@@ -1,0 +1,578 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escola Dominical - Seletor de Lições</title>
+  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e8e4d4;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #fffef7;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    
+    header {
+      background-color: #3b5e3b;
+      color: white;
+      padding: 20px 30px;
+    }
+    
+    header h1 {
+      font-size: 1.8rem;
+      margin-bottom: 5px;
+    }
+    
+    .seletor-area {
+      background-color: #f9f7e8;
+      padding: 15px 30px;
+      border-bottom: 1px solid #d4c9a6;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .seletor-linha {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    
+    .seletor-area select, .seletor-area button {
+      padding: 8px 15px;
+      font-size: 14px;
+      border-radius: 6px;
+      border: 1px solid #d4c9a6;
+      background-color: white;
+    }
+    
+    .seletor-area button {
+      background-color: #3b5e3b;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .seletor-area button:hover {
+      background-color: #2d4a2d;
+    }
+    
+    .titulo-capitalizado {
+      background-color: #e8e4d4;
+      padding: 10px 15px;
+      border-radius: 6px;
+      font-weight: bold;
+      color: #3b5e3b;
+      border-left: 4px solid #3b5e3b;
+      font-size: 13px;
+    }
+    
+    section {
+      padding: 20px 30px;
+      border-bottom: 1px solid #d4c9a6;
+    }
+    
+    section h2 {
+      color: #3b5e3b;
+      margin-bottom: 15px;
+      font-size: 1.4rem;
+      border-left: 4px solid #3b5e3b;
+      padding-left: 12px;
+    }
+    
+    .legenda-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px 20px;
+      background: #f9f7e8;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #d4c9a6;
+    }
+    
+    .legenda-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+    }
+    
+    .legenda-item span:first-child {
+      font-size: 18px;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+    
+    th, td {
+      border: 1px solid #d4c9a6;
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+    
+    th {
+      background-color: #e8e4d4;
+      font-weight: 600;
+      color: #3b5e3b;
+    }
+    
+    .col-num { width: 50px; text-align: center; }
+    .col-ref { width: 120px; font-family: monospace; }
+    .col-pag { width: 60px; text-align: center; }
+    
+    .mapa-estatico {
+      background-color: #d4c9a6;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      color: #5c4a1e;
+      font-weight: bold;
+    }
+    
+    #mapaInterativo {
+      height: 400px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    
+    .netlify-section {
+      background: #f9f7e8;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #d4c9a6;
+    }
+    
+    .netlify-section input {
+      width: 70%;
+      padding: 8px 12px;
+      border: 1px solid #d4c9a6;
+      border-radius: 4px;
+      margin-right: 10px;
+    }
+    
+    .netlify-section button {
+      background-color: #3b5e3b;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .contexto-card {
+      background-color: #f9f7e8;
+      border-left: 5px solid #3b5e3b;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .contexto-titulo {
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 10px;
+      color: #3b5e3b;
+    }
+    
+    .contexto-versiculo {
+      font-style: italic;
+      background: white;
+      padding: 10px;
+      border-radius: 6px;
+      margin: 10px 0;
+      border: 1px solid #d4c9a6;
+    }
+    
+    .contexto-tags {
+      font-size: 11px;
+      color: #666;
+      margin: 8px 0;
+    }
+    
+    .vestibular {
+      background-color: #e0dcc8;
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      margin-top: 10px;
+    }
+    
+    .link-volta {
+      text-align: right;
+      margin-top: 10px;
+    }
+    
+    .link-volta a {
+      color: #3b5e3b;
+      text-decoration: none;
+      font-size: 12px;
+    }
+    
+    .footer-links {
+      margin-top: 15px;
+      text-align: right;
+      font-size: 12px;
+    }
+    
+    .footer-links a {
+      color: #3b5e3b;
+      text-decoration: none;
+      margin-left: 15px;
+    }
+    
+    .loading {
+      text-align: center;
+      padding: 40px;
+      color: #666;
+    }
+    
+    @media (max-width: 768px) {
+      section { padding: 15px; }
+      .legenda-grid { grid-template-columns: repeat(2, 1fr); }
+      .netlify-section input { width: 100%; margin-bottom: 10px; }
+    }
+    
+    @media print {
+      .leaflet-container, .netlify-section, .seletor-area, button, input {
+        display: none !important;
+      }
+      body { background: white; padding: 0; }
+      .container { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  
+  <header>
+    <h1>📖 Escola Dominical</h1>
+  </header>
+  
+  <div class="seletor-area">
+    <div class="seletor-linha">
+      <label>Trimestre:</label>
+      <select id="seletorTrimestre">
+        <option value="2T2026">2º Trimestre 2026</option>
+      </select>
+      
+      <label>Lição:</label>
+      <select id="seletorLicao">
+        <option value="7">Lição 7</option>
+        <option value="8">Lição 8</option>
+        <option value="9">Lição 9</option>
+      </select>
+      
+      <button id="carregarBtn">🔤 Carregar Lição</button>
+    </div>
+    
+    <div id="tituloDinamico" class="titulo-capitalizado">Selecione uma lição</div>
+  </div>
+  
+  <div id="conteudo-principal">
+    <div class="loading">Selecione uma lição e clique em "Carregar Lição"</div>
+  </div>
+  
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="biblioteca/biblioteca-contextos.js"></script>
+<script src="biblioteca/biblioteca-vestibular.js"></script>
+
+<script>
+  let mapaAtual = null;
+  let scriptCarregado = null;
+  
+  function removerScriptAnterior() {
+    if (scriptCarregado && scriptCarregado.parentNode) {
+      scriptCarregado.parentNode.removeChild(scriptCarregado);
+      scriptCarregado = null;
+    }
+    if (window.dadosLicao) {
+      delete window.dadosLicao;
+    }
+  }
+  
+  function destruirMapa() {
+    if (mapaAtual) {
+      mapaAtual.remove();
+      mapaAtual = null;
+    }
+  }
+  
+  function renderizarConteudo(dados) {
+    console.log('Renderizando:', dados.titulo);
+    
+    const tituloHeader = document.getElementById('tituloDinamico');
+    if (dados.titulo) {
+      tituloHeader.innerHTML = dados.titulo;
+      if (dados.trimestre) {
+        tituloHeader.innerHTML += ' | ' + dados.trimestre;
+      }
+      if (dados.paginas) {
+        tituloHeader.innerHTML += ' | Páginas ' + dados.paginas;
+      }
+    }
+    
+    const container = document.getElementById('conteudo-principal');
+    container.innerHTML = '';
+    
+    const legendas = [
+      ["🏁", "Aparição"], ["🔤", "Alfabética"], ["🌏⛺", "Mapa da Lição"], ["📖💬#️⃣", "Contexto Bíblico"],
+      ["💬#️⃣", "Contextos"], ["🚩", "Localização"], ["🎯", "Vestibular"], ["🔢", "Cronologia"],
+      ["❓", "Questões"], ["🔑", "Gabaritos"], ["🌋", "Geografia"], ["📝", "Literatura"],
+      ["📚", "Estudo"], ["📖", "Bíblia"], ["🎓", "Ano escolar"], ["📅", "Ano do evento"],
+      ["✝️", "Trecho bíblico"], ["📂", "Subtópico"], ["🔗", "Link"], ["⏳", "História"],
+      ["💡", "Filosofia"], ["👪", "Sociologia"], ["🎨", "Arte"], ["➕", "Matemática"],
+      ["⚡", "Física"], ["⚛", "Química"], ["🌿", "Biologia"], ["📘", "Português"],
+      ["📙", "Inglês"], ["🏃", "Educação Física"], ["📜", "Obra"], ["🎥", "Filme"],
+      ["🌏", "Mapa base"], ["🗻", "Região"], ["🌏⛺", "Mapa estático"], ["🌏🔗⛺", "Mapa interativo"],
+      ["📄", "Página"], ["1️⃣", "Número"], ["🔘", "Categoria"]
+    ];
+    
+    let html = `
+      <section id="legenda">
+        <h2>📌 Legenda de Emojis</h2>
+        <div class="legenda-grid">
+    `;
+    
+    legendas.forEach(leg => {
+      html += `<div class="legenda-item"><span>${leg[0]}</span><span>${leg[1]}</span></div>`;
+    });
+    
+    html += `</div></section>`;
+    
+    if (dados.listaAparicao && dados.listaAparicao.length > 0) {
+      html += `<section id="aparicao">
+        <h2>🏁 Lista 1 – Ordem de Aparição</h2>
+        <table>
+          <thead>
+            <tr><th class="col-num">1️⃣</th><th class="col-ref">📖</th><th>#️⃣</th><th>📂</th><th class="col-pag">📄</th></tr>
+          </thead>
+          <tbody>`;
+      
+      dados.listaAparicao.forEach(item => {
+        const refLink = item.id ? `<a href="#${item.id}-contexto" style="color:#3b5e3b; text-decoration:none; font-weight:bold;">${item.referencia || ''}</a>` : (item.referencia || '');
+        html += `
+          <tr>
+            <td class="col-num">${item.numero}</td>
+            <td class="col-ref">${refLink}</td>
+            <td>${item.tags || ''}</td>
+            <td>${item.topico || ''}</td>
+            <td class="col-pag">${item.pagina}</td>
+          </tr>`;
+      });
+      
+      html += `</tbody>
+        </table>
+        <div class="footer-links"><a href="#alfabetica">🔤</a></div>
+      </section>`;
+      
+      const listaAlfabetica = dados.listaAlfabetica || [...dados.listaAparicao];
+      if (!dados.listaAlfabetica) {
+        listaAlfabetica.sort((a, b) => {
+          const refA = (a.referencia || '').replace(/^[0-9]+ /, '');
+          const refB = (b.referencia || '').replace(/^[0-9]+ /, '');
+          return refA.localeCompare(refB);
+        });
+      }
+      
+      html += `<section id="alfabetica">
+        <h2>🔤 Lista 2 – Ordem Alfabética</h2>
+        <table>
+          <thead>
+            <tr><th class="col-num">1️⃣</th><th class="col-ref">📖</th><th>#️⃣</th><th>📂</th><th class="col-pag">📄</th></tr>
+          </thead>
+          <tbody>`;
+      
+      listaAlfabetica.forEach((item, idx) => {
+        const refLink = item.id ? `<a href="#${item.id}-contexto" style="color:#3b5e3b; text-decoration:none; font-weight:bold;">${item.referencia || ''}</a>` : (item.referencia || '');
+        html += `
+          <tr id="${item.id || ''}">
+            <td class="col-num">${idx + 1}</td>
+            <td class="col-ref">${refLink}</td>
+            <td>${item.tags || ''}</td>
+            <td>${item.topico || ''}</td>
+            <td class="col-pag">${item.pagina}</td>
+          </tr>`;
+      });
+      
+      html += `</tbody>
+        </table>
+        <div class="footer-links"><a href="#aparicao">🏁</a></div>
+      </section>`;
+    } else {
+      html += `<section><h2>⚠️ Dados da Lição</h2><p>Nenhuma referência encontrada nesta lição.</p></section>`;
+    }
+    
+    html += `<section id="mapas">
+      <h2>🌏⛺ Mapas da Lição</h2>
+      <div class="mapa-estatico">🖼️ INSIRA A IMAGEM ESTÁTICA DO MAPA AQUI</div>
+      <div id="mapaInterativo"></div>
+      <div class="netlify-section">
+        <h3>🔗 Link do Projeto (Netlify)</h3>
+        <input type="text" id="netlifyInput" placeholder="Cole o link do seu projeto no Netlify">
+        <button id="salvarLink">Salvar Link</button>
+        <div id="linkSalvo" class="link-salvo"></div>
+      </div>
+    </section>`;
+    
+    html += `<section id="contextos">
+      <h2>💬#️⃣ Contextos das Passagens</h2>
+      <div id="containerContextos"></div>
+    </section>`;
+    
+    container.innerHTML = html;
+    
+    if (dados.listaAparicao && dados.listaAparicao.length > 0) {
+      const containerContextos = document.getElementById('containerContextos');
+      dados.listaAparicao.forEach(item => {
+        const ctxId = item.id;
+        if (!ctxId) return;
+        
+        const ctx = bibliotecaContextos[ctxId];
+        if (ctx) {
+          const chaveVestibular = `${ctx.local}|${ctx.data}`;
+          const vest = (typeof bibliotecaVestibular !== 'undefined') ? bibliotecaVestibular[chaveVestibular] : null;
+          
+          const card = document.createElement('div');
+          card.className = 'contexto-card';
+          card.id = `${ctx.id}-contexto`;
+          
+          const vestibularHtml = vest ? `
+            <div class="vestibular">🎯 VESTIBULAR: ⏳ ${vest.historia || ''} | 🌋 ${vest.geografia || ''} | 🎨 ${vest.arte || ''} | 📝 ${vest.literatura || ''} | 🎓 ${vest.anoEscolar || ''}</div>
+          ` : '';
+          
+          card.innerHTML = `
+            <div class="contexto-titulo">📖 ${ctx.referencia} | 🚩 ${ctx.local} | 📅 ${ctx.data}</div>
+            <div class="contexto-versiculo">✝️ "${ctx.versiculo}"</div>
+            <div>💬 ${ctx.contexto}</div>
+            <div class="contexto-tags">#️⃣ ${ctx.tags}</div>
+            ${vestibularHtml}
+            <div class="link-volta"><a href="#${ctx.id}">🔤</a></div>
+          `;
+          containerContextos.appendChild(card);
+        }
+      });
+      
+      if (containerContextos.children.length === 0) {
+        containerContextos.innerHTML = '<p>📖 Nenhum contexto específico disponível para esta lição.</p>';
+      }
+    }
+    
+    const centroMapa = dados.mapaConfig && dados.mapaConfig.centro ? dados.mapaConfig.centro : [20, 0];
+    const zoomMapa = dados.mapaConfig && dados.mapaConfig.zoom ? dados.mapaConfig.zoom : 2;
+    
+    setTimeout(() => {
+      const mapaDiv = document.getElementById('mapaInterativo');
+      if (mapaDiv) {
+        mapaAtual = L.map('mapaInterativo').setView(centroMapa, zoomMapa);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> & CartoDB',
+          subdomains: 'abcd',
+          maxZoom: 19,
+          minZoom: 1
+        }).addTo(mapaAtual);
+      }
+    }, 100);
+    
+    setTimeout(() => {
+      const netlifyInput = document.getElementById('netlifyInput');
+      const salvarLinkBtn = document.getElementById('salvarLink');
+      const linkSalvoDiv = document.getElementById('linkSalvo');
+      
+      if (netlifyInput && salvarLinkBtn) {
+        const linkSalvo = localStorage.getItem('netlifyLink');
+        if (linkSalvo) {
+          netlifyInput.value = linkSalvo;
+          if (linkSalvoDiv) {
+            linkSalvoDiv.innerHTML = `✅ Link salvo: <a href="${linkSalvo}" target="_blank">${linkSalvo}</a>`;
+          }
+        }
+        
+        salvarLinkBtn.onclick = () => {
+          const link = netlifyInput.value.trim();
+          if (link) {
+            localStorage.setItem('netlifyLink', link);
+            if (linkSalvoDiv) {
+              linkSalvoDiv.innerHTML = `✅ Link salvo: <a href="${link}" target="_blank">${link}</a>`;
+            }
+            alert('Link salvo com sucesso!');
+          } else {
+            alert('Digite um link válido.');
+          }
+        };
+      }
+    }, 100);
+  }
+  
+  function carregarLicao() {
+    const trimestre = document.getElementById('seletorTrimestre').value;
+    const licao = document.getElementById('seletorLicao').value;
+    
+    console.log(`Carregando lição ${licao}...`);
+    
+    removerScriptAnterior();
+    destruirMapa();
+    
+    const container = document.getElementById('conteudo-principal');
+    container.innerHTML = '<div class="loading">📖 Carregando lição ' + licao + '...</div>';
+    
+    const tituloHeader = document.getElementById('tituloDinamico');
+    tituloHeader.innerHTML = '⏳ Carregando lição ' + licao + '...';
+    
+    const script = document.createElement('script');
+    const timestamp = Date.now();
+    script.src = `dados/dominical/dados-${trimestre}-licao${licao}.js?v=${timestamp}`;
+    scriptCarregado = script;
+    
+    script.onload = function() {
+      setTimeout(() => {
+        if (typeof window.dadosLicao !== 'undefined' && window.dadosLicao) {
+          console.log(`Lição carregada: ${licao}`, window.dadosLicao.titulo);
+          renderizarConteudo(window.dadosLicao);
+        } else {
+          container.innerHTML = `<div class="loading">❌ Erro: Dados da lição ${licao} não encontrados.</div>`;
+          tituloHeader.innerHTML = `❌ Falha ao carregar lição ${licao}`;
+        }
+      }, 100);
+    };
+    
+    script.onerror = function() {
+      container.innerHTML = `<div class="loading">❌ Arquivo não encontrado: dados/dominical/dados-${trimestre}-licao${licao}.js</div>`;
+      tituloHeader.innerHTML = `❌ Lição ${licao} não disponível`;
+    };
+    
+    document.body.appendChild(script);
+  }
+  
+  document.getElementById('carregarBtn').addEventListener('click', function() {
+    carregarLicao();
+  });
+  
+  window.addEventListener('load', function() {
+    carregarLicao();
+  });
+</script>
+</body>
+</html>
