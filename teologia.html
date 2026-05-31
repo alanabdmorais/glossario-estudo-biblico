@@ -216,6 +216,19 @@
       border-radius: 6px;
       font-size: 11px;
       margin-top: 10px;
+      line-height: 1.5;
+    }
+    
+    .link-vestibular {
+      color: #3b5e3b;
+      text-decoration: none;
+      font-weight: bold;
+      border-bottom: 1px dotted #3b5e3b;
+      cursor: pointer;
+    }
+    
+    .link-vestibular:hover {
+      background-color: #d4c9a6;
     }
     
     .link-volta {
@@ -299,26 +312,144 @@
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="biblioteca/biblioteca-contextos.js"></script>
-<script src="biblioteca/biblioteca-vestibular.js"></script>
+<script src="biblioteca/contextos-biblicos.js"></script>
+<script src="biblioteca/rodape-vestibular.js"></script>
+<script src="biblioteca/materias-vestibular.js"></script>
+<script src="biblioteca/calendario-escolar.js"></script>
 
 <script>
   let mapaAtual = null;
   let scriptCarregado = null;
   
-  // Função para remover script anterior
+  // ============================================
+  // FUNÇÃO PARA ABRIR MATÉRIA (MODAL COMPLETO)
+  // ============================================
+  
+  function abrirMateria(id) {
+    if (typeof materiasVestibular === 'undefined' && typeof bibliotecaMaterias === 'undefined') {
+      alert('Biblioteca de matérias não carregada ainda.');
+      return;
+    }
+    
+    const materia = (typeof materiasVestibular !== 'undefined' && materiasVestibular[id]) 
+                  ? materiasVestibular[id] 
+                  : (typeof bibliotecaMaterias !== 'undefined' && bibliotecaMaterias[id]) 
+                    ? bibliotecaMaterias[id] 
+                    : null;
+    
+    if (!materia) {
+      alert(`Matéria "${id}" não encontrada na biblioteca.`);
+      return;
+    }
+    
+    const modalExistente = document.querySelector('.modal-materia');
+    if (modalExistente) modalExistente.remove();
+    
+    const conteudo = materia.conteudo || '<p>Conteúdo em desenvolvimento.</p>';
+    const areaTexto = materia.area || 'Geral';
+    const materiaNome = materia.materia || 'MATÉRIA';
+    const anoNome = materia.ano || 'EM';
+    
+    const modal = document.createElement('div');
+    modal.className = 'modal-materia';
+    modal.innerHTML = `
+      <div class="modal-materia-content">
+        <span class="modal-materia-close" onclick="this.closest('.modal-materia').remove()">&times;</span>
+        <h2 class="modal-materia-titulo">📖 ${materia.titulo}</h2>
+        <div class="modal-materia-meta">
+          <span class="modal-materia-badge modal-materia-materia">📚 ${materiaNome}</span>
+          <span class="modal-materia-badge modal-materia-ano">🎓 ${anoNome}</span>
+          <span class="modal-materia-badge modal-materia-area">🔖 ${areaTexto}</span>
+        </div>
+        <div class="modal-materia-conteudo">
+          ${conteudo}
+        </div>
+        <div class="modal-materia-footer">
+          <button onclick="this.closest('.modal-materia').remove()">Fechar</button>
+        </div>
+      </div>
+    `;
+    
+    document.body.appendChild(modal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) modal.remove();
+    });
+  }
+  
+  // ============================================
+  // FUNÇÃO PARA GERAR VESTIBULAR COM LINKS
+  // ============================================
+  
+  function gerarVestibularComLinks(chaveVestibular) {
+    if (typeof rodapeVestibular === 'undefined' && typeof bibliotecaVestibular === 'undefined') return '';
+    
+    const vest = (typeof rodapeVestibular !== 'undefined') 
+                ? rodapeVestibular[chaveVestibular] 
+                : (typeof bibliotecaVestibular !== 'undefined') 
+                  ? bibliotecaVestibular[chaveVestibular] 
+                  : null;
+    if (!vest) return '';
+    
+    const palavrasMap = [
+      { palavra: "estoicismo", id: "estoicismo" },
+      { palavra: "Estoicismo", id: "estoicismo" },
+      { palavra: "epicurismo", id: "epicurismo" },
+      { palavra: "Epicurismo", id: "epicurismo" },
+      { palavra: "celtas", id: "celtas_galacia" },
+      { palavra: "Celtas", id: "celtas_galacia" },
+      { palavra: "galácia", id: "celtas_galacia" },
+      { palavra: "Galácia", id: "celtas_galacia" },
+      { palavra: "helenística", id: "arte_helenistica" },
+      { palavra: "Helenística", id: "arte_helenistica" },
+      { palavra: "helenistica", id: "arte_helenistica" },
+      { palavra: "Helenistica", id: "arte_helenistica" },
+      { palavra: "socrates", id: "socrates" },
+      { palavra: "Sócrates", id: "socrates" },
+      { palavra: "platao", id: "platao" },
+      { palavra: "Platão", id: "platao" },
+      { palavra: "aristoteles", id: "aristoteles" },
+      { palavra: "Aristóteles", id: "aristoteles" }
+    ];
+    
+    const categorias = ["⏳", "🌋", "🎨", "📝", "💡", "👪"];
+    let textoCorrido = '';
+    
+    for (const cat of categorias) {
+      if (vest[cat]) {
+        let texto = vest[cat];
+        let textoComLinks = texto;
+        
+        for (const item of palavrasMap) {
+          const regex = new RegExp(`\\b(${item.palavra})\\b`, 'g');
+          textoComLinks = textoComLinks.replace(regex, (match) => {
+            return `<a href="#" class="link-vestibular" onclick="abrirMateria('${item.id}'); return false;">${match}</a>`;
+          });
+        }
+        
+        textoCorrido += ` ${cat} ${textoComLinks} |`;
+      }
+    }
+    
+    textoCorrido = textoCorrido.replace(/\|$/, '');
+    if (textoCorrido.trim() === '') return '';
+    
+    return `<div class="vestibular">🎯 VESTIBULAR: ${textoCorrido}</div>`;
+  }
+  
+  // ============================================
+  // FUNÇÕES PRINCIPAIS
+  // ============================================
+  
   function removerScriptAnterior() {
     if (scriptCarregado && scriptCarregado.parentNode) {
       scriptCarregado.parentNode.removeChild(scriptCarregado);
       scriptCarregado = null;
     }
-    // Limpar a variável global
     if (window.dadosLicao) {
       delete window.dadosLicao;
     }
   }
   
-  // Função para destruir o mapa anterior
   function destruirMapa() {
     if (mapaAtual) {
       mapaAtual.remove();
@@ -329,7 +460,6 @@
   function renderizarConteudo(dados) {
     console.log('Renderizando:', dados.titulo);
     
-    // Atualizar título
     const tituloHeader = document.getElementById('tituloDinamico');
     if (dados.titulo) {
       tituloHeader.innerHTML = dados.titulo;
@@ -341,7 +471,6 @@
     const container = document.getElementById('conteudo-principal');
     container.innerHTML = '';
     
-    // LEGENDA
     const legendas = [
       ["🏁", "Aparição"], ["🔤", "Alfabética"], ["🌏⛺", "Mapa da Lição"], ["📖💬#️⃣", "Contexto Bíblico"],
       ["💬#️⃣", "Contextos"], ["🚩", "Localização"], ["🎯", "Vestibular"], ["🔢", "Cronologia"],
@@ -367,25 +496,25 @@
     
     html += `</div></section>`;
     
-    // Verificar se existem dados
     if (dados.listaAparicao && dados.listaAparicao.length > 0) {
-      // LISTA 1 - APARIÇÃO
       html += `<section id="aparicao">
         <h2>🏁 Lista 1 – Ordem de Aparição</h2>
         <table>
-          <thead><tr><th class="col-num">1️⃣</th><th class="col-ref">📖</th><th>#️⃣</th><th>📂</th><th class="col-pag">📄</th></tr></thead>
+          <thead>
+            <tr><th class="col-num">1️⃣</th><th class="col-ref">📖</th><th>#️⃣</th><th>📂</th><th class="col-pag">📄</th></tr>
+          </thead>
           <tbody>`;
       
       dados.listaAparicao.forEach(item => {
         const refLink = item.id ? `<a href="#${item.id}-contexto" style="color:#3b5e3b; text-decoration:none; font-weight:bold;">${item.referencia}</a>` : item.referencia;
-        
-        html += `<tr>
-          <td class="col-num">${item.numero}</td>
-          <td class="col-ref">${refLink}</td>
-          <td class="tags">${item.tags || ''}</td>
-          <td>${item.topico}</td>
-          <td class="col-pag">${item.pagina}</td>
-        </tr>`;
+        html += `
+          <tr>
+            <td class="col-num">${item.numero}</td>
+            <td class="col-ref">${refLink}</td>
+            <td class="tags">${item.tags || ''}</td>
+            <td>${item.topico}</td>
+            <td class="col-pag">${item.pagina}</td>
+          </tr>`;
       });
       
       html += `</tbody>
@@ -393,7 +522,6 @@
         <div class="footer-links"><a href="#alfabetica">🔤</a></div>
         </section>`;
       
-      // LISTA 2 - ALFABÉTICA
       const listaAlfabetica = [...dados.listaAparicao];
       listaAlfabetica.sort((a, b) => {
         const refA = a.referencia.replace(/^[0-9]+ /, '');
@@ -404,7 +532,9 @@
       html += `<section id="alfabetica">
         <h2>🔤 Lista 2 – Ordem Alfabética</h2>
         <table>
-          <thead><tr><th class="col-num">1️⃣</th><th class="col-ref">📖</th><th>#️⃣</th><th>📂</th><th class="col-pag">📄</th></tr></thead>
+          <thead>
+            <tr><th class="col-num">1️⃣</th><th class="col-ref">📖</th><th>#️⃣</th><th>📂</th><th class="col-pag">📄</th><tr>
+          </thead>
           <tbody>`;
       
       listaAlfabetica.forEach((item, idx) => {
@@ -425,7 +555,6 @@
       html += `<section><h2>⚠️ Dados do Capítulo</h2><p>Nenhuma referência encontrada neste capítulo.</p></section>`;
     }
     
-    // MAPAS
     html += `<section id="mapas">
       <h2>🌏⛺ Mapas da Lição</h2>
       <div class="mapa-estatico">🖼️ INSIRA A IMAGEM ESTÁTICA DO MAPA AQUI</div>
@@ -438,7 +567,6 @@
       </div>
     </section>`;
     
-    // CONTEXTOS
     html += `<section id="contextos">
       <h2>💬#️⃣ Contextos das Passagens</h2>
       <div id="containerContextos"></div>
@@ -446,30 +574,37 @@
     
     container.innerHTML = html;
     
-    // Renderizar contextos
     if (dados.listaAparicao && dados.listaAparicao.length > 0) {
       const containerContextos = document.getElementById('containerContextos');
       dados.listaAparicao.forEach(item => {
-        const ctx = bibliotecaContextos[item.id];
+        const ctxId = item.id;
+        if (!ctxId) return;
+        
+        // Usa a variável contextosBiblicos (nome correto do arquivo)
+        const ctx = (typeof contextosBiblicos !== 'undefined') 
+                    ? contextosBiblicos[ctxId] 
+                    : null;
+        
         if (ctx) {
-          // Buscar dados vestibular usando local e data do contexto
-          const chaveVestibular = `${ctx.local}|${ctx.data}`;
-          const vest = bibliotecaVestibular[chaveVestibular];
+          // Extrai local sem governante (antes do " // ")
+          const localSemGovernante = ctx.local ? ctx.local.split(" // ")[0] : ctx.local;
+          const chaveVestibular = `${localSemGovernante}|${ctx.data}`;
           
           const card = document.createElement('div');
           card.className = 'contexto-card';
           card.id = `${ctx.id}-contexto`;
           
-          // Se existir dados vestibular, mostra; senão, mostra apenas o contexto bíblico
-          const vestibularHtml = vest ? `
-            <div class="vestibular">🎯 VESTIBULAR: ⏳ ${vest.historia || ''} | 🌋 ${vest.geografia || ''} | 🎨 ${vest.arte || ''} | 📝 ${vest.literatura || ''} | 🎓 ${vest.anoEscolar || ''}</div>
-          ` : '';
+          let vestibularHtml = '';
+          if (typeof rodapeVestibular !== 'undefined') {
+            vestibularHtml = gerarVestibularComLinks(chaveVestibular);
+          }
           
           card.innerHTML = `
-            <div class="contexto-titulo">📖 ${ctx.referencia} | 🚩 ${ctx.local} | 📅 ${ctx.data}</div>
-            <div class="contexto-versiculo">✝️ "${ctx.versiculo}"</div>
-            <div>💬 ${ctx.contexto}</div>
-            <div class="contexto-tags">#️⃣ ${ctx.tags}</div>
+            <div class="contexto-titulo">📖 ${ctx.referencia} | 🚩 ${ctx.local || 'Local não informado'} | 📅 ${ctx.data || 'Data não informada'}</div>
+            <div class="contexto-versiculo">✝️ "${ctx.versiculo || 'Versículo não disponível'}"</div>
+            <div><strong>📜 ANTES:</strong> ${ctx.antes || 'Contexto anterior não disponível'}</div>
+            <div><strong>📖 DEPOIS:</strong> ${ctx.depois || 'Contexto posterior não disponível'}</div>
+            <div class="contexto-tags">#️⃣ ${ctx.tags || ''}</div>
             ${vestibularHtml}
             <div class="link-volta"><a href="#${ctx.id}">🔤</a></div>
           `;
@@ -478,11 +613,10 @@
       });
       
       if (containerContextos.children.length === 0) {
-        containerContextos.innerHTML = '<p>📖 Nenhum contexto específico disponível para este capítulo.</p>';
+        containerContextos.innerHTML = '<p>📖 Nenhum contexto específico disponível para este capítulo. Verifique se os IDs estão corretos.</p>';
       }
     }
     
-    // Criar mapa
     const centroMapa = dados.mapaConfig && dados.mapaConfig.centro ? dados.mapaConfig.centro : [20, 0];
     const zoomMapa = dados.mapaConfig && dados.mapaConfig.zoom ? dados.mapaConfig.zoom : 2;
     
@@ -496,10 +630,17 @@
           maxZoom: 19,
           minZoom: 1
         }).addTo(mapaAtual);
+        
+        if (dados.mapaConfig && dados.mapaConfig.marcadores && dados.mapaConfig.marcadores.length > 0) {
+          dados.mapaConfig.marcadores.forEach(marcador => {
+            L.marker([marcador.lat, marcador.lng])
+              .addTo(mapaAtual)
+              .bindPopup(marcador.popup || marcador.local);
+          });
+        }
       }
     }, 100);
     
-    // Netlify
     setTimeout(() => {
       const netlifyInput = document.getElementById('netlifyInput');
       const salvarLinkBtn = document.getElementById('salvarLink');
@@ -530,14 +671,12 @@
     }, 100);
   }
   
-  // Função para carregar o capítulo
   function carregarCapitulo() {
     const livro = document.getElementById('seletorLivro').value;
     const capitulo = document.getElementById('seletorCapitulo').value;
     
     console.log(`Carregando capítulo ${capitulo}...`);
     
-    // Limpar tudo antes de carregar novo
     removerScriptAnterior();
     destruirMapa();
     
@@ -572,12 +711,10 @@
     document.body.appendChild(script);
   }
   
-  // Configurar eventos
   document.getElementById('carregarBtn').addEventListener('click', function() {
     carregarCapitulo();
   });
   
-  // Carregar capítulo 5 ao iniciar
   window.addEventListener('load', function() {
     carregarCapitulo();
   });

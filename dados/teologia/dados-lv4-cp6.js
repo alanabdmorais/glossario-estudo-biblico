@@ -1,12 +1,15 @@
 window.dadosLicao = {
-    titulo: "📖 CAPÍTULO VI - TÍTULO DO CAPÍTULO 6",
-    subtitulo: "Livro 4 - Capítulo 6 | Curso Teologia Descomplicada para Jovens",
-    mapaConfig: {
-      centro: [20, 10],
-      zoom: 2
-    },
-    listaAparicao: [
-      { numero: 1, referencia: "Exemplo 1.1", tags: "tag1 / tag2", topico: "📖 Lição 1 – Título da Lição / 📂 Seção", pagina: 100, id: "ex1" },
-      { numero: 2, referencia: "Exemplo 2.1", tags: "tag3 / tag4", topico: "📖 Lição 2 – Título da Lição / 📂 Seção", pagina: 101, id: "ex2" }
-    ]
-  };
+  titulo: "📖 CAPÍTULO VI - [TÍTULO REAL]",
+  subtitulo: "Livro 4 - Capítulo 6 | Curso Teologia Descomplicada para Jovens",
+  mapaConfig: {
+    centro: [20, 10],
+    zoom: 2
+  },
+  listaAparicao: [
+    // { numero: 1, referencia: "Gl 5.22-23a", tags: "fruto do Espírito / versículo-chave", topico: "📖 Lição 1 – O que é o fruto do Espírito? / 📂 Versículo-chave", pagina: 91, id: "gl5.22a" },
+    // ... adicione os itens reais aqui
+  ],
+  listaAlfabetica: [
+    // ... adicione os itens reais aqui (opcional, será gerado automaticamente)
+  ]
+};
