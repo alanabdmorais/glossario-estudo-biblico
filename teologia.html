@@ -260,6 +260,87 @@
       color: #666;
     }
     
+    /* Modal para matérias do vestibular */
+    .modal-materia {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    
+    .modal-materia-content {
+      background-color: #fffef7;
+      max-width: 600px;
+      width: 90%;
+      max-height: 80vh;
+      border-radius: 12px;
+      padding: 25px;
+      position: relative;
+      overflow-y: auto;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    
+    .modal-materia-close {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #999;
+    }
+    
+    .modal-materia-close:hover {
+      color: #3b5e3b;
+    }
+    
+    .modal-materia-titulo {
+      color: #3b5e3b;
+      margin-bottom: 15px;
+      font-size: 1.4rem;
+      padding-right: 30px;
+    }
+    
+    .modal-materia-meta {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .modal-materia-badge {
+      background-color: #e8e4d4;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      color: #3b5e3b;
+    }
+    
+    .modal-materia-conteudo {
+      line-height: 1.6;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    
+    .modal-materia-footer {
+      text-align: right;
+    }
+    
+    .modal-materia-footer button {
+      background-color: #3b5e3b;
+      color: white;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    
     @media (max-width: 768px) {
       section { padding: 15px; }
       .legenda-grid { grid-template-columns: repeat(2, 1fr); }
@@ -290,13 +371,19 @@
       <label>Livro:</label>
       <select id="seletorLivro">
         <option value="lv4">Livro 4</option>
+        <option value="lv5">Livro 5</option>
       </select>
       
       <label>Capítulo:</label>
       <select id="seletorCapitulo">
-        <option value="5">Capítulo 5</option>
-        <option value="6">Capítulo 6</option>
-        <option value="7">Capítulo 7</option>
+        <!-- Livro 4 - Capítulos -->
+        <option value="5" data-livro="lv4">Capítulo 5</option>
+        <option value="6" data-livro="lv4">Capítulo 6</option>
+        <option value="7" data-livro="lv4">Capítulo 7</option>
+        <!-- Livro 5 - Capítulos -->
+        <option value="1" data-livro="lv5">Capítulo 1</option>
+        <option value="2" data-livro="lv5">Capítulo 2</option>
+        <option value="3" data-livro="lv5">Capítulo 3</option>
       </select>
       
       <button id="carregarBtn">🔤 Carregar Capítulo</button>
@@ -320,6 +407,32 @@
 <script>
   let mapaAtual = null;
   let scriptCarregado = null;
+  
+  // ============================================
+  // FUNÇÃO PARA ATUALIZAR CAPÍTULOS CONFORME LIVRO
+  // ============================================
+  
+  function atualizarOpcoesCapitulo() {
+    const livroSelecionado = document.getElementById('seletorLivro').value;
+    const seletorCapitulo = document.getElementById('seletorCapitulo');
+    const opcoes = seletorCapitulo.querySelectorAll('option');
+    
+    opcoes.forEach(option => {
+      const livroOption = option.getAttribute('data-livro');
+      if (livroOption === livroSelecionado) {
+        option.style.display = '';
+      } else {
+        option.style.display = 'none';
+      }
+    });
+    
+    for (let option of opcoes) {
+      if (option.style.display !== 'none') {
+        option.selected = true;
+        break;
+      }
+    }
+  }
   
   // ============================================
   // FUNÇÃO PARA ABRIR MATÉRIA (MODAL COMPLETO)
@@ -506,7 +619,16 @@
           <tbody>`;
       
       dados.listaAparicao.forEach(item => {
-        const refLink = item.id ? `<a href="#${item.id}-contexto" style="color:#3b5e3b; text-decoration:none; font-weight:bold;">${item.referencia}</a>` : item.referencia;
+        let refLink = '';
+        
+        if (item.id) {
+          // Tem ID - é referência bíblica válida
+          refLink = `<a href="#${item.id}-contexto" style="color:#3b5e3b; text-decoration:none; font-weight:bold;">${item.referencia}</a>`;
+        } else {
+          // Sem referência ou sem ID - mostra apenas ---
+          refLink = '---';
+        }
+        
         html += `
           <tr>
             <td class="col-num">${item.numero}</td>
@@ -522,7 +644,21 @@
         <div class="footer-links"><a href="#alfabetica">🔤</a></div>
         </section>`;
       
-      const listaAlfabetica = [...dados.listaAparicao];
+      // ==================== LISTA ALFABÉTICA CORRIGIDA ====================
+      // Filtrar apenas itens com ID (versículos bíblicos) e remover duplicatas
+      const mapaUnico = new Map();
+      dados.listaAparicao.forEach(item => {
+        // Só adiciona se tiver ID (é uma referência bíblica válida)
+        if (item.id) {
+          // Usa a referência como chave para evitar duplicatas
+          if (!mapaUnico.has(item.referencia)) {
+            mapaUnico.set(item.referencia, item);
+          }
+        }
+      });
+      
+      // Converter o mapa de volta para array e ordenar
+      const listaAlfabetica = Array.from(mapaUnico.values());
       listaAlfabetica.sort((a, b) => {
         const refA = a.referencia.replace(/^[0-9]+ /, '');
         const refB = b.referencia.replace(/^[0-9]+ /, '');
@@ -533,7 +669,7 @@
         <h2>🔤 Lista 2 – Ordem Alfabética</h2>
         <table>
           <thead>
-            <tr><th class="col-num">1️⃣</th><th class="col-ref">📖</th><th>#️⃣</th><th>📂</th><th class="col-pag">📄</th><tr>
+            <tr><th class="col-num">1️⃣</th><th class="col-ref">📖</th><th>#️⃣</th><th>📂</th><th class="col-pag">📄</th></tr>
           </thead>
           <tbody>`;
       
@@ -580,13 +716,12 @@
         const ctxId = item.id;
         if (!ctxId) return;
         
-        // Usa a variável contextosBiblicos (nome correto do arquivo)
-        const ctx = (typeof contextosBiblicos !== 'undefined') 
-                    ? contextosBiblicos[ctxId] 
+        // CORREÇÃO: usar window.contextosBiblicosMap
+        const ctx = (typeof window.contextosBiblicosMap !== 'undefined') 
+                    ? window.contextosBiblicosMap[ctxId] 
                     : null;
         
         if (ctx) {
-          // Extrai local sem governante (antes do " // ")
           const localSemGovernante = ctx.local ? ctx.local.split(" // ")[0] : ctx.local;
           const chaveVestibular = `${localSemGovernante}|${ctx.data}`;
           
@@ -614,6 +749,8 @@
       
       if (containerContextos.children.length === 0) {
         containerContextos.innerHTML = '<p>📖 Nenhum contexto específico disponível para este capítulo. Verifique se os IDs estão corretos.</p>';
+      } else {
+        console.log(`✅ ${containerContextos.children.length} contextos carregados!`);
       }
     }
     
@@ -675,7 +812,7 @@
     const livro = document.getElementById('seletorLivro').value;
     const capitulo = document.getElementById('seletorCapitulo').value;
     
-    console.log(`Carregando capítulo ${capitulo}...`);
+    console.log(`Carregando ${livro} capítulo ${capitulo}...`);
     
     removerScriptAnterior();
     destruirMapa();
@@ -711,11 +848,22 @@
     document.body.appendChild(script);
   }
   
+  // Event listeners
   document.getElementById('carregarBtn').addEventListener('click', function() {
     carregarCapitulo();
   });
   
+  document.getElementById('seletorLivro').addEventListener('change', function() {
+    atualizarOpcoesCapitulo();
+    carregarCapitulo();
+  });
+  
+  document.getElementById('seletorCapitulo').addEventListener('change', function() {
+    carregarCapitulo();
+  });
+  
   window.addEventListener('load', function() {
+    atualizarOpcoesCapitulo();
     carregarCapitulo();
   });
 </script>

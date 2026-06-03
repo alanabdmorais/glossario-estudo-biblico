@@ -2182,8 +2182,1487 @@ const bibliotecaContextos = [
     depois: "Este versículo tem sido usado ao longo da história para expressar o desejo humano por Deus. Agostinho escreveu: 'Fizeste-nos para ti, Senhor, e o nosso coração está inquieto enquanto não descansar em ti'. O salmo ensina que o vazio existencial só pode ser preenchido pela presença de Deus.",
     tags: "sede de Deus / vazio / anseio / espiritualidade",
     assuntos: ["sede-de-deus", "vazio-existencial", "salmos", "adoracao", "espiritualidade"]
-  }
+  },
+
+// 122. Atos 2.42
+{
+  id: "at2.42",
+  referencia: "At 2.42",
+  local: "Jerusalém / Judéia (Israel)",
+  paisAtual: "Israel",
+  lider: "Pedro",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~30 d.C.",
+  antes: "Cerca de 3.000 pessoas haviam se convertido no dia de Pentecostes após a pregação de Pedro. Eles foram batizados e se juntaram à comunidade cristã primitiva.",
+  versiculo: "✅ E perseveravam na doutrina dos apóstolos, e na comunhão, e no partir do pão, e nas orações.",
+  depois: "A igreja primitiva crescia diariamente. Os novos convertidos vendiam suas propriedades e repartiam com os necessitados. O Senhor acrescentava à igreja os que iam sendo salvos.",
+  tags: "doutrina / comunhão / oração / partir do pão",
+  assuntos: ["igreja-primitiva", "pentecostes", "jerusalem"]
+},
+
+// 123. Atos 2.46
+{
+  id: "at2.46",
+  referencia: "At 2.46",
+  local: "Jerusalém / Judéia (Israel)",
+  paisAtual: "Israel",
+  lider: "Pedro",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~30 d.C.",
+  antes: "Os primeiros cristãos dedicavam-se ao ensino dos apóstolos, à comunhão e às orações. Havia um senso de comunidade e partilha entre eles.",
+  versiculo: "✅ E, perseverando unânimes todos os dias no templo, e partindo o pão em casa, comiam juntos com alegria e singeleza de coração.",
+  depois: "A igreja mantinha tanto o culto público no templo quanto os encontros nas casas. A alegria e a generosidade marcavam sua comunhão. Deus acrescentava novas pessoas diariamente.",
+  tags: "templo / casa / alegria / comunhão",
+  assuntos: ["igreja-primitiva", "jerusalem", "comunhao"]
+},
+
+// 124. Colossenses 1.23
+{
+  id: "cl1.23",
+  referencia: "Cl 1.23",
+  local: "Roma / Itália",
+  paisAtual: "Itália",
+  lider: "Paulo",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~60-62 d.C.",
+  antes: "Paulo escreve aos colossenses sobre a supremacia de Cristo. Ele os exorta a permanecerem firmes na fé, sem se desviarem da esperança do evangelho.",
+  versiculo: "✅ Se, na verdade, permanecerdes fundados e firmes na fé, e não vos moverdes da esperança do evangelho que ouvistes, e que foi pregado a toda criatura que está debaixo do céu; e do qual eu, Paulo, sou feito ministro.",
+  depois: "O evangelho já havia se espalhado por todo o mundo conhecido na época de Paulo. A mensagem de Cristo não era um movimento local, mas universal. Paulo se via como ministro desse evangelho global.",
+  tags: "evangelho / pregação / universal / permanecer",
+  assuntos: ["roma", "paulo", "evangelho", "universalidade"]
+},
+
+// 125. Efésios 1.22-23
+{
+  id: "ef1.22",
+  referencia: "Ef 1.22-23",
+  local: "Roma / Itália",
+  paisAtual: "Itália",
+  lider: "Paulo",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~60-62 d.C.",
+  antes: "Paulo ora para que os efésios conheçam o poder de Deus manifestado em Cristo. Ele descreve a posição exaltada de Cristo após a ressurreição.",
+  versiculo: "✅ E sujeitou todas as coisas debaixo de seus pés, e sobre todas as coisas o constituiu como cabeça da igreja, que é o seu corpo, a plenitude daquele que cumpre tudo em todos.",
+  depois: "Cristo é a cabeça e a igreja é o corpo. A igreja não é apenas seguidora de Cristo, mas Sua plenitude - Ele Se expressa através dela. Esta é uma das declarações mais elevadas sobre a igreja no Novo Testamento.",
+  tags: "cabeça / corpo / igreja / plenitude",
+  assuntos: ["roma", "paulo", "igreja", "corpo-de-cristo"]
+},
+
+// 126. Efésios 2.19
+{
+  id: "ef2.19",
+  referencia: "Ef 2.19",
+  local: "Roma / Itália",
+  paisAtual: "Itália",
+  lider: "Paulo",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~60-62 d.C.",
+  antes: "Paulo explica que tanto judeus quanto gentios foram reconciliados com Deus através da cruz. Antes, os gentios eram estrangeiros e excluídos das alianças.",
+  versiculo: "✅ Assim que já não sois estrangeiros, nem forasteiros, mas concidadãos dos santos e da família de Deus.",
+  depois: "A igreja é uma nova família, onde judeus e gentios são membros da mesma casa. Não há mais divisão étnica ou religiosa. Todos têm igual acesso a Deus através de Cristo.",
+  tags: "família / concidadãos / santos / unidade",
+  assuntos: ["roma", "paulo", "familia-deus", "unidade-igreja"]
+},
+
+// 127. Efésios 2.20
+{
+  id: "ef2.20",
+  referencia: "Ef 2.20",
+  local: "Roma / Itália",
+  paisAtual: "Itália",
+  lider: "Paulo",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~60-62 d.C.",
+  antes: "Paulo continua a metáfora da igreja como edifício. Os gentios não eram mais estrangeiros, mas agora faziam parte da construção espiritual.",
+  versiculo: "✅ Edificados sobre o fundamento dos apóstolos e dos profetas, de que Jesus Cristo é a principal pedra da esquina.",
+  depois: "A igreja é comparada a um edifício. Os apóstolos e profetas são o fundamento (porque receberam e transmitiram a revelação), e Cristo é a pedra angular que sustenta e alinha toda a construção.",
+  tags: "fundamento / apóstolos / profetas / pedra angular",
+  assuntos: ["roma", "paulo", "igreja", "apostolos"]
+},
+
+// 128. Gálatas 6.10
+{
+  id: "gl6.10",
+  referencia: "Gl 6.10",
+  local: "Galácia / Ásia Menor (Turquia)",
+  paisAtual: "Turquia",
+  lider: "Paulo",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~49-55 d.C.",
+  antes: "Paulo conclui a carta aos Gálatas com exortações práticas. Ele falou sobre semear no Espírito, sobre restaurar os caídos e sobre compartilhar cargas.",
+  versiculo: "✅ Então, enquanto temos tempo, façamos bem a todos, mas principalmente aos domésticos da fé.",
+  depois: "A prioridade do bem é para todos, mas especialmente para a família da fé - a igreja. Paulo reconhece que o amor cristão começa dentro da comunidade, mas não se limita a ela.",
+  tags: "fazer bem / família da fé / prioridade",
+  assuntos: ["galacia", "paulo", "amor-cristao", "comunidade"]
+},
+
+// 129. Hebreus 10.25
+{
+  id: "hb10.25",
+  referencia: "Hb 10.25",
+  local: "Roma / Itália",
+  paisAtual: "Itália",
+  lider: "",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~60-65 d.C.",
+  antes: "O autor de Hebreus exorta os cristãos a se aproximarem de Deus com coração sincero. Eles estavam enfrentando perseguição e alguns estavam abandonando a comunhão.",
+  versiculo: "✅ Não deixando a nossa congregação, como é costume de alguns; antes, admoestando-nos uns aos outros; e tanto mais quanto vedes que se vai aproximando aquele dia.",
+  depois: "A exortação mútua e a reunião regular são essenciais para a perseverança, especialmente em tempos de perseguição. O autor alerta que o dia do juízo está se aproximando, o que torna a comunhão ainda mais necessária.",
+  tags: "congregação / exortação / dia / comunhão",
+  assuntos: ["roma", "autor-hebreus", "comunhao", "perseveranca"]
+},
+
+// 130. Mateus 16.18
+{
+  id: "mt16.18",
+  referencia: "Mt 16.18",
+  local: "Cesareia de Filipe / Galileia (Israel)",
+  paisAtual: "Israel",
+  lider: "Jesus",
+  liderReinado: "",
+  periodo: "Período Romano",
+  periodoDatas: "63 a.C. - 70 d.C.",
+  data: "~29-30 d.C.",
+  antes: "Jesus perguntou aos discípulos quem os homens diziam que Ele era. Após várias respostas, Pedro confessou: 'Tu és o Cristo, o Filho do Deus vivo'.",
+  versiculo: "✅ Pois também eu te digo que tu és Pedro, e sobre esta pedra edificarei a minha igreja, e as portas do inferno não prevalecerão contra ela.",
+  depois: "Esta é a primeira vez que Jesus usa a palavra 'igreja' (ekklesia). A 'pedra' sobre a qual a igreja é edificada é a confissão de Pedro de que Jesus é o Cristo. As portas do inferno - imagem de um forte sitiado - não prevalecerão.",
+  tags: "igreja / pedra / portas do inferno / confissão",
+  assuntos: ["cesareia-filipe", "jesus", "igreja", "pedro"]
+},
+
+// 131. Mateus 28.20
+{
+  id: "mt28.20",
+  referencia: "Mt 28.20",
+  local: "Galileia / Monte designado por Jesus (Israel)",
+  paisAtual: "Israel",
+  lider: "Jesus",
+  liderReinado: "",
+  periodo: "Período Romano",
+  periodoDatas: "63 a.C. - 70 d.C.",
+  data: "~30 d.C.",
+  antes: "Após a ressurreição, Jesus encontrou os discípulos na Galileia. Ele lhes deu a Grande Comissão: 'Ide, fazei discípulos de todas as nações, batizando-os... ensinando-os'.",
+  versiculo: "✅ Ensinando-os a guardar todas as coisas que eu vos tenho mandado; e eis que eu estou convosco todos os dias, até à consumação dos séculos.",
+  depois: "A promessa da presença constante de Jesus sustenta a missão da igreja. Ele não abandonou seus discípulos. A mesma presença que esteve com os apóstolos continua com a igreja até o fim dos tempos.",
+  tags: "presença / sempre / Jesus / comissionamento",
+  assuntos: ["galileia", "jesus", "grande-comissao", "presenca-divina"]
+},
+
+// 132. Romanos 12.5
+{
+  id: "rm12.5",
+  referencia: "Rm 12.5",
+  local: "Corinto / Acaia (Grécia)",
+  paisAtual: "Grécia",
+  lider: "Paulo",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~57 d.C.",
+  antes: "Paulo exorta os romanos a apresentarem seus corpos como sacrifício vivo. Ele começa a descrever como os dons devem funcionar no corpo de Cristo.",
+  versiculo: "✅ Assim nós, que somos muitos, somos um só corpo em Cristo, mas individualmente somos membros uns dos outros.",
+  depois: "A unidade no corpo não significa uniformidade. Cada membro tem uma função diferente, mas todos pertencem uns aos outros. Esta interdependência elimina o orgulho e a inveja na igreja.",
+  tags: "membros / uns dos outros / corpo / interdependência",
+  assuntos: ["corinto", "paulo", "corpo-de-cristo", "unidade-igreja"]
+},
+
+// 133. Romanos 16.5
+{
+  id: "rm16.5",
+  referencia: "Rm 16.5",
+  local: "Corinto / Acaia (Grécia)",
+  paisAtual: "Grécia",
+  lider: "Paulo",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~57 d.C.",
+  antes: "Paulo termina a carta aos Romanos com saudações pessoais. Ele lista muitos colaboradores, mostrando seu apreço pela equipe que trabalhou com ele.",
+  versiculo: "✅ Saudai também a igreja que está em sua casa. Saudai a Epêneto, meu amado, que é as primícias da Acaia em Cristo.",
+  depois: "As igrejas domésticas eram comuns no cristianismo primitivo, já que não haviam construções dedicadas ao culto. Priscila e Áquila também tinham uma igreja em sua casa. O cristianismo cresceu através dessas comunidades familiares.",
+  tags: "igreja em casa / saudações / Priscila / Áquila",
+  assuntos: ["corinto", "paulo", "igreja-domestica", "comunidade"]
+},
+
+// 134. Atos 2.4
+{
+  id: "at2.4",
+  referencia: "At 2.4",
+  local: "Jerusalém / Judéia (Israel)",
+  paisAtual: "Israel",
+  lider: "Pedro",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~30 d.C.",
+  antes: "Os apóstolos estavam reunidos no cenáculo no dia de Pentecostes. De repente, veio um som do céu como de um vento impetuoso, e línguas como de fogo repousaram sobre cada um deles.",
+  versiculo: "✅ E todos foram cheios do Espírito Santo, e começaram a falar noutras línguas, conforme o Espírito Santo lhes concedia que falassem.",
+  depois: "O cumprimento da promessa de Jesus (Atos 1.8) inaugurou a era da igreja. A capacitação do Espírito permitiu que os discípulos falassem em línguas, testemunhando a grandeza de Deus aos peregrinos de várias nações.",
+  tags: "Pentecostes / Espírito Santo / línguas / capacitação",
+  assuntos: ["jerusalem", "pentecostes", "espirito-santo", "igreja-primitiva"]
+},
+
+// 135. Atos 2.5
+{
+  id: "at2.5",
+  referencia: "At 2.5",
+  local: "Jerusalém / Judéia (Israel)",
+  paisAtual: "Israel",
+  lider: "Pedro",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~30 d.C.",
+  antes: "Os discípulos começaram a falar em outras línguas pelo poder do Espírito Santo. O som atraiu uma multidão que se reuniu para entender o que estava acontecendo.",
+  versiculo: "✅ E em Jerusalém estavam habitando judeus, varões religiosos, de todas as nações que estão debaixo do céu.",
+  depois: "A diáspora judaica (judeus espalhados pelo império) havia retornado a Jerusalém para a festa de Pentecostes. Eles testemunharam o evento e ouviram o evangelho em suas próprias línguas, levando a mensagem de volta às suas comunidades.",
+  tags: "judeus / nações / Pentecostes / diáspora",
+  assuntos: ["jerusalem", "pentecostes", "judeus", "diaspora"]
+},
+
+// 136. Atos 2.6-8
+{
+  id: "at2.6",
+  referencia: "At 2.6-8",
+  local: "Jerusalém / Judéia (Israel)",
+  paisAtual: "Israel",
+  lider: "Pedro",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~30 d.C.",
+  antes: "O barulho do derramamento do Espírito atraiu uma grande multidão. Os peregrinos estavam confusos porque cada um ouvia os discípulos falando em sua própria língua.",
+  versiculo: "⚠️ E, feito aquele som, ajuntou-se uma multidão, e estava confusa, porque cada um os ouvia falar na sua própria língua. E todos se maravilhavam e se admiravam, dizendo uns aos outros: Porventura não são galileus todos esses que estão falando? Como, pois, os ouvimos, cada um na nossa própria língua em que somos nascidos?",
+  depois: "O milagre de Pentecostes foi auditivo, não apenas vocal. Os ouvintes ouviam em suas línguas nativas o que os discípulos diziam. Isso simbolizava que o evangelho era para todas as nações, revertendo a confusão de línguas de Babel.",
+  tags: "línguas / galileus / milagre / nações",
+  assuntos: ["jerusalem", "pentecostes", "milagre", "linguas"]
+},
+
+// 137. Atos 2.9-11
+{
+  id: "at2.9",
+  referencia: "At 2.9-11",
+  local: "Jerusalém / Judéia (Israel)",
+  paisAtual: "Israel",
+  lider: "Pedro",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~30 d.C.",
+  antes: "A multidão estava confusa e maravilhada porque cada um ouvia os discípulos falando em sua própria língua. Eles se perguntavam como galileus podiam falar tantas línguas.",
+  versiculo: "⚠️ Partos, medos, elamitas; e os que habitam na Mesopotâmia, Judéia, Capadócia, Ponto, Ásia, Frígia, Panfília, Egito, partes da Líbia, junto a Cirene, e forasteiros romanos, judeus e prosélitos, cretenses e árabes; todos os ouvimos falar em nossas próprias línguas as grandezas de Deus.",
+  depois: "A lista de 15 nações representa todo o mundo conhecido na época - do Oriente (Partos, Medos) ao Ocidente (Roma), do Norte (Ponto, Ásia) ao Sul (Egito, Líbia). O evangelho começou em Jerusalém, mas seu destino era o mundo inteiro.",
+  tags: "nações / línguas / lista / universalidade",
+  assuntos: ["jerusalem", "pentecostes", "universalidade", "evangelho"]
+},
+
+// 138. Joel 2.28
+{
+  id: "jl2.28",
+  referencia: "Jl 2.28",
+  local: "Judá (Israel)",
+  paisAtual: "Israel",
+  lider: "Joel",
+  liderReinado: "",
+  periodo: "Profetas Menores",
+  periodoDatas: "~835-796 a.C.",
+  data: "~830 a.C.",
+  antes: "Joel profetizou sobre um juízo iminente de gafanhotos, mas também sobre um derramamento futuro do Espírito que inauguraria uma nova era.",
+  versiculo: "✅ E há de ser que, depois, derramarei o meu Espírito sobre toda a carne; e vossos filhos e vossas filhas profetizarão, os vossos velhos sonharão sonhos, os vossos jovens terão visões.",
+  depois: "Pedro citou esta profecia em Atos 2.17-21 como sendo cumprida em Pentecostes. O derramamento não seria mais restrito a profetas ou reis, mas sobre 'toda a carne' - homens e mulheres, jovens e velhos, judeus e gentios.",
+  tags: "derramamento / Espírito / profecia / Pentecostes",
+  assuntos: ["juda", "joel", "espirito-santo", "profecia", "pentecostes"]
+},
+
+// 139. Levítico 23.15-16
+{
+  id: "lv23.15",
+  referencia: "Lv 23.15-16",
+  local: "Sinai / Deserto (Egito/Israel)",
+  paisAtual: "Egito/Israel",
+  lider: "Moisés",
+  liderReinado: "",
+  periodo: "Êxodo e Conquista",
+  periodoDatas: "~1446-1400 a.C.",
+  data: "~1446 a.C.",
+  antes: "Deus instruiu Moisés sobre as festas do Senhor. Depois da Páscoa e dos Pães Ázimos, vinha a festa das Semanas (Pentecostes), cinquenta dias depois.",
+  versiculo: "✅ Também contareis desde o dia seguinte ao sábado, desde o dia em que trouxerdes o molho da oferta de movimento, sete semanas inteiras serão. Até ao dia seguinte ao sétimo sábado, contareis cinquenta dias; então oferecereis nova oferta de manjares ao Senhor.",
+  depois: "Pentecostes (do grego 'pentekoste' = quinquagésimo) era uma festa de colheita. Era também uma das três festas de peregrinação, quando os judeus iam a Jerusalém. Foi neste contexto que o Espírito Santo foi derramado.",
+  tags: "Pentecostes / festa / semanas / colheita",
+  assuntos: ["sinai", "moises", "pentecostes", "festas-biblicas"]
+},
+
+// 140. 1 Coríntios 1.2
+{
+  id: "1co1.2",
+  referencia: "1 Co 1.2",
+  local: "Corinto / Acaia (Grécia)",
+  paisAtual: "Grécia",
+  lider: "Paulo",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~55 d.C.",
+  antes: "Paulo inicia sua primeira carta aos coríntios com saudações. Ele escreve para uma igreja que ele havia fundado em sua segunda viagem missionária.",
+  versiculo: "✅ À igreja de Deus que está em Corinto, aos santificados em Cristo Jesus, chamados santos, com todos os que em todo lugar invocam o nome de nosso Senhor Jesus Cristo, Senhor deles e nosso.",
+  depois: "Paulo distingue a igreja local (em Corinto) da igreja universal (todos os que invocam o nome de Cristo). A carta abordaria problemas específicos da igreja coríntia: divisões, imoralidade, litígios, dons e a ressurreição.",
+  tags: "igreja / Corinto / santos / chamados",
+  assuntos: ["corinto", "paulo", "igreja-local", "igreja-universal"]
+},
+
+// 141. Atos 20.28
+{
+  id: "at20.28",
+  referencia: "At 20.28",
+  local: "Mileto / Ásia Menor (Turquia)",
+  paisAtual: "Turquia",
+  lider: "Paulo",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~57 d.C.",
+  antes: "Paulo convocou os anciãos da igreja de Éfeso para encontrá-lo em Mileto. Ele sabia que seria preso em Jerusalém e não os veria novamente.",
+  versiculo: "✅ Olhai, pois, por vós e por todo o rebanho sobre que o Espírito Santo vos constituiu bispos, para apascentardes a igreja de Deus, que ele resgatou com seu próprio sangue.",
+  depois: "Paulo exorta os líderes a cuidarem da igreja, que Deus comprou com o sangue de Cristo. A imagem é pastoral: a igreja é um rebanho, os líderes são pastores, e o preço pago foi o sangue do próprio Filho de Deus.",
+  tags: "bispos / apascentar / igreja / sangue",
+  assuntos: ["mileto", "paulo", "lideranca-igreja", "pastoral"]
+},
+
+// 142. Colossenses 1.18
+{
+  id: "cl1.18",
+  referencia: "Cl 1.18",
+  local: "Roma / Itália",
+  paisAtual: "Itália",
+  lider: "Paulo",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~60-62 d.C.",
+  antes: "Paulo escreve um dos mais elevados hinos cristológicos sobre a supremacia de Cristo. Ele é a imagem do Deus invisível, o primogênito de toda criação.",
+  versiculo: "✅ E ele é a cabeça do corpo, da igreja; é o princípio, o primogênito dentre os mortos, para que em tudo tenha a preeminência.",
+  depois: "Cristo é a cabeça, a igreja é o corpo. Ele tem a preeminência em tudo: na criação (primogênito de toda criação) e na redenção (primogênito dentre os mortos). A igreja existe para manifestar a supremacia de Cristo.",
+  tags: "cabeça / corpo / primogênito / preeminência",
+  assuntos: ["roma", "paulo", "cristo", "igreja", "supremacia"]
+},
+
+// 143. Hebreus 13.17
+{
+  id: "hb13.17",
+  referencia: "Hb 13.17",
+  local: "Roma / Itália",
+  paisAtual: "Itália",
+  lider: "",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~60-65 d.C.",
+  antes: "O autor de Hebreus dá instruções práticas para a vida cristã. Ele aborda o amor fraternal, a hospitalidade, o casamento e o contentamento.",
+  versiculo: "✅ Obedecei a vossos pastores e sujeitai-vos a eles; porque velam por vossas almas, como quem há de dar conta delas; para que o façam com alegria e não gemendo, porque isso não vos seria útil.",
+  depois: "A liderança da igreja tem responsabilidade diante de Deus pelas almas sob seus cuidados. A resposta da congregação deve ser obediência e submissão voluntária. Quando os líderes lideram com alegria, toda a igreja se beneficia.",
+  tags: "obedecer / pastores / vigiar / dar contas",
+  assuntos: ["roma", "autor-hebreus", "lideranca", "igreja-local"]
+},
+
+// 144. Apocalipse 19.7-8
+{
+  id: "ap19.7",
+  referencia: "Ap 19.7-8",
+  local: "Patmos / Ilhas do Egeu (Grécia)",
+  paisAtual: "Grécia",
+  lider: "João",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~95 d.C.",
+  antes: "João ouve uma grande multidão no céu celebrando a queda da Babilônia e a vitória de Deus. Há sons de aleluia e adoração.",
+  versiculo: "✅ Regozijemo-nos, e alegremo-nos, e demos-lhe glória; porque vindas são as bodas do Cordeiro, e já a sua esposa se preparou. E foi-lhe dado que se vestisse de linho fino, puro e resplandecente; porque o linho fino são as justiças dos santos.",
+  depois: "A igreja é apresentada como a noiva do Cordeiro (Cristo). As bodas representam a união final e eterna entre Cristo e Sua igreja. O vestido de linho fino representa as obras justas dos santos - a evidência da salvação, não o meio dela.",
+  tags: "bodas / Cordeiro / noiva / justiças",
+  assuntos: ["patmos", "joao", "noiva-de-cristo", "apocalipse", "escatologia"]
+},
+
+// 145. Apocalipse 21.2
+{
+  id: "ap21.2",
+  referencia: "Ap 21.2",
+  local: "Patmos / Ilhas do Egeu (Grécia)",
+  paisAtual: "Grécia",
+  lider: "João",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~95 d.C.",
+  antes: "João vê um novo céu e uma nova terra. O primeiro céu e a primeira terra passaram, e o mar já não existe. Deus habitará com os homens.",
+  versiculo: "✅ E eu, João, vi a santa cidade, a nova Jerusalém, que de Deus descia do céu, aparelhada como uma esposa adornada para o seu marido.",
+  depois: "A nova Jerusalém é a imagem final da igreja - a noiva de Cristo, preparada e adornada para o encontro com seu marido. A cidade celestial não é apenas um lugar, mas um povo - a comunidade redimida em união perfeita com Deus.",
+  tags: "nova Jerusalém / noiva / cidade santa / esposa",
+  assuntos: ["patmos", "joao", "nova-jerusalem", "apocalipse", "escatologia"]
+},
+
+// 146. Atos 9.4
+{
+  id: "at9.4",
+  referencia: "At 9.4",
+  local: "Damasco / Síria",
+  paisAtual: "Síria",
+  lider: "Saulo/Paulo",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~34-35 d.C.",
+  antes: "Saulo (Paulo) estava a caminho de Damasco com autorização para prender cristãos. Ele perseguia a igreja ferozmente, achando que estava servindo a Deus.",
+  versiculo: "✅ E, caindo em terra, ouviu uma voz que lhe dizia: Saulo, Saulo, por que me persegues?",
+  depois: "Ao perguntar 'Quem és, Senhor?', Saulo descobre que perseguir a igreja é perseguir o próprio Cristo. A identificação entre Cristo e Sua igreja é tão íntima que o que se faz à igreja se faz a Ele. Esta foi a virada na vida de Paulo.",
+  tags: "perseguição / Saulo / igreja / Cristo",
+  assuntos: ["damasco", "paulo", "conversao", "igreja", "perseguicao"]
+},
+
+// 147. Efésios 5.25
+{
+  id: "ef5.25",
+  referencia: "Ef 5.25",
+  local: "Roma / Itália",
+  paisAtual: "Itália",
+  lider: "Paulo",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~60-62 d.C.",
+  antes: "Paulo instrui sobre relacionamentos familiares: esposas devem se sujeitar aos maridos, e maridos devem amar suas esposas. O casamento é um mistério que aponta para Cristo e a igreja.",
+  versiculo: "✅ Vós, maridos, amai vossas mulheres, como também Cristo amou a igreja e a si mesmo se entregou por ela.",
+  depois: "O amor de Cristo pela igreja é o padrão do amor conjugal. Ele não é um amor sentimental ou egoísta, mas sacrificial - 'se entregou por ela'. A cruz é a expressão máxima do amor de Cristo por Sua igreja.",
+  tags: "amar / igreja / entregou / sacrifício",
+  assuntos: ["roma", "paulo", "amor-cristo", "igreja", "casamento"]
+},
+
+// 148. Efésios 5.27
+{
+  id: "ef5.27",
+  referencia: "Ef 5.27",
+  local: "Roma / Itália",
+  paisAtual: "Itália",
+  lider: "Paulo",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~60-62 d.C.",
+  antes: "Paulo continua descrevendo o amor sacrificial de Cristo pela igreja. Ele não apenas morreu por ela, mas também a purifica e santifica.",
+  versiculo: "✅ Para a apresentar a si mesmo igreja gloriosa, sem mácula, nem ruga, nem coisa semelhante, mas santa e irrepreensível.",
+  depois: "O objetivo final de Cristo para a igreja é apresentá-la perfeita a Si mesmo. A santificação é obra contínua de Cristo através da Palavra e do Espírito. A igreja será sem mácula (moralmente pura), sem ruga (eternamente jovem), santa e irrepreensível.",
+  tags: "igreja / gloriosa / sem mácula / santa",
+  assuntos: ["roma", "paulo", "igreja", "santificacao", "gloria"]
+},
+
+// 149. Oséias 2.19-20
+{
+  id: "os2.19",
+  referencia: "Os 2.19-20",
+  local: "Israel / Reino do Norte",
+  paisAtual: "Israel",
+  lider: "Jeroboão II",
+  liderReinado: "793-753 a.C.",
+  periodo: "Reino Dividido (Norte)",
+  periodoDatas: "930-722 a.C.",
+  data: "~755-715 a.C.",
+  antes: "Deus, através de Oséias, usa o casamento do profeta com uma prostituta (Gômer) como metáfora do relacionamento de Deus com Israel infiel. Deus promete restaurar a aliança.",
+  versiculo: "✅ E desposar-te-ei comigo para sempre; desposar-te-ei comigo em justiça, e em juízo, e em benignidade, e em misericórdias. E desposar-te-ei comigo em fidelidade, e conhecerás ao Senhor.",
+  depois: "O amor de Deus por Israel é como um casamento. Apesar da infidelidade de Israel (idolatria), Deus promete restaurar a aliança. Esta imagem prepara o Novo Testamento, onde a igreja é a noiva de Cristo - um relacionamento de amor eterno baseado em justiça, juízo, benignidade, misericórdia e fidelidade.",
+  tags: "desposar / noiva / aliança / fidelidade",
+  assuntos: ["israel", "oseias", "alianca", "noiva-de-deus", "amor-divino"]
+},
+// ==================== CONTEXTOS LIVRO 5 - CAPÍTULO 1 (COMPLEMENTARES) ====================
+
+// 150. 1 Coríntios 3.16
+{
+  id: "1co3.16",
+  referencia: "1 Co 3.16",
+  local: "Corinto / Acaia (Grécia)",
+  paisAtual: "Grécia",
+  lider: "Paulo",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~55 d.C.",
+  antes: "Paulo está corrigindo divisões na igreja de Corinto. Alguns seguiam Paulo, outros Apolo, outros Cefas. Ele argumenta que todos são servos de Deus e que a igreja é o templo de Deus.",
+  versiculo: "✅ Não sabeis vós que sois o templo de Deus e que o Espírito de Deus habita em vós?",
+  depois: "A igreja não é um edifício físico, mas um templo espiritual onde Deus habita. O Espírito Santo não habita em templos feitos por mãos humanas, mas no povo de Deus. Esta verdade exige santidade e respeito mútuo entre os crentes.",
+  tags: "templo / Deus / habitação / Espírito",
+  assuntos: ["corinto", "paulo", "igreja", "templo-deus"]
+},
+
+// 151. 1 Coríntios 12.7
+{
+  id: "1co12.7",
+  referencia: "1 Co 12.7",
+  local: "Corinto / Acaia (Grécia)",
+  paisAtual: "Grécia",
+  lider: "Paulo",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~55 d.C.",
+  antes: "Paulo introduz o tema dos dons espirituais em Corinto. Havia competição e orgulho em relação aos dons, especialmente o dom de línguas.",
+  versiculo: "✅ Mas a manifestação do Espírito é dada a cada um para o que for útil.",
+  depois: "O propósito dos dons não é exaltação pessoal, mas utilidade para a comunidade. Cada dom é uma manifestação do Espírito para o bem comum. Paulo usará essa verdade para corrigir os abusos em Corinto.",
+  tags: "dons / manifestação / Espírito / utilidade",
+  assuntos: ["corinto", "paulo", "dons-espirituais", "comunidade"]
+},
+
+// 152. 1 Coríntios 12.12
+{
+  id: "1co12.12",
+  referencia: "1 Co 12.12",
+  local: "Corinto / Acaia (Grécia)",
+  paisAtual: "Grécia",
+  lider: "Paulo",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~55 d.C.",
+  antes: "Paulo usa a metáfora do corpo humano para ensinar sobre a unidade e diversidade na igreja. Os coríntios estavam divididos e competindo entre si.",
+  versiculo: "✅ Porque, assim como o corpo é um e tem muitos membros, e todos os membros, sendo muitos, são um só corpo, assim é Cristo também.",
+  depois: "A igreja é como um corpo com muitos membros que funcionam juntos. Cada membro é necessário e tem uma função única. A diversidade não é problema, mas força. A unidade não significa uniformidade.",
+  tags: "corpo / membros / unidade / diversidade",
+  assuntos: ["corinto", "paulo", "corpo-de-cristo", "unidade-igreja"]
+},
+
+// 153. 1 Coríntios 12.27
+{
+  id: "1co12.27",
+  referencia: "1 Co 12.27",
+  local: "Corinto / Acaia (Grécia)",
+  paisAtual: "Grécia",
+  lider: "Paulo",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~55 d.C.",
+  antes: "Paulo conclui sua argumentação sobre o corpo de Cristo. Ele já explicou que muitos membros formam um corpo e que todos são necessários.",
+  versiculo: "✅ Ora, vós sois o corpo de Cristo, e individualmente seus membros.",
+  depois: "Esta é uma das declarações mais diretas sobre a identidade da igreja. Os crentes não são apenas seguidores de Cristo; eles são o próprio corpo de Cristo na terra. Cada um tem um papel único e indispensável.",
+  tags: "corpo / Cristo / membros / identidade",
+  assuntos: ["corinto", "paulo", "corpo-de-cristo", "igreja"]
+},
+
+// 154. 1 Pedro 2.5
+{
+  id: "1pe2.5",
+  referencia: "1 Pe 2.5",
+  local: "Roma / Itália",
+  paisAtual: "Itália",
+  lider: "Pedro",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~60-65 d.C.",
+  antes: "Pedro escreve aos cristãos dispersos enfrentando perseguição. Ele os lembra de sua identidade como pedras vivas em construção espiritual.",
+  versiculo: "✅ Vós também, como pedras vivas, sois edificados casa espiritual e sacerdócio santo, para oferecer sacrifícios espirituais agradáveis a Deus por Jesus Cristo.",
+  depois: "Cada crente é uma 'pedra viva' na construção da igreja. Diferente de um templo de pedras mortas, a igreja é feita de pessoas vivas. Todos são sacerdotes com acesso direto a Deus, oferecendo vidas como sacrifícios espirituais.",
+  tags: "pedras vivas / sacerdócio / templo / espiritual",
+  assuntos: ["roma", "pedro", "igreja", "sacerdocio"]
+},
+
+// 155. 1 Tessalonicenses 5.11
+{
+  id: "1ts5.11",
+  referencia: "1 Ts 5.11",
+  local: "Corinto / Acaia (Grécia)",
+  paisAtual: "Grécia",
+  lider: "Paulo",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~50-51 d.C.",
+  antes: "Paulo conclui sua primeira carta aos tessalonicenses com exortações práticas sobre a vida cristã e a esperança da volta de Cristo.",
+  versiculo: "✅ Por isso, exortai-vos uns aos outros e edificai-vos reciprocamente, como também estais fazendo.",
+  depois: "A exortação mútua e a edificação são responsabilidades de todos os crentes, não apenas dos líderes. A igreja cresce quando os membros se encorajam mutuamente. Esta é uma das marcas da comunidade cristã saudável.",
+  tags: "exortação / edificação / mútuo / encorajamento",
+  assuntos: ["corinto", "paulo", "comunidade", "edificacao"]
+},
+
+// 156. Apocalipse 7.9
+{
+  id: "ap7.9",
+  referencia: "Ap 7.9",
+  local: "Patmos / Ilhas do Egeu (Grécia)",
+  paisAtual: "Grécia",
+  lider: "João",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~95 d.C.",
+  antes: "João vê uma visão dos 144.000 selados de Israel. Depois, uma multidão incontável de todas as nações aparece diante do trono de Deus.",
+  versiculo: "✅ Depois destas coisas, olhei, e eis grande multidão que ninguém podia contar, de todas as nações, tribos, povos e línguas, em pé diante do trono e diante do Cordeiro, vestidos de vestes brancas, com palmas nas mãos.",
+  depois: "A igreja universal é composta de pessoas de todas as nações, tribos, povos e línguas. A salvação não é exclusiva de um grupo étnico. A diversidade é celebrada na adoração celestial.",
+  tags: "multidão / nações / tribos / línguas",
+  assuntos: ["patmos", "joao", "igreja-universal", "apocalipse"]
+},
+
+// 157. Atos 1.3
+{
+  id: "at1.3",
+  referencia: "At 1.3",
+  local: "Jerusalém / Judéia (Israel)",
+  paisAtual: "Israel",
+  lider: "Jesus",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~30 d.C.",
+  antes: "Lucas escreve a Teófilo sobre o que Jesus começou a fazer e ensinar. Após a ressurreição, Jesus apareceu aos apóstolos durante quarenta dias.",
+  versiculo: "✅ Aos quais também, depois de ter padecido, se apresentou vivo, com muitas e infalíveis provas, sendo visto por eles durante quarenta dias, falando das coisas concernentes ao reino de Deus.",
+  depois: "Jesus passou quarenta dias ensinando os apóstolos sobre o reino de Deus antes de ascender ao céu. Este período preparou-os para a missão que receberiam em Pentecostes. O reino de Deus era o tema central de Seu ensino pós-ressurreição.",
+  tags: "quarenta dias / reino de Deus / ressurreição",
+  assuntos: ["jerusalem", "jesus", "ressurreicao", "reino-deus"]
+},
+
+// 158. Atos 1.4-5
+{
+  id: "at1.4",
+  referencia: "At 1.4-5",
+  local: "Jerusalém / Judéia (Israel)",
+  paisAtual: "Israel",
+  lider: "Jesus",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~30 d.C.",
+  antes: "Jesus estava reunido com os apóstolos antes de Sua ascensão. Eles perguntaram se Ele restauraria o reino a Israel naquele momento.",
+  versiculo: "✅ E, estando com eles, determinou-lhes que não se ausentassem de Jerusalém, mas que esperassem a promessa do Pai, que, disse ele, de mim ouvistes. Porque, na verdade, João batizou com água, mas vós sereis batizados com o Espírito Santo, não muito depois destes dias.",
+  depois: "Jesus ordenou que os discípulos esperassem em Jerusalém pela promessa do Pai - o batismo com o Espírito Santo. O dom do Espírito seria a capacitação para a missão de serem testemunhas em Jerusalém, Judeia, Samaria e até os confins da terra.",
+  tags: "promessa / batismo / Espírito Santo / espera",
+  assuntos: ["jerusalem", "jesus", "espirito-santo", "pentecostes"]
+},
+
+// 159. Atos 1.14
+{
+  id: "at1.14",
+  referencia: "At 1.14",
+  local: "Jerusalém / Judéia (Israel)",
+  paisAtual: "Israel",
+  lider: "Pedro",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~30 d.C.",
+  antes: "Após a ascensão de Jesus, os apóstolos voltaram para Jerusalém. Eles se reuniram no cenáculo, onde estavam hospedados, junto com outras mulheres e os irmãos de Jesus.",
+  versiculo: "✅ Todos estes perseveravam unanimemente em oração e súplica, com as mulheres, e Maria, mãe de Jesus, e com seus irmãos.",
+  depois: "A igreja primitiva nasceu da oração. Cerca de 120 pessoas estavam reunidas em oração constante, aguardando a promessa do Espírito Santo. A unidade e a perseverança em oração prepararam o cenário para o derramamento de Pentecostes.",
+  tags: "oração / unânime / discípulos / espera",
+  assuntos: ["jerusalem", "igreja-primitiva", "oracao", "pentecostes"]
+},
+
+// 160. Atos 2.1
+{
+  id: "at2.1",
+  referencia: "At 2.1",
+  local: "Jerusalém / Judéia (Israel)",
+  paisAtual: "Israel",
+  lider: "Pedro",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~30 d.C.",
+  antes: "Os discípulos estavam reunidos em Jerusalém, obedecendo à ordem de Jesus de esperar a promessa do Pai. Eles perseveravam em oração.",
+  versiculo: "✅ E, ao cumprir-se o dia de Pentecostes, estavam todos reunidos no mesmo lugar.",
+  depois: "Pentecostes era uma das três festas de peregrinação judaica, celebrada cinquenta dias após a Páscoa. Foi neste contexto que o Espírito Santo foi derramado. O cumprimento da promessa de Jesus inaugurou a era da igreja.",
+  tags: "Pentecostes / cumprimento / dia / promessa",
+  assuntos: ["jerusalem", "pentecostes", "espirito-santo", "igreja-primitiva"]
+},
+
+// 161. Atos 2.11
+{
+  id: "at2.11",
+  referencia: "At 2.11",
+  local: "Jerusalém / Judéia (Israel)",
+  paisAtual: "Israel",
+  lider: "Pedro",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~30 d.C.",
+  antes: "A multidão estava confusa porque cada um ouvia os discípulos falando em sua própria língua. Eles listaram as várias nações representadas.",
+  versiculo: "✅ Cretenses e árabes, todos os ouvimos falar em nossas próprias línguas as grandezas de Deus.",
+  depois: "Os peregrinos não ouviram palavras vazias, mas 'as grandezas de Deus'. O evangelho começou a ser proclamado em todas as línguas, revertendo a confusão de Babel. A mensagem era sobre as maravilhas de Deus, especialmente a ressurreição de Cristo.",
+  tags: "maravilhas / Deus / línguas / grandezas",
+  assuntos: ["jerusalem", "pentecostes", "evangelho", "linguas"]
+},
+
+// 162. Atos 2.16-17
+{
+  id: "at2.16",
+  referencia: "At 2.16-17",
+  local: "Jerusalém / Judéia (Israel)",
+  paisAtual: "Israel",
+  lider: "Pedro",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~30 d.C.",
+  antes: "Alguns zombavam dos discípulos, dizendo que estavam embriagados. Pedro se levantou para explicar o que estava acontecendo.",
+  versiculo: "✅ Mas isto é o que foi dito pelo profeta Joel: E nos últimos dias acontecerá, diz Deus, que do meu Espírito derramarei sobre toda a carne.",
+  depois: "Pedro cita Joel 2.28-32 para explicar Pentecostes. O derramamento do Espírito não era embriaguez, mas o cumprimento da profecia. A era dos 'últimos dias' havia começado com a vinda do Espírito.",
+  tags: "Joel / profecia / últimos dias / derramamento",
+  assuntos: ["jerusalem", "pedro", "profecia", "pentecostes", "joel"]
+},
+
+// 163. Atos 2.22-23
+{
+  id: "at2.22",
+  referencia: "At 2.22-23",
+  local: "Jerusalém / Judéia (Israel)",
+  paisAtual: "Israel",
+  lider: "Pedro",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~30 d.C.",
+  antes: "Pedro começa a pregar o evangelho após citar a profecia de Joel. Ele conecta o derramamento do Espírito com a vida, morte e ressurreição de Jesus.",
+  versiculo: "✅ Varões israelitas, ouvi estas palavras: A Jesus Nazareno, varão aprovado por Deus entre vós com milagres, prodígios e sinais, que Deus por ele fez no meio de vós, como vós mesmos bem sabeis; a este, que foi entregue pelo determinado conselho e presciência de Deus, vós crucificastes e matastes pelas mãos de injustos.",
+  depois: "Pedro proclama que Jesus era aprovado por Deus através de milagres e sinais. A cruz não foi um acidente, mas parte do plano de Deus. Os ouvintes foram confrontados com sua culpa na crucificação.",
+  tags: "Jesus / nazareno / crucificado / milagres",
+  assuntos: ["jerusalem", "pedro", "evangelho", "cruz", "ressurreicao"]
+},
+
+// 164. Atos 2.24
+{
+  id: "at2.24",
+  referencia: "At 2.24",
+  local: "Jerusalém / Judéia (Israel)",
+  paisAtual: "Israel",
+  lider: "Pedro",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~30 d.C.",
+  antes: "Pedro continua seu sermão, explicando que Jesus foi crucificado por homens injustos, mas Deus o ressuscitou.",
+  versiculo: "✅ Ao qual Deus ressuscitou, soltas as dores da morte, pois não era possível que fosse retido por ela.",
+  depois: "A ressurreição não foi um milagre qualquer. Era 'impossível' que a morte retivesse Jesus porque Ele era o Santo de Deus. Pedro cita o Salmo 16 para provar que Davi profetizou a ressurreição do Messias.",
+  tags: "ressurreição / morte / libertou / impossível",
+  assuntos: ["jerusalem", "pedro", "ressurreicao", "evangelho"]
+},
+
+// 165. Atos 2.32-36
+{
+  id: "at2.32",
+  referencia: "At 2.32-36",
+  local: "Jerusalém / Judéia (Israel)",
+  paisAtual: "Israel",
+  lider: "Pedro",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~30 d.C.",
+  antes: "Pedro conclui sua argumentação mostrando que Davi não poderia estar falando de si mesmo, pois ele morreu e foi sepultado. Davi falava do Messias.",
+  versiculo: "⚠️ Deus ressuscitou a este Jesus, do que todos nós somos testemunhas. Exaltado, pois, à destra de Deus, e tendo recebido do Pai a promessa do Espírito Santo, derramou isto que vós agora vedes e ouvis. Porque Davi não subiu aos céus, mas ele mesmo diz: Disse o Senhor ao meu Senhor: Assenta-te à minha direita, até que eu ponha os teus inimigos por escabelo de teus pés. Saiba, pois, com certeza toda a casa de Israel que a este Jesus, a quem vós crucificastes, Deus o fez Senhor e Cristo.",
+  depois: "Pedro conclui com três verdades: Jesus ressuscitou, Jesus foi exaltado à direita de Deus, e Jesus derramou o Espírito Santo. A conclusão: Jesus é Senhor e Cristo. A multidão, compungida, perguntou: 'Que faremos?'",
+  tags: "testemunhas / exaltado / Senhor / Cristo",
+  assuntos: ["jerusalem", "pedro", "pentecostes", "evangelho"]
+},
+
+// 166. Atos 2.37
+{
+  id: "at2.37",
+  referencia: "At 2.37",
+  local: "Jerusalém / Judéia (Israel)",
+  paisAtual: "Israel",
+  lider: "Pedro",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~30 d.C.",
+  antes: "Pedro acabou de declarar que Jesus, a quem crucificaram, foi feito Senhor e Cristo pelo Deus. A mensagem foi direta e confrontadora.",
+  versiculo: "✅ E, ouvindo eles isto, compungiram-se em seu coração, e perguntaram a Pedro e aos demais apóstolos: Homens irmãos, que faremos?",
+  depois: "A pregação de Pedro produziu convicção de pecado. 'Compungir-se' significa ser cortado no coração. Eles não perguntaram 'o que aconteceu?' mas 'o que faremos?'. A pregação exigia uma resposta.",
+  tags: "compungidos / coração / perguntaram / resposta",
+  assuntos: ["jerusalem", "pedro", "conviccao", "arrependimento"]
+},
+
+// 167. Atos 2.38
+{
+  id: "at2.38",
+  referencia: "At 2.38",
+  local: "Jerusalém / Judéia (Israel)",
+  paisAtual: "Israel",
+  lider: "Pedro",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~30 d.C.",
+  antes: "A multidão perguntou a Pedro o que deveriam fazer após serem convencidos de seu pecado contra Jesus.",
+  versiculo: "✅ E Pedro lhes disse: Arrependei-vos, e cada um de vós seja batizado em nome de Jesus Cristo, para perdão dos pecados; e recebereis o dom do Espírito Santo.",
+  depois: "A resposta de Pedro é o primeiro convite ao evangelho após Pentecostes. Duas ações: arrependimento (mudança de mente) e batismo (identificação pública com Cristo). Duas promessas: perdão dos pecados e o dom do Espírito Santo.",
+  tags: "arrependei / batismo / perdão / Espírito Santo",
+  assuntos: ["jerusalem", "pedro", "evangelho", "arrependimento", "batismo"]
+},
+
+// 168. Atos 2.41
+{
+  id: "at2.41",
+  referencia: "At 2.41",
+  local: "Jerusalém / Judéia (Israel)",
+  paisAtual: "Israel",
+  lider: "Pedro",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~30 d.C.",
+  antes: "Pedro pregou com muitas outras palavras, exortando-os a se salvarem da geração perversa. A mensagem foi clara e urgente.",
+  versiculo: "✅ De sorte que foram batizados os que de bom grado receberam a sua palavra; e naquele dia agregaram-se quase três mil almas.",
+  depois: "O resultado foi impressionante: 3.000 pessoas se converteram e foram batizadas. A igreja primitiva nasceu com um crescimento exponencial. 'De bom grado' indica que não houve coerção - eles receberam a palavra voluntariamente.",
+  tags: "batizados / três mil / almas / conversão",
+  assuntos: ["jerusalem", "pedro", "igreja-primitiva", "pentecostes"]
+},
+
+// 169. Atos 9.4
+{
+  id: "at9.4",
+  referencia: "At 9.4",
+  local: "Damasco / Síria",
+  paisAtual: "Síria",
+  lider: "Saulo/Paulo",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~34-35 d.C.",
+  antes: "Saulo (Paulo) estava a caminho de Damasco com autorização para prender cristãos. Ele perseguia a igreja ferozmente, achando que estava servindo a Deus.",
+  versiculo: "✅ E, caindo em terra, ouviu uma voz que lhe dizia: Saulo, Saulo, por que me persegues?",
+  depois: "Ao perguntar 'Quem és, Senhor?', Saulo descobre que perseguir a igreja é perseguir o próprio Cristo. A identificação entre Cristo e Sua igreja é tão íntima que o que se faz à igreja se faz a Ele. Esta foi a virada na vida de Paulo.",
+  tags: "perseguição / Saulo / igreja / Cristo",
+  assuntos: ["damasco", "paulo", "conversao", "igreja", "perseguicao"]
+},
+
+// 170. Atos 20.28
+{
+  id: "at20.28",
+  referencia: "At 20.28",
+  local: "Mileto / Ásia Menor (Turquia)",
+  paisAtual: "Turquia",
+  lider: "Paulo",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~57 d.C.",
+  antes: "Paulo convocou os anciãos da igreja de Éfeso para encontrá-lo em Mileto. Ele sabia que seria preso em Jerusalém e não os veria novamente.",
+  versiculo: "✅ Olhai, pois, por vós e por todo o rebanho sobre que o Espírito Santo vos constituiu bispos, para apascentardes a igreja de Deus, que ele resgatou com seu próprio sangue.",
+  depois: "Paulo exorta os líderes a cuidarem da igreja, que Deus comprou com o sangue de Cristo. A imagem é pastoral: a igreja é um rebanho, os líderes são pastores, e o preço pago foi o sangue do próprio Filho de Deus.",
+  tags: "bispos / apascentar / igreja / sangue",
+  assuntos: ["mileto", "paulo", "lideranca-igreja", "pastoral"]
+},
+
+// 171. Colossenses 1.18
+{
+  id: "cl1.18",
+  referencia: "Cl 1.18",
+  local: "Roma / Itália",
+  paisAtual: "Itália",
+  lider: "Paulo",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~60-62 d.C.",
+  antes: "Paulo escreve um dos mais elevados hinos cristológicos sobre a supremacia de Cristo. Ele é a imagem do Deus invisível, o primogênito de toda criação.",
+  versiculo: "✅ E ele é a cabeça do corpo, da igreja; é o princípio, o primogênito dentre os mortos, para que em tudo tenha a preeminência.",
+  depois: "Cristo é a cabeça, a igreja é o corpo. Ele tem a preeminência em tudo: na criação (primogênito de toda criação) e na redenção (primogênito dentre os mortos). A igreja existe para manifestar a supremacia de Cristo.",
+  tags: "cabeça / corpo / primogênito / preeminência",
+  assuntos: ["roma", "paulo", "cristo", "igreja", "supremacia"]
+},
+
+// 172. Colossenses 1.23
+{
+  id: "cl1.23",
+  referencia: "Cl 1.23",
+  local: "Roma / Itália",
+  paisAtual: "Itália",
+  lider: "Paulo",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~60-62 d.C.",
+  antes: "Paulo escreve aos colossenses sobre a supremacia de Cristo. Ele os exorta a permanecerem firmes na fé, sem se desviarem da esperança do evangelho.",
+  versiculo: "✅ Se, na verdade, permanecerdes fundados e firmes na fé, e não vos moverdes da esperança do evangelho que ouvistes, e que foi pregado a toda criatura que está debaixo do céu; e do qual eu, Paulo, sou feito ministro.",
+  depois: "O evangelho já havia se espalhado por todo o mundo conhecido na época de Paulo. A mensagem de Cristo não era um movimento local, mas universal. Paulo se via como ministro desse evangelho global.",
+  tags: "evangelho / pregação / universal / permanecer",
+  assuntos: ["roma", "paulo", "evangelho", "universalidade"]
+},
+
+// 173. Efésios 1.22-23
+{
+  id: "ef1.22",
+  referencia: "Ef 1.22-23",
+  local: "Roma / Itália",
+  paisAtual: "Itália",
+  lider: "Paulo",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~60-62 d.C.",
+  antes: "Paulo ora para que os efésios conheçam o poder de Deus manifestado em Cristo. Ele descreve a posição exaltada de Cristo após a ressurreição.",
+  versiculo: "✅ E sujeitou todas as coisas debaixo de seus pés, e sobre todas as coisas o constituiu como cabeça da igreja, que é o seu corpo, a plenitude daquele que cumpre tudo em todos.",
+  depois: "Cristo é a cabeça e a igreja é o corpo. A igreja não é apenas seguidora de Cristo, mas Sua plenitude - Ele Se expressa através dela. Esta é uma das declarações mais elevadas sobre a igreja no Novo Testamento.",
+  tags: "cabeça / corpo / igreja / plenitude",
+  assuntos: ["roma", "paulo", "igreja", "corpo-de-cristo"]
+},
+
+// 174. Efésios 2.19
+{
+  id: "ef2.19",
+  referencia: "Ef 2.19",
+  local: "Roma / Itália",
+  paisAtual: "Itália",
+  lider: "Paulo",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~60-62 d.C.",
+  antes: "Paulo explica que tanto judeus quanto gentios foram reconciliados com Deus através da cruz. Antes, os gentios eram estrangeiros e excluídos das alianças.",
+  versiculo: "✅ Assim que já não sois estrangeiros, nem forasteiros, mas concidadãos dos santos e da família de Deus.",
+  depois: "A igreja é uma nova família, onde judeus e gentios são membros da mesma casa. Não há mais divisão étnica ou religiosa. Todos têm igual acesso a Deus através de Cristo.",
+  tags: "família / concidadãos / santos / unidade",
+  assuntos: ["roma", "paulo", "familia-deus", "unidade-igreja"]
+},
+
+// 175. Efésios 2.20
+{
+  id: "ef2.20",
+  referencia: "Ef 2.20",
+  local: "Roma / Itália",
+  paisAtual: "Itália",
+  lider: "Paulo",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~60-62 d.C.",
+  antes: "Paulo continua a metáfora da igreja como edifício. Os gentios não eram mais estrangeiros, mas agora faziam parte da construção espiritual.",
+  versiculo: "✅ Edificados sobre o fundamento dos apóstolos e dos profetas, de que Jesus Cristo é a principal pedra da esquina.",
+  depois: "A igreja é comparada a um edifício. Os apóstolos e profetas são o fundamento (porque receberam e transmitiram a revelação), e Cristo é a pedra angular que sustenta e alinha toda a construção.",
+  tags: "fundamento / apóstolos / profetas / pedra angular",
+  assuntos: ["roma", "paulo", "igreja", "apostolos"]
+},
+
+// 176. Efésios 5.25
+{
+  id: "ef5.25",
+  referencia: "Ef 5.25",
+  local: "Roma / Itália",
+  paisAtual: "Itália",
+  lider: "Paulo",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~60-62 d.C.",
+  antes: "Paulo instrui sobre relacionamentos familiares: esposas devem se sujeitar aos maridos, e maridos devem amar suas esposas. O casamento é um mistério que aponta para Cristo e a igreja.",
+  versiculo: "✅ Vós, maridos, amai vossas mulheres, como também Cristo amou a igreja e a si mesmo se entregou por ela.",
+  depois: "O amor de Cristo pela igreja é o padrão do amor conjugal. Ele não é um amor sentimental ou egoísta, mas sacrificial - 'se entregou por ela'. A cruz é a expressão máxima do amor de Cristo por Sua igreja.",
+  tags: "amar / igreja / entregou / sacrifício",
+  assuntos: ["roma", "paulo", "amor-cristo", "igreja", "casamento"]
+},
+
+// 177. Efésios 5.27
+{
+  id: "ef5.27",
+  referencia: "Ef 5.27",
+  local: "Roma / Itália",
+  paisAtual: "Itália",
+  lider: "Paulo",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~60-62 d.C.",
+  antes: "Paulo continua descrevendo o amor sacrificial de Cristo pela igreja. Ele não apenas morreu por ela, mas também a purifica e santifica.",
+  versiculo: "✅ Para a apresentar a si mesmo igreja gloriosa, sem mácula, nem ruga, nem coisa semelhante, mas santa e irrepreensível.",
+  depois: "O objetivo final de Cristo para a igreja é apresentá-la perfeita a Si mesmo. A santificação é obra contínua de Cristo através da Palavra e do Espírito. A igreja será sem mácula (moralmente pura), sem ruga (eternamente jovem), santa e irrepreensível.",
+  tags: "igreja / gloriosa / sem mácula / santa",
+  assuntos: ["roma", "paulo", "igreja", "santificacao", "gloria"]
+},
+
+// 178. Gálatas 6.10
+{
+  id: "gl6.10",
+  referencia: "Gl 6.10",
+  local: "Galácia / Ásia Menor (Turquia)",
+  paisAtual: "Turquia",
+  lider: "Paulo",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~49-55 d.C.",
+  antes: "Paulo conclui a carta aos Gálatas com exortações práticas. Ele falou sobre semear no Espírito, sobre restaurar os caídos e sobre compartilhar cargas.",
+  versiculo: "✅ Então, enquanto temos tempo, façamos bem a todos, mas principalmente aos domésticos da fé.",
+  depois: "A prioridade do bem é para todos, mas especialmente para a família da fé - a igreja. Paulo reconhece que o amor cristão começa dentro da comunidade, mas não se limita a ela.",
+  tags: "fazer bem / família da fé / prioridade",
+  assuntos: ["galacia", "paulo", "amor-cristao", "comunidade"]
+},
+
+// 179. Hebreus 10.25
+{
+  id: "hb10.25",
+  referencia: "Hb 10.25",
+  local: "Roma / Itália",
+  paisAtual: "Itália",
+  lider: "",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~60-65 d.C.",
+  antes: "O autor de Hebreus exorta os cristãos a se aproximarem de Deus com coração sincero. Eles estavam enfrentando perseguição e alguns estavam abandonando a comunhão.",
+  versiculo: "✅ Não deixando a nossa congregação, como é costume de alguns; antes, admoestando-nos uns aos outros; e tanto mais quanto vedes que se vai aproximando aquele dia.",
+  depois: "A exortação mútua e a reunião regular são essenciais para a perseverança, especialmente em tempos de perseguição. O autor alerta que o dia do juízo está se aproximando, o que torna a comunhão ainda mais necessária.",
+  tags: "congregação / exortação / dia / comunhão",
+  assuntos: ["roma", "autor-hebreus", "comunhao", "perseveranca"]
+},
+
+// 180. Hebreus 13.17
+{
+  id: "hb13.17",
+  referencia: "Hb 13.17",
+  local: "Roma / Itália",
+  paisAtual: "Itália",
+  lider: "",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~60-65 d.C.",
+  antes: "O autor de Hebreus dá instruções práticas para a vida cristã. Ele aborda o amor fraternal, a hospitalidade, o casamento e o contentamento.",
+  versiculo: "✅ Obedecei a vossos pastores e sujeitai-vos a eles; porque velam por vossas almas, como quem há de dar conta delas; para que o façam com alegria e não gemendo, porque isso não vos seria útil.",
+  depois: "A liderança da igreja tem responsabilidade diante de Deus pelas almas sob seus cuidados. A resposta da congregação deve ser obediência e submissão voluntária. Quando os líderes lideram com alegria, toda a igreja se beneficia.",
+  tags: "obedecer / pastores / vigiar / dar contas",
+  assuntos: ["roma", "autor-hebreus", "lideranca", "igreja-local"]
+},
+
+// 181. Joel 2.28
+{
+  id: "jl2.28",
+  referencia: "Jl 2.28",
+  local: "Judá (Israel)",
+  paisAtual: "Israel",
+  lider: "Joel",
+  liderReinado: "",
+  periodo: "Profetas Menores",
+  periodoDatas: "~835-796 a.C.",
+  data: "~830 a.C.",
+  antes: "Joel profetizou sobre um juízo iminente de gafanhotos, mas também sobre um derramamento futuro do Espírito que inauguraria uma nova era.",
+  versiculo: "✅ E há de ser que, depois, derramarei o meu Espírito sobre toda a carne; e vossos filhos e vossas filhas profetizarão, os vossos velhos sonharão sonhos, os vossos jovens terão visões.",
+  depois: "Pedro citou esta profecia em Atos 2.17-21 como sendo cumprida em Pentecostes. O derramamento não seria mais restrito a profetas ou reis, mas sobre 'toda a carne' - homens e mulheres, jovens e velhos, judeus e gentios.",
+  tags: "derramamento / Espírito / profecia / Pentecostes",
+  assuntos: ["juda", "joel", "espirito-santo", "profecia", "pentecostes"]
+},
+
+// 182. Levítico 23.15-16
+{
+  id: "lv23.15",
+  referencia: "Lv 23.15-16",
+  local: "Sinai / Deserto (Egito/Israel)",
+  paisAtual: "Egito/Israel",
+  lider: "Moisés",
+  liderReinado: "",
+  periodo: "Êxodo e Conquista",
+  periodoDatas: "~1446-1400 a.C.",
+  data: "~1446 a.C.",
+  antes: "Deus instruiu Moisés sobre as festas do Senhor. Depois da Páscoa e dos Pães Ázimos, vinha a festa das Semanas (Pentecostes), cinquenta dias depois.",
+  versiculo: "✅ Também contareis desde o dia seguinte ao sábado, desde o dia em que trouxerdes o molho da oferta de movimento, sete semanas inteiras serão. Até ao dia seguinte ao sétimo sábado, contareis cinquenta dias; então oferecereis nova oferta de manjares ao Senhor.",
+  depois: "Pentecostes (do grego 'pentekoste' = quinquagésimo) era uma festa de colheita. Era também uma das três festas de peregrinação, quando os judeus iam a Jerusalém. Foi neste contexto que o Espírito Santo foi derramado.",
+  tags: "Pentecostes / festa / semanas / colheita",
+  assuntos: ["sinai", "moises", "pentecostes", "festas-biblicas"]
+},
+
+// 183. Mateus 16.18
+{
+  id: "mt16.18",
+  referencia: "Mt 16.18",
+  local: "Cesareia de Filipe / Galileia (Israel)",
+  paisAtual: "Israel",
+  lider: "Jesus",
+  liderReinado: "",
+  periodo: "Período Romano",
+  periodoDatas: "63 a.C. - 70 d.C.",
+  data: "~29-30 d.C.",
+  antes: "Jesus perguntou aos discípulos quem os homens diziam que Ele era. Após várias respostas, Pedro confessou: 'Tu és o Cristo, o Filho do Deus vivo'.",
+  versiculo: "✅ Pois também eu te digo que tu és Pedro, e sobre esta pedra edificarei a minha igreja, e as portas do inferno não prevalecerão contra ela.",
+  depois: "Esta é a primeira vez que Jesus usa a palavra 'igreja' (ekklesia). A 'pedra' sobre a qual a igreja é edificada é a confissão de Pedro de que Jesus é o Cristo. As portas do inferno - imagem de um forte sitiado - não prevalecerão.",
+  tags: "igreja / pedra / portas do inferno / confissão",
+  assuntos: ["cesareia-filipe", "jesus", "igreja", "pedro"]
+},
+
+// 184. Mateus 28.20
+{
+  id: "mt28.20",
+  referencia: "Mt 28.20",
+  local: "Galileia / Monte designado por Jesus (Israel)",
+  paisAtual: "Israel",
+  lider: "Jesus",
+  liderReinado: "",
+  periodo: "Período Romano",
+  periodoDatas: "63 a.C. - 70 d.C.",
+  data: "~30 d.C.",
+  antes: "Após a ressurreição, Jesus encontrou os discípulos na Galileia. Ele lhes deu a Grande Comissão: 'Ide, fazei discípulos de todas as nações, batizando-os... ensinando-os'.",
+  versiculo: "✅ Ensinando-os a guardar todas as coisas que eu vos tenho mandado; e eis que eu estou convosco todos os dias, até à consumação dos séculos.",
+  depois: "A promessa da presença constante de Jesus sustenta a missão da igreja. Ele não abandonou seus discípulos. A mesma presença que esteve com os apóstolos continua com a igreja até o fim dos tempos.",
+  tags: "presença / sempre / Jesus / comissionamento",
+  assuntos: ["galileia", "jesus", "grande-comissao", "presenca-divina"]
+},
+
+// 185. Oséias 2.19-20
+{
+  id: "os2.19",
+  referencia: "Os 2.19-20",
+  local: "Israel / Reino do Norte",
+  paisAtual: "Israel",
+  lider: "Jeroboão II",
+  liderReinado: "793-753 a.C.",
+  periodo: "Reino Dividido (Norte)",
+  periodoDatas: "930-722 a.C.",
+  data: "~755-715 a.C.",
+  antes: "Deus, através de Oséias, usa o casamento do profeta com uma prostituta (Gômer) como metáfora do relacionamento de Deus com Israel infiel. Deus promete restaurar a aliança.",
+  versiculo: "✅ E desposar-te-ei comigo para sempre; desposar-te-ei comigo em justiça, e em juízo, e em benignidade, e em misericórdias. E desposar-te-ei comigo em fidelidade, e conhecerás ao Senhor.",
+  depois: "O amor de Deus por Israel é como um casamento. Apesar da infidelidade de Israel (idolatria), Deus promete restaurar a aliança. Esta imagem prepara o Novo Testamento, onde a igreja é a noiva de Cristo - um relacionamento de amor eterno baseado em justiça, juízo, benignidade, misericórdia e fidelidade.",
+  tags: "desposar / noiva / aliança / fidelidade",
+  assuntos: ["israel", "oseias", "alianca", "noiva-de-deus", "amor-divino"]
+},
+
+// 186. Romanos 12.5
+{
+  id: "rm12.5",
+  referencia: "Rm 12.5",
+  local: "Corinto / Acaia (Grécia)",
+  paisAtual: "Grécia",
+  lider: "Paulo",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~57 d.C.",
+  antes: "Paulo exorta os romanos a apresentarem seus corpos como sacrifício vivo. Ele começa a descrever como os dons devem funcionar no corpo de Cristo.",
+  versiculo: "✅ Assim nós, que somos muitos, somos um só corpo em Cristo, mas individualmente somos membros uns dos outros.",
+  depois: "A unidade no corpo não significa uniformidade. Cada membro tem uma função diferente, mas todos pertencem uns aos outros. Esta interdependência elimina o orgulho e a inveja na igreja.",
+  tags: "membros / uns dos outros / corpo / interdependência",
+  assuntos: ["corinto", "paulo", "corpo-de-cristo", "unidade-igreja"]
+},
+
+// 187. Romanos 16.5
+{
+  id: "rm16.5",
+  referencia: "Rm 16.5",
+  local: "Corinto / Acaia (Grécia)",
+  paisAtual: "Grécia",
+  lider: "Paulo",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~57 d.C.",
+  antes: "Paulo termina a carta aos Romanos com saudações pessoais. Ele lista muitos colaboradores, mostrando seu apreço pela equipe que trabalhou com ele.",
+  versiculo: "✅ Saudai também a igreja que está em sua casa. Saudai a Epêneto, meu amado, que é as primícias da Acaia em Cristo.",
+  depois: "As igrejas domésticas eram comuns no cristianismo primitivo, já que não haviam construções dedicadas ao culto. Priscila e Áquila também tinham uma igreja em sua casa. O cristianismo cresceu através dessas comunidades familiares.",
+  tags: "igreja em casa / saudações / Priscila / Áquila",
+  assuntos: ["corinto", "paulo", "igreja-domestica", "comunidade"]
+},
+// 188. Atos 2.1-4
+{
+  id: "at2.1-4",
+  referencia: "At 2.1-4",
+  local: "Jerusalém / Judéia (Israel)",
+  paisAtual: "Israel",
+  lider: "Pedro",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  data: "~30 d.C.",
+  antes: "Os discípulos estavam reunidos em Jerusalém, obedecendo à ordem de Jesus de esperar a promessa do Pai. Cerca de 120 pessoas perseveravam em oração no cenáculo. Era o dia de Pentecostes, uma das três festas de peregrinação judaica.",
+  versiculo: "✅ E, ao cumprir-se o dia de Pentecostes, estavam todos reunidos no mesmo lugar. E de repente veio do céu um som, como de um vento impetuoso, e encheu toda a casa onde estavam assentados. E foram vistas por eles línguas repartidas, como que de fogo, e pousaram sobre cada um deles. E todos foram cheios do Espírito Santo, e começaram a falar noutras línguas, conforme o Espírito Santo lhes concedia que falassem.",
+  depois: "Este é o relato do nascimento da igreja. O vento representa o Espírito vivificador, o fogo representa a purificação e a presença divina, e as línguas representam a universalidade do evangelho. A promessa de Jesus (Atos 1.8) foi cumprida, e a era da igreja foi inaugurada.",
+  tags: "Pentecostes / Espírito Santo / línguas / vento / fogo",
+  assuntos: ["jerusalem", "pentecostes", "espirito-santo", "igreja-primitiva"]
+}
 ];
+
+// ============================================
+// ÍNDICE DE CONTEXTOS BÍBLICOS
+// Organizado por ordem alfabética de ID
+// Total: 149 contextos
+// ============================================
+
+// ============================================
+// ÍNDICE DE CONTEXTOS BÍBLICOS
+// Organizado por ordem alfabética de ID
+// Total: 187 contextos
+// ============================================
+
+const indiceContextos = {
+  // ==================== NOVO TESTAMENTO ====================
+  
+  // 1 Coríntios
+  "1co1.18": { numero: 7, referencia: "1 Co 1.18", pagina: 92 },
+  "1co1.2": { numero: 140, referencia: "1 Co 1.2", pagina: 111 },
+  "1co1.7": { numero: 14, referencia: "1 Co 1.7", pagina: 93 },
+  "1co12.11": { numero: 20, referencia: "1 Co 12.11", pagina: 93 },
+  "1co12.12": { numero: 152, referencia: "1 Co 12.12", pagina: 113 },
+  "1co12.27": { numero: 153, referencia: "1 Co 12.27", pagina: 113 },
+  "1co12.31": { numero: 21, referencia: "1 Co 12.31", pagina: 93 },
+  "1co12.7": { numero: 151, referencia: "1 Co 12.7", pagina: 113 },
+  "1co13.1": { numero: 22, referencia: "1 Co 13.1-3", pagina: 93 },
+  "1co13.4": { numero: 23, referencia: "1 Co 13.4-7", pagina: 93 },
+  "1co2.16": { numero: 17, referencia: "1 Co 2.16", pagina: 93 },
+  "1co2.4": { numero: 15, referencia: "1 Co 2.4", pagina: 93 },
+  "1co2.5": { numero: 16, referencia: "1 Co 2.5", pagina: 93 },
+  "1co3.16": { numero: 150, referencia: "1 Co 3.16", pagina: 113 },
+  "1co3.3": { numero: 18, referencia: "1 Co 3.3", pagina: 93 },
+  "1co4.20": { numero: 19, referencia: "1 Co 4.20", pagina: 93 },
+  "1co9.25": { numero: 8, referencia: "1 Co 9.25", pagina: 92 },
+  
+  // 1 Pedro
+  "1pe2.5": { numero: 154, referencia: "1 Pe 2.5", pagina: 113 },
+  "1pe2.9": { numero: 78, referencia: "1 Pe 2.9", pagina: 100 },
+  "1pe4.10": { numero: 79, referencia: "1 Pe 4.10", pagina: 100 },
+  
+  // 1 Tessalonicenses
+  "1ts5.11": { numero: 155, referencia: "1 Ts 5.11", pagina: 114 },
+  
+  // 1 Timóteo
+  "1tm4.12": { numero: 71, referencia: "1 Tm 4.12", pagina: 99 },
+  "1tm4.7": { numero: 70, referencia: "1 Tm 4.7-8", pagina: 99 },
+  "1tm6.5": { numero: 72, referencia: "1 Tm 6.5-10", pagina: 99 },
+  
+  // 2 Coríntios
+  "2co1.18": { numero: 24, referencia: "2 Co 1.18", pagina: 94 },
+  "2co12.12": { numero: 30, referencia: "2 Co 12.12", pagina: 94 },
+  "2co2.14": { numero: 25, referencia: "2 Co 2.14-17", pagina: 94 },
+  "2co3.18": { numero: 26, referencia: "2 Co 3.18", pagina: 94 },
+  "2co4.18": { numero: 29, referencia: "2 Co 4.18", pagina: 94 },
+  "2co4.2": { numero: 27, referencia: "2 Co 4.2", pagina: 94 },
+  "2co4.4": { numero: 28, referencia: "2 Co 4.4", pagina: 94 },
+  
+  // 2 Timóteo
+  "2tm3.15-16": { numero: 73, referencia: "2 Tm 3.15-16", pagina: 100 },
+  "2tm3.16": { numero: 74, referencia: "2 Tm 3.16-17", pagina: 100 },
+  "2tm4.3": { numero: 75, referencia: "2 Tm 4.3", pagina: 100 },
+  
+  // 3 João
+  "3jo1.5": { numero: 105, referencia: "3 Jo 1.5", pagina: 104 },
+  
+  // Apocalipse
+  "ap19.7": { numero: 144, referencia: "Ap 19.7-8", pagina: 112 },
+  "ap2.10": { numero: 9, referencia: "Ap 2.10", pagina: 92 },
+  "ap21.2": { numero: 145, referencia: "Ap 21.2", pagina: 112 },
+  "ap7.9": { numero: 156, referencia: "Ap 7.9", pagina: 114 },
+  
+  // Atos
+    "at1.14": { numero: 159, referencia: "At 1.14", pagina: 114 },
+    "at1.3": { numero: 157, referencia: "At 1.3", pagina: 114 },
+    "at1.4": { numero: 158, referencia: "At 1.4-5", pagina: 114 },
+    "at17.24-27": { numero: 4, referencia: "At 17.24-27", pagina: 92 },
+    "at2.1": { numero: 160, referencia: "At 2.1", pagina: 114 },
+    "at2.1-4": { numero: 188, referencia: "At 2.1-4", pagina: 114 },
+    "at2.11": { numero: 161, referencia: "At 2.11", pagina: 114 },
+    "at2.16": { numero: 162, referencia: "At 2.16-17", pagina: 114 },
+    "at2.22": { numero: 163, referencia: "At 2.22-23", pagina: 115 },
+    "at2.24": { numero: 164, referencia: "At 2.24", pagina: 115 },
+    "at2.29": { numero: 1, referencia: "At 2.29-33", pagina: 91 },
+    "at2.32": { numero: 165, referencia: "At 2.32-36", pagina: 115 },
+    "at2.36": { numero: 2, referencia: "At 2.36-41", pagina: 91 },
+    "at2.37": { numero: 166, referencia: "At 2.37", pagina: 115 },
+    "at2.38": { numero: 167, referencia: "At 2.38", pagina: 115 },
+    "at2.4": { numero: 134, referencia: "At 2.4", pagina: 110 },
+    "at2.41": { numero: 168, referencia: "At 2.41", pagina: 115 },
+    "at2.42": { numero: 122, referencia: "At 2.42", pagina: 108 },
+    "at2.46": { numero: 123, referencia: "At 2.46", pagina: 108 },
+    "at2.5": { numero: 135, referencia: "At 2.5", pagina: 110 },
+    "at2.6": { numero: 136, referencia: "At 2.6-8", pagina: 110 },
+    "at2.9": { numero: 137, referencia: "At 2.9-11", pagina: 110 },
+    "at20.18": { numero: 13, referencia: "At 20.18", pagina: 93 },
+    "at20.28": { numero: 170, referencia: "At 20.28", pagina: 116 },
+    "at4.13": { numero: 3, referencia: "At 4.13", pagina: 92 },
+    "at4.29": { numero: 11, referencia: "At 4.29-30", pagina: 93 },
+    "at5.12": { numero: 12, referencia: "At 5.12-14", pagina: 93 },
+    "at9.4": { numero: 169, referencia: "At 9.4", pagina: 115 },
+  
+  // Colossenses
+  "cl1.10": { numero: 85, referencia: "Cl 1.10", pagina: 101 },
+  "cl1.18": { numero: 171, referencia: "Cl 1.18", pagina: 116 },
+  "cl1.23": { numero: 172, referencia: "Cl 1.23", pagina: 116 },
+  "cl3.12": { numero: 86, referencia: "Cl 3.12-13", pagina: 101 },
+  "cl3.13": { numero: 87, referencia: "Cl 3.13", pagina: 101 },
+  "cl4.2": { numero: 88, referencia: "Cl 4.2", pagina: 101 },
+  
+  // Efésios
+  "ef1.22": { numero: 173, referencia: "Ef 1.22-23", pagina: 116 },
+  "ef2.19": { numero: 174, referencia: "Ef 2.19", pagina: 116 },
+  "ef2.20": { numero: 175, referencia: "Ef 2.20", pagina: 116 },
+  "ef4.13": { numero: 41, referencia: "Ef 4.13-15", pagina: 95 },
+  "ef4.14": { numero: 69, referencia: "Ef 4.14-15", pagina: 99 },
+  "ef4.2": { numero: 40, referencia: "Ef 4.2-3", pagina: 95 },
+  "ef4.32": { numero: 42, referencia: "Ef 4.32", pagina: 95 },
+  "ef5.25": { numero: 176, referencia: "Ef 5.25", pagina: 117 },
+  "ef5.26": { numero: 44, referencia: "Ef 5.26", pagina: 95 },
+  "ef5.27": { numero: 177, referencia: "Ef 5.27", pagina: 117 },
+  "ef5.9": { numero: 43, referencia: "Ef 5.9", pagina: 95 },
+  
+  // Filipenses
+  "fp1.11": { numero: 46, referencia: "Fp 1.11", pagina: 95 },
+  "fp1.6": { numero: 45, referencia: "Fp 1.6", pagina: 95 },
+  "fp2.3": { numero: 47, referencia: "Fp 2.3-5", pagina: 96 },
+  "fp4.4": { numero: 48, referencia: "Fp 4.4", pagina: 96 },
+  "fp4.7": { numero: 49, referencia: "Fp 4.7", pagina: 96 },
+  
+  // Gálatas
+  "gl1.10": { numero: 5, referencia: "Gl 1.10", pagina: 92 },
+  "gl4.19": { numero: 50, referencia: "Gl 4.19", pagina: 96 },
+  "gl5.16": { numero: 52, referencia: "Gl 5.16", pagina: 96 },
+  "gl5.19": { numero: 53, referencia: "Gl 5.19-21", pagina: 96 },
+  "gl5.22": { numero: 54, referencia: "Gl 5.22-23", pagina: 96 },
+  "gl5.22a": { numero: 55, referencia: "Gl 5.22-23a", pagina: 96 },
+  "gl5.25": { numero: 56, referencia: "Gl 5.25", pagina: 97 },
+  "gl5.8": { numero: 51, referencia: "Gl 5.8", pagina: 96 },
+  "gl6.10": { numero: 178, referencia: "Gl 6.10", pagina: 117 },
+  "gl6.9": { numero: 57, referencia: "Gl 6.9", pagina: 97 },
+  
+  // Hebreus
+  "hb10.25": { numero: 179, referencia: "Hb 10.25", pagina: 117 },
+  "hb11.6": { numero: 90, referencia: "Hb 11.6", pagina: 102 },
+  "hb12.1": { numero: 91, referencia: "Hb 12.1", pagina: 102 },
+  "hb12.11": { numero: 92, referencia: "Hb 12.11", pagina: 102 },
+  "hb13.17": { numero: 180, referencia: "Hb 13.17", pagina: 117 },
+  "hb2.4": { numero: 89, referencia: "Hb 2.4", pagina: 102 },
+  
+  // João
+  "jo1.9-10": { numero: 93, referencia: "Jo 1.9-10", pagina: 102 },
+  "jo13.34": { numero: 95, referencia: "Jo 13.34", pagina: 102 },
+  "jo13.35": { numero: 96, referencia: "Jo 13.35", pagina: 103 },
+  "jo14.27": { numero: 97, referencia: "Jo 14.27", pagina: 103 },
+  "jo14.6": { numero: 31, referencia: "Jo 14.6", pagina: 94 },
+  "jo15.1": { numero: 98, referencia: "Jo 15.1-2", pagina: 103 },
+  "jo15.4": { numero: 99, referencia: "Jo 15.4-5", pagina: 103 },
+  "jo15.5": { numero: 100, referencia: "Jo 15.5", pagina: 103 },
+  "jo15.8": { numero: 101, referencia: "Jo 15.8", pagina: 103 },
+  "jo16.4": { numero: 102, referencia: "Jo 16.4", pagina: 103 },
+  "jo17.17": { numero: 32, referencia: "Jo 17.17", pagina: 94 },
+  "jo6.67": { numero: 94, referencia: "Jo 6.67", pagina: 102 },
+  
+  // Lucas
+  "lc10.19": { numero: 103, referencia: "Lc 10.19", pagina: 104 },
+  
+  // Marcos
+  "mc8.34": { numero: 104, referencia: "Mc 8.34-35", pagina: 104 },
+  
+  // Mateus
+  "mt11.29": { numero: 36, referencia: "Mt 11.29", pagina: 94 },
+  "mt16.18": { numero: 183, referencia: "Mt 16.18", pagina: 118 },
+  "mt23": { numero: 37, referencia: "Mt 23", pagina: 94 },
+  "mt23.27": { numero: 38, referencia: "Mt 23.27-28", pagina: 94 },
+  "mt24.11": { numero: 39, referencia: "Mt 24.11,24", pagina: 95 },
+  "mt28.20": { numero: 184, referencia: "Mt 28.20", pagina: 118 },
+  "mt7.16": { numero: 33, referencia: "Mt 7.16-20", pagina: 94 },
+  "mt7.21": { numero: 34, referencia: "Mt 7.21-23", pagina: 94 },
+  "mt7.22": { numero: 35, referencia: "Mt 7.22-23", pagina: 94 },
+  
+  // Romanos
+  "rm1": { numero: 6, referencia: "Rm 1", pagina: 92 },
+  "rm1.18-21": { numero: 61, referencia: "Rm 1.18-21", pagina: 97 },
+  "rm1.19": { numero: 58, referencia: "Rm 1.19", pagina: 97 },
+  "rm1.20": { numero: 59, referencia: "Rm 1.20", pagina: 97 },
+  "rm1.22": { numero: 60, referencia: "Rm 1.22", pagina: 97 },
+  "rm12.18": { numero: 68, referencia: "Rm 12.18", pagina: 99 },
+  "rm12.2": { numero: 67, referencia: "Rm 12.2", pagina: 98 },
+  "rm12.5": { numero: 186, referencia: "Rm 12.5", pagina: 118 },
+  "rm16.5": { numero: 187, referencia: "Rm 16.5", pagina: 118 },
+  "rm2.21": { numero: 62, referencia: "Rm 2.21-24", pagina: 97 },
+  "rm3.11": { numero: 63, referencia: "Rm 3.11", pagina: 97 },
+  "rm8.18": { numero: 64, referencia: "Rm 8.18", pagina: 98 },
+  "rm8.28": { numero: 65, referencia: "Rm 8.28", pagina: 98 },
+  "rm8.29": { numero: 66, referencia: "Rm 8.29", pagina: 98 },
+  
+  // Tito
+  "tt2.12": { numero: 77, referencia: "Tt 2.12", pagina: 100 },
+  "tt2.7": { numero: 76, referencia: "Tt 2.7-8", pagina: 100 },
+  
+  // Tiago
+  "tg1.19": { numero: 81, referencia: "Tg 1.19", pagina: 101 },
+  "tg1.2": { numero: 80, referencia: "Tg 1.2-4", pagina: 100 },
+  "tg1.21": { numero: 82, referencia: "Tg 1.21", pagina: 101 },
+  "tg3.17": { numero: 83, referencia: "Tg 3.17", pagina: 101 },
+  "tg5.7": { numero: 84, referencia: "Tg 5.7-8", pagina: 101 },
+  
+  // ==================== ANTIGO TESTAMENTO ====================
+  
+  // Deuteronômio
+  "dt13.3": { numero: 106, referencia: "Dt 13.3", pagina: 104 },
+  
+  // Gênesis
+  "gn1.1": { numero: 10, referencia: "Gn 1.1", pagina: 92 },
+  
+  // Isaías
+  "is55.11": { numero: 107, referencia: "Is 55.11", pagina: 104 },
+  
+  // Joel
+  "jl2.28": { numero: 181, referencia: "Jl 2.28", pagina: 117 },
+  
+  // Jeremias
+  "jr14.14": { numero: 109, referencia: "Jr 14.14", pagina: 104 },
+  "jr6.16": { numero: 108, referencia: "Jr 6.16", pagina: 104 },
+  
+  // Levítico
+  "lv23.15": { numero: 182, referencia: "Lv 23.15-16", pagina: 117 },
+  
+  // Neemias
+  "ne6.12": { numero: 110, referencia: "Ne 6.12", pagina: 104 },
+  "ne8.10": { numero: 111, referencia: "Ne 8.10", pagina: 104 },
+  
+  // Oséias
+  "os2.19": { numero: 185, referencia: "Os 2.19-20", pagina: 118 },
+  "os4.1": { numero: 112, referencia: "Os 4.1", pagina: 104 },
+  
+  // 1 Reis
+  "1rs18.40": { numero: 113, referencia: "1 Rs 18.40", pagina: 104 },
+  
+  // Salmos
+  "sl1.2": { numero: 114, referencia: "Sl 1.2-3", pagina: 104 },
+  "sl10.4": { numero: 115, referencia: "Sl 10.4", pagina: 104 },
+  "sl14": { numero: 118, referencia: "Sl 14", pagina: 105 },
+  "sl14.1": { numero: 116, referencia: "Sl 14.1", pagina: 105 },
+  "sl14.1-3": { numero: 117, referencia: "Sl 14.1-3", pagina: 105 },
+  "sl16.11": { numero: 120, referencia: "Sl 16.11", pagina: 105 },
+  "sl19.1": { numero: 119, referencia: "Sl 19.1", pagina: 105 },
+  "sl42.1": { numero: 121, referencia: "Sl 42.1", pagina: 105 }
+};
+
+// ============================================
+// FUNÇÃO PARA BUSCAR POR ÍNDICE
+// ============================================
+
+function buscarPorIndice(id) {
+  if (indiceContextos[id]) {
+    return indiceContextos[id];
+  }
+  return null;
+}
+
+function listarTodosIndices() {
+  return Object.keys(indiceContextos).sort();
+}
+
+// Exporta o índice também
+if (typeof window !== 'undefined') {
+  window.indiceContextos = indiceContextos;
+  window.buscarPorIndice = buscarPorIndice;
+  window.listarTodosIndices = listarTodosIndices;
+}
+
+console.log(`📑 Índice de contextos carregado com ${Object.keys(indiceContextos).length} entradas!`);
 
 // ============================================
 // FUNÇÃO PARA FORMATAR CABEÇALHO
