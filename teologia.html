@@ -17,7 +17,7 @@
     }
     
     .container {
-      max-width: 1200px;
+      max-width: 1400px;
       margin: 0 auto;
       background-color: #fffef7;
       border-radius: 12px;
@@ -96,7 +96,7 @@
     
     .legenda-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(6, 1fr);
       gap: 8px 20px;
       background: #f9f7e8;
       padding: 15px;
@@ -135,7 +135,7 @@
     }
     
     .col-num { width: 50px; text-align: center; }
-    .col-ref { width: 120px; font-family: monospace; }
+    .col-ref { width: 130px; font-family: monospace; }
     .col-pag { width: 60px; text-align: center; }
     
     .mapa-estatico {
@@ -190,9 +190,13 @@
     
     .contexto-titulo {
       font-weight: bold;
-      font-size: 14px;
+      font-size: 13px;
       margin-bottom: 10px;
       color: #3b5e3b;
+      background-color: #e8e4d4;
+      padding: 8px;
+      border-radius: 6px;
+      word-break: break-word;
     }
     
     .contexto-versiculo {
@@ -204,10 +208,37 @@
       border: 1px solid #d4c9a6;
     }
     
+    .contexto-campo {
+      margin-bottom: 10px;
+      font-size: 13px;
+    }
+    
+    .contexto-campo strong {
+      color: #5c4a1e;
+    }
+    
     .contexto-tags {
       font-size: 11px;
       color: #666;
       margin: 8px 0;
+      background-color: #e8e4d4;
+      padding: 5px 8px;
+      border-radius: 4px;
+    }
+    
+    .assuntos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 10px 0;
+    }
+    
+    .assunto-tag {
+      background-color: #3b5e3b;
+      color: white;
+      padding: 2px 8px;
+      border-radius: 15px;
+      font-size: 10px;
     }
     
     .vestibular {
@@ -234,24 +265,37 @@
     .link-volta {
       text-align: right;
       margin-top: 10px;
+      font-size: 18px;
+      display: flex;
+      gap: 15px;
+      justify-content: flex-end;
     }
     
     .link-volta a {
       color: #3b5e3b;
       text-decoration: none;
-      font-size: 12px;
+    }
+    
+    .link-volta a:hover {
+      opacity: 0.7;
     }
     
     .footer-links {
       margin-top: 15px;
       text-align: right;
-      font-size: 12px;
+      font-size: 18px;
+      display: flex;
+      gap: 15px;
+      justify-content: flex-end;
     }
     
     .footer-links a {
       color: #3b5e3b;
       text-decoration: none;
-      margin-left: 15px;
+    }
+    
+    .footer-links a:hover {
+      opacity: 0.7;
     }
     
     .loading {
@@ -260,30 +304,29 @@
       color: #666;
     }
     
-    /* Modal para matérias do vestibular */
     .modal-materia {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0,0,0,0.7);
+      background: rgba(0,0,0,0.8);
       display: flex;
-      align-items: center;
       justify-content: center;
-      z-index: 1000;
+      align-items: center;
+      z-index: 2000;
     }
     
     .modal-materia-content {
-      background-color: #fffef7;
-      max-width: 600px;
+      background: #fffef7;
+      max-width: 700px;
       width: 90%;
-      max-height: 80vh;
-      border-radius: 12px;
-      padding: 25px;
-      position: relative;
+      max-height: 85%;
       overflow-y: auto;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      padding: 25px;
+      border-radius: 12px;
+      position: relative;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
     }
     
     .modal-materia-close {
@@ -291,49 +334,89 @@
       top: 15px;
       right: 20px;
       font-size: 28px;
-      font-weight: bold;
       cursor: pointer;
       color: #999;
     }
     
     .modal-materia-close:hover {
-      color: #3b5e3b;
+      color: #000;
     }
     
     .modal-materia-titulo {
       color: #3b5e3b;
       margin-bottom: 15px;
-      font-size: 1.4rem;
       padding-right: 30px;
+      font-size: 1.4rem;
     }
     
     .modal-materia-meta {
-      display: flex;
-      gap: 10px;
       margin-bottom: 20px;
-      flex-wrap: wrap;
     }
     
     .modal-materia-badge {
-      background-color: #e8e4d4;
+      display: inline-block;
       padding: 4px 12px;
       border-radius: 20px;
       font-size: 12px;
+      margin-right: 8px;
+    }
+    
+    .modal-materia-materia {
+      background: #3b5e3b;
+      color: white;
+    }
+    
+    .modal-materia-ano {
+      background: #d4c9a6;
       color: #3b5e3b;
+    }
+    
+    .modal-materia-area {
+      background: #e8e4d4;
+      color: #5c4a1e;
     }
     
     .modal-materia-conteudo {
       line-height: 1.6;
       font-size: 14px;
+    }
+    
+    .modal-materia-conteudo h3 {
+      color: #3b5e3b;
+      margin: 20px 0 10px;
+    }
+    
+    .modal-materia-conteudo ul {
+      margin-left: 20px;
+    }
+    
+    .modal-materia-conteudo .sumario {
+      background: #e8e4d4;
+      padding: 12px;
+      border-radius: 8px;
       margin-bottom: 20px;
     }
     
+    .modal-materia-conteudo .sumario ul {
+      margin: 8px 0 0 20px;
+    }
+    
+    .modal-materia-conteudo .sumario a {
+      color: #3b5e3b;
+      text-decoration: none;
+    }
+    
+    .modal-materia-conteudo .sumario a:hover {
+      text-decoration: underline;
+    }
+    
     .modal-materia-footer {
+      margin-top: 25px;
       text-align: right;
     }
     
     .modal-materia-footer button {
-      background-color: #3b5e3b;
+      background: #3b5e3b;
       color: white;
       border: none;
       padding: 8px 20px;
@@ -343,8 +426,11 @@
     
     @media (max-width: 768px) {
       section { padding: 15px; }
-      .legenda-grid { grid-template-columns: repeat(2, 1fr); }
+      .legenda-grid { grid-template-columns: repeat(3, 1fr); }
       .netlify-section input { width: 100%; margin-bottom: 10px; }
+      .contexto-titulo { font-size: 11px; }
+      .link-volta { font-size: 14px; }
+      .footer-links { font-size: 14px; }
     }
     
     @media print {
@@ -407,6 +493,115 @@
 <script>
   let mapaAtual = null;
   let scriptCarregado = null;
+  
+  // ============================================
+  // LEGENDA COMPLETA ATUALIZADA
+  // ============================================
+  
+  const legendas = [
+    // LISTAS E ORGANIZAÇÃO
+    ["🏁", "Aparição"],
+    ["🔤", "Alfabética"],
+    ["1️⃣", "Número"],
+    ["🔘", "Categoria"],
+    ["📄", "Página"],
+    ["📂", "Subtópico"],
+    ["🔗", "Link"],
+    
+    // VERSÍCULOS (regras de formatação)
+    ["✅📖", "Versículo (até 4v) - Integral"],
+    ["⚠️📖", "Atenção (5+v) - Síntese"],
+    ["📑📖", "Capítulo - Síntese"],
+    ["✝️", "Trecho bíblico"],
+    
+    // CONTEXTO BÍBLICO
+    ["💬#️⃣", "Contexto"],
+    ["🚩", "Localização"],
+    ["📅", "Data"],
+    ["#️⃣", "Tags"],
+    ["👑", "Líder/Rei"],
+    ["📖", "Bíblia"],
+    
+    // MAPAS
+    ["🌏⛺", "Mapa da Lição"],
+    ["🌏", "Mapa base"],
+    ["🗻", "Região"],
+    ["🌏🔗⛺", "Mapa interativo"],
+    ["📍", "Marcador"],
+    
+    // VESTIBULAR E MATÉRIAS
+    ["⏳", "História"],
+    ["🌋", "Geografia"],
+    ["🎨", "Arte"],
+    ["📝", "Literatura"],
+    ["💡", "Filosofia"],
+    ["👪", "Sociologia"],
+    ["➕", "Matemática"],
+    ["⚡", "Física"],
+    ["⚛", "Química"],
+    ["🌿", "Biologia"],
+    ["📘", "Português"],
+    ["📙", "Inglês"],
+    ["🏃", "Educação Física"],
+    ["🎓", "Ano escolar"],
+    ["🎯", "Vestibular"],
+    
+    // FERRAMENTAS
+    ["🔢", "Cronologia"],
+    ["❓", "Questões"],
+    ["🔑", "Gabaritos"],
+    ["📚", "Estudo"],
+    ["📜", "Obra"],
+    ["🎥", "Filme"],
+    
+    // AÇÕES
+    ["🔃", "Ordenar"],
+    ["🏠", "Voltar"],
+    ["✔️", "Confirmar"],
+    ["❌", "Erro"],
+    ["❗", "Atenção"],
+    ["ℹ️", "Informação"],
+    ["🏰", "Período Humanidade"]
+  ];
+  
+  // ============================================
+  // FUNÇÃO PARA FORMATAR CABEÇALHO DO CONTEXTO (PADRÃO ATUALIZADO)
+  // ============================================
+  
+  function formatarCabecalhoContexto(ctx) {
+    let cabecalho = `📖 ${ctx.referencia}`;
+    
+    if (ctx.data && ctx.data !== "") {
+      cabecalho += ` | 📅 ${ctx.data}`;
+    }
+    
+    if (ctx.local && ctx.local !== "") {
+      cabecalho += ` | 🚩 ${ctx.local}`;
+    }
+    
+    if (ctx.lider && ctx.lider !== "") {
+      cabecalho += ` | 👑 ${ctx.lider}`;
+      if (ctx.liderReinado && ctx.liderReinado !== "") {
+        cabecalho += ` (${ctx.liderReinado})`;
+      }
+    }
+    
+    if (ctx.periodo && ctx.periodo !== "") {
+      cabecalho += ` | 📜 ${ctx.periodo}`;
+      if (ctx.periodoDatas && ctx.periodoDatas !== "") {
+        cabecalho += ` (${ctx.periodoDatas})`;
+      }
+    }
+    
+    if (ctx.periodoHumanidade && ctx.periodoHumanidade !== "") {
+      cabecalho += ` | 🏰 ${ctx.periodoHumanidade}`;
+      if (ctx.periodoHumanidadeDatas && ctx.periodoHumanidadeDatas !== "") {
+        cabecalho += ` (${ctx.periodoHumanidadeDatas})`;
+      }
+    }
+    
+    return cabecalho;
+  }
   
   // ============================================
   // FUNÇÃO PARA ATUALIZAR CAPÍTULOS CONFORME LIVRO
@@ -550,6 +745,25 @@
   }
   
   // ============================================
+  // FUNÇÃO PARA REMOVER DUPLICATAS
+  // ============================================
+  
+  function removerDuplicatas(lista) {
+    const seen = new Map();
+    const resultado = [];
+    
+    for (const item of lista) {
+      const chave = item.referencia;
+      if (!seen.has(chave)) {
+        seen.set(chave, true);
+        resultado.push(item);
+      }
+    }
+    
+    return resultado;
+  }
+  
+  // ============================================
   // FUNÇÕES PRINCIPAIS
   // ============================================
   
@@ -584,31 +798,22 @@
     const container = document.getElementById('conteudo-principal');
     container.innerHTML = '';
     
-    const legendas = [
-      ["🏁", "Aparição"], ["🔤", "Alfabética"], ["🌏⛺", "Mapa da Lição"], ["📖💬#️⃣", "Contexto Bíblico"],
-      ["💬#️⃣", "Contextos"], ["🚩", "Localização"], ["🎯", "Vestibular"], ["🔢", "Cronologia"],
-      ["❓", "Questões"], ["🔑", "Gabaritos"], ["🌋", "Geografia"], ["📝", "Literatura"],
-      ["📚", "Estudo"], ["📖", "Bíblia"], ["🎓", "Ano escolar"], ["📅", "Ano do evento"],
-      ["✝️", "Trecho bíblico"], ["📂", "Subtópico"], ["🔗", "Link"], ["⏳", "História"],
-      ["💡", "Filosofia"], ["👪", "Sociologia"], ["🎨", "Arte"], ["➕", "Matemática"],
-      ["⚡", "Física"], ["⚛", "Química"], ["🌿", "Biologia"], ["📘", "Português"],
-      ["📙", "Inglês"], ["🏃", "Educação Física"], ["📜", "Obra"], ["🎥", "Filme"],
-      ["🌏", "Mapa base"], ["🗻", "Região"], ["🌏⛺", "Mapa estático"], ["🌏🔗⛺", "Mapa interativo"],
-      ["📄", "Página"], ["1️⃣", "Número"], ["🔘", "Categoria"]
-    ];
+    // Monta o lookup de contextos por id
+    const ctxPorId = {};
+    if (typeof window.contextosBiblicosMap !== 'undefined') {
+      Object.assign(ctxPorId, window.contextosBiblicosMap);
+    } else if (typeof window.contextosBiblicos !== 'undefined') {
+      window.contextosBiblicos.forEach(function(c) { ctxPorId[c.id] = c; });
+    }
     
-    let html = `
-      <section id="legenda">
-        <h2>📌 Legenda de Emojis</h2>
-        <div class="legenda-grid">
-    `;
-    
+    // Renderiza legenda
+    let html = `<section id="legenda"><h2>📌 Legenda de Emojis</h2><div class="legenda-grid">`;
     legendas.forEach(leg => {
       html += `<div class="legenda-item"><span>${leg[0]}</span><span>${leg[1]}</span></div>`;
     });
-    
     html += `</div></section>`;
     
+    // ── Lista 1 – Ordem de Aparição ──
     if (dados.listaAparicao && dados.listaAparicao.length > 0) {
       html += `<section id="aparicao">
         <h2>🏁 Lista 1 – Ordem de Aparição</h2>
@@ -622,61 +827,14 @@
         let refLink = '';
         
         if (item.id) {
-          // Tem ID - é referência bíblica válida
           refLink = `<a href="#${item.id}-contexto" style="color:#3b5e3b; text-decoration:none; font-weight:bold;">${item.referencia}</a>`;
         } else {
-          // Sem referência ou sem ID - mostra apenas ---
           refLink = '---';
         }
         
-        html += `
-          <tr>
-            <td class="col-num">${item.numero}</td>
-            <td class="col-ref">${refLink}</td>
-            <td class="tags">${item.tags || ''}</td>
-            <td>${item.topico}</td>
-            <td class="col-pag">${item.pagina}</td>
-          </tr>`;
-      });
-      
-      html += `</tbody>
-        </table>
-        <div class="footer-links"><a href="#alfabetica">🔤</a></div>
-        </section>`;
-      
-      // ==================== LISTA ALFABÉTICA CORRIGIDA ====================
-      // Filtrar apenas itens com ID (versículos bíblicos) e remover duplicatas
-      const mapaUnico = new Map();
-      dados.listaAparicao.forEach(item => {
-        // Só adiciona se tiver ID (é uma referência bíblica válida)
-        if (item.id) {
-          // Usa a referência como chave para evitar duplicatas
-          if (!mapaUnico.has(item.referencia)) {
-            mapaUnico.set(item.referencia, item);
-          }
-        }
-      });
-      
-      // Converter o mapa de volta para array e ordenar
-      const listaAlfabetica = Array.from(mapaUnico.values());
-      listaAlfabetica.sort((a, b) => {
-        const refA = a.referencia.replace(/^[0-9]+ /, '');
-        const refB = b.referencia.replace(/^[0-9]+ /, '');
-        return refA.localeCompare(refB);
-      });
-      
-      html += `<section id="alfabetica">
-        <h2>🔤 Lista 2 – Ordem Alfabética</h2>
-        <table>
-          <thead>
-            <tr><th class="col-num">1️⃣</th><th class="col-ref">📖</th><th>#️⃣</th><th>📂</th><th class="col-pag">📄</th></tr>
-          </thead>
-          <tbody>`;
-      
-      listaAlfabetica.forEach((item, idx) => {
-        html += `<tr id="${item.id}">
-          <td class="col-num">${idx + 1}</td>
-          <td class="col-ref"><a href="#${item.id}-contexto" style="color:#3b5e3b; text-decoration:none; font-weight:bold;">${item.referencia}</a></td>
+        html += `<tr>
+          <td class="col-num">${item.numero}</td>
+          <td class="col-ref">${refLink}</td>
           <td class="tags">${item.tags || ''}</td>
           <td>${item.topico}</td>
           <td class="col-pag">${item.pagina}</td>
@@ -685,12 +843,58 @@
       
       html += `</tbody>
         </table>
-        <div class="footer-links"><a href="#aparicao">🏁</a></div>
-        </section>`;
+        <div class="footer-links">
+          <a href="#alfabetica">🔤</a>
+        </div>
+      </section>`;
+      
+      // ── Lista 2 – Ordem Alfabética (sem duplicatas) ──
+      let listaAlfabetica = dados.listaAlfabetica
+        ? [...dados.listaAlfabetica]
+        : [...dados.listaAparicao];
+      
+      listaAlfabetica = removerDuplicatas(listaAlfabetica);
+      
+      listaAlfabetica.sort((a, b) => {
+        const refA = (a.referencia || '').replace(/^[0-9]+ /, '');
+        const refB = (b.referencia || '').replace(/^[0-9]+ /, '');
+        return refA.localeCompare(refB);
+      });
+      
+      html += `<section id="alfabetica">
+        <h2>🔤 Lista 2 – Ordem Alfabética</h2>
+        <p style="font-size: 12px; color: #666; margin-bottom: 10px;">📌 ${listaAlfabetica.length} referências únicas (sem duplicatas)</p>
+        <table>
+          <thead>
+            <tr><th class="col-num">1️⃣</th><th class="col-ref">📖</th><th>#️⃣</th><th>📂</th><th class="col-pag">📄</th></tr>
+          </thead>
+          <tbody>`;
+      
+      listaAlfabetica.forEach((item, idx) => {
+        const refLink = item.id
+          ? `<a href="#${item.id}-contexto" style="color:#3b5e3b; text-decoration:none; font-weight:bold;">${item.referencia}</a>`
+          : (item.referencia || '');
+        html += `<tr>
+          <td class="col-num">${idx + 1}</td>
+          <td class="col-ref">${refLink}</td>
+          <td class="tags">${item.tags || ''}</td>
+          <td>${item.topico}</td>
+          <td class="col-pag">${item.pagina || ''}</td>
+        </tr>`;
+      });
+      
+      html += `</tbody>
+        </table>
+        <div class="footer-links">
+          <a href="#aparicao">🏁</a>
+        </div>
+      </section>`;
+      
     } else {
       html += `<section><h2>⚠️ Dados do Capítulo</h2><p>Nenhuma referência encontrada neste capítulo.</p></section>`;
     }
     
+    // ── Mapas ──
     html += `<section id="mapas">
       <h2>🌏⛺ Mapas da Lição</h2>
       <div class="mapa-estatico">🖼️ INSIRA A IMAGEM ESTÁTICA DO MAPA AQUI</div>
@@ -703,6 +907,7 @@
       </div>
     </section>`;
     
+    // ── Contextos Bíblicos ──
     html += `<section id="contextos">
       <h2>💬#️⃣ Contextos das Passagens</h2>
       <div id="containerContextos"></div>
@@ -710,50 +915,70 @@
     
     container.innerHTML = html;
     
+    // ── Renderiza os cards de contexto com o novo padrão ──
     if (dados.listaAparicao && dados.listaAparicao.length > 0) {
       const containerContextos = document.getElementById('containerContextos');
-      dados.listaAparicao.forEach(item => {
+      let algumContextoEncontrado = false;
+      
+      dados.listaAparicao.forEach(function(item) {
         const ctxId = item.id;
         if (!ctxId) return;
         
-        // CORREÇÃO: usar window.contextosBiblicosMap
-        const ctx = (typeof window.contextosBiblicosMap !== 'undefined') 
-                    ? window.contextosBiblicosMap[ctxId] 
-                    : null;
+        const ctx = ctxPorId[ctxId];
         
         if (ctx) {
-          const localSemGovernante = ctx.local ? ctx.local.split(" // ")[0] : ctx.local;
-          const chaveVestibular = `${localSemGovernante}|${ctx.data}`;
+          algumContextoEncontrado = true;
           
-          const card = document.createElement('div');
-          card.className = 'contexto-card';
-          card.id = `${ctx.id}-contexto`;
+          // Usa a nova função de formatação de cabeçalho
+          const cabecalhoContexto = formatarCabecalhoContexto(ctx);
+          
+          const localSemGovernante = ctx.local ? ctx.local.split(' // ')[0] : ctx.local;
+          const chaveVestibular = `${localSemGovernante}|${ctx.data}`;
           
           let vestibularHtml = '';
           if (typeof rodapeVestibular !== 'undefined') {
             vestibularHtml = gerarVestibularComLinks(chaveVestibular);
           }
           
+          // Monta a lista de assuntos
+          let assuntosHtml = '';
+          if (ctx.assuntos && ctx.assuntos.length > 0) {
+            assuntosHtml = '<div class="assuntos">';
+            ctx.assuntos.forEach(assunto => {
+              assuntosHtml += `<span class="assunto-tag">#${assunto}</span>`;
+            });
+            assuntosHtml += '</div>';
+          }
+          
+          const card = document.createElement('div');
+          card.className = 'contexto-card';
+          card.id = `${ctx.id}-contexto`;
           card.innerHTML = `
-            <div class="contexto-titulo">📖 ${ctx.referencia} | 🚩 ${ctx.local || 'Local não informado'} | 📅 ${ctx.data || 'Data não informada'}</div>
-            <div class="contexto-versiculo">✝️ "${ctx.versiculo || 'Versículo não disponível'}"</div>
-            <div><strong>📜 ANTES:</strong> ${ctx.antes || 'Contexto anterior não disponível'}</div>
-            <div><strong>📖 DEPOIS:</strong> ${ctx.depois || 'Contexto posterior não disponível'}</div>
-            <div class="contexto-tags">#️⃣ ${ctx.tags || ''}</div>
+            <div class="contexto-titulo">${cabecalhoContexto}</div>
+            <div class="contexto-campo"><strong>📜 ANTES:</strong> ${ctx.antes || 'Contexto anterior não disponível'}</div>
+            <div class="contexto-versiculo"><strong>✝️ ${ctx.referencia}:</strong><br>"${ctx.versiculo || 'Versículo não disponível'}"</div>
+            <div class="contexto-campo"><strong>📖 DEPOIS:</strong> ${ctx.depois || 'Contexto posterior não disponível'}</div>
+            <div class="contexto-tags"><strong>#️⃣ TAGS:</strong> ${ctx.tags || ''}</div>
+            ${assuntosHtml}
             ${vestibularHtml}
-            <div class="link-volta"><a href="#${ctx.id}">🔤</a></div>
+            <div class="link-volta">
+              <a href="#aparicao" title="Voltar para lista de aparição">🏁</a>
+              <a href="#alfabetica" title="Voltar para lista alfabética">🔤</a>
+              <a href="#${ctx.id}" title="Voltar para este contexto na tabela">🔗</a>
+            </div>
           `;
           containerContextos.appendChild(card);
         }
       });
       
-      if (containerContextos.children.length === 0) {
-        containerContextos.innerHTML = '<p>📖 Nenhum contexto específico disponível para este capítulo. Verifique se os IDs estão corretos.</p>';
+      if (!algumContextoEncontrado) {
+        containerContextos.innerHTML = '<p>📖 Nenhum contexto disponível para este capítulo. Verifique se os IDs estão corretos e se contextos-biblicos.js foi carregado.</p>';
       } else {
         console.log(`✅ ${containerContextos.children.length} contextos carregados!`);
       }
     }
     
+    // ── Mapa Leaflet ──
     const centroMapa = dados.mapaConfig && dados.mapaConfig.centro ? dados.mapaConfig.centro : [20, 0];
     const zoomMapa = dados.mapaConfig && dados.mapaConfig.zoom ? dados.mapaConfig.zoom : 2;
     
@@ -778,6 +1003,7 @@
       }
     }, 100);
     
+    // ── Link Netlify ──
     setTimeout(() => {
       const netlifyInput = document.getElementById('netlifyInput');
       const salvarLinkBtn = document.getElementById('salvarLink');

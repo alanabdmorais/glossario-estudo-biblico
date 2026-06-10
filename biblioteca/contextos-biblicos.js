@@ -2687,7 +2687,6 @@ const bibliotecaContextos = [
   tags: "desposar / noiva / aliança / fidelidade",
   assuntos: ["israel", "oseias", "alianca", "noiva-de-deus", "amor-divino"]
 },
-// ==================== CONTEXTOS LIVRO 5 - CAPÍTULO 1 (COMPLEMENTARES) ====================
 
 // 150. 1 Coríntios 3.16
 {
@@ -3388,19 +3387,1788 @@ const bibliotecaContextos = [
   depois: "Este é o relato do nascimento da igreja. O vento representa o Espírito vivificador, o fogo representa a purificação e a presença divina, e as línguas representam a universalidade do evangelho. A promessa de Jesus (Atos 1.8) foi cumprida, e a era da igreja foi inaugurada.",
   tags: "Pentecostes / Espírito Santo / línguas / vento / fogo",
   assuntos: ["jerusalem", "pentecostes", "espirito-santo", "igreja-primitiva"]
+},
+// 189. Colossenses 1.16-17
+{
+  id: "cl1.16-17",
+  referencia: "Cl 1.16-17",
+  local: "Roma / Itália (Itália)",
+  paisAtual: "Itália",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~60-62 d.C.",
+  antes: "Paulo estava preso em Roma, escrevendo cartas às igrejas. Em Colossos, surgiam ensinamentos que diminuíam a pessoa de Cristo, misturando elementos judaicos e filosofias gregas. Paulo escreve para afirmar a supremacia absoluta de Cristo sobre toda a criação.",
+  versiculo: "⚠️ Porque nele foram criadas todas as coisas que há nos céus e na terra, visíveis e invisíveis, sejam tronos, sejam dominações, sejam principados, sejam potestades; tudo foi criado por ele e para ele. E ele é antes de todas as coisas, e todas as coisas subsistem por ele.",
+  depois: "Este hino cristológico tornou-se um dos textos mais importantes sobre a supremacia de Cristo. A igreja primitiva usou estas verdades para combater o gnosticismo e outras heresias que diminuíam a divindade de Cristo. Até hoje, é referência para a compreensão da relação entre Criador e criação.",
+  tags: "criação / subsistência / tudo foi criado por Ele",
+  assuntos: ["roma", "paulo", "colossenses", "supremacia-cristo", "criacao"]
+},
+
+// 190. Hebreus 1.3
+{
+  id: "hb1.3",
+  referencia: "Hb 1.3",
+  local: "Roma / Itália (Itália)",
+  paisAtual: "Itália",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~60-65 d.C.",
+  antes: "O autor de Hebreus escreve a judeus cristãos que estavam tentados a voltar ao judaísmo por causa da perseguição. Ele começa a carta afirmando que Deus falou pelo Filho, que é muito superior aos anjos e a Moisés.",
+  versiculo: "✅ O qual, sendo o resplendor da sua glória e a expressa imagem da sua pessoa, e sustentando todas as coisas pela palavra do seu poder, havendo feito por si mesmo a purificação dos nossos pecados, assentou-se à destra da Majestade nas alturas.",
+  depois: "O autor argumenta que se a mensagem dos anjos era firme, muito mais a mensagem do Filho. A purificação dos pecados já foi realizada - não há mais necessidade de sacrifícios. Cristo está assentado à direita de Deus, aguardando até que seus inimigos sejam postos por escabelo de seus pés.",
+  tags: "sustentação / palavra do seu poder / universo",
+  assuntos: ["roma", "autor-hebreus", "cristo", "supremacia", "sacrificio"]
+},
+
+// 191. Salmo 121.4
+{
+  id: "sl121.4",
+  referencia: "Sl 121.4",
+  local: "Jerusalém / Judá (Israel)",
+  paisAtual: "Israel",
+  lider: "Davi",
+  liderReinado: "1010-970 a.C.",
+  periodo: "Reino Unido",
+  periodoDatas: "1010-970 a.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~1000 a.C.",
+  antes: "Este é um cântico de peregrinação (Salmo 120-134), usado pelos peregrinos que subiam a Jerusalém para as festas. A viagem era perigosa, com montanhas e desertos. O peregrino olha para as montanhas e se pergunta de onde virá o socorro.",
+  versiculo: "✅ Eis que não tosquenejará nem dormirá o guarda de Israel.",
+  depois: "O salmo afirma que Deus não é como os guardas humanos que dormem. Ele está sempre vigilante. A conclusão é uma bênção: 'O Senhor guardará a tua saída e a tua entrada, desde agora e para sempre'. Este salmo tem sido uma fonte de grande conforto para os crentes em todas as épocas.",
+  tags: "vigilante / guarda de Israel / não dormita",
+  assuntos: ["jerusalem", "salmos", "davi", "providencia-divina", "confianca"]
+},
+
+// 192. João 14.13
+{
+  id: "jo14.13",
+  referencia: "Jo 14.13",
+  local: "Jerusalém / Judéia (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~30 d.C.",
+  antes: "Jesus está no cenáculo com os discípulos na véspera de sua morte. Filipe pediu: 'Mostra-nos o Pai'. Jesus responde que quem o vê, vê o Pai. Ele então fala sobre a oração e o poder do Seu nome.",
+  versiculo: "✅ E tudo quanto pedirdes em meu nome, isso farei, para que o Pai seja glorificado no Filho.",
+  depois: "A promessa de oração respondida tem uma condição: 'em meu nome'. Não é uma fórmula mágica, mas orar de acordo com o caráter e a vontade de Jesus. O propósito final não é nossa satisfação, mas a glória do Pai. A oração cristã é cristocêntrica e teocêntrica.",
+  tags: "oração / resposta / pedir em meu nome",
+  assuntos: ["jerusalem", "jesus", "oracao", "nome-de-jesus", "gloria-deus"]
+},
+
+// 193. Isaías 41.10
+{
+  id: "is41.10",
+  referencia: "Is 41.10",
+  local: "Jerusalém / Judá (Israel)",
+  paisAtual: "Israel",
+  lider: "Ezequias",
+  liderReinado: "715-686 a.C.",
+  periodo: "Reino de Judá (Sul)",
+  periodoDatas: "930-586 a.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~700 a.C.",
+  antes: "Isaías profetiza durante o cerco de Jerusalém pelos assírios. O rei Ezequias e o povo estão aterrorizados. Deus encoraja Israel: 'Não temas, porque eu sou contigo'. O versículo faz parte de uma seção de consolo.",
+  versiculo: "✅ Não temas, porque eu sou contigo; não te assombres, porque eu sou teu Deus; eu te fortaleço, e te ajudo, e te sustento com a destra da minha justiça.",
+  depois: "Este versículo tem sido uma fonte de encorajamento para incontáveis crentes ao longo dos séculos. A promessa inclui quatro ações divinas: fortalecer, ajudar, sustentar e a presença da justiça de Deus. O 'não temas' é o mandamento mais repetido nas Escrituras.",
+  tags: "não temas / auxílio / justiça",
+  assuntos: ["jerusalem", "isaias", "encorajamento", "confianca", "presenca-divina"]
+},
+
+// 194. Mateus 10.29-30
+{
+  id: "mt10.29-30",
+  referencia: "Mt 10.29-30",
+  local: "Galileia (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~28 d.C.",
+  antes: "Jesus está enviando os doze discípulos em missão. Ele os adverte sobre perseguições, prisões e até morte. Para encorajá-los, ele fala do cuidado de Deus pelos detalhes da criação.",
+  versiculo: "✅ Não se vendem dois passarinhos por um ceitil? e nenhum deles cairá em terra sem a vontade de vosso Pai. E até mesmo os cabelos da vossa cabeça estão todos contados.",
+  depois: "Os pardais eram as aves mais baratas do mercado - dois por uma moeda de pouco valor. Se Deus cuida de algo tão insignificante, quanto mais cuidará de seus discípulos que estão fazendo Sua obra. A conclusão: 'Não temais, pois mais valeis vós do que muitos passarinhos'.",
+  tags: "pardais / cabelos contados / cuidado divino",
+  assuntos: ["galileia", "jesus", "providencia-divina", "confianca", "cuidado-deus"]
+},
+
+// 195. Salmo 139.7-10
+{
+  id: "sl139.7-10",
+  referencia: "Sl 139.7-10",
+  local: "Jerusalém / Judá (Israel)",
+  paisAtual: "Israel",
+  lider: "Davi",
+  liderReinado: "1010-970 a.C.",
+  periodo: "Reino Unido",
+  periodoDatas: "1010-970 a.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~1000 a.C.",
+  antes: "Davi reflete sobre o conhecimento íntimo que Deus tem dele. Deus conhece seus pensamentos, suas palavras e suas ações. Não há como esconder nada do Criador. Davi então considera a impossibilidade de fugir da presença divina.",
+  versiculo: "⚠️ Para onde me irei do teu espírito, ou para onde fugirei da tua face? Se subir ao céu, ali tu estás; se fizer no inferno a minha cama, eis que tu ali estás também. Se tomar as asas da alva, se habitar nas extremidades do mar, até ali me guiará a tua mão e me susterá a tua destra.",
+  depois: "Davi conclui que não há esconderijo possível. Nem o céu, nem o inferno, nem o oriente (asas da alva), nem o ocidente (extremidades do mar) podem separar alguém de Deus. Para o crente, isso é conforto; para o ímpio, é advertência. O salmo termina com um pedido para que Deus examine o coração.",
+  tags: "onipresença / Espírito / fuga impossível",
+  assuntos: ["jerusalem", "salmos", "davi", "onipresenca", "conhecimento-deus"]
+},
+
+// 196. Mateus 10.29
+{
+  id: "mt10.29",
+  referencia: "Mt 10.29",
+  local: "Galileia (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~28 d.C.",
+  antes: "Jesus está instruindo os discípulos antes de enviá-los em missão. Ele fala sobre perseguição e necessidade de confiança em Deus. Os discípulos poderiam pensar que Deus não se importa com suas pequenas vidas.",
+  versiculo: "✅ Não se vendem dois passarinhos por um ceitil? e nenhum deles cairá em terra sem a vontade de vosso Pai.",
+  depois: "Jesus usa o exemplo mais simples para ensinar sobre a providência divina. Se Deus cuida dos pardais - aves de pouco valor comercial - quanto mais cuidará de seus discípulos. Este ensino contrasta com a visão deísta de um Deus distante e desinteressado.",
+  tags: "providência contínua / pardal / Pai celestial",
+  assuntos: ["galileia", "jesus", "providencia-divina", "cuidado-deus", "confianca"]
+},
+
+// 197. Provérbios 3.5
+{
+  id: "pv3.5",
+  referencia: "Pv 3.5",
+  local: "Jerusalém / Judá (Israel)",
+  paisAtual: "Israel",
+  lider: "Salomão",
+  liderReinado: "970-930 a.C.",
+  periodo: "Reino Unido",
+  periodoDatas: "1010-970 a.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~950 a.C.",
+  antes: "Salomão escreve provérbios para seu filho, instruindo-o sobre a sabedoria prática. O capítulo 3 é uma exortação à confiança em Deus, contrastando com a autossuficiência humana.",
+  versiculo: "✅ Confia no Senhor de todo o teu coração e não te estribes no teu próprio entendimento.",
+  depois: "Este é um dos versículos mais citados sobre confiança em Deus. A confiança deve ser 'de todo o coração' - total, não parcial. A alternativa é confiar no 'próprio entendimento' - a sabedoria humana limitada. O versículo seguinte promete: 'Reconhece-o em todos os teus caminhos, e ele endireitará as tuas veredas'.",
+  tags: "providência contínua / confiança / não te estribes",
+  assuntos: ["jerusalem", "salomao", "proverbios", "confianca", "sabedoria-divina"]
+},
+
+// 198. Jeremias 33.3
+{
+  id: "jr33.3",
+  referencia: "Jr 33.3",
+  local: "Jerusalém / Judá (Israel)",
+  paisAtual: "Israel",
+  lider: "Zedequias",
+  liderReinado: "597-586 a.C.",
+  periodo: "Reino de Judá (Sul)",
+  periodoDatas: "930-586 a.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~587 a.C.",
+  antes: "Jeremias está preso no pátio da guarda durante o cerco final de Jerusalém pelos babilônios. A cidade está prestes a cair. Deus ordena que Jeremias ore, prometendo revelar coisas grandes e ocultas.",
+  versiculo: "✅ Clama a mim, e responder-te-ei, e anunciar-te-ei coisas grandes e firmes, que não sabes.",
+  depois: "Deus responde à oração de Jeremias revelando que a restauração virá após o exílio. Ele promete curar a cidade, trazer prosperidade e levantar um 'Renovo de justiça' - uma profecia messiânica. A oração é a chave para receber revelação divina.",
+  tags: "Deus que age / clama / responderei",
+  assuntos: ["jerusalem", "jeremias", "oracao", "revelacao", "restauracao"]
+},
+
+// 199. Êxodo 2.24-25
+{
+  id: "ex2.24-25",
+  referencia: "Êx 2.24-25",
+  local: "Egito / Delta do Nilo (Egito)",
+  paisAtual: "Egito",
+  lider: "Faraó (nome não especificado)",
+  liderReinado: "~1525-1500 a.C.",
+  periodo: "Êxodo e Conquista",
+  periodoDatas: "~1446-1400 a.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~1446 a.C.",
+  antes: "Israel estava escravizado no Egito há décadas. O faraó havia ordenado a morte de todos os meninos hebreus. Moisés havia fugido para Midiã. O povo gemeu e clamou a Deus por causa da opressão.",
+  versiculo: "✅ E ouviu Deus o seu gemido, e lembrou-se Deus da sua aliança com Abraão, com Isaque e com Jacó. E viu Deus os filhos de Israel, e atentou para a sua condição.",
+  depois: "Deus responde ao clamor de Israel. Ele 'lembrou-se' da aliança - não que tivesse esquecido, mas agora age com base nela. Este é o prelúdio para o chamado de Moisés na sarça ardente e o êxodo. Deus vê, ouve e age em favor do seu povo.",
+  tags: "Deus que age / gemido / lembrou-se",
+  assuntos: ["egito", "exodo", "moises", "alianca", "libertacao"]
+},
+
+// 200. João 1.14
+{
+  id: "jo1.14",
+  referencia: "Jo 1.14",
+  local: "Éfeso / Ásia Menor (Turquia)",
+  paisAtual: "Turquia",
+  lider: "Domiciano",
+  liderReinado: "81-96 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~90 d.C.",
+  antes: "João abre seu evangelho com um prólogo sobre o Verbo (Logos) que estava com Deus e era Deus. O Verbo criou todas as coisas. João Batista testemunhou sobre a luz. Agora João anuncia a encarnação.",
+  versiculo: "✅ E o Verbo se fez carne, e habitou entre nós, e vimos a sua glória, como a glória do Unigênito do Pai, cheio de graça e de verdade.",
+  depois: "A encarnação é o ponto central da fé cristã. Deus não permaneceu distante, mas tornou-se humano. 'Habitou' significa 'tabernaculou' - Deus acampou entre nós, como no tabernáculo no deserto. João e os outros apóstolos testemunharam esta glória.",
+  tags: "Deus que age / Verbo se fez carne / habitou",
+  assuntos: ["efeso", "joao", "encarnacao", "verbo", "cristo"]
+},
+
+// 201. Hebreus 1.1-2
+{
+  id: "hb1.1-2",
+  referencia: "Hb 1.1-2",
+  local: "Roma / Itália (Itália)",
+  paisAtual: "Itália",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~60-65 d.C.",
+  antes: "O autor de Hebreus escreve a judeus cristãos que estavam tentados a voltar ao judaísmo. Eles respeitavam os profetas do Antigo Testamento, mas estavam perdendo a visão da superioridade de Cristo.",
+  versiculo: "✅ Havendo Deus antigamente falado muitas vezes e de muitas maneiras aos pais pelos profetas, a nós falou-nos nestes últimos dias pelo Filho, a quem constituiu herdeiro de tudo, por quem fez também o mundo.",
+  depois: "O autor estabelece um contraste: a revelação antiga (profetas, múltiplas vezes, múltiplas maneiras) versus a revelação final (pelo Filho, uma vez, de maneira definitiva). O Filho é o herdeiro de tudo e o agente da criação. A carta então demonstra a superioridade do Filho sobre os anjos, Moisés e o sistema sacrificial.",
+  tags: "revelação especial / profetas / Filho",
+  assuntos: ["roma", "autor-hebreus", "revelacao", "cristo", "supremacia"]
+},
+
+// 202. Salmo 103.13-14
+{
+  id: "sl103.13-14",
+  referencia: "Sl 103.13-14",
+  local: "Jerusalém / Judá (Israel)",
+  paisAtual: "Israel",
+  lider: "Davi",
+  liderReinado: "1010-970 a.C.",
+  periodo: "Reino Unido",
+  periodoDatas: "1010-970 a.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~1000 a.C.",
+  antes: "Davi bendiz a Deus por todos os seus benefícios: perdão, cura, redenção, amor e misericórdia. Ele contrasta o amor de Deus com a fragilidade humana. O salmo é uma celebração da compaixão divina.",
+  versiculo: "✅ Como um pai se compadece de seus filhos, assim o Senhor se compadece daqueles que o temem. Pois ele conhece a nossa estrutura; lembra-se de que somos pó.",
+  depois: "A imagem do pai compassivo contrasta com a visão de um Deus distante ou severo. Deus conhece nossa fragilidade - 'somos pó' - e age com compaixão. O salmo conclui com um chamado universal para bendizer ao Senhor, desde os anjos até toda a criação.",
+  tags: "Deus relojoeiro / compaixão / conhece nossa estrutura",
+  assuntos: ["jerusalem", "salmos", "davi", "compaixao-divina", "fragilidade-humana"]
+},
+
+// 203. Mateus 4.23-25
+{
+  id: "mt4.23-25",
+  referencia: "Mt 4.23-25",
+  local: "Galileia (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~28 d.C.",
+  antes: "Jesus acabou de chamar os primeiros discípulos (Pedro, André, Tiago e João) e de vencer as tentações no deserto. Agora ele inicia seu ministério público na Galileia, uma região com muitas cidades e vilarejos.",
+  versiculo: "✅ E percorria Jesus toda a Galileia, ensinando nas sinagogas, pregando o evangelho do reino, e curando toda sorte de enfermidades e moléstias entre o povo. E a sua fama correu por toda a Síria; e traziam-lhe todos os que padeciam, acometidos de várias enfermidades e tormentos, os endemoninhados, os lunáticos e os paralíticos; e ele os curava. E seguia-o uma grande multidão da Galileia, e de Decápolis, e de Jerusalém, e da Judéia, e dalém do Jordão.",
+  depois: "Este resumo mostra as três atividades principais de Jesus: ensinar, pregar e curar. As multidões vinham de toda a região - não apenas da Galileia, mas também da Decápolis (cidades greco-romanas), Jerusalém (centro religioso) e além do Jordão (Pereia). O ministério de Jesus atraiu judeus e gentios.",
+  tags: "negação dos milagres / curas / multidões",
+  assuntos: ["galileia", "jesus", "milagres", "cura", "evangelho"]
+},
+
+// 204. Mateus 8.23-27
+{
+  id: "mt8.23-27",
+  referencia: "Mt 8.23-27",
+  local: "Mar da Galileia (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~28 d.C.",
+  antes: "Jesus havia ensinado sobre o custo do discipulado. Ele entrou no barco com seus discípulos para atravessar o Mar da Galileia. Repentinamente, uma grande tempestade se levantou - comum na região devido à geografia do lago cercado por montanhas.",
+  versiculo: "✅ E, entrando ele no barco, seus discípulos o seguiram. E eis que no mar se levantou uma grande tempestade, de sorte que o barco era coberto pelas ondas; ele, porém, estava dormindo. E os discípulos, aproximando-se, o despertaram, dizendo: Senhor, salva-nos! Que perecemos? E ele disse-lhes: Por que temeis, homens de pouca fé? Então, levantando-se, repreendeu os ventos e o mar, e seguiu-se uma grande bonança. E aqueles homens se maravilharam, dizendo: Quem é este, que até os ventos e o mar lhe obedecem?",
+  depois: "Os discípulos, muitos deles pescadores experientes, estavam aterrorizados. Jesus dormia tranquilamente, demonstrando confiança no Pai. Ao acordá-lo, eles reconheceram sua necessidade: 'Salva-nos! Que perecemos'. Jesus responde com uma pergunta sobre a falta de fé. O milagre revela a autoridade divina de Cristo sobre as forças da natureza.",
+  tags: "negação dos milagres / acalma a tempestade / ventos",
+  assuntos: ["mar-galileia", "jesus", "milagres", "tempestade", "autoridade-divina"]
+},
+
+// 205. Marcos 4.35-41
+{
+  id: "mc4.35-41",
+  referencia: "Mc 4.35-41",
+  local: "Mar da Galileia (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~28 d.C.",
+  antes: "Jesus havia passado o dia ensinando à beira do mar usando parábolas. Ao entardecer, ele disse aos discípulos: 'Passemos para a outra margem'. Eles entraram no barco com ele, exaustos após um longo dia.",
+  versiculo: "✅ E, naquele dia, sendo já tarde, disse-lhes: Passemos para a outra margem. E eles, deixando a multidão, o levaram consigo, assim como estava, no barco; e havia também com ele outros barquinhos. E levantou-se grande temporal de vento, e as ondas batiam dentro do barco, de modo que já se enchia. E ele estava na popa dormindo sobre uma almofada; e despertaram-no, dizendo-lhe: Mestre, não se te dá que pereçamos? E ele, despertando, repreendeu o vento, e disse ao mar: Cala-te, aquieta-te. E o vento se aquietou, e houve grande bonança. E disse-lhes: Por que sois tão tímidos? Ainda não tendes fé? E eles sentiram grande temor, e diziam uns aos outros: Quem é este, que até o vento e o mar lhe obedecem?",
+  depois: "Marcos acrescenta detalhes que Mateus não inclui: 'outros barquinhos' acompanhavam, Jesus dormia sobre uma almofada na popa, e os discípulos perguntaram 'Não se te dá que pereçamos?'. A pergunta revela tanto medo quanto um senso de abandono. Jesus repreende o vento e o mar com autoridade divina. A reação dos discípulos é 'grande temor' - não medo da tempestade, mas temor reverente diante do poder divino manifestado.",
+  tags: "negação dos milagres / mar se acalma / quem é este",
+  assuntos: ["mar-galileia", "jesus", "milagres", "tempestade", "divindade-cristo"]
+},
+
+// 206. Lucas 7.11-17
+{
+  id: "lc7.11-17",
+  referencia: "Lc 7.11-17",
+  local: "Naim / Galileia (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~28 d.C.",
+  antes: "Jesus estava em Cafarnaum, onde curou o servo do centurião. Depois, foi para a cidade de Naim, cerca de 40 km ao sul. Ao se aproximar da porta da cidade, encontrou um cortejo fúnebre saindo.",
+  versiculo: "✅ E aconteceu que, no dia seguinte, ele foi à cidade chamada Naim, e com ele iam muitos dos seus discípulos e uma grande multidão. E, quando chegou perto da porta da cidade, eis que levavam um defunto, filho único de sua mãe, que era viúva; e com ela ia uma grande multidão da cidade. E, vendo-a, o Senhor moveu-se de íntima compaixão por ela, e disse-lhe: Não chores. E, chegando-se, tocou no esquife (e os que o levavam pararam), e disse: Jovem, eu te digo: Levanta-te. E o defunto assentou-se, e começou a falar. E ele o entregou à sua mãe.",
+  depois: "Este é o primeiro relato de ressurreição nos evangelhos sinóticos. A situação era especialmente trágica: a viúva já havia perdido o marido, e agora perdia seu único filho - sua única fonte de sustento. Jesus age com compaixão antes mesmo de qualquer pedido. O toque no esquife (caixão aberto) o tornaria cerimonialmente impuro, mas Jesus transcende as leis de pureza. A notícia se espalhou por toda a Judeia.",
+  tags: "negação dos milagres / ressurreição do filho da viúva / Naim",
+  assuntos: ["naim", "jesus", "milagres", "ressurreicao", "compaixao"]
+},
+
+// 207. Lucas 8.40-56
+{
+  id: "lc8.40-56",
+  referencia: "Lc 8.40-56",
+  local: "Cafarnaum / Galileia (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~28 d.C.",
+  antes: "Jesus retornou de Gadara, onde havia expulsado demônios. Uma multidão o esperava em Cafarnaum. Dois milagres se entrelaçam: a cura da mulher com hemorragia e a ressurreição da filha de Jairo, um dos líderes da sinagoga.",
+  versiculo: "⚠️ E aconteceu que, quando Jesus voltou, a multidão o recebeu, porque todos o estavam esperando. E eis que chegou um varão de nome Jairo, que era príncipe da sinagoga; e, prostrando-se aos pés de Jesus, rogava-lhe que entrasse em sua casa; porque tinha uma filha única, quase doze anos, que estava à morte. E, indo ele, a multidão o apertava. E uma mulher que tinha um fluxo de sangue, havia doze anos, e havia gasto com os médicos toda a sua fazenda, e por nenhum pudera ser curada, chegando-se por detrás, tocou na orla da sua veste, e logo cessou o seu fluxo de sangue. E disse Jesus: Quem é que me tocou? E, negando todos, disse Pedro e os que estavam com ele: Mestre, a multidão te aperta e te oprime. Mas Jesus disse: Alguém me tocou, porque bem conheço que de mim saiu virtude. Então, a mulher, vendo que não podia ocultar-se, aproximou-se tremendo e, prostrando-se ante ele, declarou-lhe diante de todo o povo a causa por que lhe havia tocado, e como logo sarara. E ele lhe disse: Tem bom ânimo, filha, a tua fé te salvou; vai em paz. Estando ele ainda falando, chegou um do príncipe da sinagoga, dizendo: A tua filha já está morta; não incomodes o Mestre. Porém Jesus, ouvindo isso, respondeu-lhe: Não temas; crê somente, e será salva. E, entrando na casa, não permitiu que entrasse com ele ninguém, senão Pedro, Tiago e João, e o pai e a mãe da menina. E todos choravam e a pranteavam; mas ele disse: Não choreis; não está morta, mas dorme. E riam-se dele, sabendo que estava morta. Porém ele, levando-a pela mão, exclamou, dizendo: Menina, levanta-te. E o seu espírito voltou, e ela logo se levantou; e Jesus mandou que lhe desse de comer.",
+  depois: "Os dois milagres estão conectados pelo número 12: a mulher sofreu por 12 anos, a menina tinha 12 anos. Ambos os casos envolvem impureza cerimonial (hemorragia e contato com morto), mas Jesus a ignora. A mulher curou-se pelo toque da fé, e Jesus a chama de 'filha'. Jairo é encorajado: 'Não temas; crê somente'. A morte é chamada de sono, apontando para a ressurreição futura.",
+  tags: "negação dos milagres / filha de Jairo / hemorroíssa",
+  assuntos: ["cafarnaum", "jesus", "milagres", "ressurreicao", "cura"]
+},
+
+// 208. Romanos 3.10-12
+{
+  id: "rm3.10-12",
+  referencia: "Rm 3.10-12",
+  local: "Corinto / Acaia (Grécia)",
+  paisAtual: "Grécia",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~57 d.C.",
+  antes: "Paulo tem argumentado que tanto judeus quanto gentios estão sob o pecado. Ele cita uma catena (corrente) de versículos do Antigo Testamento (Salmos e Isaías) para provar que ninguém é justo por si mesmo.",
+  versiculo: "✅ Como está escrito: Não há justo, nem um sequer. Não há quem entenda; não há quem busque a Deus. Todos se extraviaram e juntamente se fizeram inúteis; não há quem faça o bem, não há nem um sequer.",
+  depois: "Paulo conclui que 'todos pecaram e destituídos estão da glória de Deus' (Rm 3.23). A conclusão não é desespero, mas a necessidade da justificação pela fé, independentemente das obras da lei. A citação mostra a universalidade do pecado - nenhum ser humano é naturalmente justo, entende a Deus ou O busca.",
+  tags: "moral natural / não há justo / todos se extraviaram",
+  assuntos: ["corinto", "paulo", "pecado-universal", "depravacao-total", "justificacao"]
+},
+
+// 209. Mateus 6.26-30
+{
+  id: "mt6.26-30",
+  referencia: "Mt 6.26-30",
+  local: "Monte das Bem-aventuranças / Galileia (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~28 d.C.",
+  antes: "Jesus está ensinando no Sermão da Montanha. Ele acabara de ensinar sobre o perigo da ansiedade em relação às riquezas, dizendo que ninguém pode servir a dois senhores: Deus e o dinheiro.",
+  versiculo: "⚠️ Olhai para as aves do céu, que nem semeiam, nem ceifam, nem ajuntam em celeiros; e vosso Pai celestial as alimenta. Não tendes vós muito mais valor do que elas? E qual de vós, por mais que pense, pode acrescentar um côvado à sua estatura? E, quanto ao vestuário, por que andais cuidadosos? Olhai para os lírios do campo, como eles crescem; não trabalham nem fiam; e eu vos digo que nem mesmo Salomão, em toda a sua glória, se vestiu como qualquer deles. Pois, se Deus assim veste a erva do campo, que hoje existe e amanhã é lançada no forno, não vos vestirá muito mais a vós, homens de pouca fé?",
+  depois: "Jesus ensina que a ansiedade é desnecessária porque Deus cuida da criação. A conclusão: 'Buscai primeiro o reino de Deus e a sua justiça, e todas estas coisas vos serão acrescentadas'. A ansiedade revela 'pouca fé' - não ausência, mas imaturidade. A confiança na providência divina liberta da escravidão das preocupações materiais.",
+  tags: "providência contínua / aves do céu / lírios do campo",
+  assuntos: ["galileia", "jesus", "providencia-divina", "ansiedade", "confianca"]
+},
+
+// 210. João 14.13-14
+{
+  id: "jo14.13-14",
+  referencia: "Jo 14.13-14",
+  local: "Jerusalém / Judéia (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~30 d.C.",
+  antes: "Jesus está no cenáculo, na véspera de sua morte. Ele acabou de dizer que quem crê nele fará as obras que ele faz, e até maiores. A oração é o meio pelo qual essas obras serão realizadas.",
+  versiculo: "✅ E tudo quanto pedirdes em meu nome, isso farei, para que o Pai seja glorificado no Filho. Se pedirdes alguma coisa em meu nome, eu o farei.",
+  depois: "A repetição enfatiza a certeza da promessa. Orar 'em meu nome' não é uma fórmula mágica, mas orar de acordo com o caráter, a vontade e a autoridade de Jesus. O propósito da oração respondida é a glória do Pai. A oração cristã é cristocêntrica e teocêntrica.",
+  tags: "O Deus que age / resposta a oração",
+  assuntos: ["jerusalem", "jesus", "oracao", "nome-de-jesus", "gloria-deus"]
+},
+
+// 211. Isaías 45.5
+{
+  id: "is45.5",
+  referencia: "Is 45.5",
+  local: "Babilônia / Mesopotâmia (Iraque)",
+  paisAtual: "Iraque",
+  lider: "Ciro, o Grande",
+  liderReinado: "559-530 a.C.",
+  periodo: "Império Persa",
+  periodoDatas: "550-330 a.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~540 a.C.",
+  antes: "Isaías profetiza sobre Ciro, o rei persa que libertaria Israel do exílio babilônico. Deus declara sua soberania sobre todos os reinos. Ciro é chamado de 'ungido' do Senhor, mesmo sendo um governante pagão.",
+  versiculo: "✅ Eu sou o Senhor, e não há outro; fora de mim não há Deus; eu te cingirei, ainda que tu me não conheças.",
+  depois: "Deus declara sua unicidade absoluta. Não há outros deuses. A soberania de Deus se estende sobre todos os eventos históricos, incluindo a ascensão de Ciro. Mesmo que Ciro não conhecesse a Deus, Deus o usaria para libertar seu povo. Este versículo é fundamental para a teologia monoteísta.",
+  tags: "convite à confiança / Eu sou o Senhor / não há outro",
+  assuntos: ["babilonia", "isaias", "monoteismo", "soberania-divina", "ciro"]
+},
+
+// 212. Sofonias 3.17
+{
+  id: "sf3.17",
+  referencia: "Sf 3.17",
+  local: "Jerusalém / Judá (Israel)",
+  paisAtual: "Israel",
+  lider: "Josias",
+  liderReinado: "640-609 a.C.",
+  periodo: "Reino de Judá (Sul)",
+  periodoDatas: "930-586 a.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~630 a.C.",
+  antes: "Sofonias profetizou durante o reinado de Josias, antes da reforma religiosa. O livro começa com juízo severo contra Judá e as nações, mas termina com uma promessa de restauração e alegria divina sobre o povo remanescente.",
+  versiculo: "✅ O Senhor teu Deus está no meio de ti, poderoso para te salvar; ele se deleitará em ti com alegria; calar-se-á por seu amor, regozijar-se-á em ti com júbilo.",
+  depois: "Esta é uma das imagens mais ternas de Deus no Antigo Testamento. Deus não é apenas poderoso para salvar, mas 'se deleita' em seu povo com alegria. 'Calar-se-á por seu amor' pode significar que Deus descansa em seu amor por nós, ou que renova seu amor silenciosamente. O regozijo de Deus é comparado ao júbilo de uma festa de casamento.",
+  tags: "convite à confiança / Deus poderoso para salvar / exulta de alegria",
+  assuntos: ["jerusalem", "sofonias", "amor-divino", "alegria-deus", "salvacao"]
+},
+
+// 213. Jeremias 23.23
+{
+  id: "jr23.23",
+  referencia: "Jr 23.23",
+  local: "Jerusalém / Judá (Israel)",
+  paisAtual: "Israel",
+  lider: "Zedequias",
+  liderReinado: "597-586 a.C.",
+  periodo: "Reino de Judá (Sul)",
+  periodoDatas: "930-586 a.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~590-580 a.C.",
+  antes: "Jeremias confronta os falsos profetas que diziam 'Paz, paz' quando não havia paz. Eles pensavam que Deus estava longe e não via seus pecados. Deus responde com uma pergunta retórica.",
+  versiculo: "✅ Sou eu apenas Deus de perto, diz o Senhor, e não também Deus de longe?",
+  depois: "Deus afirma que não é apenas um Deus local, limitado ao templo ou a Jerusalém. Ele é Deus de perto (presente, íntimo, conhecendo cada detalhe) e Deus de longe (transcendente, soberano sobre toda a criação). Os falsos profetas estavam errados em ambos os aspectos.",
+  tags: "convite à confiança / Deus de perto / Deus de longe",
+  assuntos: ["jerusalem", "jeremias", "onipresenca", "soberania-divina", "falsos-profetas"]
+},
+// 214. Hebreus 13.8
+{
+  id: "hb13.8",
+  referencia: "Hb 13.8",
+  local: "Roma / Itália (Itália)",
+  paisAtual: "Itália",
+  lider: "",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~60-65 d.C.",
+  antes: "O autor de Hebreus está concluindo a carta com exortações práticas sobre amor fraternal, hospitalidade, casamento, contentamento e obediência aos líderes. Ele lembra os leitores dos seus líderes que já partiram e exorta que imitem sua fé.",
+  versiculo: "✅ Jesus Cristo é o mesmo, ontem, e hoje, e eternamente.",
+  depois: "Esta declaração da imutabilidade de Cristo serve como fundamento para todas as exortações práticas da carta. Diante de doutrinas estranhas e variadas, o crente pode confiar que Cristo não muda. O que Ele foi no passado (ontem), é agora (hoje) e será para sempre (eternamente).",
+  tags: "imutabilidade / Jesus Cristo / ontem hoje sempre",
+  assuntos: ["roma", "autor-hebreus", "imutabilidade-cristo", "confianca", "estabilidade"]
+},
+// 215. Apocalipse 3.17
+{
+  id: "ap3.17",
+  referencia: "Ap 3.17",
+  local: "Laodicéia / Ásia Menor (Turquia)",
+  paisAtual: "Turquia",
+  lider: "Domiciano",
+  liderReinado: "81-96 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~95 d.C.",
+  antes: "A igreja de Laodicéia era conhecida por sua riqueza. A cidade era um centro bancário e financeiro, famosa por seus tecidos de lã negra e por um colírio medicinal. A igreja refletia a opulência da cidade, mas estava espiritualmente empobrecida.",
+  versiculo: "✅ Porquanto dizes: Rico sou, e estou enriquecido, e de nada tenho falta; e não sabes que és um desgraçado, e miserável, e pobre, e cego, e nu.",
+  depois: "Jesus aconselha a igreja a comprar dele ouro refinado no fogo (verdadeira riqueza espiritual), vestes brancas (justiça) e colírio (discernimento espiritual). Aqueles que Ele ama, repreende e disciplina. A carta termina com uma promessa para os vencedores: sentar-se-ão no trono de Cristo.",
+  tags: "Laodicéia / rico / miserável",
+  assuntos: ["laodiceia", "apocalipse", "igreja-primitiva", "riqueza-espiritual"]
+},
+
+// 216. 1 Timóteo 6.6-8
+{
+  id: "1tm6.6-8",
+  referencia: "1 Tm 6.6-8",
+  local: "Éfeso / Ásia Menor (Turquia)",
+  paisAtual: "Turquia",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~62-64 d.C.",
+  antes: "Paulo escreve a Timóteo, seu filho na fé, que estava pastoreando a igreja em Éfeso. Havia falsos mestres que ensinavam que a piedade era fonte de lucro. Paulo contrasta essa visão com o verdadeiro contentamento.",
+  versiculo: "✅ Mas é grande ganho a piedade com contentamento. Porque nada trouxemos para este mundo, e manifesto é que nada podemos levar dele. Tendo, porém, sustento e com que nos cobrirmos, estejamos com isso contentes.",
+  depois: "Paulo continua advertindo que os que querem ser ricos caem em tentação e em muitos desejos tolos e prejudiciais. O amor ao dinheiro é a raiz de todos os males. O homem de Deus deve fugir dessas coisas e buscar justiça, piedade, fé, amor, perseverança e mansidão.",
+  tags: "contentamento / suficiência / nada trouxemos",
+  assuntos: ["efeso", "paulo", "contentamento", "piedade", "timoteo"]
+},
+
+// 217. 1 Timóteo 6.9
+{
+  id: "1tm6.9",
+  referencia: "1 Tm 6.9",
+  local: "Éfeso / Ásia Menor (Turquia)",
+  paisAtual: "Turquia",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~62-64 d.C.",
+  antes: "Paulo acabara de dizer que a piedade com contentamento é grande ganho. Agora ele contrasta aqueles que buscam enriquecer, mostrando os perigos dessa busca.",
+  versiculo: "✅ Mas os que querem ser ricos caem em tentação, e em laço, e em muitas concupiscências loucas e nocivas, que submergem os homens na perdição e ruína.",
+  depois: "Paulo afirma que o amor ao dinheiro é a raiz de todos os males. Muitos, cobiçando-o, se desviaram da fé e se traspassaram com muitas dores. Timóteo deve fugir dessas coisas e buscar a justiça e a piedade.",
+  tags: "amor ao dinheiro / tentação / laço",
+  assuntos: ["efeso", "paulo", "amor-dinheiro", "tentacao", "timoteo"]
+},
+
+// 218. Provérbios 23.4-5
+{
+  id: "pv23.4-5",
+  referencia: "Pv 23.4-5",
+  local: "Jerusalém / Judá (Israel)",
+  paisAtual: "Israel",
+  lider: "Salomão",
+  liderReinado: "970-930 a.C.",
+  periodo: "Reino Unido",
+  periodoDatas: "1010-970 a.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~950 a.C.",
+  antes: "Salomão escreve provérbios instruindo seu filho sobre a sabedoria prática. Este provérbio específico adverte contra a busca excessiva por riquezas, mostrando sua natureza passageira.",
+  versiculo: "✅ Não te canses para enriquecer; e não apliques nisso o teu entendimento. Porventura fitarás os olhos naquilo que não é? Porque certamente isso fará para si asas, e como águia voará em direção ao céu.",
+  depois: "O provérbio contrasta a busca por riquezas terrenas com a busca pela sabedoria. As riquezas são comparadas a algo que tem asas e voa como águia - desaparecem rapidamente e sem aviso. A verdadeira riqueza está na sabedoria e no temor do Senhor.",
+  tags: "riquezas / voam / asas de águia",
+  assuntos: ["jerusalem", "salomao", "proverbios", "riquezas", "fugacidade"]
+},
+
+// 219. Hebreus 13.5
+{
+  id: "hb13.5",
+  referencia: "Hb 13.5",
+  local: "Roma / Itália (Itália)",
+  paisAtual: "Itália",
+  lider: "",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~60-65 d.C.",
+  antes: "O autor de Hebreus está concluindo a carta com exortações práticas sobre o amor fraternal, a hospitalidade e o casamento. Ele agora aborda o desprendimento dos bens materiais e a confiança na providência divina.",
+  versiculo: "✅ Sejam vossos costumes sem avareza, contentando-vos com o que tendes; porque ele disse: Não te deixarei, nem te desampararei.",
+  depois: "O autor cita Deuteronômio 31.6 e Josué 1.5, lembrando a promessa de Deus de nunca abandonar seu povo. Esta promessa é fundamento para o contentamento e para a ausência de avareza. O Senhor é nosso ajudador, e não precisamos temer o que os homens possam fazer.",
+  tags: "desamparo / presença / nunca te deixarei",
+  assuntos: ["roma", "autor-hebreus", "contentamento", "presenca-divina", "confianca"]
+},
+
+// 220. Mateus 16.24-26
+{
+  id: "mt16.24-26",
+  referencia: "Mt 16.24-26",
+  local: "Cesareia de Filipe / Galileia (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~29-30 d.C.",
+  antes: "Pedro acabara de confessar que Jesus era o Cristo, o Filho do Deus vivo. Jesus então começou a ensinar sobre Seu sofrimento e morte iminentes. Pedro o repreendeu, e Jesus respondeu ensinando sobre o verdadeiro discipulado.",
+  versiculo: "✅ Então disse Jesus aos seus discípulos: Se alguém quiser vir após mim, negue-se a si mesmo, tome a sua cruz, e siga-me. Porque qualquer que quiser salvar a sua vida perdê-la-á; mas qualquer que perder a sua vida por amor de mim, a achá-la-á. Pois que aproveitaria ao homem ganhar o mundo inteiro, se perdesse a sua alma? Ou que daria o homem em recompensa da sua alma?",
+  depois: "Jesus ensina que o discipulado envolve renúncia e sacrifício. O paradoxo central: quem tenta preservar sua vida a perde, quem a perde por causa de Cristo a encontra. A pergunta retórica sobre ganhar o mundo e perder a alma confronta qualquer ambição materialista que desconsidere as realidades eternas.",
+  tags: "negar a si mesmo / ganhar o mundo / perder a alma",
+  assuntos: ["cesareia-filipe", "jesus", "discipulado", "renuncia", "salvacao"]
+},
+
+// 221. João 6.26
+{
+  id: "jo6.26",
+  referencia: "Jo 6.26",
+  local: "Cafarnaum / Galileia (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~28-29 d.C.",
+  antes: "Jesus havia alimentado 5.000 pessoas com cinco pães e dois peixes. No dia seguinte, a multidão o procurou novamente, atravessando o mar de Tiberíades. Jesus percebeu a motivação errada por trás da busca deles.",
+  versiculo: "✅ Jesus respondeu e disse-lhes: Na verdade, na verdade vos digo que me buscais, não pelos sinais que vistes, mas porque comestes do pão e vos saciastes.",
+  depois: "Jesus os exorta a trabalhar não pela comida que perece, mas pela comida que permanece para a vida eterna. Isto introduz o discurso do 'pão da vida', onde Jesus se declara como o verdadeiro pão descido do céu. Muitos discípulos o abandonaram por causa deste ensino.",
+  tags: "pão que perece / sinais / motivação errada",
+  assuntos: ["cafarnaum", "jesus", "motivacao", "pao-da-vida", "milagres"]
+},
+
+// 222. 2 Coríntios 12.7-10
+{
+  id: "2co12.7-10",
+  referencia: "2 Co 12.7-10",
+  local: "Filipos / Macedônia (Grécia)",
+  paisAtual: "Grécia",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~55-56 d.C.",
+  antes: "Paulo falou de uma visão celestial que teve há quatorze anos. Para que não se exaltasse por causa da grandeza das revelações, Deus lhe deu um espinho na carne. Paulo rogou três vezes ao Senhor para que o removesse.",
+  versiculo: "⚠️ E, para que não me exaltasse pelas excelência das revelações, foi-me dado um espinho na carne, a saber, um mensageiro de Satanás para me esbofetear, a fim de que não me exalte. Por causa disto, três vezes orei ao Senhor para que se desviasse de mim. E disse-me: A minha graça te basta, porque o meu poder se aperfeiçoa na tua fraqueza. De boa vontade, pois, me gloriarei nas minhas fraquezas, para que em mim habite o poder de Cristo. Por isso sinto prazer nas fraquezas, nas injúrias, nas necessidades, nas perseguições, nas angústias por amor de Cristo. Porque quando estou fraco, então sou forte.",
+  depois: "Paulo aprendeu que o poder de Deus se aperfeiçoa na fraqueza humana. Em vez de pedir a remoção do espinho, ele passou a gloriar-se em suas fraquezas. Este ensinamento contrasta fortemente com a teologia da prosperidade, que vê o sofrimento como falta de fé.",
+  tags: "espinho na carne / graça suficiente / gloriar-se",
+  assuntos: ["filipos", "paulo", "sofrimento", "graça-divina", "fraqueza"]
+},
+
+// 223. 2 Coríntios 9.7
+{
+  id: "2co9.7",
+  referencia: "2 Co 9.7",
+  local: "Filipos / Macedônia (Grécia)",
+  paisAtual: "Grécia",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~55-56 d.C.",
+  antes: "Paulo estava organizando uma coleta para os santos pobres de Jerusalém. Ele instrui os coríntios sobre os princípios da generosidade cristã, que deve ser voluntária e alegre, não forçada ou por obrigação.",
+  versiculo: "✅ Cada um contribua segundo propôs no seu coração, não com tristeza, nem por necessidade; porque Deus ama ao que dá com alegria.",
+  depois: "Paulo afirma que Deus é poderoso para fazer abundar toda graça, para que tendo sempre suficiência em tudo, os coríntios transbordem em toda boa obra. A generosidade não empobrece, mas é sementeira para colheita de justiça.",
+  tags: "dar / alegria / não por necessidade",
+  assuntos: ["filipos", "paulo", "generosidade", "ofertas", "alegria"]
+},
+
+// 224. Lucas 1.9-58 (Zacarias e Isabel)
+{
+  id: "lc1.9-58",
+  referencia: "Lc 1.9,58",
+  local: "Hebrom / Judéia (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~5 a.C.",
+  antes: "Zacarias e Isabel eram justos diante de Deus, vivendo irrepreensivelmente em todos os mandamentos. No entanto, Isabel era estéril e ambos eram avançados em idade. Zacarias estava servindo no templo como sacerdote quando o anjo Gabriel lhe apareceu.",
+  versiculo: "⚠️ Zacarias era sacerdote da ordem de Abias, e Isabel, sua mulher, era das filhas de Arão. E eram ambos justos diante de Deus, andando em todos os mandamentos e preceitos do Senhor, irrepreensíveis. E não tinham filhos, porque Isabel era estéril, e ambos eram de idade avançada. Aconteceu que, exercendo ele o sacerdócio diante de Deus na ordem da sua turma, segundo o costume do sacerdócio, coube-lhe entrar no templo do Senhor para queimar incenso. E toda a multidão do povo estava fora, orando, à hora do incenso. E apareceu-lhe um anjo do Senhor, em pé à direita do altar do incenso. E Zacarias, vendo-o, turbou-se, e caiu temor sobre ele. Mas o anjo lhe disse: Zacarias, não temas, porque a tua oração foi ouvida; e Isabel, tua mulher, te dará à luz um filho, e lhe porás o nome de João. E terás prazer e alegria, e muitos se alegrarão no seu nascimento... E aconteceu que, no oitavo dia, vieram circuncidar o menino, e chamavam-no pelo nome de seu pai, Zacarias. E sua mãe, respondendo, disse: Não, mas será chamado João. E disseram-lhe: Nenhum há na tua parentela que se chame por este nome. E fizeram sinais a seu pai, para saber como queria que se chamasse. E ele, pedindo uma tabuinha, escreveu, dizendo: O seu nome é João. E todos se maravilharam. E logo a sua boca se abriu, e a sua língua se soltou; e falava, louvando a Deus. E veio temor sobre todos os seus vizinhos; e em toda a montanha da Judéia foram divulgadas todas estas coisas. E todos os que as ouviam as guardavam em seus corações, dizendo: Quem será, pois, este menino? E a mão do Senhor estava com ele. E Isabel, sua mãe, foi visitada por Maria, sua parenta, e exclamou: Bendita és tu entre as mulheres, e bendito é o fruto do teu ventre.",
+  depois: "Zacarias e Isabel, mesmo sendo justos e pobres, foram abençoados por Deus com um filho na velhice - João Batista. Este exemplo mostra que a pobreza não é sinal de maldição, e que Deus abençoa os justos independentemente de sua condição financeira.",
+  tags: "Zacarias / Isabel / pobres / justos",
+  assuntos: ["hebron", "zacarias", "isabel", "joao-batista", "justica"]
+},
+
+// 225. 1 Timóteo 2.4
+{
+  id: "1tm2.4",
+  referencia: "1 Tm 2.4",
+  local: "Éfeso / Ásia Menor (Turquia)",
+  paisAtual: "Turquia",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~62-64 d.C.",
+  antes: "Paulo exorta que se façam orações por todos os homens, incluindo reis e autoridades. Deus deseja que todos os homens sejam salvos e cheguem ao conhecimento da verdade, não que todos sejam ricos.",
+  versiculo: "✅ Que quer que todos os homens se salvem, e venham ao conhecimento da verdade.",
+  depois: "Paulo enfatiza que há um só Deus e um só Mediador entre Deus e os homens, Jesus Cristo homem, que se deu em resgate por todos. A vontade de Deus é salvação, não prosperidade material. A verdadeira riqueza é espiritual.",
+  tags: "Deus quer / todos / salvos",
+  assuntos: ["efeso", "paulo", "salvacao", "vontade-deus", "verdade"]
+},
+
+// 226. 1 Timóteo 6.18
+{
+  id: "1tm6.18",
+  referencia: "1 Tm 6.18",
+  local: "Éfeso / Ásia Menor (Turquia)",
+  paisAtual: "Turquia",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~62-64 d.C.",
+  antes: "Paulo instrui Timóteo sobre como ensinar os ricos na igreja. Eles não devem ser orgulhosos nem confiar em riquezas incertas, mas em Deus.",
+  versiculo: "✅ Que façam bem, enriqueçam em boas obras, generosos em dar, prontos a repartir.",
+  depois: "Paulo conclui que procedendo assim, os ricos acumulam para si mesmos um bom fundamento para o futuro, para que possam alcançar a vida eterna. A verdadeira riqueza não está no que se possui, mas no que se compartilha.",
+  tags: "ricos / boas obras / generosos",
+  assuntos: ["efeso", "paulo", "generosidade", "boas-obras", "timoteo"]
+},
+
+// 227. Hebreus 12.6
+{
+  id: "hb12.6",
+  referencia: "Hb 12.6",
+  local: "Roma / Itália (Itália)",
+  paisAtual: "Itália",
+  lider: "",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~60-65 d.C.",
+  antes: "O autor de Hebreus exorta os leitores a não desprezarem a disciplina do Senhor. O sofrimento não é sinal de falta de fé, mas de filiação divina.",
+  versiculo: "✅ Porque o Senhor corrige o que ama, e açoita a qualquer que recebe por filho.",
+  depois: "A disciplina é evidência de que somos filhos legítimos, não bastardos. Se suportamos a correção, Deus nos trata como filhos. O sofrimento produz fruto pacífico de justiça naqueles que são exercitados por ele.",
+  tags: "disciplina / castiga / aceita",
+  assuntos: ["roma", "autor-hebreus", "disciplina-divina", "sofrimento", "filiacao"]
+},
+
+// 228. Tiago 1.2-4
+{
+  id: "tg1.2-4",
+  referencia: "Tg 1.2-4",
+  local: "Jerusalém / Judéia (Israel)",
+  paisAtual: "Israel",
+  lider: "Tiago",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~45-50 d.C.",
+  antes: "Tiago escreve aos judeus cristãos dispersos (diáspora), que enfrentavam perseguição e pobreza. Ele aborda o tema do sofrimento desde o início, ensinando que as provações têm propósito espiritual.",
+  versiculo: "✅ Meus irmãos, tende por motivo de grande gozo o passar por várias provações, sabendo que a prova da vossa fé produz paciência; e a paciência tenha a sua obra perfeita, para que sejais perfeitos e completos, sem falta alguma.",
+  depois: "Tiago não diz 'se' passardes por provações, mas 'quando'. As provações são inevitáveis. Ele ordena 'tende por motivo de grande gozo' — alegria não pelas provações em si, mas pelo resultado que produzem. A paciência (hypomone = perseverança) precisa ter sua obra completa para produzir maturidade.",
+  tags: "provações / paciência / perfeito",
+  assuntos: ["jerusalem", "tiago", "provações", "perseverança", "maturidade"]
+},
+
+// 229. Jeremias 17.9-11
+{
+  id: "jr17.9-11",
+  referencia: "Jr 17.9-11",
+  local: "Jerusalém / Judá (Israel)",
+  paisAtual: "Israel",
+  lider: "Zedequias",
+  liderReinado: "597-586 a.C.",
+  periodo: "Reino de Judá (Sul)",
+  periodoDatas: "930-586 a.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~590-580 a.C.",
+  antes: "Jeremias confronta o pecado de Judá, especialmente a confiança no homem e nos ídolos. Ele contrasta a maldição daqueles que confiam nos homens com a bênção daqueles que confiam no Senhor.",
+  versiculo: "✅ Enganoso é o coração, mais do que todas as coisas, e perverso; quem o conhecerá? Eu, o Senhor, esquadrinho o coração, provo os rins, e isso para dar a cada um segundo os seus caminhos e segundo o fruto das suas obras. Como a perdiz que ajunta ovos que não pôs, assim é aquele que amontoa riquezas, mas não com justiça; no meio de seus dias as deixará, e no seu fim será louco.",
+  depois: "Jeremias ensina que confiar em riquezas obtidas injustamente é loucura. A perdiz que choca ovos que não pôs perde o tempo e o esforço. Assim, aqueles que ajuntam riquezas sem justiça as perderão. O coração humano é enganoso e precisa ser examinado por Deus.",
+  tags: "coração / enganoso / perdiz",
+  assuntos: ["jerusalem", "jeremias", "coração", "riquezas", "justica"]
+},
+
+// 230. Provérbios 30.7-9
+{
+  id: "pv30.7-9",
+  referencia: "Pv 30.7-9",
+  local: "Jerusalém / Judá (Israel)",
+  paisAtual: "Israel",
+  lider: "Salomão",
+  liderReinado: "970-930 a.C.",
+  periodo: "Reino Unido",
+  periodoDatas: "1010-970 a.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~950 a.C.",
+  antes: "Agur, filho de Jaque, escreve estes provérbios. Ele expressa humildade diante de Deus e faz duas petições específicas sobre sua condição financeira, reconhecendo os perigos tanto da pobreza quanto da riqueza.",
+  versiculo: "✅ Duas coisas te pedi; não mas negues, antes que morra: afasta de mim a falsidade e a mentira; não me dês nem a pobreza nem a riqueza; dá-me o pão que me é necessário; para que, por fartura, te não negue e diga: Quem é o Senhor? Ou que, empobrecido, não venha a furtar e tome o nome de Deus em vão.",
+  depois: "Agur demonstra sabedoria prática ao pedir um meio-termo - o suficiente para viver. Ele reconhece os perigos espirituais de ambos os extremos: a riqueza pode levar ao orgulho e ao esquecimento de Deus; a pobreza extrema pode levar ao roubo e à blasfêmia. O contentamento está na provisão diária de Deus.",
+  tags: "duas coisas / pobreza / riqueza",
+  assuntos: ["jerusalem", "agur", "proverbios", "contentamento", "sabedoria"]
+},
+
+// 231. Jeremias 17 (capítulo inteiro)
+{
+  id: "jr17",
+  referencia: "Jr 17",
+  local: "Jerusalém / Judá (Israel)",
+  paisAtual: "Israel",
+  lider: "Zedequias",
+  liderReinado: "597-586 a.C.",
+  periodo: "Reino de Judá (Sul)",
+  periodoDatas: "930-586 a.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~590-580 a.C.",
+  antes: "O profeta Jeremias recebe a palavra do Senhor durante o reinado de Zedequias. O povo de Judá havia se desviado, confiando em ídolos e em alianças políticas, em vez de confiar no Senhor.",
+  versiculo: "📖 O pecado de Judá está escrito com ponte de ferro, com ponta de diamante, gravado na tábua do seu coração. O Senhor declara maldito o homem que confia no homem e faz da carne o seu braço. Bendito o homem que confia no Senhor, cuja esperança é o Senhor. Ele é como árvore plantada junto às águas. Enganoso é o coração, mais do que todas as coisas. O Senhor esquadrinha o coração. Como a perdiz que ajunta ovos que não pôs, assim é aquele que amontoa riquezas sem justiça. O trono da glória é o lugar do nosso santuário. Ó Senhor, esperança de Israel, todos os que te deixam serão envergonhados. Cura-me, Senhor, e sararei. Guarda-nos. Eles me dizem: Onde está a palavra do Senhor? Mas eu não me apressei em ser pastor. Santifica-lhes o dia de sábado. Se diligentemente me ouvirdes, não entrareis pelas portas desta cidade.",
+  depois: "Jeremias clama a Deus por cura e libertação. O capítulo termina com uma exortação a guardar o sábado como sinal da aliança. A confiança no homem versus confiança em Deus é o tema central, com a lição de que a verdadeira segurança não está nas riquezas, mas no relacionamento com o Senhor.",
+  tags: "pecado de Judá / confiança no homem",
+  assuntos: ["jerusalem", "jeremias", "confiança", "maldicao", "bencao"]
+},
+
+// 232. Provérbios 18.21
+{
+  id: "pv18.21",
+  referencia: "Pv 18.21",
+  local: "Jerusalém / Judá (Israel)",
+  paisAtual: "Israel",
+  lider: "Salomão",
+  liderReinado: "970-930 a.C.",
+  periodo: "Reino Unido",
+  periodoDatas: "1010-970 a.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~950 a.C.",
+  antes: "Salomão escreve provérbios sobre o poder das palavras. Este versículo específico destaca como a língua tem poder para construir ou destruir.",
+  versiculo: "✅ A morte e a vida estão no poder da língua; e aquele que a ama comerá do seu fruto.",
+  depois: "O livro de Provérbios consistentemente ensina que as palavras têm consequências. A fala sábia traz vida, cura e edificação; a fala tola traz destruição e morte. Este versículo é frequentemente citado pela teologia da prosperidade, mas deve ser entendido em seu contexto de sabedoria prática, não como fórmula mágica.",
+  tags: "morte e vida / poder da língua",
+  assuntos: ["jerusalem", "salomao", "proverbios", "palavras", "sabedoria"]
+},
+
+// 233. Malaquias 3.10
+{
+  id: "ml3.10",
+  referencia: "Ml 3.10",
+  local: "Jerusalém / Judá (Israel)",
+  paisAtual: "Israel",
+  lider: "Neemias",
+  liderReinado: "",
+  periodo: "Período Persa",
+  periodoDatas: "539-332 a.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~430-420 a.C.",
+  antes: "Malaquias profetiza após o exílio, quando o povo havia se tornado negligente nos dízimos e ofertas. Deus os acusa de roubar os dízimos e as ofertas, e os convida a prová-lo nesta área.",
+  versiculo: "✅ Trazei todos os dízimos à casa do tesouro, para que haja mantimento na minha casa, e provai-me nisto, diz o Senhor dos Exércitos, se eu não vos abrir as janelas do céu, e não derramar sobre vós uma bênção tal que dela vos advenha a maior abastança.",
+  depois: "Deus promete abençoar aqueles que são fiéis nos dízimos, abrindo as janelas do céu e repreendendo o devorador. Este versículo é amplamente usado pela teologia da prosperidade, mas deve ser entendido no contexto da aliança de Israel e do propósito de sustentar o templo e os sacerdotes.",
+  tags: "dízimos / ofertas / janelas do céu",
+  assuntos: ["jerusalem", "malaquias", "dizimos", "ofertas", "prova"]
+},
+
+// 234. João 16.33
+{
+  id: "jo16.33",
+  referencia: "Jo 16.33",
+  local: "Jerusalém / Judéia (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~30 d.C.",
+  antes: "Jesus está falando com os discípulos na véspera de sua morte. Ele já havia anunciado que eles seriam espalhados e o deixariam sozinho. Ele os prepara para as tribulações que virão.",
+  versiculo: "✅ Tenho-vos dito estas coisas, para que em mim tenhais paz; no mundo tereis aflições, mas tende bom ânimo; eu venci o mundo.",
+  depois: "Jesus não promete ausência de aflições, mas paz nele em meio às aflições. Sua vitória sobre o mundo (pecado, morte e Satanás) é a base para o bom ânimo dos discípulos. O sofrimento não é sinal de falta de fé, mas parte da experiência cristã.",
+  tags: "tribulação / paz / vencido o mundo",
+  assuntos: ["jerusalem", "jesus", "paz", "tribulacao", "vitoria"]
+},
+
+// 235. Salmo 34.18
+{
+  id: "sl34.18",
+  referencia: "Sl 34.18",
+  local: "Israel / Judá (Israel)",
+  paisAtual: "Israel",
+  lider: "Davi",
+  liderReinado: "1010-970 a.C.",
+  periodo: "Reino Unido",
+  periodoDatas: "1010-970 a.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~1000 a.C.",
+  antes: "Davi escreve este salmo após ter escapado de Abimeleque (Aquis), fingindo loucura. Ele testemunha que Deus ouviu seu clamor e o livrou de todos os seus temores.",
+  versiculo: "✅ Perto está o Senhor dos que têm o coração quebrantado, e salva os contritos de espírito.",
+  depois: "Davi contrasta a face do Senhor contra os que praticam o mal com a proximidade de Deus aos quebrantados de coração. O salmo ensina que Deus não está distante do sofrimento humano, mas próximo dos que sofrem. O livramento pode vir, mas a promessa central é a presença de Deus na dor.",
+  tags: "quebrantados / contritos / salva",
+  assuntos: ["juda", "davi", "salmos", "sofrimento", "consolo"]
+},
+
+// 236. 1 Coríntios 6.9-10
+{
+  id: "1co6.9-10",
+  referencia: "1 Co 6.9-10",
+  local: "Corinto / Acaia (Grécia)",
+  paisAtual: "Grécia",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~55 d.C.",
+  antes: "Paulo está corrigindo a igreja de Corinto, que se orgulhava de sua sabedoria e tolerância com o pecado. Ele enumera os tipos de pecado que desqualificam alguém do reino de Deus.",
+  versiculo: "✅ Não sabeis que os injustos não hão de herdar o reino de Deus? Não erreis: nem os devassos, nem os idólatras, nem os adúlteros, nem os efeminados, nem os sodomitas, nem os ladrões, nem os avarentos, nem os bêbados, nem os maldizentes, nem os roubadores herdarão o reino de Deus.",
+  depois: "Paulo lembra aos coríntios que alguns deles foram assim, mas foram lavados, santificados e justificados em nome do Senhor Jesus. Ele os exorta a fugir da imoralidade sexual, pois seus corpos são templo do Espírito Santo.",
+  tags: "injustos / não herdarão",
+  assuntos: ["corinto", "paulo", "pecado", "reino-deus", "arrependimento"]
+},
+
+// 237. Gálatas 5.19-21
+{
+  id: "gl5.19-21",
+  referencia: "Gl 5.19-21",
+  local: "Galácia / Ásia Menor (Turquia)",
+  paisAtual: "Turquia",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~49-55 d.C.",
+  antes: "Paulo contrasta a carne e o Espírito. Ele lista as obras da carne para mostrar o que a natureza pecaminosa produz, em contraste com o fruto do Espírito.",
+  versiculo: "✅ Porque as obras da carne são manifestas: adultério, fornicação, impureza, lascívia, idolatria, feitiçaria, inimizades, porfias, ciúmes, iras, discórdias, dissensões, facções, invejas, bebedices, glutonarias e coisas semelhantes a estas, as quais vos declaro, como já antes vos disse, que os que cometem tais coisas não herdarão o reino de Deus.",
+  depois: "Paulo exorta os gálatas a andarem pelo Espírito. Se vivem pelo Espírito, devem também andar pelo Espírito. As obras da carne são evidentes, e aqueles que praticam tais coisas não herdarão o reino de Deus. O fruto do Espírito, por outro lado, é amor, alegria, paz, etc.",
+  tags: "obras da carne / não herdarão",
+  assuntos: ["galacia", "paulo", "obras-carne", "reino-deus", "espirito-santo"]
+},
+
+// 238. Efésios 5.5-6
+{
+  id: "ef5.5-6",
+  referencia: "Ef 5.5-6",
+  local: "Roma / Itália (Itália)",
+  paisAtual: "Itália",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~60-62 d.C.",
+  antes: "Paulo exorta os efésios a imitarem a Deus e a andarem em amor. Ele os adverte contra imoralidade sexual, impureza e avareza, que são impróprias para os santos.",
+  versiculo: "✅ Porque bem sabeis isto: que nenhum devasso, ou impuro, ou avarento (que é idólatra), tem herança no reino de Cristo e de Deus. Ninguém vos engane com palavras vãs; porque por estas coisas vem a ira de Deus sobre os filhos da desobediência.",
+  depois: "Paulo chama a avareza de idolatria, mostrando que o amor ao dinheiro desloca Deus do centro do coração. Os efésios devem andar como filhos da luz, discernindo o que é agradável ao Senhor, não participando das obras infrutíferas das trevas.",
+  tags: "avarento / não tem herança",
+  assuntos: ["roma", "paulo", "avareza", "idolatria", "reino-deus"]
+},
+
+// 239. 2 Coríntios 11.15
+{
+  id: "2co11.15",
+  referencia: "2 Co 11.15",
+  local: "Filipos / Macedônia (Grécia)",
+  paisAtual: "Grécia",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~55-56 d.C.",
+  antes: "Paulo defende seu apostolado contra falsos apóstolos que se disfarçam de apóstolos de Cristo. Ele mostra que Satanás também se disfarça de anjo de luz, e seus servos se disfarçam de servos da justiça.",
+  versiculo: "✅ Não é, pois, muito, que os seus ministros também se transfigurem em ministros da justiça; o fim dos quais será conforme as suas obras.",
+  depois: "Paulo adverte que a aparência enganosa desses falsos mestres não mudará seu destino final. O julgamento será de acordo com suas obras, não com sua aparência. A igreja deve discernir pela doutrina e pelo fruto, não pela aparência externa de piedade.",
+  tags: "falsos apóstolos / fim será das obras",
+  assuntos: ["filipos", "paulo", "falsos-apostolos", "discernimento", "juizo"]
+},
+
+// 240. Mateus 13.24-28 (parábola do joio)
+{
+  id: "mt13.24-28",
+  referencia: "Mt 13.24-28",
+  local: "Mar da Galileia / Cafarnaum (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~28 d.C.",
+  antes: "Jesus está ensinando à beira do mar, sentado em um barco. Ele conta parábolas para ensinar sobre o reino dos céus. Após a parábola do semeador, ele conta a parábola do trigo e do joio.",
+  versiculo: "⚠️ Propôs-lhes outra parábola, dizendo: O reino dos céus é semelhante a um homem que semeia boa semente no seu campo; mas, enquanto os homens dormiam, veio o seu inimigo, e semeou o joio no meio do trigo, e retirou-se. E, quando a erva cresceu e deu fruto, apareceu também o joio. Chegando os servos do pai de família, disseram-lhe: Senhor, não semeaste tu boa semente no teu campo? Por que tem, pois, joio? Ele, porém, lhes disse: Um inimigo é quem fez isto. E os servos lhe disseram: Queres, pois, que vamos arrancá-lo? Ele lhes disse: Não; para que, ao colher o joio, não arranqueis também com ele o trigo.",
+  depois: "Jesus explica a parábola: o semeador é o Filho do Homem; o campo é o mundo; a boa semente são os filhos do reino; o joio são os filhos do maligno; o inimigo é o diabo; a colheita é o fim do mundo. Na separação final, os anjos arrancarão o joio e os lançarão na fornalha ardente.",
+  tags: "joio / trigo / inimigo",
+  assuntos: ["mar-galileia", "jesus", "parabolas", "joio-trigo", "discernimento"]
+},
+
+// 241. Mateus 13.36-43 (explicação do joio)
+{
+  id: "mt13.36-43",
+  referencia: "Mt 13.36-43",
+  local: "Cafarnaum / Casa (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~28 d.C.",
+  antes: "Jesus havia contado várias parábolas à beira do mar, incluindo a parábola do trigo e do joio. Depois, deixou a multidão e entrou em casa. Os discípulos pediram que lhes explicasse a parábola.",
+  versiculo: "⚠️ Então, deixando Jesus a multidão, foi para casa; e chegaram os seus discípulos, dizendo: Explica-nos a parábola do joio do campo. E ele, respondendo, disse-lhes: O que semeia a boa semente é o Filho do Homem; e o campo é o mundo; e a boa semente são os filhos do reino; e o joio são os filhos do maligno; e o inimigo que o semeou é o diabo; e a ceifa é o fim do mundo; e os ceifeiros são os anjos. Assim como o joio é colhido e queimado no fogo, assim será também no fim deste mundo. Mandará o Filho do Homem os seus anjos, e eles colherão do seu reino tudo o que causa escândalo e os que cometem iniquidade, e lançá-los-ão na fornalha de fogo; ali haverá choro e ranger de dentes. Então, os justos resplandecerão como o sol, no reino de seu Pai. Quem tem ouvidos para ouvir, ouça.",
+  depois: "Jesus explica que o trigo e o joio crescerão juntos até a colheita final. Os servos não devem arrancar o joio prematuramente, para não prejudicar o trigo. No fim, os anjos farão a separação final. Os justos resplandecerão como o sol no reino de seu Pai.",
+  tags: "explicação do joio / anjos",
+  assuntos: ["cafarnaum", "jesus", "parabolas", "joio-trigo", "juizo-final"]
+},
+
+// 242. Mateus 6.19-21
+{
+  id: "mt6.19-21",
+  referencia: "Mt 6.19-21",
+  local: "Monte das Bem-aventuranças / Galileia (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~28 d.C.",
+  antes: "Jesus está ensinando no Sermão da Montanha. Ele já falou sobre esmolas, oração e jejum. Agora aborda a questão dos tesouros terrenos versus tesouros celestiais.",
+  versiculo: "✅ Não ajunteis tesouros na terra, onde a traça e a ferrugem consomem, e onde os ladrões minam e roubam; mas ajuntai tesouros no céu, onde nem a traça nem a ferrugem consomem, e onde os ladrões não minam nem roubam. Porque onde estiver o vosso tesouro, aí estará também o vosso coração.",
+  depois: "Jesus ensina que a prioridade do crente deve ser os tesouros celestiais (justiça, bondade, amor, etc.), não os terrenos (riquezas materiais). O coração segue o tesouro. Este ensino fundamenta a confiança na providência divina que vem a seguir (não andeis ansiosos).",
+  tags: "tesouros na terra / tesouros no céu",
+  assuntos: ["galileia", "jesus", "tesouros", "coracao", "prioridades"]
+},
+
+// 243. Mateus 5.3
+{
+  id: "mt5.3",
+  referencia: "Mt 5.3",
+  local: "Monte das Bem-aventuranças / Galileia (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~28 d.C.",
+  antes: "Jesus subiu ao monte e sentou-se, e seus discípulos se aproximaram. Ele começou a ensinar as bem-aventuranças, descrevendo o caráter dos cidadãos do reino dos céus.",
+  versiculo: "✅ Bem-aventurados os pobres de espírito, porque deles é o reino dos céus.",
+  depois: "A primeira bem-aventurança estabelece o fundamento do discipulado: reconhecer a própria pobreza espiritual e dependência de Deus. Os 'pobres de espírito' são aqueles que, como os publicanos na parábola, reconhecem sua necessidade de Deus. Este ensinamento contrasta com a teologia da prosperidade, que enfatiza a autossuficiência.",
+  tags: "pobres de espírito / reino dos céus",
+  assuntos: ["galileia", "jesus", "bem-aventuranças", "humildade", "dependencia"]
+},
+
+// 244. Efésios 1.3
+{
+  id: "ef1.3",
+  referencia: "Ef 1.3",
+  local: "Roma / Itália (Itália)",
+  paisAtual: "Itália",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~60-62 d.C.",
+  antes: "Paulo inicia sua carta aos efésios com uma bênção. Ele louva a Deus pelas bênçãos espirituais que os crentes têm em Cristo, enfatizando a natureza espiritual dessas bênçãos, não materiais.",
+  versiculo: "✅ Bendito seja o Deus e Pai de nosso Senhor Jesus Cristo, o qual nos abençoou com todas as bênçãos espirituais nos lugares celestiais em Cristo.",
+  depois: "Paulo então lista essas bênçãos espirituais: eleição antes da fundação do mundo, adoção como filhos, redenção pelo sangue, perdão dos pecados, conhecimento do mistério da vontade de Deus, selo do Espírito Santo. As bênçãos são espirituais, não materiais, e estão 'nos lugares celestiais', não na terra.",
+  tags: "bênçãos espirituais / lugares celestiais",
+  assuntos: ["roma", "paulo", "bencao-espiritual", "efesios", "redenção"]
+},
+
+// 245. Efésios 2.6
+{
+  id: "ef2.6",
+  referencia: "Ef 2.6",
+  local: "Roma / Itália (Itália)",
+  paisAtual: "Itália",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~60-62 d.C.",
+  antes: "Paulo descreve a condição anterior dos efésios: mortos em delitos e pecados, seguindo o príncipe das potestades do ar. Mas Deus, rico em misericórdia, os vivificou juntamente com Cristo.",
+  versiculo: "✅ E nos ressuscitou juntamente com ele, e nos fez assentar nos lugares celestiais em Cristo Jesus.",
+  depois: "A ressurreição e exaltação do crente com Cristo são realidades espirituais atuais, não apenas futuras. Os crentes estão posicionalmente assentados com Cristo nos lugares celestiais. A verdadeira bênção e posição do crente são espirituais, não materiais ou terrenas.",
+  tags: "ressuscitou / assentou / lugares celestiais",
+  assuntos: ["roma", "paulo", "ressurreicao", "exaltacao", "posicao-em-cristo"]
+},
+
+// 246. Romanos 8.26
+{
+  id: "rm8.26",
+  referencia: "Rm 8.26",
+  local: "Corinto / Acaia (Grécia)",
+  paisAtual: "Grécia",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~57 d.C.",
+  antes: "Paulo fala sobre o sofrimento presente e a glória futura. Ele descreve a criação aguardando a redenção, e os crentes aguardando a adoção, a redenção de seus corpos. Neste contexto de espera e sofrimento, o Espírito Santo ajuda os crentes em sua fraqueza.",
+  versiculo: "✅ E da mesma forma também o Espírito nos ajuda em nossa fraqueza; porque não sabemos o que havemos de pedir como convém, mas o mesmo Espírito intercede por nós com gemidos inexprimíveis.",
+  depois: "Paulo assegura que o Espírito Santo intercede pelos santos segundo a vontade de Deus. Esta é uma das grandes bênçãos espirituais do crente: a assistência do Espírito na oração, especialmente em tempos de fraqueza e sofrimento.",
+  tags: "Espírito / ajuda / intercede",
+  assuntos: ["corinto", "paulo", "espirito-santo", "oracao", "intercessao"]
+},
+
+// 247. Efésios 3.16
+{
+  id: "ef3.16",
+  referencia: "Ef 3.16",
+  local: "Roma / Itália (Itália)",
+  paisAtual: "Itália",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~60-62 d.C.",
+  antes: "Paulo ora pelos efésios, pedindo que sejam fortalecidos interiormente. Ele se ajoelha diante do Pai, de quem toda família nos céus e na terra recebe o nome.",
+  versiculo: "✅ Que vos conceda, segundo as riquezas da sua glória, que sejais corroborados com poder pelo seu Espírito no homem interior.",
+  depois: "Paulo pede que os efésios sejam fortalecidos no 'homem interior' (a vida espiritual interior) pelo Espírito Santo, não exteriormente com riquezas materiais. A verdadeira força e riqueza do crente são espirituais, resultando em Cristo habitando no coração pela fé.",
+  tags: "fortalecido / Espírito / homem interior",
+  assuntos: ["roma", "paulo", "forca-espiritual", "espirito-santo", "homem-interior"]
+},
+
+// 248. Romanos 8.37
+{
+  id: "rm8.37",
+  referencia: "Rm 8.37",
+  local: "Corinto / Acaia (Grécia)",
+  paisAtual: "Grécia",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~57 d.C.",
+  antes: "Paulo lista uma série de adversidades que os crentes podem enfrentar: tribulação, angústia, perseguição, fome, nudez, perigo, espada. Apesar de tudo isso, ele afirma que os crentes são mais que vencedores.",
+  versiculo: "✅ Mas em todas estas coisas somos mais do que vencedores, por aquele que nos amou.",
+  depois: "A vitória do crente não é ausência de dificuldades, mas vitória em meio a elas. O amor de Deus em Cristo é a base da certeza de que nada pode separar os crentes do amor de Deus - nem morte, nem vida, nem anjos, nem principados, nem coisas presentes, nem futuras, nem altura, nem profundidade.",
+  tags: "mais que vencedores / amor de Deus",
+  assuntos: ["corinto", "paulo", "vitoria", "amor-deus", "certeza"]
+},
+
+// 249. Lucas 19.10
+{
+  id: "lc19.10",
+  referencia: "Lc 19.10",
+  local: "Jericó / Judéia (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~30 d.C.",
+  antes: "Jesus encontrou Zaqueu, um cobrador de impostos rico, que subiu em uma figueira para vê-lo. Jesus o chamou para descer e foi hospedar-se em sua casa. Zaqueu se arrependeu e prometeu restituir quatro vezes mais o que havia roubado.",
+  versiculo: "✅ Porque o Filho do Homem veio buscar e salvar o que se havia perdido.",
+  depois: "Jesus declara que a salvação veio à casa de Zaqueu naquele dia. A missão do Filho do Homem é buscar e salvar os perdidos, não enriquecer os já ricos. O evangelho é sobre salvação de almas, não sobre prosperidade material.",
+  tags: "buscar / salvar / perdido",
+  assuntos: ["jerico", "jesus", "salvacao", "missoes", "zaqueu"]
+},
+
+// 250. Salmo 23 (capítulo inteiro)
+{
+  id: "sl23",
+  referencia: "Sl 23",
+  local: "Israel / Judá (Israel)",
+  paisAtual: "Israel",
+  lider: "Davi",
+  liderReinado: "1010-970 a.C.",
+  periodo: "Reino Unido",
+  periodoDatas: "1010-970 a.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~1000 a.C.",
+  antes: "Davi, que foi pastor antes de ser rei, escreve este salmo baseado em sua experiência pessoal cuidando de ovelhas. Ele usa a metáfora do pastor para descrever o cuidado de Deus por seu povo.",
+  versiculo: "📖 O Senhor é o meu pastor; nada me faltará. Deitar-me faz em verdes pastos, guia-me mansamente a águas tranquilas. Refrigera a minha alma; guia-me pelas veredas da justiça por amor do seu nome. Ainda que eu andasse pelo vale da sombra da morte, não temeria mal algum, porque tu estás comigo; a tua vara e o teu cajado me consolam. Preparas uma mesa perante mim na presença dos meus inimigos; unges a minha cabeça com óleo, o meu cálice transborda. Certamente que a bondade e a misericórdia me seguirão todos os dias da minha vida; e habitarei na casa do Senhor por longos dias.",
+  depois: "O salmo é uma declaração de confiança na provisão, proteção e presença de Deus, mesmo em meio às dificuldades ('vale da sombra da morte'). A ênfase não está em riquezas materiais, mas na presença e cuidado pastoral de Deus. O salmo termina com a esperança de habitar na casa do Senhor para sempre.",
+  tags: "pastor / nada me faltará / vale da sombra",
+  assuntos: ["juda", "davi", "salmos", "confianca", "pastor-divino"]
+},
+
+// 251. Filipenses 4.11
+{
+  id: "fp4.11",
+  referencia: "Fp 4.11",
+  local: "Roma / Itália (Itália)",
+  paisAtual: "Itália",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~60-62 d.C.",
+  antes: "Paulo está escrevendo da prisão em Roma. Ele agradece aos filipenses pela generosidade deles, mas quer deixar claro que seu contentamento não depende das circunstâncias.",
+  versiculo: "✅ Não digo isto por causa da necessidade, porque já aprendi a contentar-me com o que tenho.",
+  depois: "Paulo explica que aprendeu a viver contente em toda e qualquer situação: tanto na humilhação quanto na abundância, tanto em fartura quanto em escassez. Ele pode todas as coisas naquele que o fortalece (Cristo). O contentamento é aprendido, não automático, e independe das circunstâncias externas.",
+  tags: "aprendi / contentar / circunstâncias",
+  assuntos: ["roma", "paulo", "contentamento", "aprendizado", "dependencia-cristo"]
+},
+// 252. Efésios 3.10
+{
+  id: "ef3.10",
+  referencia: "Ef 3.10",
+  local: "Roma / Itália (Itália)",
+  paisAtual: "Itália",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~60-62 d.C.",
+  antes: "Paulo está preso em Roma, escrevendo aos efésios sobre o mistério do evangelho revelado. Ele explica que judeus e gentios são um só corpo em Cristo. Agora ele revela o propósito cósmico da igreja.",
+  versiculo: "✅ Para que agora, pela igreja, a multiforme sabedoria de Deus seja conhecida dos principados e potestades nos céus.",
+  depois: "Paulo conclui que os efésios não devem desanimar com suas tribulações, pois elas são para a glória deles. Ele ora para que sejam fortalecidos interiormente, para que Cristo habite em seus corações pela fé. A igreja é o meio pelo qual Deus manifesta Sua sabedoria ao universo.",
+  tags: "igreja / propósito / manifestação da sabedoria",
+  assuntos: ["roma", "paulo", "igreja", "sabedoria-divina", "principados"]
+},
+
+// 253. Atos 2.47
+{
+  id: "at2.47",
+  referencia: "At 2.47",
+  local: "Jerusalém / Judéia (Israel)",
+  paisAtual: "Israel",
+  lider: "Pedro",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~30 d.C.",
+  antes: "Cerca de 3.000 pessoas se converteram no dia de Pentecostes. A igreja primitiva se dedicava ao ensino dos apóstolos, à comunhão, ao partir do pão e às orações. Eles vendiam suas propriedades e repartiam com os necessitados.",
+  versiculo: "✅ Louvando a Deus, e caindo na graça de todo o povo. E todos os dias acrescentava o Senhor à igreja aqueles que se haviam de salvar.",
+  depois: "A igreja continuava crescendo diariamente. Os apóstolos realizavam muitos sinais e prodígios. Apesar das perseguições do Sinédrio, a igreja se mantinha unida em oração e o Senhor acrescentava novos convertidos. A adoração era o combustível do crescimento da igreja primitiva.",
+  tags: "adoração / louvor / igreja primitiva",
+  assuntos: ["jerusalem", "pedro", "adoracao", "igreja-primitiva", "crescimento"]
+},
+
+// 254. João 4.23
+{
+  id: "jo4.23",
+  referencia: "Jo 4.23",
+  local: "Samaria / Poço de Jacó (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~28 d.C.",
+  antes: "Jesus estava viajando da Judéia para a Galileia e passou pela Samaria. Cansado da viagem, sentou-se junto ao poço de Jacó. Uma mulher samaritana veio tirar água, e Jesus pediu-lhe de beber, quebrando as barreiras raciais e religiosas da época.",
+  versiculo: "✅ Mas a hora vem, e agora é, em que os verdadeiros adoradores adorarão o Pai em espírito e em verdade; porque o Pai procura a tais que assim o adorem.",
+  depois: "Jesus revela que a adoração verdadeira não está mais limitada ao templo de Jerusalém ou ao monte Gerizim. O Pai busca adoradores que o adorem em espírito (pelo Espírito Santo) e em verdade (de acordo com a revelação de Cristo). A mulher samaritana crê e vai anunciar Jesus à cidade.",
+  tags: "adoração / espírito / verdade",
+  assuntos: ["samaria", "jesus", "adoracao", "espirito-santo", "verdade"]
+},
+
+// 255. Efésios 4.12
+{
+  id: "ef4.12",
+  referencia: "Ef 4.12",
+  local: "Roma / Itália (Itália)",
+  paisAtual: "Itália",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~60-62 d.C.",
+  antes: "Paulo lista os dons de liderança dados por Cristo à igreja: apóstolos, profetas, evangelistas, pastores e mestres. O propósito desses dons não é criar uma hierarquia, mas equipar a igreja para o serviço.",
+  versiculo: "✅ Com o fim de aperfeiçoar os santos para a obra do ministério, para edificação do corpo de Cristo.",
+  depois: "O objetivo final dos dons é que todos os crentes cheguem à unidade da fé e ao conhecimento do Filho de Deus, à medida da estatura da plenitude de Cristo. A igreja madura não é mais como crianças instáveis, levadas por todo vento de doutrina.",
+  tags: "edificação / ministério / corpo de Cristo",
+  assuntos: ["roma", "paulo", "edificacao", "dons-espirituais", "corpo-de-cristo"]
+},
+
+// 256. 1 Coríntios 14.26
+{
+  id: "1co14.26",
+  referencia: "1 Co 14.26",
+  local: "Corinto / Acaia (Grécia)",
+  paisAtual: "Grécia",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~55 d.C.",
+  antes: "A igreja de Corinto valorizava excessivamente o dom de línguas, causando confusão e desordem nas reuniões. Paulo instrui que tudo deve ser feito para edificação. Ele contrasta línguas não interpretadas com profecias que edificam a igreja.",
+  versiculo: "✅ Que fareis, pois, irmãos? Quando vos ajuntais, cada um de vós tem salmo, tem doutrina, tem revelação, tem língua, tem interpretação. Faça-se tudo para edificação.",
+  depois: "Paulo estabelece princípios de ordem no culto: falar em línguas deve ser limitado a dois ou três, e deve haver intérprete. As profecias também devem ser avaliadas. Deus não é Deus de confusão, mas de paz. Todo o culto deve visar a edificação da igreja.",
+  tags: "edificação / dons / comunhão",
+  assuntos: ["corinto", "paulo", "edificacao", "dons-espirituais", "ordem-no-culto"]
+},
+
+// 257. Mateus 28.19-20 (Grande Comissão)
+{
+  id: "mt28.19-20",
+  referencia: "Mt 28.19-20",
+  local: "Galileia / Monte designado por Jesus (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~30 d.C.",
+  antes: "Jesus ressuscitou dos mortos e apareceu várias vezes aos discípulos. Os chefes dos sacerdotes haviam subornado os soldados para dizerem que o corpo de Jesus foi roubado. Jesus encontrou os discípulos na Galileia, no monte que designara.",
+  versiculo: "✅ Portanto ide, ensinai todas as nações, batizando-as em nome do Pai, e do Filho, e do Espírito Santo; ensinando-as a guardar todas as coisas que eu vos tenho mandado; e eis que eu estou convosco todos os dias, até a consumação dos séculos.",
+  depois: "Os discípulos obedeceram e começaram a pregar em Jerusalém, depois na Judéia, Samaria e até os confins da terra. A promessa da presença constante de Jesus sustentou a igreja através de perseguições e desafios. A Grande Comissão continua sendo o mandato missionário da igreja até hoje.",
+  tags: "grande comissão / discipulado / missão",
+  assuntos: ["galileia", "jesus", "grande-comissao", "discipulado", "missoes"]
+},
+
+// 258. Atos 1.8
+{
+  id: "at1.8",
+  referencia: "At 1.8",
+  local: "Monte das Oliveiras / Jerusalém (Israel)",
+  paisAtual: "Israel",
+  lider: "Jesus",
+  liderReinado: "",
+  periodo: "Período Romano",
+  periodoDatas: "63 a.C. - 70 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~30 d.C.",
+  antes: "Jesus passou quarenta dias após a ressurreição falando sobre o reino de Deus. Os discípulos perguntaram se Ele restauraria o reino a Israel naquele momento. Jesus respondeu que não lhes compete saber os tempos, mas que receberiam poder.",
+  versiculo: "✅ Mas recebereis a virtude do Espírito Santo, que há de vir sobre vós; e ser-me-eis testemunhas, tanto em Jerusalém como em toda a Judéia e Samaria, e até aos confins da terra.",
+  depois: "Após dizer isto, Jesus foi elevado ao céu, e uma nuvem o recebeu. Os discípulos ficaram olhando para o céu, e dois anjos apareceram prometendo que Jesus voltaria da mesma forma. Os discípulos voltaram para Jerusalém e perseveraram em oração no cenáculo até Pentecostes.",
+  tags: "testemunhas / poder / Espírito Santo",
+  assuntos: ["jerusalem", "jesus", "espirito-santo", "missoes", "testemunho"]
+},
+
+// 259. Mateus 5.13-14
+{
+  id: "mt5.13-14",
+  referencia: "Mt 5.13-14",
+  local: "Monte das Bem-aventuranças / Galileia (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~28 d.C.",
+  antes: "Jesus está ensinando no Sermão da Montanha. Ele já havia pronunciado as bem-aventuranças, descrevendo o caráter dos cidadãos do reino. Agora ele aplica essas características à identidade pública dos discípulos.",
+  versiculo: "✅ Vós sois o sal da terra; e se o sal for insípido, com que se há de salgar? Para nada mais presta senão para se lançar fora, e ser pisado pelos homens. Vós sois a luz do mundo; não se pode esconder uma cidade edificada sobre um monte.",
+  depois: "Jesus continua: 'Assim resplandeça a vossa luz diante dos homens, para que vejam as vossas boas obras e glorifiquem a vosso Pai que está nos céus'. O sal preserva e dá sabor; a luz ilumina e guia. Os discípulos são chamados a influenciar o mundo, não a se isolar dele.",
+  tags: "sal da terra / luz do mundo / testemunho",
+  assuntos: ["galileia", "jesus", "sermao-montanha", "testemunho", "influencia"]
+},
+
+// 260. Mateus 5.14
+{
+  id: "mt5.14",
+  referencia: "Mt 5.14",
+  local: "Monte das Bem-aventuranças / Galileia (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~28 d.C.",
+  antes: "Jesus acabou de dizer que os discípulos são o sal da terra. Agora ele usa a segunda metáfora: a luz. No contexto da Galileia, as cidades construídas no alto das colinas eram visíveis de longe, especialmente à noite com suas lamparinas acesas.",
+  versiculo: "✅ Vós sois a luz do mundo; não se pode esconder uma cidade edificada sobre um monte.",
+  depois: "A luz não pode ser escondida. Assim como uma cidade no monte é visível para todos, a vida do discípulo deve ser visível e iluminadora. A conclusão: 'Assim resplandeça a vossa luz diante dos homens, para que vejam as vossas boas obras e glorifiquem a vosso Pai que está nos céus'.",
+  tags: "luz do mundo / cidade sobre o monte / missão",
+  assuntos: ["galileia", "jesus", "sermao-montanha", "luz", "missao"]
+},
+
+// 261. Mateus 5.16
+{
+  id: "mt5.16",
+  referencia: "Mt 5.16",
+  local: "Monte das Bem-aventuranças / Galileia (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~28 d.C.",
+  antes: "Jesus acabou de declarar que os discípulos são a luz do mundo. Agora ele explica como essa luz deve brilhar: através de boas obras visíveis, mas com o objetivo correto.",
+  versiculo: "✅ Assim resplandeça a vossa luz diante dos homens, para que vejam as vossas boas obras e glorifiquem a vosso Pai que está nos céus.",
+  depois: "As boas obras não devem ser para autoengrandecimento, mas para que outros glorifiquem a Deus. Este princípio equilibra a visibilidade do testemunho cristão com a humildade. O alvo final não é a reputação do discípulo, mas a glória do Pai.",
+  tags: "boas obras / glorificar / luz",
+  assuntos: ["galileia", "jesus", "sermao-montanha", "boas-obras", "gloria-deus"]
+},
+
+// 262. 1 Timóteo 2.1
+{
+  id: "1tm2.1",
+  referencia: "1 Tm 2.1",
+  local: "Éfeso / Ásia Menor (Turquia)",
+  paisAtual: "Turquia",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~62-64 d.C.",
+  antes: "Paulo escreve a Timóteo, que pastoreia a igreja em Éfeso. Havia falsos mestres ensinando doutrinas estranhas. Paulo instrui Timóteo sobre a ordem na igreja e a importância da oração intercessória.",
+  versiculo: "✅ Admoesto-te, pois, antes de tudo, que se façam deprecações, orações, intercessões e ações de graças por todos os homens.",
+  depois: "Paulo especifica que as orações devem ser feitas por reis e por todos os que estão em autoridade, para que tenhamos uma vida tranquila e sossegada. Isto é bom e agradável diante de Deus, que deseja que todos os homens sejam salvos e cheguem ao conhecimento da verdade.",
+  tags: "oração / intercessão / autoridades",
+  assuntos: ["efeso", "paulo", "oracao", "intercessao", "autoridades"]
+},
+
+// 263. Mateus 5.9
+{
+  id: "mt5.9",
+  referencia: "Mt 5.9",
+  local: "Monte das Bem-aventuranças / Galileia (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~28 d.C.",
+  antes: "Jesus está proclamando as bem-aventuranças no Sermão da Montanha. Ele já falou sobre os pobres de espírito, os que choram, os mansos, os que têm fome e sede de justiça, os misericordiosos, os limpos de coração. Agora ele aborda os pacificadores.",
+  versiculo: "✅ Bem-aventurados os pacificadores, porque eles serão chamados filhos de Deus.",
+  depois: "Os pacificadores não são os que evitam conflitos a qualquer custo, mas os que ativamente promovem a reconciliação. Eles refletem o caráter de Deus, que em Cristo reconciliou o mundo consigo mesmo. Ser chamado 'filho de Deus' é receber a identidade e aprovação divinas.",
+  tags: "pacificadores / filhos de Deus / paz",
+  assuntos: ["galileia", "jesus", "bem-aventuranças", "paz", "reconciliacao"]
+},
+
+// 264. 2 Coríntios 5.18-19
+{
+  id: "2co5.18-19",
+  referencia: "2 Co 5.18-19",
+  local: "Filipos / Macedônia (Grécia)",
+  paisAtual: "Grécia",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~55-56 d.C.",
+  antes: "Paulo fala sobre a nova criação em Cristo. Quem está em Cristo é uma nova criatura, as coisas velhas já passaram. A reconciliação com Deus é o centro da mensagem do evangelho.",
+  versiculo: "✅ Ora, tudo provém de Deus, que nos reconciliou consigo mesmo por Jesus Cristo, e nos deu o ministério da reconciliação. Isto é, Deus estava em Cristo reconciliando consigo o mundo, não lhes imputando os seus pecados; e pôs em nós a palavra da reconciliação.",
+  depois: "Paulo conclui que somos embaixadores de Cristo, como se Deus estivesse rogando por nosso intermédio. Ele suplica aos coríntios que se reconciliem com Deus. O ministério da reconciliação é a missão confiada à igreja.",
+  tags: "reconciliação / ministério / embaixadores",
+  assuntos: ["filipos", "paulo", "reconciliacao", "ministerio", "embaixadores"]
+},
+
+// 265. João 16.33
+{
+  id: "jo16.33",
+  referencia: "Jo 16.33",
+  local: "Jerusalém / Judéia (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~30 d.C.",
+  antes: "Jesus está falando com os discípulos na véspera de sua morte. Ele já havia anunciado que eles seriam espalhados e o deixariam sozinho. Ele os prepara para as tribulações que virão após sua partida.",
+  versiculo: "✅ Tenho-vos dito estas coisas, para que em mim tenhais paz; no mundo tereis aflições, mas tende bom ânimo; eu venci o mundo.",
+  depois: "Jesus não promete ausência de aflições, mas paz nele em meio às aflições. Sua vitória sobre o mundo (pecado, morte e Satanás) é a base para o bom ânimo dos discípulos. Esta promessa tem sustentado os cristãos através de séculos de perseguição.",
+  tags: "paz / tribulação / vitória",
+  assuntos: ["jerusalem", "jesus", "paz", "tribulacao", "vitoria"]
+},
+
+// 266. Mateus 5.13
+{
+  id: "mt5.13",
+  referencia: "Mt 5.13",
+  local: "Monte das Bem-aventuranças / Galileia (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~28 d.C.",
+  antes: "Jesus inicia a seção sobre a identidade dos discípulos no mundo. Após as bem-aventuranças, ele agora os chama de 'sal da terra' e 'luz do mundo'. A metáfora do sal vem do contexto agrícola da Galileia.",
+  versiculo: "✅ Vós sois o sal da terra; e se o sal for insípido, com que se há de salgar? Para nada mais presta senão para se lançar fora, e ser pisado pelos homens.",
+  depois: "O sal tinha múltiplas funções: preservar os alimentos da decomposição, dar sabor e era usado em sacrifícios. Se o sal perde sua força, torna-se inútil. Assim, os discípulos devem manter seu caráter distintivo no mundo, preservando a verdade e dando sabor à sociedade.",
+  tags: "sal da terra / preservar / sabor",
+  assuntos: ["galileia", "jesus", "sermao-montanha", "sal", "influencia"]
+},
+
+// 267. Efésios 4.11-12
+{
+  id: "ef4.11-12",
+  referencia: "Ef 4.11-12",
+  local: "Roma / Itália (Itália)",
+  paisAtual: "Itália",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~60-62 d.C.",
+  antes: "Paulo está preso em Roma, escrevendo aos efésios sobre a unidade do corpo de Cristo. Ele já falou sobre a unidade da fé e do Espírito. Agora ele explica como os dons de liderança contribuem para essa unidade.",
+  versiculo: "✅ E ele mesmo deu uns para apóstolos, e outros para profetas, e outros para evangelistas, e outros para pastores e doutores, para o aperfeiçoamento dos santos, para a obra do ministério, para edificação do corpo de Cristo.",
+  depois: "Os dons de liderança não são para exaltação pessoal, mas para equipar a igreja. O objetivo é que todos os crentes cheguem à unidade da fé e ao conhecimento do Filho de Deus. A igreja madura não é mais como crianças instáveis, levadas por todo vento de doutrina.",
+  tags: "dons / ministério / edificação",
+  assuntos: ["roma", "paulo", "dons-espirituais", "ministerio", "edificacao"]
+},
+
+// 268. Atos 2.42-47
+{
+  id: "at2.42-47",
+  referencia: "At 2.42-47",
+  local: "Jerusalém / Judéia (Israel)",
+  paisAtual: "Israel",
+  lider: "Pedro",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~30 d.C.",
+  antes: "Cerca de 3.000 pessoas se converteram no dia de Pentecostes após a pregação de Pedro. Eles foram batizados e se juntaram à comunidade cristã primitiva. Este resumo descreve o funcionamento da primeira igreja.",
+  versiculo: "⚠️ E perseveravam na doutrina dos apóstolos, e na comunhão, e no partir do pão, e nas orações. E em toda a alma havia temor, e muitas maravilhas e sinais se faziam pelos apóstolos. Todos os que criam estavam juntos e tinham tudo em comum. Vendiam suas propriedades e bens e repartiam com todos, segundo cada um tinha necessidade. E perseverando unânimes todos os dias no templo, e partindo o pão em casa, comiam juntos com alegria e singeleza de coração, louvando a Deus e caindo na graça de todo o povo. E todos os dias acrescentava o Senhor à igreja aqueles que se haviam de salvar.",
+  depois: "A igreja primitiva estabeleceu o padrão para a vida comunitária cristã: ensino apostólico, comunhão, partilha de bens, oração, adoração e evangelismo. Este modelo tem inspirado comunidades cristãs ao longo da história. O crescimento da igreja era resultado natural da vida comunitária autêntica.",
+  tags: "igreja primitiva / comunhão / discipulado",
+  assuntos: ["jerusalem", "pedro", "igreja-primitiva", "comunhao", "partilha"]
+},
+
+// 269. 2 Timóteo 3.16
+{
+  id: "2tm3.16",
+  referencia: "2 Tm 3.16",
+  local: "Roma / Itália (Itália)",
+  paisAtual: "Itália",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~64-67 d.C.",
+  antes: "Paulo está na prisão em Roma, próximo da morte. Ele escreve sua última carta a Timóteo, encorajando-o a permanecer fiel às Escrituras que aprendeu desde a infância, ensinado por sua avó Lóide e sua mãe Eunice.",
+  versiculo: "✅ Toda Escritura é inspirada por Deus e útil para o ensino, para a repreensão, para a correção, para a educação na justiça.",
+  depois: "O propósito das Escrituras é equipar o homem de Deus para toda boa obra. A inspiração (theopneustos = soprada por Deus) garante a autoridade das Escrituras. Paulo exorta Timóteo a pregar a palavra, a tempo e fora de tempo, porque virá tempo em que não suportarão a sã doutrina.",
+  tags: "inspiração / ensino / correção",
+  assuntos: ["roma", "paulo", "escrituras", "inspiracao", "ensino"]
+},
+
+// 270. Mateus 4.4
+{
+  id: "mt4.4",
+  referencia: "Mt 4.4",
+  local: "Deserto da Judéia (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~28 d.C.",
+  antes: "Jesus foi levado pelo Espírito ao deserto para ser tentado pelo diabo. Jejuou quarenta dias e quarenta noites. O tentador se aproximou e o desafiou a transformar pedras em pães, apelando para sua fome física.",
+  versiculo: "✅ Ele, porém, respondendo, disse: Está escrito: Nem só de pão viverá o homem, mas de toda a palavra que sai da boca de Deus.",
+  depois: "Jesus cita Deuteronômio 8.3, lembrando como Deus alimentou Israel com o maná no deserto para ensinar que a verdadeira vida vem da Palavra de Deus. O diabo então tenta Jesus de outras formas, mas Ele resiste com as Escrituras. A Palavra de Deus é o alimento essencial para a vida espiritual.",
+  tags: "pão / palavra de Deus / viver",
+  assuntos: ["deserto-juda", "jesus", "palavra-deus", "tentacao", "vida-espiritual"]
+},
+
+// 271. Gálatas 6.2
+{
+  id: "gl6.2",
+  referencia: "Gl 6.2",
+  local: "Galácia / Ásia Menor (Turquia)",
+  paisAtual: "Turquia",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~49-55 d.C.",
+  antes: "Paulo conclui a carta aos Gálatas com exortações práticas sobre a vida em comunidade. Ele fala sobre restaurar os caídos com espírito de mansidão e sobre carregar as cargas uns dos outros.",
+  versiculo: "✅ Levai as cargas uns dos outros, e assim cumprireis a lei de Cristo.",
+  depois: "A 'lei de Cristo' é o mandamento do amor mútuo (João 13.34). Carregar as cargas uns dos outros é uma expressão prática desse amor. Paulo contrasta isso com a ideia de que cada um deve carregar o seu próprio fardo (responsabilidade pessoal), mostrando que há fardos que não podemos carregar sozinhos.",
+  tags: "carregar cargas / lei de Cristo",
+  assuntos: ["galacia", "paulo", "comunhao", "amor", "compartilhar"]
+},
+
+// 272. Romanos 12.15
+{
+  id: "rm12.15",
+  referencia: "Rm 12.15",
+  local: "Corinto / Acaia (Grécia)",
+  paisAtual: "Grécia",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~57 d.C.",
+  antes: "Paulo dá instruções sobre a vida em comunidade, exortando os romanos a amarem sinceramente, a se dedicarem uns aos outros com preferência, e a serem zelosos no serviço ao Senhor.",
+  versiculo: "✅ Alegrai-vos com os que se alegram; e chorai com os que choram.",
+  depois: "A empatia é a marca da comunidade cristã. Alegrar-se com os que se alegram requer ausência de inveja. Chorar com os que choram requer compaixão ativa. Paulo ensina que a comunidade cristã é um corpo onde os membros participam das alegrias e tristezas uns dos outros.",
+  tags: "alegrar / chorar / empatia",
+  assuntos: ["corinto", "paulo", "empatia", "comunhao", "amor"]
+},
+
+// 273. Hebreus 12.11
+{
+  id: "hb12.11",
+  referencia: "Hb 12.11",
+  local: "Roma / Itália (Itália)",
+  paisAtual: "Itália",
+  lider: "",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~60-65 d.C.",
+  antes: "O autor de Hebreus exorta os leitores a suportarem a disciplina de Deus. Ele compara a disciplina divina à disciplina paterna, que é evidência de filiação, não de rejeição.",
+  versiculo: "✅ E, na verdade, toda a correção, ao presente, não parece ser de gozo, mas de tristeza; mas depois produz um fruto pacífico de justiça nos que por ela são exercitados.",
+  depois: "A disciplina divina, embora dolorosa no momento, tem um propósito positivo: produzir fruto de justiça e paz. O crescimento espiritual muitas vezes vem através do sofrimento e da correção. Os crentes são encorajados a não desmaiarem diante da disciplina, mas a se deixarem exercitar por ela.",
+  tags: "disciplina / paz / justiça",
+  assuntos: ["roma", "autor-hebreus", "disciplina-divina", "fruto-justica", "paciencia"]
+},
+
+// 274. 1 Coríntios 12.7
+{
+  id: "1co12.7",
+  referencia: "1 Co 12.7",
+  local: "Corinto / Acaia (Grécia)",
+  paisAtual: "Grécia",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~55 d.C.",
+  antes: "Paulo introduz o tema dos dons espirituais em Corinto. A igreja estava orgulhosa de seus dons, especialmente o dom de línguas, e havia competição e comparação entre os membros.",
+  versiculo: "✅ Mas a manifestação do Espírito é dada a cada um para o que for útil.",
+  depois: "O propósito dos dons não é exaltação pessoal, mas utilidade para a comunidade. Cada dom é uma manifestação do Espírito para o bem comum. Paulo usará essa verdade para corrigir os abusos em Corinto, mostrando que todos os dons são importantes para o corpo de Cristo.",
+  tags: "dons / utilidade / bem comum",
+  assuntos: ["corinto", "paulo", "dons-espirituais", "comunidade", "servir"]
+},
+
+// 275. 1 Pedro 2.2
+{
+  id: "1pe2.2",
+  referencia: "1 Pe 2.2",
+  local: "Roma / Itália (Itália)",
+  paisAtual: "Itália",
+  lider: "Pedro",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~60-65 d.C.",
+  antes: "Pedro escreve a cristãos dispersos enfrentando perseguição. Ele os lembra de sua nova identidade em Cristo: eleitos, santos e amados. Agora ele os exorta a crescerem espiritualmente.",
+  versiculo: "✅ Desejai afetuosamente, como meninos novamente nascidos, o leite racional, não falsificado, para que por ele vades crescendo.",
+  depois: "Assim como um bebê deseja naturalmente o leite materno, o novo crente deve desejar a Palavra de Deus (o 'leite racional' ou 'leite espiritual'). O crescimento espiritual não é automático; requer desejo e ingestão constante da Palavra. Pedro contrasta isso com as falsificações do mundo.",
+  tags: "leite espiritual / crescimento / salvação",
+  assuntos: ["roma", "pedro", "crescimento-espiritual", "palavra-deus", "santificacao"]
+},
+
+// 276. Atos 4.20
+{
+  id: "at4.20",
+  referencia: "At 4.20",
+  local: "Jerusalém / Judéia (Israel)",
+  paisAtual: "Israel",
+  lider: "Pedro e João",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~30 d.C.",
+  antes: "Pedro e João foram presos pelo Sinédrio após curar um homem coxo de nascença. Foram ameaçados e ordenados a não falar mais no nome de Jesus. Ao serem libertos, foram para os irmãos e relataram tudo.",
+  versiculo: "✅ Porque não podemos deixar de falar do que temos visto e ouvido.",
+  depois: "A igreja se reuniu em oração, e o lugar onde estavam tremeu; todos foram cheios do Espírito Santo e falavam a palavra de Deus com ousadia. A experiência pessoal com Cristo criou uma compulsão irresistível para testemunhar. A gratidão pela salvação transformou-se em missão.",
+  tags: "testemunhar / não posso calar / visto e ouvido",
+  assuntos: ["jerusalem", "pedro", "testemunho", "missao", "gratidao"]
+},
+
+// 277. 1 Coríntios 9.16
+{
+  id: "1co9.16",
+  referencia: "1 Co 9.16",
+  local: "Corinto / Acaia (Grécia)",
+  paisAtual: "Grécia",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~55 d.C.",
+  antes: "Paulo defende seu direito como apóstolo de ser sustentado pelo evangelho, mas ele deliberadamente abriu mão desse direito para não ser um obstáculo ao evangelho. Ele explica sua motivação para pregar.",
+  versiculo: "✅ Porque, se anuncio o evangelho, não tenho de que me gloriar, pois me é imposta essa obrigação; e ai de mim se não anunciar o evangelho!",
+  depois: "Paulo sente uma compulsão interior que o impulsiona a pregar, independentemente de receber ou não recompensa. Essa obrigação vem de seu encontro com Cristo no caminho de Damasco. A pregação do evangelho não é opcional para Paulo; é uma necessidade que brota do amor a Cristo e aos perdidos.",
+  tags: "anunciar / obrigação / ai de mim",
+  assuntos: ["corinto", "paulo", "evangelismo", "missao", "compulsao"]
 }
 ];
-
 // ============================================
 // ÍNDICE DE CONTEXTOS BÍBLICOS
 // Organizado por ordem alfabética de ID
-// Total: 149 contextos
-// ============================================
-
-// ============================================
-// ÍNDICE DE CONTEXTOS BÍBLICOS
-// Organizado por ordem alfabética de ID
-// Total: 187 contextos
+// Total: 277 contextos
 // ============================================
 
 const indiceContextos = {
@@ -3417,15 +5185,19 @@ const indiceContextos = {
   "1co12.7": { numero: 151, referencia: "1 Co 12.7", pagina: 113 },
   "1co13.1": { numero: 22, referencia: "1 Co 13.1-3", pagina: 93 },
   "1co13.4": { numero: 23, referencia: "1 Co 13.4-7", pagina: 93 },
+  "1co14.26": { numero: 256, referencia: "1 Co 14.26", pagina: 25 },
   "1co2.16": { numero: 17, referencia: "1 Co 2.16", pagina: 93 },
   "1co2.4": { numero: 15, referencia: "1 Co 2.4", pagina: 93 },
   "1co2.5": { numero: 16, referencia: "1 Co 2.5", pagina: 93 },
   "1co3.16": { numero: 150, referencia: "1 Co 3.16", pagina: 113 },
   "1co3.3": { numero: 18, referencia: "1 Co 3.3", pagina: 93 },
   "1co4.20": { numero: 19, referencia: "1 Co 4.20", pagina: 93 },
+  "1co6.9-10": { numero: 236, referencia: "1 Co 6.9-10", pagina: 78 },
+  "1co9.16": { numero: 277, referencia: "1 Co 9.16", pagina: 40 },
   "1co9.25": { numero: 8, referencia: "1 Co 9.25", pagina: 92 },
   
   // 1 Pedro
+  "1pe2.2": { numero: 275, referencia: "1 Pe 2.2", pagina: 36 },
   "1pe2.5": { numero: 154, referencia: "1 Pe 2.5", pagina: 113 },
   "1pe2.9": { numero: 78, referencia: "1 Pe 2.9", pagina: 100 },
   "1pe4.10": { numero: 79, referencia: "1 Pe 4.10", pagina: 100 },
@@ -3434,18 +5206,28 @@ const indiceContextos = {
   "1ts5.11": { numero: 155, referencia: "1 Ts 5.11", pagina: 114 },
   
   // 1 Timóteo
+  "1tm2.1": { numero: 262, referencia: "1 Tm 2.1", pagina: 30 },
+  "1tm2.4": { numero: 225, referencia: "1 Tm 2.4", pagina: 76 },
   "1tm4.12": { numero: 71, referencia: "1 Tm 4.12", pagina: 99 },
   "1tm4.7": { numero: 70, referencia: "1 Tm 4.7-8", pagina: 99 },
+  "1tm6.18": { numero: 226, referencia: "1 Tm 6.18", pagina: 76 },
   "1tm6.5": { numero: 72, referencia: "1 Tm 6.5-10", pagina: 99 },
+  "1tm6.6-8": { numero: 216, referencia: "1 Tm 6.6-8", pagina: 75 },
+  "1tm6.9": { numero: 217, referencia: "1 Tm 6.9", pagina: 75 },
   
   // 2 Coríntios
   "2co1.18": { numero: 24, referencia: "2 Co 1.18", pagina: 94 },
+  "2co11.15": { numero: 239, referencia: "2 Co 11.15", pagina: 78 },
   "2co12.12": { numero: 30, referencia: "2 Co 12.12", pagina: 94 },
+  "2co12.7-10": { numero: 222, referencia: "2 Co 12.7-10", pagina: 76 },
+  "2co12.7-9": { numero: 43, referencia: "2 Co 12.7-9", pagina: 78 },
   "2co2.14": { numero: 25, referencia: "2 Co 2.14-17", pagina: 94 },
   "2co3.18": { numero: 26, referencia: "2 Co 3.18", pagina: 94 },
   "2co4.18": { numero: 29, referencia: "2 Co 4.18", pagina: 94 },
   "2co4.2": { numero: 27, referencia: "2 Co 4.2", pagina: 94 },
   "2co4.4": { numero: 28, referencia: "2 Co 4.4", pagina: 94 },
+  "2co5.18-19": { numero: 264, referencia: "2 Co 5.18-19", pagina: 30 },
+  "2co9.7": { numero: 223, referencia: "2 Co 9.7", pagina: 76 },
   
   // 2 Timóteo
   "2tm3.15-16": { numero: 73, referencia: "2 Tm 3.15-16", pagina: 100 },
@@ -3459,40 +5241,47 @@ const indiceContextos = {
   "ap19.7": { numero: 144, referencia: "Ap 19.7-8", pagina: 112 },
   "ap2.10": { numero: 9, referencia: "Ap 2.10", pagina: 92 },
   "ap21.2": { numero: 145, referencia: "Ap 21.2", pagina: 112 },
+  "ap3.17": { numero: 215, referencia: "Ap 3.17", pagina: 75 },
   "ap7.9": { numero: 156, referencia: "Ap 7.9", pagina: 114 },
   
   // Atos
-    "at1.14": { numero: 159, referencia: "At 1.14", pagina: 114 },
-    "at1.3": { numero: 157, referencia: "At 1.3", pagina: 114 },
-    "at1.4": { numero: 158, referencia: "At 1.4-5", pagina: 114 },
-    "at17.24-27": { numero: 4, referencia: "At 17.24-27", pagina: 92 },
-    "at2.1": { numero: 160, referencia: "At 2.1", pagina: 114 },
-    "at2.1-4": { numero: 188, referencia: "At 2.1-4", pagina: 114 },
-    "at2.11": { numero: 161, referencia: "At 2.11", pagina: 114 },
-    "at2.16": { numero: 162, referencia: "At 2.16-17", pagina: 114 },
-    "at2.22": { numero: 163, referencia: "At 2.22-23", pagina: 115 },
-    "at2.24": { numero: 164, referencia: "At 2.24", pagina: 115 },
-    "at2.29": { numero: 1, referencia: "At 2.29-33", pagina: 91 },
-    "at2.32": { numero: 165, referencia: "At 2.32-36", pagina: 115 },
-    "at2.36": { numero: 2, referencia: "At 2.36-41", pagina: 91 },
-    "at2.37": { numero: 166, referencia: "At 2.37", pagina: 115 },
-    "at2.38": { numero: 167, referencia: "At 2.38", pagina: 115 },
-    "at2.4": { numero: 134, referencia: "At 2.4", pagina: 110 },
-    "at2.41": { numero: 168, referencia: "At 2.41", pagina: 115 },
-    "at2.42": { numero: 122, referencia: "At 2.42", pagina: 108 },
-    "at2.46": { numero: 123, referencia: "At 2.46", pagina: 108 },
-    "at2.5": { numero: 135, referencia: "At 2.5", pagina: 110 },
-    "at2.6": { numero: 136, referencia: "At 2.6-8", pagina: 110 },
-    "at2.9": { numero: 137, referencia: "At 2.9-11", pagina: 110 },
-    "at20.18": { numero: 13, referencia: "At 20.18", pagina: 93 },
-    "at20.28": { numero: 170, referencia: "At 20.28", pagina: 116 },
-    "at4.13": { numero: 3, referencia: "At 4.13", pagina: 92 },
-    "at4.29": { numero: 11, referencia: "At 4.29-30", pagina: 93 },
-    "at5.12": { numero: 12, referencia: "At 5.12-14", pagina: 93 },
-    "at9.4": { numero: 169, referencia: "At 9.4", pagina: 115 },
+  "at1.14": { numero: 159, referencia: "At 1.14", pagina: 114 },
+  "at1.3": { numero: 157, referencia: "At 1.3", pagina: 114 },
+  "at1.4": { numero: 158, referencia: "At 1.4-5", pagina: 114 },
+  "at1.8": { numero: 258, referencia: "At 1.8", pagina: 25 },
+  "at17.24-27": { numero: 4, referencia: "At 17.24-27", pagina: 92 },
+  "at2.1": { numero: 160, referencia: "At 2.1", pagina: 114 },
+  "at2.1-4": { numero: 188, referencia: "At 2.1-4", pagina: 114 },
+  "at2.11": { numero: 161, referencia: "At 2.11", pagina: 114 },
+  "at2.16": { numero: 162, referencia: "At 2.16-17", pagina: 114 },
+  "at2.22": { numero: 163, referencia: "At 2.22-23", pagina: 115 },
+  "at2.24": { numero: 164, referencia: "At 2.24", pagina: 115 },
+  "at2.29": { numero: 1, referencia: "At 2.29-33", pagina: 91 },
+  "at2.32": { numero: 165, referencia: "At 2.32-36", pagina: 115 },
+  "at2.36": { numero: 2, referencia: "At 2.36-41", pagina: 91 },
+  "at2.37": { numero: 166, referencia: "At 2.37", pagina: 115 },
+  "at2.38": { numero: 167, referencia: "At 2.38", pagina: 115 },
+  "at2.4": { numero: 134, referencia: "At 2.4", pagina: 110 },
+  "at2.41": { numero: 168, referencia: "At 2.41", pagina: 115 },
+  "at2.42": { numero: 122, referencia: "At 2.42", pagina: 108 },
+  "at2.42-47": { numero: 268, referencia: "At 2.42-47", pagina: 34 },
+  "at2.44-47": { numero: 64, referencia: "At 2.44-47", pagina: 79 },
+  "at2.46": { numero: 123, referencia: "At 2.46", pagina: 108 },
+  "at2.47": { numero: 253, referencia: "At 2.47", pagina: 24 },
+  "at2.5": { numero: 135, referencia: "At 2.5", pagina: 110 },
+  "at2.6": { numero: 136, referencia: "At 2.6-8", pagina: 110 },
+  "at2.9": { numero: 137, referencia: "At 2.9-11", pagina: 110 },
+  "at20.18": { numero: 13, referencia: "At 20.18", pagina: 93 },
+  "at20.28": { numero: 170, referencia: "At 20.28", pagina: 116 },
+  "at4.13": { numero: 3, referencia: "At 4.13", pagina: 92 },
+  "at4.20": { numero: 276, referencia: "At 4.20", pagina: 40 },
+  "at4.29": { numero: 11, referencia: "At 4.29-30", pagina: 93 },
+  "at5.12": { numero: 12, referencia: "At 5.12-14", pagina: 93 },
+  "at9.4": { numero: 169, referencia: "At 9.4", pagina: 115 },
   
   // Colossenses
   "cl1.10": { numero: 85, referencia: "Cl 1.10", pagina: 101 },
+  "cl1.16-17": { numero: 189, referencia: "Cl 1.16-17", pagina: 68 },
   "cl1.18": { numero: 171, referencia: "Cl 1.18", pagina: 116 },
   "cl1.23": { numero: 172, referencia: "Cl 1.23", pagina: 116 },
   "cl3.12": { numero: 86, referencia: "Cl 3.12-13", pagina: 101 },
@@ -3501,8 +5290,14 @@ const indiceContextos = {
   
   // Efésios
   "ef1.22": { numero: 173, referencia: "Ef 1.22-23", pagina: 116 },
+  "ef1.3": { numero: 244, referencia: "Ef 1.3", pagina: 79 },
   "ef2.19": { numero: 174, referencia: "Ef 2.19", pagina: 116 },
   "ef2.20": { numero: 175, referencia: "Ef 2.20", pagina: 116 },
+  "ef2.6": { numero: 245, referencia: "Ef 2.6", pagina: 79 },
+  "ef3.10": { numero: 252, referencia: "Ef 3.10", pagina: 24 },
+  "ef3.16": { numero: 247, referencia: "Ef 3.16", pagina: 79 },
+  "ef4.11-12": { numero: 267, referencia: "Ef 4.11-12", pagina: 34 },
+  "ef4.12": { numero: 255, referencia: "Ef 4.12", pagina: 25 },
   "ef4.13": { numero: 41, referencia: "Ef 4.13-15", pagina: 95 },
   "ef4.14": { numero: 69, referencia: "Ef 4.14-15", pagina: 99 },
   "ef4.2": { numero: 40, referencia: "Ef 4.2-3", pagina: 95 },
@@ -3510,12 +5305,15 @@ const indiceContextos = {
   "ef5.25": { numero: 176, referencia: "Ef 5.25", pagina: 117 },
   "ef5.26": { numero: 44, referencia: "Ef 5.26", pagina: 95 },
   "ef5.27": { numero: 177, referencia: "Ef 5.27", pagina: 117 },
+  "ef5.5-6": { numero: 238, referencia: "Ef 5.5-6", pagina: 78 },
   "ef5.9": { numero: 43, referencia: "Ef 5.9", pagina: 95 },
   
   // Filipenses
   "fp1.11": { numero: 46, referencia: "Fp 1.11", pagina: 95 },
   "fp1.6": { numero: 45, referencia: "Fp 1.6", pagina: 95 },
   "fp2.3": { numero: 47, referencia: "Fp 2.3-5", pagina: 96 },
+  "fp4.11": { numero: 251, referencia: "Fp 4.11", pagina: 80 },
+  "fp4.12": { numero: 18, referencia: "Fp 4.12", pagina: 76 },
   "fp4.4": { numero: 48, referencia: "Fp 4.4", pagina: 96 },
   "fp4.7": { numero: 49, referencia: "Fp 4.7", pagina: 96 },
   
@@ -3524,51 +5322,119 @@ const indiceContextos = {
   "gl4.19": { numero: 50, referencia: "Gl 4.19", pagina: 96 },
   "gl5.16": { numero: 52, referencia: "Gl 5.16", pagina: 96 },
   "gl5.19": { numero: 53, referencia: "Gl 5.19-21", pagina: 96 },
+  "gl5.19-21": { numero: 237, referencia: "Gl 5.19-21", pagina: 78 },
   "gl5.22": { numero: 54, referencia: "Gl 5.22-23", pagina: 96 },
   "gl5.22a": { numero: 55, referencia: "Gl 5.22-23a", pagina: 96 },
   "gl5.25": { numero: 56, referencia: "Gl 5.25", pagina: 97 },
   "gl5.8": { numero: 51, referencia: "Gl 5.8", pagina: 96 },
   "gl6.10": { numero: 178, referencia: "Gl 6.10", pagina: 117 },
+  "gl6.2": { numero: 271, referencia: "Gl 6.2", pagina: 35 },
   "gl6.9": { numero: 57, referencia: "Gl 6.9", pagina: 97 },
   
   // Hebreus
+  "hb1.1-2": { numero: 201, referencia: "Hb 1.1-2", pagina: 69 },
+  "hb1.3": { numero: 190, referencia: "Hb 1.3", pagina: 68 },
   "hb10.25": { numero: 179, referencia: "Hb 10.25", pagina: 117 },
   "hb11.6": { numero: 90, referencia: "Hb 11.6", pagina: 102 },
   "hb12.1": { numero: 91, referencia: "Hb 12.1", pagina: 102 },
   "hb12.11": { numero: 92, referencia: "Hb 12.11", pagina: 102 },
+  "hb12.6": { numero: 227, referencia: "Hb 12.6", pagina: 76 },
   "hb13.17": { numero: 180, referencia: "Hb 13.17", pagina: 117 },
+  "hb13.5": { numero: 219, referencia: "Hb 13.5", pagina: 75 },
+  "hb13.8": { numero: 214, referencia: "Hb 13.8", pagina: 73 },
   "hb2.4": { numero: 89, referencia: "Hb 2.4", pagina: 102 },
   
+  // Isaías
+  "is41.10": { numero: 193, referencia: "Is 41.10", pagina: 68 },
+  "is45.5": { numero: 211, referencia: "Is 45.5", pagina: 73 },
+  "is55.11": { numero: 107, referencia: "Is 55.11", pagina: 104 },
+  
   // João
+  "jo1.14": { numero: 200, referencia: "Jo 1.14", pagina: 69 },
   "jo1.9-10": { numero: 93, referencia: "Jo 1.9-10", pagina: 102 },
   "jo13.34": { numero: 95, referencia: "Jo 13.34", pagina: 102 },
   "jo13.35": { numero: 96, referencia: "Jo 13.35", pagina: 103 },
+  "jo14.13": { numero: 192, referencia: "Jo 14.13", pagina: 68 },
+  "jo14.13-14": { numero: 210, referencia: "Jo 14.13-14", pagina: 72 },
   "jo14.27": { numero: 97, referencia: "Jo 14.27", pagina: 103 },
   "jo14.6": { numero: 31, referencia: "Jo 14.6", pagina: 94 },
   "jo15.1": { numero: 98, referencia: "Jo 15.1-2", pagina: 103 },
   "jo15.4": { numero: 99, referencia: "Jo 15.4-5", pagina: 103 },
   "jo15.5": { numero: 100, referencia: "Jo 15.5", pagina: 103 },
   "jo15.8": { numero: 101, referencia: "Jo 15.8", pagina: 103 },
+  "jo16.33": { numero: 234, referencia: "Jo 16.33", pagina: 78 },
   "jo16.4": { numero: 102, referencia: "Jo 16.4", pagina: 103 },
   "jo17.17": { numero: 32, referencia: "Jo 17.17", pagina: 94 },
+  "jo4.23": { numero: 254, referencia: "Jo 4.23", pagina: 24 },
+  "jo6.26": { numero: 221, referencia: "Jo 6.26", pagina: 75 },
   "jo6.67": { numero: 94, referencia: "Jo 6.67", pagina: 102 },
   
+  // Jeremias
+  "jr14.14": { numero: 109, referencia: "Jr 14.14", pagina: 104 },
+  "jr17": { numero: 231, referencia: "Jr 17", pagina: 77 },
+  "jr17.9-11": { numero: 229, referencia: "Jr 17.9-11", pagina: 77 },
+  "jr23.23": { numero: 213, referencia: "Jr 23.23", pagina: 73 },
+  "jr33.3": { numero: 198, referencia: "Jr 33.3", pagina: 69 },
+  "jr6.16": { numero: 108, referencia: "Jr 6.16", pagina: 104 },
+  
   // Lucas
+  "lc1.9-58": { numero: 224, referencia: "Lc 1.9,58", pagina: 76 },
   "lc10.19": { numero: 103, referencia: "Lc 10.19", pagina: 104 },
+  "lc19.10": { numero: 249, referencia: "Lc 19.10", pagina: 80 },
+  "lc22.42": { numero: 37, referencia: "Lc 22.42", pagina: 77 },
+  "lc7.11-17": { numero: 206, referencia: "Lc 7.11-17", pagina: 71 },
+  "lc8.40-56": { numero: 207, referencia: "Lc 8.40-56", pagina: 71 },
+  
+  // Levítico
+  "lv23.15": { numero: 182, referencia: "Lv 23.15-16", pagina: 117 },
+  
+  // Malaquias
+  "ml3.10": { numero: 233, referencia: "Ml 3.10", pagina: 78 },
   
   // Marcos
+  "mc4.35-41": { numero: 205, referencia: "Mc 4.35-41", pagina: 71 },
   "mc8.34": { numero: 104, referencia: "Mc 8.34-35", pagina: 104 },
   
   // Mateus
+  "mt10.29": { numero: 196, referencia: "Mt 10.29", pagina: 69 },
+  "mt10.29-30": { numero: 194, referencia: "Mt 10.29-30", pagina: 68 },
+  "mt10.8": { numero: 63, referencia: "Mt 10.8", pagina: 79 },
   "mt11.29": { numero: 36, referencia: "Mt 11.29", pagina: 94 },
+  "mt13.24-28": { numero: 240, referencia: "Mt 13.24-28", pagina: 78 },
+  "mt13.36-43": { numero: 241, referencia: "Mt 13.36-43", pagina: 78 },
   "mt16.18": { numero: 183, referencia: "Mt 16.18", pagina: 118 },
+  "mt16.24-26": { numero: 220, referencia: "Mt 16.24-26", pagina: 75 },
   "mt23": { numero: 37, referencia: "Mt 23", pagina: 94 },
   "mt23.27": { numero: 38, referencia: "Mt 23.27-28", pagina: 94 },
   "mt24.11": { numero: 39, referencia: "Mt 24.11,24", pagina: 95 },
+  "mt25.21": { numero: 65, referencia: "Mt 25.21", pagina: 79 },
+  "mt28.19-20": { numero: 257, referencia: "Mt 28.19-20", pagina: 25 },
   "mt28.20": { numero: 184, referencia: "Mt 28.20", pagina: 118 },
+  "mt4.23-25": { numero: 203, referencia: "Mt 4.23-25", pagina: 71 },
+  "mt4.4": { numero: 270, referencia: "Mt 4.4", pagina: 34 },
+  "mt5.13": { numero: 266, referencia: "Mt 5.13", pagina: 31 },
+  "mt5.13-14": { numero: 259, referencia: "Mt 5.13-14", pagina: 25 },
+  "mt5.14": { numero: 260, referencia: "Mt 5.14", pagina: 29 },
+  "mt5.16": { numero: 261, referencia: "Mt 5.16", pagina: 29 },
+  "mt5.3": { numero: 243, referencia: "Mt 5.3", pagina: 79 },
+  "mt5.9": { numero: 263, referencia: "Mt 5.9", pagina: 30 },
+  "mt6.10": { numero: 36, referencia: "Mt 6.10", pagina: 77 },
+  "mt6.19-21": { numero: 242, referencia: "Mt 6.19-21", pagina: 79 },
+  "mt6.25-34": { numero: 23, referencia: "Mateus 6.25-34", pagina: 70 },
+  "mt6.26-30": { numero: 209, referencia: "Mt 6.26-30", pagina: 72 },
   "mt7.16": { numero: 33, referencia: "Mt 7.16-20", pagina: 94 },
   "mt7.21": { numero: 34, referencia: "Mt 7.21-23", pagina: 94 },
   "mt7.22": { numero: 35, referencia: "Mt 7.22-23", pagina: 94 },
+  "mt8.23-27": { numero: 204, referencia: "Mt 8.23-27", pagina: 71 },
+  
+  // Êxodo
+  "ex2.24-25": { numero: 199, referencia: "Êx 2.24-25", pagina: 69 },
+  
+  // Provérbios
+  "pv18.21": { numero: 232, referencia: "Pv 18.21", pagina: 77 },
+  "pv23.4-5": { numero: 218, referencia: "Pv 23.4,5", pagina: 75 },
+  "pv30.7-9": { numero: 230, referencia: "Pv 30.7-9", pagina: 77 },
+  "pv3.5": { numero: 197, referencia: "Pv 3.5", pagina: 69 },
   
   // Romanos
   "rm1": { numero: 6, referencia: "Rm 1", pagina: 92 },
@@ -3576,26 +5442,49 @@ const indiceContextos = {
   "rm1.19": { numero: 58, referencia: "Rm 1.19", pagina: 97 },
   "rm1.20": { numero: 59, referencia: "Rm 1.20", pagina: 97 },
   "rm1.22": { numero: 60, referencia: "Rm 1.22", pagina: 97 },
+  "rm12.15": { numero: 272, referencia: "Rm 12.15", pagina: 35 },
   "rm12.18": { numero: 68, referencia: "Rm 12.18", pagina: 99 },
   "rm12.2": { numero: 67, referencia: "Rm 12.2", pagina: 98 },
   "rm12.5": { numero: 186, referencia: "Rm 12.5", pagina: 118 },
   "rm16.5": { numero: 187, referencia: "Rm 16.5", pagina: 118 },
   "rm2.21": { numero: 62, referencia: "Rm 2.21-24", pagina: 97 },
+  "rm3.10-12": { numero: 208, referencia: "Rm 3.10-12", pagina: 71 },
   "rm3.11": { numero: 63, referencia: "Rm 3.11", pagina: 97 },
   "rm8.18": { numero: 64, referencia: "Rm 8.18", pagina: 98 },
+  "rm8.26": { numero: 246, referencia: "Rm 8.26", pagina: 79 },
   "rm8.28": { numero: 65, referencia: "Rm 8.28", pagina: 98 },
   "rm8.29": { numero: 66, referencia: "Rm 8.29", pagina: 98 },
+  "rm8.37": { numero: 248, referencia: "Rm 8.37", pagina: 79 },
   
-  // Tito
-  "tt2.12": { numero: 77, referencia: "Tt 2.12", pagina: 100 },
-  "tt2.7": { numero: 76, referencia: "Tt 2.7-8", pagina: 100 },
+  // Salmos
+  "sl1.2": { numero: 114, referencia: "Sl 1.2-3", pagina: 104 },
+  "sl10.4": { numero: 115, referencia: "Sl 10.4", pagina: 104 },
+  "sl103.13-14": { numero: 202, referencia: "Sl 103.13-14", pagina: 70 },
+  "sl121.4": { numero: 191, referencia: "Sl 121.4", pagina: 68 },
+  "sl139.7-10": { numero: 195, referencia: "Sl 139.7-10", pagina: 68 },
+  "sl14": { numero: 118, referencia: "Sl 14", pagina: 105 },
+  "sl14.1": { numero: 116, referencia: "Sl 14.1", pagina: 105 },
+  "sl14.1-3": { numero: 117, referencia: "Sl 14.1-3", pagina: 105 },
+  "sl16.11": { numero: 120, referencia: "Sl 16.11", pagina: 105 },
+  "sl19.1": { numero: 119, referencia: "Sl 19.1", pagina: 105 },
+  "sl23": { numero: 250, referencia: "Sl 23", pagina: 80 },
+  "sl34.18": { numero: 235, referencia: "Sl 34.18", pagina: 78 },
+  "sl42.1": { numero: 121, referencia: "Sl 42.1", pagina: 105 },
+  
+  // Sofonias
+  "sf3.17": { numero: 212, referencia: "Sf 3.17", pagina: 73 },
   
   // Tiago
   "tg1.19": { numero: 81, referencia: "Tg 1.19", pagina: 101 },
   "tg1.2": { numero: 80, referencia: "Tg 1.2-4", pagina: 100 },
+  "tg1.2-4": { numero: 228, referencia: "Tg 1.2-4", pagina: 76 },
   "tg1.21": { numero: 82, referencia: "Tg 1.21", pagina: 101 },
   "tg3.17": { numero: 83, referencia: "Tg 3.17", pagina: 101 },
   "tg5.7": { numero: 84, referencia: "Tg 5.7-8", pagina: 101 },
+  
+  // Tito
+  "tt2.12": { numero: 77, referencia: "Tt 2.12", pagina: 100 },
+  "tt2.7": { numero: 76, referencia: "Tt 2.7-8", pagina: 100 },
   
   // ==================== ANTIGO TESTAMENTO ====================
   
@@ -3605,18 +5494,8 @@ const indiceContextos = {
   // Gênesis
   "gn1.1": { numero: 10, referencia: "Gn 1.1", pagina: 92 },
   
-  // Isaías
-  "is55.11": { numero: 107, referencia: "Is 55.11", pagina: 104 },
-  
   // Joel
   "jl2.28": { numero: 181, referencia: "Jl 2.28", pagina: 117 },
-  
-  // Jeremias
-  "jr14.14": { numero: 109, referencia: "Jr 14.14", pagina: 104 },
-  "jr6.16": { numero: 108, referencia: "Jr 6.16", pagina: 104 },
-  
-  // Levítico
-  "lv23.15": { numero: 182, referencia: "Lv 23.15-16", pagina: 117 },
   
   // Neemias
   "ne6.12": { numero: 110, referencia: "Ne 6.12", pagina: 104 },
@@ -3627,19 +5506,8 @@ const indiceContextos = {
   "os4.1": { numero: 112, referencia: "Os 4.1", pagina: 104 },
   
   // 1 Reis
-  "1rs18.40": { numero: 113, referencia: "1 Rs 18.40", pagina: 104 },
-  
-  // Salmos
-  "sl1.2": { numero: 114, referencia: "Sl 1.2-3", pagina: 104 },
-  "sl10.4": { numero: 115, referencia: "Sl 10.4", pagina: 104 },
-  "sl14": { numero: 118, referencia: "Sl 14", pagina: 105 },
-  "sl14.1": { numero: 116, referencia: "Sl 14.1", pagina: 105 },
-  "sl14.1-3": { numero: 117, referencia: "Sl 14.1-3", pagina: 105 },
-  "sl16.11": { numero: 120, referencia: "Sl 16.11", pagina: 105 },
-  "sl19.1": { numero: 119, referencia: "Sl 19.1", pagina: 105 },
-  "sl42.1": { numero: 121, referencia: "Sl 42.1", pagina: 105 }
+  "1rs18.40": { numero: 113, referencia: "1 Rs 18.40", pagina: 104 }
 };
-
 // ============================================
 // FUNÇÃO PARA BUSCAR POR ÍNDICE
 // ============================================
@@ -3664,12 +5532,21 @@ if (typeof window !== 'undefined') {
 
 console.log(`📑 Índice de contextos carregado com ${Object.keys(indiceContextos).length} entradas!`);
 
+
 // ============================================
 // FUNÇÃO PARA FORMATAR CABEÇALHO
 // ============================================
 
 function formatarCabecalho(ctx) {
-  let cabecalho = `📖 ${ctx.referencia} | 🚩 ${ctx.local}`;
+  let cabecalho = `📖 ${ctx.referencia}`;
+  
+  if (ctx.data && ctx.data !== "") {
+    cabecalho += ` | 📅 ${ctx.data}`;
+  }
+  
+  if (ctx.local && ctx.local !== "") {
+    cabecalho += ` | 🚩 ${ctx.local}`;
+  }
   
   if (ctx.lider && ctx.lider !== "") {
     cabecalho += ` | 👑 ${ctx.lider}`;
@@ -3685,7 +5562,12 @@ function formatarCabecalho(ctx) {
     }
   }
   
-  cabecalho += ` | 📅 ${ctx.data}`;
+  if (ctx.periodoHumanidade && ctx.periodoHumanidade !== "") {
+    cabecalho += ` | 🏰 ${ctx.periodoHumanidade}`;
+    if (ctx.periodoHumanidadeDatas && ctx.periodoHumanidadeDatas !== "") {
+      cabecalho += ` (${ctx.periodoHumanidadeDatas})`;
+    }
+  }
   
   return cabecalho;
 }
