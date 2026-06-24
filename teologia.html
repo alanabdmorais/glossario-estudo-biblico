@@ -447,7 +447,7 @@
   
   <header>
     <div style="display: flex; justify-content: space-between; align-items: center;">
-      <h1>📖 Teologia Descomplicada</h1>
+      <h1>📖 Teologia Descomplicada - Livro 5</h1>
       <a href="index.html" style="color: white; background-color: #2d4a2d; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 14px;">🏠 Voltar para cursos</a>
     </div>
   </header>
@@ -457,7 +457,7 @@
       <label>Livro:</label>
       <select id="seletorLivro">
         <option value="lv4">Livro 4</option>
-        <option value="lv5">Livro 5</option>
+        <option value="lv5" selected>Livro 5</option>
       </select>
       
       <label>Capítulo:</label>
@@ -466,10 +466,14 @@
         <option value="5" data-livro="lv4">Capítulo 5</option>
         <option value="6" data-livro="lv4">Capítulo 6</option>
         <option value="7" data-livro="lv4">Capítulo 7</option>
-        <!-- Livro 5 - Capítulos -->
+        <!-- Livro 5 - Capítulos (1 a 7) -->
         <option value="1" data-livro="lv5">Capítulo 1</option>
         <option value="2" data-livro="lv5">Capítulo 2</option>
-        <option value="3" data-livro="lv5">Capítulo 3</option>
+        <option value="3" data-livro="lv5" selected>Capítulo 3</option>
+        <option value="4" data-livro="lv5">Capítulo 4</option>
+        <option value="5" data-livro="lv5">Capítulo 5</option>
+        <option value="6" data-livro="lv5">Capítulo 6</option>
+        <option value="7" data-livro="lv5">Capítulo 7</option>
       </select>
       
       <button id="carregarBtn">🔤 Carregar Capítulo</button>
@@ -621,6 +625,7 @@
       }
     });
     
+    // Seleciona o primeiro capítulo visível
     for (let option of opcoes) {
       if (option.style.display !== 'none') {
         option.selected = true;
@@ -1089,6 +1094,7 @@
   });
   
   window.addEventListener('load', function() {
+    // Inicializa com Livro 5, Capítulo 3 (já selecionado no HTML)
     atualizarOpcoesCapitulo();
     carregarCapitulo();
   });
