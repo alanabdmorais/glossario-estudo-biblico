@@ -1,4 +1,4 @@
-﻿// ============================================
+// ============================================
 // BIBLIOTECA DE CONTEXTOS BÍBLICOS
 // ORDEM DE CHEGADA (cresce no final do array)
 // ============================================
@@ -7951,7 +7951,488 @@ const bibliotecaContextos = [
   depois: "A prioridade do bem é para todos, mas especialmente para a família da fé - a igreja. Paulo reconhece que o amor cristão começa dentro da comunidade, mas não se limita a ela.",
   tags: "fazer bem / família da fé / prioridade",
   assuntos: ["galacia", "paulo", "amor-cristao", "comunidade", "generosidade"]
-}
+},
+
+
+// 445. Hebreus 5.14
+{
+  id: "hb5.14",
+  referencia: "Hb 5.14",
+  local: "Roma / Itália (Itália)",
+  paisAtual: "Itália",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~64-68 d.C.",
+  antes: "O autor de Hebreus repreende os destinatários por ainda precisarem de leite espiritual, quando deveriam ser maduros. Ele distingue entre o ensino elementar para iniciantes e o alimento sólido para os que cresceram na fé.",
+  versiculo: "✅ Mas o mantimento sólido é para os perfeitos, os quais, em razão do costume, têm os sentidos exercitados para discernir tanto o bem como o mal.",
+  depois: "O autor passa a falar da doutrina mais profunda, exortando os crentes a deixarem os princípios elementares e avançarem para a maturidade em Cristo.",
+  tags: "discernimento / maturidade / sentidos / bem / mal",
+  assuntos: ["hebreus", "maturidade-crista", "discernimento", "vida-espiritual"]
+},
+
+// 446. 1 João 4.1
+{
+  id: "1jo4.1",
+  referencia: "1 Jo 4.1",
+  local: "Éfeso / Ásia Menor (Turquia)",
+  paisAtual: "Turquia",
+  lider: "Domiciano",
+  liderReinado: "81-96 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~85-95 d.C.",
+  antes: "João acabou de ensinar sobre o amor como evidência de que conhecemos a Deus. Ele agora adverte sobre falsos profetas que circulam entre as igrejas, pedindo cautela espiritual.",
+  versiculo: "✅ Amados, não creiais a todo o espírito, mas provai os espíritos se são de Deus; porque muitos falsos profetas têm saído pelo mundo.",
+  depois: "João fornece o critério para testar os espíritos: todo espírito que confessa que Jesus Cristo veio em carne é de Deus; o que não confessa não é de Deus.",
+  tags: "espíritos / provar / falsos profetas / discernimento",
+  assuntos: ["efeso", "joao", "falsos-profetas", "discernimento", "teste-espiritual"]
+},
+
+// 447. Mateus 24.24
+{
+  id: "mt24.24",
+  referencia: "Mt 24.24",
+  local: "Monte das Oliveiras / Jerusalém (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~30 d.C.",
+  antes: "Jesus está no Monte das Oliveiras respondendo aos discípulos sobre os sinais do fim dos tempos e da destruição de Jerusalém. Ele já alertou sobre guerras, perseguições e o abominável desolador.",
+  versiculo: "✅ Porque surgirão falsos cristos e falsos profetas, e farão grandes sinais e prodígios, para enganar, se possível, até os eleitos.",
+  depois: "Jesus instrui os discípulos a não acreditarem quando lhes disserem que o Cristo está no deserto ou em câmaras secretas, pois a vinda do Filho do Homem será visível como o relâmpago.",
+  tags: "falsos cristos / falsos profetas / sinais / engano / eleitos",
+  assuntos: ["monte-oliveiras", "jerusalem", "jesus", "escatologia", "falsos-profetas"]
+},
+
+// 448. João 7.24
+{
+  id: "jo7.24",
+  referencia: "Jo 7.24",
+  local: "Jerusalém / Judeia (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~29-30 d.C.",
+  antes: "Jesus ensina no templo durante a Festa dos Tabernáculos. A multidão debate se Ele é o Cristo. Jesus defende sua cura de um paralítico no sábado, argumentando que os judeus circuncidam no sábado sem quebrar a lei.",
+  versiculo: "✅ Não julgueis segundo as aparências, mas julgai com juízo justo.",
+  depois: "Após esse ensino, alguns queriam prender Jesus, mas ninguém lançou mão dele. O povo se divide: alguns creem nele, outros duvidam.",
+  tags: "julgamento / aparências / juízo justo / discernimento",
+  assuntos: ["jerusalem", "jesus", "festa-tabernaculos", "julgamento", "discernimento"]
+},
+
+// 449. João 16.13
+{
+  id: "jo16.13",
+  referencia: "Jo 16.13",
+  local: "Jerusalém / Judeia (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~30 d.C.",
+  antes: "Jesus está no aposento alto na última ceia, confortando os discípulos antes de sua prisão. Ele promete enviar o Consolador e explica o papel do Espírito Santo na vida dos crentes.",
+  versiculo: "✅ Mas quando vier o Espírito da verdade, ele vos guiará em toda a verdade; porque não falará de si mesmo, mas dirá tudo o que tiver ouvido, e vos anunciará as coisas que hão de vir.",
+  depois: "Jesus explica que o Espírito o glorificará, pois receberá do que é de Jesus e o anunciará aos discípulos. Ele anuncia que em breve não o verão mais, mas que sua tristeza se tornará alegria.",
+  tags: "Espírito Santo / verdade / guiar / consolador",
+  assuntos: ["jerusalem", "jesus", "espirito-santo", "verdade", "consolador"]
+},
+
+// 450. Tiago 1.5
+{
+  id: "tg1.5",
+  referencia: "Tg 1.5",
+  local: "Jerusalém / Judeia (Israel)",
+  paisAtual: "Israel",
+  lider: "Cláudio",
+  liderReinado: "41-54 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~45-50 d.C.",
+  antes: "Tiago acabou de falar sobre as provações como meio de desenvolver a perseverança e a fé. Ele reconhece que nas tribulações o crente pode não saber como proceder, por isso oferece esta promessa.",
+  versiculo: "✅ E, se algum de vós tem falta de sabedoria, peça-a a Deus, que a todos dá liberalmente e não censura, e ser-lhe-á dada.",
+  depois: "Tiago acrescenta que o pedido deve ser feito com fé, sem duvidar — pois quem duvida é como uma onda do mar impelida pelo vento.",
+  tags: "sabedoria / pedir / Deus / fé / generosidade",
+  assuntos: ["jerusalem", "tiago", "sabedoria", "oracao", "fe"]
+},
+
+// 451. 1 Tessalonicenses 5.21
+{
+  id: "1ts5.21",
+  referencia: "1 Ts 5.21",
+  local: "Corinto / Acaia (Grécia)",
+  paisAtual: "Grécia",
+  lider: "Cláudio",
+  liderReinado: "41-54 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~50-51 d.C.",
+  antes: "Paulo encerra a carta com exortações práticas à igreja: não apagar o Espírito, não desprezar profecias, e agora essa instrução fundamental sobre discernimento espiritual.",
+  versiculo: "✅ Examinai tudo. Retende o bem.",
+  depois: "Paulo completa a exortação pedindo que se abstenham de toda aparência do mal, e que o próprio Deus da paz os santifique completamente.",
+  tags: "examinar / reter / bem / discernimento / profecias",
+  assuntos: ["corinto", "paulo", "tessalonica", "discernimento", "santificacao"]
+},
+
+// 452. 1 Coríntios 12.4-11
+{
+  id: "1co12.4-11",
+  referencia: "1 Co 12.4-11",
+  local: "Éfeso / Ásia Menor (Turquia)",
+  paisAtual: "Turquia",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~54-55 d.C.",
+  antes: "Paulo aborda o problema dos dons espirituais na igreja de Corinto, onde havia divisões por causa deles. Ele ensina que ninguém pode dizer 'Jesus é Senhor' senão pelo Espírito Santo.",
+  versiculo: "⚠️ Há diversidade de dons, mas o mesmo Espírito; diversidade de ministérios, mas o mesmo Senhor; diversidade de operações, mas o mesmo Deus que opera tudo em todos. A manifestação do Espírito é dada a cada um para o bem comum. (vv. 4-7)",
+  depois: "Paulo usa a metáfora do corpo para ensinar que cada membro tem sua função. Assim como o corpo tem muitas partes, a igreja tem muitos membros com dons diferentes, mas todos formam um só corpo em Cristo.",
+  tags: "dons / Espírito Santo / diversidade / ministérios / corpo",
+  assuntos: ["efeso", "paulo", "corinto", "dons-espirituais", "espirito-santo", "corpo-cristo"]
+},
+
+// 453. Mateus 7.15
+{
+  id: "mt7.15",
+  referencia: "Mt 7.15",
+  local: "Monte das Bem-aventuranças / Galileia (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~28-30 d.C.",
+  antes: "No Sermão do Monte, Jesus falou sobre o caminho largo e o caminho estreito. Agora adverte sobre aqueles que se apresentam como guias, mas são perigosos.",
+  versiculo: "✅ Acautelai-vos dos falsos profetas, que se vos aproximam disfarçados em vestes de ovelhas, mas por dentro são lobos roubadores.",
+  depois: "Jesus diz que pelos frutos os conhecereis. Uma árvore boa produz bons frutos; uma árvore má, maus frutos. Assim se reconhece o verdadeiro do falso.",
+  tags: "falsos profetas / lobos / ovelhas / discernimento / frutos",
+  assuntos: ["galilaia", "jesus", "sermao-monte", "falsos-profetas", "discernimento"]
+},
+
+// 454. Marcos 4.24
+{
+  id: "mc4.24",
+  referencia: "Mc 4.24",
+  local: "Galileia (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~28-30 d.C.",
+  antes: "Jesus acabou de contar as parábolas da semente e da candeeira. Ele explica que tudo o que está oculto será manifestado. Agora exorta os discípulos sobre como ouvir.",
+  versiculo: "✅ Também lhes dizia: Atendei ao que ouvis. Com a medida com que medirdes vos será medido, e ser-vos-á dado de mais.",
+  depois: "Jesus continua ensinando que quem tem, mais lhe será dado; e quem não tem, até o que tem lhe será tirado. Ele conta a parábola do crescimento da semente.",
+  tags: "ouvir / cuidado / medida / atenção",
+  assuntos: ["galilaia", "jesus", "parabolas", "ouvir", "discernimento"]
+},
+
+// 455. Marcos 8.15
+{
+  id: "mc8.15",
+  referencia: "Mc 8.15",
+  local: "Mar da Galileia / Galileia (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~28-30 d.C.",
+  antes: "Os fariseus pedem um sinal do céu para testar Jesus. Ele recusa e parte de barco com os discípulos. Os discípulos se preocupam por não terem pão — e Jesus aproveita para dar este aviso.",
+  versiculo: "✅ E advertia-os: Vede, acautelai-vos do levedo dos fariseus e do levedo de Herodes.",
+  depois: "Os discípulos entendem erroneamente que Jesus fala de pão literal. Jesus os corrige, lembrando os milagres dos pães e peixes, e pergunta por que ainda não entendem.",
+  tags: "levedo / fariseus / Herodes / cautela / hipocrisia",
+  assuntos: ["galilaia", "jesus", "fariseus", "herodes", "discernimento"]
+},
+
+// 456. Mateus 24.4
+{
+  id: "mt24.4",
+  referencia: "Mt 24.4",
+  local: "Monte das Oliveiras / Jerusalém (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~30 d.C.",
+  antes: "Os discípulos perguntam a Jesus sobre os sinais de sua vinda e do fim dos tempos, após ele anunciar a destruição do templo. Esta é a abertura do discurso escatológico de Jesus.",
+  versiculo: "✅ Jesus respondeu: Vede que ninguém vos engane.",
+  depois: "Jesus lista os primeiros sinais: falsos cristos, guerras, rumores de guerras, nações levantando-se umas contra as outras, fomes e terremotos — mas diz que ainda não é o fim.",
+  tags: "engano / alertas / fim dos tempos / cuidado",
+  assuntos: ["monte-oliveiras", "jerusalem", "jesus", "escatologia", "falsos-cristos"]
+},
+
+// 457. Lucas 6.11
+{
+  id: "lc6.11",
+  referencia: "Lc 6.11",
+  local: "Galileia (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~28-30 d.C.",
+  antes: "Jesus cura a mão seca de um homem na sinagoga no sábado, respondendo à pergunta provocativa dos escribas e fariseus sobre ser lícito curar no sábado.",
+  versiculo: "✅ Eles, porém, encheram-se de furor e discutiam entre si o que fariam a Jesus.",
+  depois: "Jesus sai para o monte a orar e passa a noite em oração a Deus. Na manhã seguinte, chama seus discípulos e escolhe doze deles, a quem também chama apóstolos.",
+  tags: "fariseus / furor / rejeição / discernimento / oposição",
+  assuntos: ["galilaia", "jesus", "fariseus", "sabado", "oposicao"]
+},
+
+// 458. Lucas 8.18
+{
+  id: "lc8.18",
+  referencia: "Lc 8.18",
+  local: "Galileia (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~28-30 d.C.",
+  antes: "Jesus acabou de explicar o propósito das parábolas — revelar aos que têm ouvidos para ouvir e ocultar dos que não prestam atenção. Ele fala da parábola da candeeira.",
+  versiculo: "✅ Cuidai, pois, do modo como ouvis; porque a qualquer que tiver, dar-se-lhe-á; e a qualquer que não tiver, até o que pensa ter lhe será tirado.",
+  depois: "A mãe e os irmãos de Jesus chegam querendo falar com ele. Jesus aproveita para ensinar que sua verdadeira família são os que ouvem e praticam a palavra de Deus.",
+  tags: "ouvir / cuidado / atenção / receber / perder",
+  assuntos: ["galilaia", "jesus", "parabolas", "ouvir", "palavra"]
+},
+
+// 459. Marcos 13.5
+{
+  id: "mc13.5",
+  referencia: "Mc 13.5",
+  local: "Monte das Oliveiras / Jerusalém (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~30 d.C.",
+  antes: "Os discípulos admiram a beleza do templo, e Jesus anuncia sua destruição. Pedro, Tiago, João e André perguntam em particular quando isso acontecerá e quais serão os sinais.",
+  versiculo: "✅ Jesus, respondendo, começou a dizer-lhes: Vede que ninguém vos engane.",
+  depois: "Jesus lista os sinais: falsos cristos, guerras, terremotos, fomes, perseguições — e exorta os discípulos a permanecerem firmes até o fim.",
+  tags: "engano / alertas / fim dos tempos / falsos cristos",
+  assuntos: ["monte-oliveiras", "jerusalem", "jesus", "escatologia", "discernimento"]
+},
+
+// 460. Marcos 13.23
+{
+  id: "mc13.23",
+  referencia: "Mc 13.23",
+  local: "Monte das Oliveiras / Jerusalém (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~30 d.C.",
+  antes: "Jesus descreveu a grande tribulação e o surgimento de falsos cristos e falsos profetas que farão sinais para enganar até os eleitos, se possível.",
+  versiculo: "✅ Mas vós, vede; eu vos tenho predito tudo.",
+  depois: "Jesus passa a descrever sua própria vinda gloriosa: o sol escurecerá, a lua não dará sua luz, e o Filho do Homem virá nas nuvens com grande poder e glória.",
+  tags: "profecia / alerta / falsos / predito / discernimento",
+  assuntos: ["monte-oliveiras", "jerusalem", "jesus", "escatologia", "profecias"]
+},
+
+// 461. João 10.1-5
+{
+  id: "jo10.1-5",
+  referencia: "Jo 10.1-5",
+  local: "Jerusalém / Judeia (Israel)",
+  paisAtual: "Israel",
+  lider: "Tibério",
+  liderReinado: "14-37 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~29-30 d.C.",
+  antes: "Jesus acabou de curar o cego de nascença e debater com os fariseus sobre quem realmente enxerga espiritualmente. Ele agora usa a metáfora do redil para descrever sua relação com os seus.",
+  versiculo: "⚠️ Em verdade, em verdade vos digo: quem não entra pela porta no redil das ovelhas, mas sobe por outro lugar, esse é ladrão e salteador. Mas o que entra pela porta é o pastor das ovelhas. A este o porteiro abre, e as ovelhas ouvem a sua voz; e ele chama as suas ovelhas pelo nome e as conduz para fora. Quando tira para fora todas as suas ovelhas, vai adiante delas, e as ovelhas o seguem, porque conhecem a sua voz. Mas não seguirão um estranho; pelo contrário, fugirão dele, porque não conhecem a voz dos estranhos. (vv. 1-5)",
+  depois: "Os fariseus não entendem a parábola. Jesus então explica claramente que ele é a porta das ovelhas e que os que vieram antes dele eram ladrões — alusão aos falsos líderes religiosos.",
+  tags: "ovelhas / voz / pastor / ladrão / discernimento",
+  assuntos: ["jerusalem", "jesus", "bom-pastor", "discernimento", "falsos-lideres"]
+},
+
+// 462. 1 Coríntios 9.19-22
+{
+  id: "1co9.19-22",
+  referencia: "1 Co 9.19-22",
+  local: "Éfeso / Ásia Menor (Turquia)",
+  paisAtual: "Turquia",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~54-55 d.C.",
+  antes: "Paulo defende seu apostolado e explica que abriu mão de seus direitos para não ser obstáculo ao evangelho. Ele não recebe salário para manter a liberdade de servir a todos.",
+  versiculo: "⚠️ Porque, sendo livre de todos, fiz-me servo de todos, para ganhar o maior número. Para os judeus fiz-me como judeu, a fim de ganhar os judeus... Para os fracos, fiz-me fraco, a fim de ganhar os fracos. Fiz-me tudo para todos, para por todos os meios chegar a salvar alguns. (vv. 19-22)",
+  depois: "Paulo conclui dizendo que faz tudo pelo evangelho, para ser participante das suas bênçãos. Ele usa a metáfora do atleta para falar de autodisciplina espiritual.",
+  tags: "motivação / servir / ganhar / todos / evangelho",
+  assuntos: ["efeso", "paulo", "corinto", "apostolado", "evangelismo", "motivacao"]
+},
+
+// 463. 2 João 9-11
+{
+  id: "2jo9-11",
+  referencia: "2 Jo 9-11",
+  local: "Éfeso / Ásia Menor (Turquia)",
+  paisAtual: "Turquia",
+  lider: "Domiciano",
+  liderReinado: "81-96 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~85-95 d.C.",
+  antes: "João escreve à senhora eleita e seus filhos, alertando sobre enganadores que não confessam que Jesus Cristo veio em carne. Ele exorta a guardar o que foi ensinado desde o princípio.",
+  versiculo: "⚠️ Qualquer que se adianta e não permanece na doutrina de Cristo não tem a Deus; quem permanece na doutrina de Cristo tem tanto o Pai como o Filho. Se alguém vier ter convosco e não trouxer esta doutrina, não o recebais em casa, nem lhe deis as boas-vindas; porque aquele que lhe dá as boas-vindas comunga nas suas obras más. (vv. 9-11)",
+  depois: "João encerra a carta dizendo que tem muitas coisas a escrever, mas prefere falar pessoalmente para que o gozo seja completo.",
+  tags: "doutrina / Cristo / permanecer / falsos / receber",
+  assuntos: ["efeso", "joao", "doutrina-crista", "falsos-mestres", "discernimento"]
+},
+
+// 464. Salmos 119.18
+{
+  id: "sl119.18",
+  referencia: "Sl 119.18",
+  local: "Jerusalém / Judeia (Israel)",
+  paisAtual: "Israel",
+  lider: "Desconhecido",
+  liderReinado: "",
+  periodo: "Período do Segundo Templo",
+  periodoDatas: "516 a.C. - 70 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~450-400 a.C.",
+  antes: "O Salmo 119 é o maior salmo da Bíblia, todo dedicado à meditação na lei de Deus. Esta estrofe (Ayin) é uma oração pessoal pedindo iluminação divina para compreender as maravilhas da lei.",
+  versiculo: "✅ Descobre os meus olhos, para que eu veja as maravilhas da tua lei.",
+  depois: "O salmista continua pedindo que Deus lhe mostre os seus caminhos, confessando que sua alma está apegada ao pó e pedindo que Deus o vivifique.",
+  tags: "olhos / maravilhas / lei / iluminação / palavra",
+  assuntos: ["jerusalem", "salmos", "palavra-deus", "oracao", "iluminacao"]
+},
+
+// 465. 1 Coríntios 12.10
+{
+  id: "1co12.10",
+  referencia: "1 Co 12.10",
+  local: "Éfeso / Ásia Menor (Turquia)",
+  paisAtual: "Turquia",
+  lider: "Nero",
+  liderReinado: "54-68 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~54-55 d.C.",
+  antes: "Paulo lista os dons do Espírito Santo distribuídos a cada crente conforme a vontade do Espírito. Ele enumera palavra de sabedoria, ciência, fé, cura, operação de milagres, e então este dom.",
+  versiculo: "✅ A outro, a operação de milagres; a outro, profecia; a outro, o dom de discernir os espíritos; a outro, variedade de línguas; e a outro, a interpretação das línguas.",
+  depois: "Paulo conclui que todos esses dons são operados pelo único e mesmo Espírito, que os distribui a cada um como quer. Ele então introduz a metáfora do corpo.",
+  tags: "discernimento / espíritos / dons / línguas / profecia",
+  assuntos: ["efeso", "paulo", "corinto", "dons-espirituais", "discernimento", "espirito-santo"]
+},
+
+// 466. Jeremias 17.9
+{
+  id: "jr17.9",
+  referencia: "Jr 17.9",
+  local: "Jerusalém / Judeia (Israel)",
+  paisAtual: "Israel",
+  lider: "Jeoaquim",
+  liderReinado: "609-598 a.C.",
+  periodo: "Reino de Judá",
+  periodoDatas: "930-586 a.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~627-586 a.C.",
+  antes: "Jeremias fala sobre a maldição de quem confia no homem e a bênção de quem confia em Deus. Ele usa a imagem da árvore plantada junto à água para descrever o homem que confia no Senhor.",
+  versiculo: "✅ O coração é enganoso mais do que todas as coisas, e desesperadamente corrupto; quem o conhecerá?",
+  depois: "Deus responde: 'Eu, o Senhor, esquadrinho o coração e provo os rins, para dar a cada um segundo os seus caminhos e segundo o fruto das suas obras.'",
+  tags: "coração / enganoso / corrupto / conhecer / Deus",
+  assuntos: ["jerusalem", "jeremias", "coracao-humano", "pecado", "soberania-deus"]
+},
+
+// 467. Tiago 1.22
+{
+  id: "tg1.22",
+  referencia: "Tg 1.22",
+  local: "Jerusalém / Judeia (Israel)",
+  paisAtual: "Israel",
+  lider: "Cláudio",
+  liderReinado: "41-54 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~45-50 d.C.",
+  antes: "Tiago acabou de exortar a receber com mansidão a palavra implantada, capaz de salvar as almas. Agora tira a consequência prática: não basta ouvir — é preciso fazer.",
+  versiculo: "✅ Sede, porém, praticantes da palavra e não somente ouvintes, enganando-vos a vós mesmos.",
+  depois: "Tiago usa a ilustração do espelho: quem ouve a palavra mas não a pratica é como alguém que olha seu rosto no espelho e logo se esquece de como é. Mas o que pratica a lei perfeita da liberdade será bem-aventurado.",
+  tags: "palavra / fazedores / ouvintes / enganados / prática",
+  assuntos: ["jerusalem", "tiago", "palavra-deus", "obediencia", "pratica"]
+},
+
+// 468. 1 João 1.7
+{
+  id: "1jo1.7",
+  referencia: "1 Jo 1.7",
+  local: "Éfeso / Ásia Menor (Turquia)",
+  paisAtual: "Turquia",
+  lider: "Domiciano",
+  liderReinado: "81-96 d.C.",
+  periodo: "Império Romano",
+  periodoDatas: "27 a.C. - 476 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~85-95 d.C.",
+  antes: "João introduz a carta afirmando que o que foi desde o princípio — a vida eterna manifestada em Jesus — ele viu e testifica. Ele distingue quem anda na luz de quem anda nas trevas.",
+  versiculo: "✅ Mas, se andarmos na luz, como ele está na luz, temos comunhão uns com os outros, e o sangue de Jesus Cristo, seu Filho, nos purifica de todo pecado.",
+  depois: "João continua: se dissermos que não temos pecado, enganamos a nós mesmos. Mas se confessarmos nossos pecados, ele é fiel e justo para perdoar e purificar de toda injustiça.",
+  tags: "luz / andar / comunhão / sangue / purificação",
+  assuntos: ["efeso", "joao", "luz", "comunhao", "purificacao", "perdao"]
+},
 ];
 
 // ============================================
@@ -7991,6 +8472,7 @@ const indiceAntigoTestamento = {
   "jr33.3": { numero: 198, referencia: "Jr 33.3" },
   "jr6.14": { numero: 317, referencia: "Jr 6.14" },
   "jr6.16": { numero: 108, referencia: "Jr 6.16" },
+  "jr17.9": { numero: 466, referencia: "Jr 17.9" },
 
   // ========== JOEL ==========
   "jl2.28": { numero: 138, referencia: "Jl 2.28" },
@@ -8034,6 +8516,7 @@ const indiceAntigoTestamento = {
   "sl23": { numero: 250, referencia: "Sl 23" },
   "sl34.18": { numero: 235, referencia: "Sl 34.18" },
   "sl42.1": { numero: 121, referencia: "Sl 42.1" },
+  "sl119.18": { numero: 464, referencia: "Sl 119.18" },
 
   // ========== SOFONIAS ==========
   "sf3.17": { numero: 212, referencia: "Sf 3.17" }
@@ -8073,10 +8556,19 @@ const indiceNovoTestamento = {
   "1co10.16": { numero: 389, referencia: "1 Co 10.16" },
   "1co10.16-17": { numero: 390, referencia: "1 Co 10.16-17" },
   "1co11.26": { numero: 391, referencia: "1 Co 11.26" },
+  "1co13.1-3": { numero: 375, referencia: "1 Co 13.1-3" },
+  "1co13.4-7": { numero: 376, referencia: "1 Co 13.4-7" },
+  "1co12.4-11": { numero: 452, referencia: "1 Co 12.4-11" },
+  "1co9.19-22": { numero: 462, referencia: "1 Co 9.19-22" },
+  "1co12.10": { numero: 465, referencia: "1 Co 12.10" },
 
   // ========== 1 JOÃO ==========
   "1jo1.8": { numero: 328, referencia: "1 Jo 1.8" },
-  "1jo3.18": { numero: 328, referencia: "1 Jo 3.18" },
+  "1jo4.1": { numero: 446, referencia: "1 Jo 4.1" },
+  "1jo1.7": { numero: 468, referencia: "1 Jo 1.7" },
+
+  // ========== 2 JOÃO ==========
+  "2jo9-11": { numero: 463, referencia: "2 Jo 9-11" },
 
   // ========== 1 PEDRO ==========
   "1pe1.15-16": { numero: 298, referencia: "1 Pe 1.15-16" },
@@ -8102,7 +8594,7 @@ const indiceNovoTestamento = {
 
   // ========== 1 TESSALONICENSES ==========
   "1ts5.11": { numero: 155, referencia: "1 Ts 5.11" },
-  "1ts5.12-13": { numero: 155, referencia: "1 Ts 5.12-13" },
+  "1ts5.21": { numero: 451, referencia: "1 Ts 5.21" },
 
   // ========== 2 CORÍNTIOS ==========
   "2co1.18": { numero: 24, referencia: "2 Co 1.18" },
@@ -8183,6 +8675,15 @@ const indiceNovoTestamento = {
   "at6.1-4": { numero: 289, referencia: "At 6.1-4" },
   "at8.18-20": { numero: 282, referencia: "At 8.18-20" },
   "at9.4": { numero: 365, referencia: "At 9.4" },
+  "at2.6-8": { numero: 348, referencia: "At 2.6-8" },
+  "at2.9-11": { numero: 349, referencia: "At 2.9-11" },
+  "at2.16-17": { numero: 351, referencia: "At 2.16-17" },
+  "at2.22-23": { numero: 352, referencia: "At 2.22-23" },
+  "at2.29-33": { numero: 354, referencia: "At 2.29-33" },
+  "at2.32-36": { numero: 355, referencia: "At 2.32-36" },
+  "at1.4-5": { numero: 359, referencia: "At 1.4-5" },
+  "at4.29-30": { numero: 361, referencia: "At 4.29-30" },
+  "at5.12-14": { numero: 362, referencia: "At 5.12-14" },
 
   // ========== COLOSSENSES ==========
   "cl1.10": { numero: 426, referencia: "Cl 1.10" },
@@ -8194,6 +8695,7 @@ const indiceNovoTestamento = {
   "cl3.13": { numero: 431, referencia: "Cl 3.13" },
   "cl4.2": { numero: 432, referencia: "Cl 4.2" },
   "cl4.5-6": { numero: 433, referencia: "Cl 4.5-6" },
+  "cl3.12-13": { numero: 430, referencia: "Cl 3.12-13" },
 
   // ========== EFÉSIOS ==========
   "ef1.22": { numero: 345, referencia: "Ef 1.22-23" },
@@ -8224,6 +8726,10 @@ const indiceNovoTestamento = {
   "ef5.11": { numero: 408, referencia: "Ef 5.11" },
   "ef6.18": { numero: 411, referencia: "Ef 6.18" },
   "ef4.3": { numero: 400, referencia: "Ef 4.3" },
+  "ef1.22-23": { numero: 345, referencia: "Ef 1.22-23" },
+  "ef4.13-15": { numero: 397, referencia: "Ef 4.13-15" },
+  "ef4.14-15": { numero: 398, referencia: "Ef 4.14-15" },
+  "ef4.2-3": { numero: 399, referencia: "Ef 4.2-3" },
 
   // ========== FILIPENSES ==========
   "fp1.11": { numero: 418, referencia: "Fp 1.11" },
@@ -8236,6 +8742,7 @@ const indiceNovoTestamento = {
   "fp4.15-16": { numero: 425, referencia: "Fp 4.15-16" },
   "fp4.4": { numero: 422, referencia: "Fp 4.4" },
   "fp4.7": { numero: 423, referencia: "Fp 4.7" },
+  "fp2.3-5": { numero: 420, referencia: "Fp 2.3-5" },
 
   // ========== GÁLATAS ==========
   "gl1.10": { numero: 5, referencia: "Gl 1.10" },
@@ -8252,6 +8759,7 @@ const indiceNovoTestamento = {
   "gl6.10": { numero: 444, referencia: "Gl 6.10" },
   "gl6.2": { numero: 442, referencia: "Gl 6.2" },
   "gl6.9": { numero: 443, referencia: "Gl 6.9" },
+  "gl5.22-23": { numero: 439, referencia: "Gl 5.22-23" },
 
   // ========== HEBREUS ==========
   "hb10.25": { numero: 338, referencia: "Hb 10.25" },
@@ -8268,6 +8776,7 @@ const indiceNovoTestamento = {
   "hb1.1-2": { numero: 201, referencia: "Hb 1.1-2" },
   "hb1.3": { numero: 190, referencia: "Hb 1.3" },
   "hb2.4": { numero: 89, referencia: "Hb 2.4" },
+  "hb5.14": { numero: 445, referencia: "Hb 5.14" },
 
   // ========== JOÃO ==========
   "jo1.14": { numero: 200, referencia: "Jo 1.14" },
@@ -8293,7 +8802,9 @@ const indiceNovoTestamento = {
   "jo6.67": { numero: 94, referencia: "Jo 6.67" },
   "jo8.11": { numero: 306, referencia: "Jo 8.11" },
   "jo8.12": { numero: 307, referencia: "Jo 8.12" },
-  "jo10.11": { numero: 307, referencia: "Jo 10.11" },
+  "jo7.24": { numero: 448, referencia: "Jo 7.24" },
+  "jo16.13": { numero: 449, referencia: "Jo 16.13" },
+  "jo10.1-5": { numero: 461, referencia: "Jo 10.1-5" },
 
   // ========== LUCAS ==========
   "lc10.19": { numero: 103, referencia: "Lc 10.19" },
@@ -8302,13 +8813,17 @@ const indiceNovoTestamento = {
   "lc7.11-17": { numero: 206, referencia: "Lc 7.11-17" },
   "lc8.40-56": { numero: 207, referencia: "Lc 8.40-56" },
   "lc1.9-58": { numero: 224, referencia: "Lc 1.9,58" },
-  "lc22.19-20": { numero: 224, referencia: "Lc 22.19-20" },
+  "lc6.11": { numero: 457, referencia: "Lc 6.11" },
+  "lc8.18": { numero: 458, referencia: "Lc 8.18" },
 
   // ========== MARCOS ==========
   "mc10.45": { numero: 295, referencia: "Mc 10.45" },
   "mc4.35-41": { numero: 205, referencia: "Mc 4.35-41" },
   "mc8.34": { numero: 104, referencia: "Mc 8.34-35" },
-  "mc16.15": { numero: 104, referencia: "Mc 16.15" },
+  "mc4.24": { numero: 454, referencia: "Mc 4.24" },
+  "mc8.15": { numero: 455, referencia: "Mc 8.15" },
+  "mc13.5": { numero: 459, referencia: "Mc 13.5" },
+  "mc13.23": { numero: 460, referencia: "Mc 13.23" },
 
   // ========== MATEUS ==========
   "mt10.29": { numero: 196, referencia: "Mt 10.29" },
@@ -8340,9 +8855,9 @@ const indiceNovoTestamento = {
   "mt7.22": { numero: 35, referencia: "Mt 7.22-23" },
   "mt7.3-5": { numero: 309, referencia: "Mt 7.3-5" },
   "mt8.23-27": { numero: 204, referencia: "Mt 8.23-27" },
-  "mt5.13-16": { numero: 259, referencia: "Mt 5.13-16" },
-  "mt5.14-16": { numero: 260, referencia: "Mt 5.14-16" },
-  "mt7.15": { numero: 309, referencia: "Mt 7.15" },
+  "mt24.24": { numero: 447, referencia: "Mt 24.24" },
+  "mt7.15": { numero: 453, referencia: "Mt 7.15" },
+  "mt24.4": { numero: 456, referencia: "Mt 24.4" },
 
   // ========== ROMANOS ==========
   "rm1": { numero: 6, referencia: "Rm 1" },
@@ -8365,7 +8880,6 @@ const indiceNovoTestamento = {
   "rm8.28": { numero: 65, referencia: "Rm 8.28" },
   "rm8.29": { numero: 66, referencia: "Rm 8.29" },
   "rm8.37": { numero: 248, referencia: "Rm 8.37" },
-  "rm14.19": { numero: 248, referencia: "Rm 14.19" },
 
   // ========== TIAGO ==========
   "tg1.19": { numero: 81, referencia: "Tg 1.19" },
@@ -8377,6 +8891,8 @@ const indiceNovoTestamento = {
   "tg4.7": { numero: 305, referencia: "Tg 4.7" },
   "tg5.16": { numero: 303, referencia: "Tg 5.16" },
   "tg5.7": { numero: 84, referencia: "Tg 5.7-8" },
+  "tg1.5": { numero: 450, referencia: "Tg 1.5" },
+  "tg1.22": { numero: 467, referencia: "Tg 1.22" },
 
   // ========== TITO ==========
   "tt2.12": { numero: 77, referencia: "Tt 2.12" },
