@@ -8433,6 +8433,210 @@ const bibliotecaContextos = [
   tags: "luz / andar / comunhão / sangue / purificação",
   assuntos: ["efeso", "joao", "luz", "comunhao", "purificacao", "perdao"]
 },
+
+// ==================== NOVOS CONTEXTOS — LIÇÃO 1, 3T2026 (LIVRO DE JUÍZES) ====================
+// A partir daqui, o campo "versiculo" NÃO é mais preenchido:
+// a passagem bíblica passa a ser buscada em tempo real via API na página.
+
+// 338. Josué 24.26-30
+{
+  id: "js24.26-30",
+  referencia: "Js 24.26-30",
+  local: "Siquém / Efraim (Cisjordânia)",
+  paisAtual: "Cisjordânia",
+  lider: "Josué",
+  liderReinado: "",
+  periodo: "Conquista de Canaã",
+  periodoDatas: "~1406-1380 a.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~1380 a.C.",
+  antes: "Josué, já idoso, reuniu todas as tribos de Israel em Siquém para renovar a aliança com o Senhor, relembrando toda a história da libertação e conquista, e desafiando o povo a escolher a quem serviriam.",
+  versiculo: "",
+  depois: "Josué escreveu as palavras da aliança no livro da Lei de Deus, ergueu uma pedra como testemunho, despediu o povo e morreu pouco depois, sendo sepultado em Timnate-Sera, no monte Efraim.",
+  tags: "aliança / pedra testemunho / morte de Josué / Timnate-Sera",
+  assuntos: ["siquem", "josue", "conquista-canaa", "alianca"]
+},
+
+// 339. Juízes 1.1
+{
+  id: "jz1.1",
+  referencia: "Jz 1.1",
+  local: "Canaã (Terra Prometida)",
+  paisAtual: "Israel / Cisjordânia",
+  lider: "(sem líder central)",
+  liderReinado: "",
+  periodo: "Período dos Juízes",
+  periodoDatas: "~1380-1050 a.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~1380 a.C.",
+  antes: "Josué havia morrido sem deixar um sucessor. As doze tribos ainda precisavam completar a conquista de suas respectivas porções de terra, e não havia liderança central sobre a nação.",
+  versiculo: "",
+  depois: "Os filhos de Israel perguntam ao Senhor quem deverá subir primeiro para lutar contra os cananeus. O Senhor responde que Judá subirá primeiro, dando início ao período marcado por ciclos de infidelidade e libertação que caracterizam o livro de Juízes.",
+  tags: "morte de Josué / vazio de liderança / consulta ao Senhor",
+  assuntos: ["canaa", "juizes", "conquista-canaa", "tribos-de-israel"]
+},
+
+// 340. Juízes 17.6 (= 21.25)
+{
+  id: "jz17.6",
+  referencia: "Jz 17.6",
+  local: "Monte Efraim (Canaã)",
+  paisAtual: "Cisjordânia",
+  lider: "(sem líder central)",
+  liderReinado: "",
+  periodo: "Período dos Juízes",
+  periodoDatas: "~1380-1050 a.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~1200-1100 a.C.",
+  antes: "O livro de Juízes narra o episódio de Mica, do monte Efraim, que fabricou ídolos e contratou um levita para ser seu próprio sacerdote particular — um sintoma da desordem religiosa da época.",
+  versiculo: "",
+  depois: "Esta frase, repetida em Jz 21.25, resume o tema central do livro: a ausência de uma liderança centralizada e fiel a Deus levou o povo a uma relatividade moral generalizada, cada um seguindo seus próprios critérios.",
+  tags: "não havia rei / cada qual fazia o que parecia direito / relativismo moral",
+  assuntos: ["monte-efraim", "juizes", "idolatria", "mica"]
+},
+
+// 341. Josué 23 (capítulo)
+{
+  id: "js23",
+  referencia: "Js 23",
+  local: "Siquém / Efraim (Cisjordânia)",
+  paisAtual: "Cisjordânia",
+  lider: "Josué",
+  liderReinado: "",
+  periodo: "Conquista de Canaã",
+  periodoDatas: "~1406-1380 a.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~1380 a.C.",
+  antes: "Já idoso e próximo da morte, Josué convocou os líderes de Israel — anciãos, cabeças, juízes e oficiais — para um último discurso, relembrando as vitórias que o Senhor concedera à nação.",
+  versiculo: "",
+  depois: "Josué exorta o povo a se apegar ao Senhor, a não se misturar com as nações remanescentes nem servir a seus deuses, alertando que a desobediência traria a ira de Deus e a perda da terra.",
+  tags: "discurso de despedida / fidelidade exclusiva / advertência final",
+  assuntos: ["siquem", "josue", "conquista-canaa", "fidelidade"]
+},
+
+// 342. Juízes 2.16-18
+{
+  id: "jz2.16",
+  referencia: "Jz 2.16-18",
+  local: "Canaã (Terra Prometida)",
+  paisAtual: "Israel / Cisjordânia",
+  lider: "(diversos juízes)",
+  liderReinado: "",
+  periodo: "Período dos Juízes",
+  periodoDatas: "~1380-1050 a.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~1380-1050 a.C.",
+  antes: "O narrador de Juízes introduz, em termos gerais, o padrão que se repetirá ao longo de todo o livro: o povo abandona o Senhor, é entregue a opressores e sofre muito por sua desobediência.",
+  versiculo: "",
+  depois: "Movido de compaixão pelos gemidos do povo oprimido, o Senhor levanta juízes que os livram da mão dos que os saqueavam. Contudo, o texto observa que essa libertação durava apenas enquanto o juiz vivia.",
+  tags: "juízes / libertação / compaixão / instrumentos de Deus",
+  assuntos: ["juizes", "libertacao", "compaixao-divina"]
+},
+
+// 343. Juízes 2.11-15 (ciclo da apostasia)
+{
+  id: "jz2.11-13",
+  referencia: "Jz 2.11-15",
+  local: "Canaã (Terra Prometida)",
+  paisAtual: "Israel / Cisjordânia",
+  lider: "(sem líder central)",
+  liderReinado: "",
+  periodo: "Período dos Juízes",
+  periodoDatas: "~1380-1050 a.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~1380-1050 a.C.",
+  antes: "Após a morte de Josué e da geração que testemunhou as obras do Senhor, uma nova geração se levantou que não conhecia o Senhor nem as maravilhas que ele fizera por Israel.",
+  versiculo: "",
+  depois: "Os filhos de Israel fizeram o que era mau aos olhos do Senhor e serviram a Baal, abandonando o Deus de seus pais. Em sua ira, o Senhor os entregou nas mãos de saqueadores e inimigos ao redor, e eles não puderam mais resistir.",
+  tags: "infidelidade / idolatria / Baal / opressão / ciclo de Juízes",
+  assuntos: ["juizes", "idolatria", "baal", "ciclo-apostasia"]
+},
+
+// 344. Juízes 21.25
+{
+  id: "jz21.25",
+  referencia: "Jz 21.25",
+  local: "Canaã (Terra Prometida)",
+  paisAtual: "Israel / Cisjordânia",
+  lider: "(sem líder central)",
+  liderReinado: "",
+  periodo: "Período dos Juízes",
+  periodoDatas: "~1380-1050 a.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~1100-1050 a.C.",
+  antes: "O livro de Juízes termina narrando o episódio sombrio da guerra civil contra a tribo de Benjamim e a crise pela falta de esposas para os benjamitas sobreviventes, um dos relatos mais violentos do Antigo Testamento.",
+  versiculo: "",
+  depois: "Este versículo final resume todo o livro: sem um rei ou liderança centralizada e fiel a Deus, cada pessoa vivia segundo seus próprios critérios morais — preparando o cenário para a futura monarquia de Israel.",
+  tags: "não havia rei / cada um fazia o que era reto / fechamento do livro",
+  assuntos: ["juizes", "monarquia", "relativismo-moral"]
+},
+
+// 345. Hebreus 11.32
+{
+  id: "hb11.32",
+  referencia: "Hb 11.32",
+  local: "Roma / Itália ou Jerusalém (destinatários judeus)",
+  paisAtual: "Itália",
+  lider: "",
+  liderReinado: "",
+  periodo: "Igreja Primitiva",
+  periodoDatas: "30-100 d.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~60-70 d.C.",
+  antes: "O autor de Hebreus percorre a chamada 'galeria da fé', citando patriarcas e profetas que, pela fé, agradaram a Deus, incluindo referências à travessia do Mar Vermelho e à queda dos muros de Jericó.",
+  versiculo: "",
+  depois: "O autor declara que o tempo lhe faltaria para contar sobre Gideão, Baraque, Sansão, Jefté, Davi, Samuel e os profetas — todos exemplos de homens usados por Deus apesar de suas limitações humanas.",
+  tags: "galeria da fé / juízes / heróis da fé",
+  assuntos: ["hebreus", "fe", "juizes", "galeria-da-fe"]
+},
+
+// 346. Juízes 6.34 (Gideão)
+{
+  id: "jz6.34",
+  referencia: "Jz 6.34",
+  local: "Ofra / Manassés (Canaã)",
+  paisAtual: "Cisjordânia",
+  lider: "Gideão",
+  liderReinado: "",
+  periodo: "Período dos Juízes",
+  periodoDatas: "~1380-1050 a.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~1200 a.C.",
+  antes: "Israel estava sendo oprimido pelos midianitas havia sete anos. Gideão, um homem inseguro da tribo de Manassés, foi chamado pelo anjo do Senhor para libertar o povo, exigindo sinais antes de confiar no chamado.",
+  versiculo: "",
+  depois: "Revestido pelo Espírito do Senhor, Gideão convoca seu clã e as tribos vizinhas para a guerra contra os midianitas, culminando na vitória com apenas 300 homens em Jz 7.",
+  tags: "Espírito do Senhor se apoderou de / Gideão / midianitas",
+  assuntos: ["ofra", "gideao", "midianitas", "juizes"]
+},
+
+// 347. Juízes 14.6 (Sansão)
+{
+  id: "jz14.6",
+  referencia: "Jz 14.6",
+  local: "Timna / Filístia (Canaã)",
+  paisAtual: "Israel",
+  lider: "Sansão",
+  liderReinado: "",
+  periodo: "Período dos Juízes",
+  periodoDatas: "~1380-1050 a.C.",
+  periodoHumanidade: "Idade Antiga",
+  periodoHumanidadeDatas: "4000 a.C. - 476 d.C.",
+  data: "~1100 a.C.",
+  antes: "Sansão, nazireu desde o nascimento, caminhava para Timna a fim de se casar com uma mulher filisteia, contra a vontade de seus pais, quando um leão novo rugiu contra ele.",
+  versiculo: "",
+  depois: "O Espírito do Senhor se apoderou dele e ele despedaçou o leão com as mãos como quem despedaça um cabrito, sem contar nada a seus pais — um prenúncio de sua força sobrenatural e de seu caráter impulsivo.",
+  tags: "Espírito do Senhor se apoderou de / Sansão / força sobrenatural",
+  assuntos: ["timna", "sansao", "filisteus", "juizes"]
+},
 ];
 
 // ============================================
@@ -8447,9 +8651,52 @@ const bibliotecaContextos = [
 const indiceAntigoTestamento = {
   // ========== DEUTERONÔMIO ==========
   "dt13.3": { numero: 106, referencia: "Dt 13.3" },
+  "dt3.10": { numero: 469, referencia: "Dt 3.10" },
+  "dt19.12": { numero: 470, referencia: "Dt 19.12" },
+  "dt21.2": { numero: 471, referencia: "Dt 21.2,18-20" },
+  "dt22.15": { numero: 472, referencia: "Dt 22.15" },
+  "dt25.7": { numero: 473, referencia: "Dt 25.7" },
+  "dt31.9": { numero: 474, referencia: "Dt 31.9" },
 
   // ========== ÊXODO ==========
   "ex2.24-25": { numero: 199, referencia: "Êx 2.24-25" },
+  "ex19.7": { numero: 475, referencia: "Êx 19.7" },
+
+  // ========== JOSUÉ ==========
+  "js1.1-9": { numero: 476, referencia: "Js 1.1-9" },
+  "js3.1-17": { numero: 477, referencia: "Js 3.1-17" },
+  "js3.14-17": { numero: 478, referencia: "Js 3.14-17" },
+  "js13.1": { numero: 479, referencia: "Js 13.1" },
+  "js21.1-41": { numero: 480, referencia: "Js 21.1-41" },
+  "js23": { numero: 481, referencia: "Js 23" },
+  "js23.3": { numero: 482, referencia: "Js 23.3" },
+  "js23.11": { numero: 483, referencia: "Js 23.11" },
+  "js24.15": { numero: 484, referencia: "Js 24.15" },
+  "js24.26-30": { numero: 485, referencia: "Js 24.26-30" },
+  "js24.29": { numero: 486, referencia: "Js 24.29" },
+
+  // ========== JUÍZES ==========
+  "jz1.1": { numero: 487, referencia: "Jz 1.1" },
+  "jz2.11-13": { numero: 488, referencia: "Jz 2.11-15" },
+  "jz2.16": { numero: 489, referencia: "Jz 2.16-18" },
+  "jz2.18": { numero: 490, referencia: "Jz 2.18" },
+  "jz2.20-23": { numero: 491, referencia: "Jz 2.20-23" },
+  "jz3.9": { numero: 492, referencia: "Jz 3.9" },
+  "jz3.10": { numero: 493, referencia: "Jz 3.10" },
+  "jz3.15": { numero: 494, referencia: "Jz 3.15" },
+  "jz6.34": { numero: 495, referencia: "Jz 6.34" },
+  "jz10.10": { numero: 496, referencia: "Jz 10.10" },
+  "jz11.29": { numero: 497, referencia: "Jz 11.29" },
+  "jz13.25": { numero: 498, referencia: "Jz 13.25" },
+  "jz14.6": { numero: 499, referencia: "Jz 14.6" },
+  "jz17.6": { numero: 500, referencia: "Jz 17.6" },
+  "jz21.25": { numero: 501, referencia: "Jz 21.25" },
+
+  // ========== LEVÍTICO (adicional) ==========
+  "lv10.11": { numero: 502, referencia: "Lv 10.11" },
+
+  // ========== NÚMEROS ==========
+  "nm35.1-8": { numero: 503, referencia: "Nm 35.1-8" },
 
   // ========== EZEQUIEL ==========
   "ez33.7": { numero: 314, referencia: "Ez 33.7" },
@@ -8777,6 +9024,7 @@ const indiceNovoTestamento = {
   "hb1.3": { numero: 190, referencia: "Hb 1.3" },
   "hb2.4": { numero: 89, referencia: "Hb 2.4" },
   "hb5.14": { numero: 445, referencia: "Hb 5.14" },
+  "hb11.32": { numero: 504, referencia: "Hb 11.32" },
 
   // ========== JOÃO ==========
   "jo1.14": { numero: 200, referencia: "Jo 1.14" },

@@ -6,6 +6,7 @@ const legendas = [
   ["🔘", "Categoria"],
   ["📄", "Página"],
   ["📂", "Subtópico"],
+  ["📋", "Hierarquia"],
   ["🔗", "Link"],
   
   // ===== VERSÍCULOS (regras de formatação) =====
@@ -50,6 +51,7 @@ const legendas = [
   ["🔢", "Cronologia"],
   ["❓", "Questões"],
   ["🔑", "Gabaritos"],
+  ["🙈", "Ocultar gabarito"],
   ["📚", "Estudo"],
   ["📜", "Obra"],
   ["🎥", "Filme"],

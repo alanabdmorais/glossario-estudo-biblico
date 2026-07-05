@@ -1,0 +1,231 @@
+// ============================================
+// PERGUNTAS SUGERIDAS
+// ESCOLA DOMINICAL
+// ============================================
+// Estrutura por lição:
+// pergunta      : texto da pergunta
+// topicoOrigem  : tópico/subtópico de onde a resposta vem (gabarito)
+// pagina        : página da revista onde a resposta se encontra (gabarito)
+// tags          : palavras-chave da resposta (gabarito)
+// refs          : IDs de referências bíblicas relacionadas (gabarito, opcional)
+//
+// O "gabarito" (topicoOrigem + pagina + tags + refs) deve ficar
+// oculto na interface até o usuário clicar para revelar.
+//
+// Inclui tanto perguntas extras de aprofundamento quanto as
+// perguntas oficiais da seção "Hora da Revisão" da apostila.
+// ============================================
+
+window.bibliotecaPerguntas = window.bibliotecaPerguntas || {};
+
+window.bibliotecaPerguntas["2T2026-licao13"] = [
+  // ── 9 perguntas, uma para cada subtópico da lição ──
+  {
+    pergunta: "Por que a diversidade de ensinos e interpretações teológicas pode tanto enriquecer quanto confundir o cristão?",
+    topicoOrigem: "I.1 Numerosos ensinos",
+    pagina: 91,
+    tags: "numerosos ensinos / diversidade / confusão / Evangelho puro",
+    refs: []
+  },
+  {
+    pergunta: "O que significa, na prática, 'examinar tudo e reter o bem'?",
+    topicoOrigem: "I.2 Advertência bíblica",
+    pagina: 91,
+    tags: "advertência bíblica / examinar / reter / atitude investigativa",
+    refs: ["1ts5.21"]
+  },
+  {
+    pergunta: "De que forma a falta de discernimento deixa o povo de Deus vulnerável, como 'ovelhas sem pastor'?",
+    topicoOrigem: "I.3 Proteção do rebanho",
+    pagina: 92,
+    tags: "proteção do rebanho / liderança / lobos vorazes / unidade da fé",
+    refs: []
+  },
+  {
+    pergunta: "Por que a Bíblia é chamada de 'padrão absoluto' para avaliar ideias e ensinamentos?",
+    topicoOrigem: "II.1 Escrituras Sagradas",
+    pagina: 93,
+    tags: "Escrituras Sagradas / padrão absoluto / familiaridade com a Palavra",
+    refs: ["sl119.18"]
+  },
+  {
+    pergunta: "Como o Espírito Santo opera em harmonia com a Palavra no processo de discernimento?",
+    topicoOrigem: "II.2 Espírito Santo",
+    pagina: 93,
+    tags: "Espírito Santo / harmonia com a Palavra / revelação rejeitada",
+    refs: ["jo16.13", "1co12.10"]
+  },
+  {
+    pergunta: "Por que a maturidade espiritual não é medida pelo tempo de conversão, mas pela profundidade do relacionamento com Deus?",
+    topicoOrigem: "II.3 Maturidade cristã",
+    pagina: 94,
+    tags: "maturidade cristã / sentidos exercitados / vento de doutrina",
+    refs: ["hb5.14", "ef4.14"]
+  },
+  {
+    pergunta: "Que cuidados a lição recomenda antes de tirar conclusões ao julgar algo?",
+    topicoOrigem: "III.1 Julgar corretamente",
+    pagina: 94,
+    tags: "julgar corretamente / não precipitado / comparar com as Escrituras",
+    refs: ["jo7.24"]
+  },
+  {
+    pergunta: "Como podemos acolher nossas emoções sem deixar que elas governem nossas decisões espirituais?",
+    topicoOrigem: "III.2 Cuidado com as emoções",
+    pagina: 94,
+    tags: "cuidado com as emoções / equilíbrio / razão iluminada pela Palavra",
+    refs: ["jr17.9"]
+  },
+  {
+    pergunta: "De que maneira a obediência prática à verdade nos torna mais sensíveis à voz de Deus?",
+    topicoOrigem: "III.3 Obediência à verdade",
+    pagina: 95,
+    tags: "obediência à verdade / fidelidade / andar na luz",
+    refs: ["tg1.22", "1jo1.7"]
+  },
+
+  // ── 1 pergunta extra, livre ──
+  {
+    pergunta: "Quais são os quatro passos sugeridos no Subsídio 1 para discernir o caráter e as motivações de um líder cristão?",
+    topicoOrigem: "I — Subsídio 1",
+    pagina: 92,
+    tags: "Subsídio 1 / discernir caráter / discernir motivações / falsos líderes",
+    refs: ["gl5.22-23", "1co9.19-22", "2jo9-11"]
+  },
+
+  // ── 5 perguntas oficiais da Hora da Revisão (apostila) ──
+  {
+    pergunta: "Hora da Revisão — 1. De acordo com a lição, o que é o discernimento espiritual?",
+    topicoOrigem: "Introdução",
+    pagina: 91,
+    tags: "discernimento / dom / Deus / verdadeiro / falso / vontade",
+    refs: ["hb5.14"]
+  },
+  {
+    pergunta: "Hora da Revisão — 2. De que forma a Bíblia nos orienta a respeito do cuidado com os falsos ensinos?",
+    topicoOrigem: "I.2 Advertência bíblica",
+    pagina: 91,
+    tags: "Bíblia / falsos ensinos / cuidado / orientação clara",
+    refs: ["1ts5.21", "1jo4.1"]
+  },
+  {
+    pergunta: "Hora da Revisão — 3. Qual é a principal fonte do discernimento?",
+    topicoOrigem: "II.1 Escrituras Sagradas",
+    pagina: 93,
+    tags: "Palavra de Deus / fonte principal",
+    refs: ["sl119.18"]
+  },
+  {
+    pergunta: "Hora da Revisão — 4. Quem conduz o crente à verdade plena?",
+    topicoOrigem: "II.2 Espírito Santo",
+    pagina: 93,
+    tags: "Espírito Santo / verdade plena / conduzir",
+    refs: ["jo16.13"]
+  },
+  {
+    pergunta: "Hora da Revisão — 5. Qual prática também protege contra o engano?",
+    topicoOrigem: "III.3 Obediência à verdade",
+    pagina: 95,
+    tags: "obediência / proteção / engano",
+    refs: ["tg1.22", "1jo1.7"]
+  }
+];
+
+window.bibliotecaPerguntas["3T2026-licao01"] = [
+  // ── perguntas extras de aprofundamento, uma para cada subtópico ──
+  {
+    pergunta: "Que desafios Israel enfrentava logo após a morte de Josué, e por que a ausência de um sucessor foi tão impactante?",
+    topicoOrigem: "I.3 A morte de Josué",
+    pagina: 6,
+    tags: "morte de Josué / vazio de liderança / tribos desorientadas",
+    refs: ["js24.29", "jz1.1"]
+  },
+  {
+    pergunta: "Qual era o 'segredo do êxito' de Israel nas conquistas, segundo o discurso de despedida de Josué?",
+    topicoOrigem: "I.2 Deus é o Conquistador",
+    pagina: 6,
+    tags: "obediência / amar a Jeová / fidelidade exclusiva",
+    refs: ["js23.11", "js24.15"]
+  },
+  {
+    pergunta: "Por que os juízes de Israel não pertenciam a uma linha de sucessão hereditária, como reis ou sacerdotes?",
+    topicoOrigem: "II.2 Os Juízes",
+    pagina: 7,
+    tags: "juízes / escolhidos por Deus / sem sucessão hereditária",
+    refs: ["jz2.16"]
+  },
+  {
+    pergunta: "De que forma o livro de Juízes evita transformar seus protagonistas em 'super-heróis' infalíveis?",
+    topicoOrigem: "II.3 Heróis, porém falhos",
+    pagina: 8,
+    tags: "heróis falhos / graça / único Libertador",
+    refs: ["jz2.18"]
+  },
+  {
+    pergunta: "Como o pensamento pós-moderno se assemelha ao cenário espiritual da época dos juízes?",
+    topicoOrigem: "III.1 Quando cada um fazia o que parecia certo",
+    pagina: 9,
+    tags: "relativismo moral / pós-modernismo / ausência de liderança",
+    refs: ["jz17.6", "jz21.25"]
+  },
+  {
+    pergunta: "Descreva as quatro etapas do ciclo repetitivo que marca toda a narrativa de Juízes.",
+    topicoOrigem: "III.2 O ciclo da libertação",
+    pagina: 9,
+    tags: "ciclo / infidelidade / opressão / arrependimento / libertação",
+    refs: ["jz2.11-13", "jz3.9", "jz2.16"]
+  },
+  {
+    pergunta: "O que a expressão 'o Espírito do Senhor se apoderou de...' revela sobre a origem do poder dos juízes?",
+    topicoOrigem: "III.3 No poder do Espírito",
+    pagina: 9,
+    tags: "Espírito do Senhor / intervenção divina / não é habilidade natural",
+    refs: ["jz3.10", "jz6.34", "jz14.6"]
+  },
+
+  // ── pergunta extra, livre ──
+  {
+    pergunta: "Por que a Bíblia afirma que 'ninguém é insignificante' para Deus usar, à luz da diversidade dos doze juízes?",
+    topicoOrigem: "II.2 Os Juízes",
+    pagina: 7,
+    tags: "diversidade dos juízes / ninguém é insignificante / juízes maiores e menores",
+    refs: []
+  },
+
+  // ── 5 perguntas oficiais da Hora da Revisão (apostila, Pg. 10) ──
+  {
+    pergunta: "Hora da Revisão — 1. Sob a liderança de quem o povo de Israel avançou para conquistar a Terra Prometida?",
+    topicoOrigem: "I.1 A conquista da Terra Prometida",
+    pagina: 10,
+    tags: "Josué",
+    refs: ["js1.1-9"]
+  },
+  {
+    pergunta: "Hora da Revisão — 2. Quem foram os juízes, no que diz respeito às suas funções?",
+    topicoOrigem: "II.2 Os Juízes",
+    pagina: 10,
+    tags: "pessoas levantadas e capacitadas sobrenaturalmente por Deus / instrumentos de libertação contra os povos que procuravam oprimir Israel",
+    refs: ["jz2.16"]
+  },
+  {
+    pergunta: "Hora da Revisão — 3. Geralmente, como são divididos os juízes?",
+    topicoOrigem: "II.2 Os Juízes",
+    pagina: 10,
+    tags: "juízes maiores (Otniel, Eúde, Débora, Gideão, Jefté, Sansão) e juízes menores (Sangar, Tola, Jair, Ibsã, Elom, Abdom)",
+    refs: []
+  },
+  {
+    pergunta: "Hora da Revisão — 4. Quais eram as virtudes dos juízes, dignas de verdadeiros heróis?",
+    topicoOrigem: "II.3 Heróis, porém falhos",
+    pagina: 10,
+    tags: "coragem, valentia, sabedoria, obediência, humildade e fé intensa",
+    refs: ["jz2.18"]
+  },
+  {
+    pergunta: "Hora da Revisão — 5. De que forma o livro de Juízes destaca a atuação do Espírito Santo?",
+    topicoOrigem: "III.3 No poder do Espírito",
+    pagina: 10,
+    tags: "'o Espírito do Senhor se apoderou de...' / poder para julgar, guerrear e liderar vinha da intervenção divina",
+    refs: ["jz3.10", "jz6.34", "jz11.29", "jz13.25", "jz14.6"]
+  }
+];
