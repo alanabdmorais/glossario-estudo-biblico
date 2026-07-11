@@ -131,7 +131,7 @@ window.bibliotecaPerguntas["2T2026-licao13"] = [
   }
 ];
 
-window.bibliotecaPerguntas["3T2026-licao01"] = [
+window.bibliotecaPerguntas["3T2026-licao1"] = [
   // ── perguntas extras de aprofundamento, uma para cada subtópico ──
   {
     pergunta: "Que desafios Israel enfrentava logo após a morte de Josué, e por que a ausência de um sucessor foi tão impactante?",
@@ -227,5 +227,118 @@ window.bibliotecaPerguntas["3T2026-licao01"] = [
     pagina: 10,
     tags: "'o Espírito do Senhor se apoderou de...' / poder para julgar, guerrear e liderar vinha da intervenção divina",
     refs: ["jz3.10", "jz6.34", "jz11.29", "jz13.25", "jz14.6"]
+  }
+];
+
+window.bibliotecaPerguntas["3T2026-licao2"] = [
+  // ── perguntas extras de aprofundamento, uma para cada subtópico ──
+  {
+    pergunta: "Por que o gesto da tribo de Judá em unir forças com a tribo de Simeão é apresentado como um princípio importante?",
+    topicoOrigem: "I.2 Força divina e união fraterna",
+    pagina: 13,
+    tags: "união fraterna / companheiros de fé / Judá e Simeão",
+    refs: ["jz1.4", "rm12.10", "gl6.2"]
+  },
+  {
+    pergunta: "Por que Israel não conseguiu expulsar totalmente os cananeus dos vales, mesmo com o Senhor ao seu lado?",
+    topicoOrigem: "I.3 Conquista parcial e fracassos",
+    pagina: 14,
+    tags: "carros de ferro / falta de fé / vitória incompleta",
+    refs: ["jz1.19", "sl24.8", "sl46.9"]
+  },
+  {
+    pergunta: "O que a repreensão do Anjo do Senhor em Juízes 2.1 revela: falta de capacidade ou falta de vontade de Israel?",
+    topicoOrigem: "II.1 Deus fala",
+    pagina: 14,
+    tags: "Anjo do Senhor / teofania / questão de vontade, não de capacidade",
+    refs: ["jz2.1b", "mt6.24b", "tg4.4"]
+  },
+  {
+    pergunta: "Por que a pergunta retórica de Deus 'Por que fizestes isso?' evidencia a incoerência da aliança do povo com os cananeus?",
+    topicoOrigem: "II.2 A desobediência do povo",
+    pagina: 15,
+    tags: "incoerência / aliança com moradores da terra / infidelidade",
+    refs: ["jz2.2"]
+  },
+  {
+    pergunta: "Por que o choro e os sacrifícios do povo em Juízes 2.4-5 não foram suficientes para mudar o rumo da história?",
+    topicoOrigem: "II.3 Choro e remorso",
+    pagina: 15,
+    tags: "remorso sem mudança de atitude / arrependimento genuíno",
+    refs: ["jz2.4-5"]
+  },
+  {
+    pergunta: "O que significa dizer que a nova geração 'não conhecia o Senhor' mesmo tendo informações sobre Ele?",
+    topicoOrigem: "III.1 Uma geração rebelde",
+    pagina: 15,
+    tags: "informação sem intimidade / esquecimento das origens",
+    refs: ["jz2.10"]
+  },
+  {
+    pergunta: "Quem eram Baal e Astarote, e por que a adoração a esses ídolos envolvia práticas tão graves?",
+    topicoOrigem: "III.2 O pecado da idolatria",
+    pagina: 16,
+    tags: "Baal / Astarote / ritos lascivos / sacrifícios humanos",
+    refs: ["jz2.12-13", "1rs14.24", "jr19.5"]
+  },
+  {
+    pergunta: "De que forma o ciclo de pecado, disciplina, arrependimento e livramento se repetia sem que o povo realmente mudasse?",
+    topicoOrigem: "III.3 Contaminação e sincretismo",
+    pagina: 16,
+    tags: "ciclo / sincretismo / juízo divino / misericórdia",
+    refs: ["jz2.14", "jz2.15", "jz2.19"]
+  },
+  {
+    pergunta: "Como a idolatria pode se manifestar hoje em formas não religiosas, segundo a lição?",
+    topicoOrigem: "III.4 Mantendo a fidelidade hoje",
+    pagina: 16,
+    tags: "ídolos modernos / materiais, políticos, pessoais / pluralismo religioso",
+    refs: ["1co10.14", "cl3.5", "mt6.21"]
+  },
+
+  // ── pergunta extra, livre ──
+  {
+    pergunta: "Segundo o Subsídio 2, quais eram os 'favores' que tornavam a idolatria tão atrativa para os israelitas?",
+    topicoOrigem: "III.3 — Subsídio 2",
+    pagina: 16,
+    tags: "Subsídio 2 / atrativos da idolatria / nações pagãs vizinhas",
+    refs: []
+  },
+
+  // ── 5 perguntas oficiais da Hora da Revisão (apostila, Pg. 17) ──
+  {
+    pergunta: "Hora da Revisão — 1. Qual tribo de Israel Deus determinou que assumisse a liderança para dar sequência às conquistas?",
+    topicoOrigem: "I.1 O começo promissor de Judá",
+    pagina: 17,
+    tags: "Tribo de Judá",
+    refs: ["jz1.1", "jz1.2"]
+  },
+  {
+    pergunta: "Hora da Revisão — 2. O que o gesto da Tribo de Judá em unir forças com a Tribo de Simeão nos ensina?",
+    topicoOrigem: "I.2 Força divina e união fraterna",
+    pagina: 17,
+    tags: "princípio importante / Deus concede companheiros de fé para nos auxiliar na jornada",
+    refs: ["jz1.4"]
+  },
+  {
+    pergunta: "Hora da Revisão — 3. Quem é o Anjo do Senhor em Juízes 2.1?",
+    topicoOrigem: "II.1 Deus fala",
+    pagina: 17,
+    tags: "a teofania do próprio Deus",
+    refs: ["jz2.1b"]
+  },
+  {
+    pergunta: "Hora da Revisão — 4. Quem era Baal?",
+    topicoOrigem: "III.2 O pecado da idolatria",
+    pagina: 17,
+    tags: "senhor, mestre ou dono em hebraico e outras línguas semíticas / divindade cultuada entre fenícios e cananeus / deus da fertilidade, da chuva e da tempestade",
+    refs: ["jz2.12-13"]
+  },
+  {
+    pergunta: "Hora da Revisão — 5. Por que Deus ordenou que os cananeus fossem expulsos da terra?",
+    topicoOrigem: "III.3 Contaminação e sincretismo",
+    pagina: 17,
+    tags: "extremamente maldosos e moralmente corrompidos / o tempo do juízo divino havia chegado",
+    refs: ["lv18.24-30", "dt18.9-12", "gn15.16"]
   }
 ];

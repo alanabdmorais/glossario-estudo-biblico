@@ -86,11 +86,17 @@
     .pergunta-ref-badge:hover { background: #d4c9a6; }
     .sem-perguntas { color: #999; font-style: italic; font-size: 13px; padding: 20px; text-align: center; }
     /* ── API STATUS ── */
-    .api-config { background: #fff8e1; border: 1px solid #ffe082; border-radius: 8px; padding: 14px 18px; margin-bottom: 16px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .api-config { background: #fff8e1; border: 1px solid #ffe082; border-radius: 8px; padding: 14px 18px; margin-bottom: 16px; }
     .api-config label { font-size: 13px; font-weight: 600; color: #5c4a1e; }
     .api-config select, .api-config input { padding: 6px 10px; border: 1px solid #d4c9a6; border-radius: 4px; font-size: 13px; }
     .api-config input { width: 300px; }
     .api-config button { background: #5c4a1e; color: white; border: none; padding: 6px 14px; border-radius: 4px; cursor: pointer; font-size: 13px; }
+    .api-config .api-linha { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-top: 8px; }
+    .api-config .api-linha:first-child { margin-top: 0; }
+    .api-status-badge { font-size: 12px; padding: 2px 10px; border-radius: 12px; font-weight: 500; }
+    .api-status-badge.ativa { background: #c8e6c9; color: #2e7d32; }
+    .api-status-badge.inativa { background: #ffcdd2; color: #c62828; }
+    .api-status-badge.aguardando { background: #fff3e0; color: #e65100; }
     /* ── MODAL LEGENDA EMOJIS ── */
     .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center; }
     .modal-overlay.aberto { display: flex; }
@@ -127,7 +133,7 @@
       </select>
       <label>Lição:</label>
       <select id="seletorLicao">
-        <option value="1">Lição 1</option>
+        <option value="1" selected>Lição 1</option>
         <option value="2">Lição 2</option>
         <option value="3">Lição 3</option>
         <option value="4">Lição 4</option>
@@ -139,7 +145,7 @@
         <option value="10">Lição 10</option>
         <option value="11">Lição 11</option>
         <option value="12">Lição 12</option>
-        <option value="13" selected>Ligação 13</option>
+        <option value="13">Lição 13</option>
       </select>
       <button id="carregarBtn">🔤 Carregar Lição</button>
     </div>
@@ -164,69 +170,368 @@
   </div>
 </div>
 
-<script src="biblioteca/contextos-biblicos.js"></script>
-<script src="biblioteca/rodape-vestibular.js"></script>
-<script src="biblioteca/materias-vestibular.js"></script>
-<script src="biblioteca/calendario-escolar.js"></script>
+<script src="biblioteca/periodos-biblicos.js"></script>
+<script src="biblioteca/periodos-seculares.js"></script>
+<script src="biblioteca/periodos-humanidade.js"></script>
+<script src="biblioteca/classificacao-livros-biblicos.js"></script>
+<script src="biblioteca/eventos-biblicos.js"></script>
+<script src="biblioteca/titulos-biblicos.js"></script>
+<script src="biblioteca/referencias-contextos.js"></script>
 <script src="biblioteca/legendas-emogis.js"></script>
 <script src="biblioteca/perguntas-dominical.js"></script>
 <script src="biblioteca/mermaid-dominical.js"></script>
-<script src="biblioteca/links-dominical.js"></script>
 
 <script>
 // ============================================
-// CONFIG API (Groq / Mistral)
+// CONFIG DAS 3 APIS (separadas)
 // ============================================
-let apiConfig = {
-  provider: localStorage.getItem('apiProvider') || 'groq',
-  key: localStorage.getItem('apiKey') || ''
+const apiKeys = {
+  groq: localStorage.getItem('apiKey_groq') || '',
+  mistral: localStorage.getItem('apiKey_mistral') || '',
 };
 
-async function buscarVersiculo(referencia) {
-  if (!apiConfig.key) return null;
-  const prompt = `Forneça APENAS o texto do versículo bíblico "${referencia}" na versão Almeida Revista e Corrigida (ARC) em português. Não inclua nenhuma explicação, comentário ou formatação. Apenas o texto do versículo.`;
-  try {
-    if (apiConfig.provider === 'groq') {
-      const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiConfig.key}` },
-        body: JSON.stringify({ model: 'llama3-8b-8192', messages: [{ role: 'user', content: prompt }], max_tokens: 300, temperature: 0 })
-      });
-      const data = await res.json();
-      return data.choices?.[0]?.message?.content?.trim() || null;
+// Status de cada API: 'ativa' | 'inativa' | 'aguardando'
+// A Bíblia (bible-api.com) é gratuita e não precisa de chave, então já começa ativa,
+// a não ser que o usuário desative manualmente (fica salvo no localStorage).
+let apiStatus = {
+  biblia: localStorage.getItem('bibliaAtiva') === 'false' ? 'inativa' : 'ativa',
+  groq: apiKeys.groq ? 'ativa' : 'inativa',
+  mistral: apiKeys.mistral ? 'ativa' : 'inativa',
+};
+
+// Configuração do rodízio
+const config = {
+  delay: parseInt(localStorage.getItem('apiDelay')) || 2000,
+  providerOrder: ['groq', 'mistral'], // fallback secundário, usado só se a Bíblia falhar
+  currentIndex: 0,
+  isRunning: false,
+  shouldStop: false,
+};
+
+// Nome completo em português de cada livro, no formato que o bible-api.com espera
+// (tradução "almeida" = João Ferreira de Almeida, domínio público)
+const NOME_LIVRO_PT = {
+  gn:"Gênesis", ex:"Êxodo", lv:"Levítico", nm:"Números", dt:"Deuteronômio",
+  js:"Josué", jz:"Juízes", rt:"Rute", "1sm":"1 Samuel", "2sm":"2 Samuel",
+  "1rs":"1 Reis", "2rs":"2 Reis", "1cr":"1 Crônicas", "2cr":"2 Crônicas",
+  ed:"Esdras", ne:"Neemias", et:"Ester", job:"Jó", sl:"Salmos", pv:"Provérbios",
+  ec:"Eclesiastes", ct:"Cantares de Salomão", is:"Isaías", jr:"Jeremias",
+  lm:"Lamentações de Jeremias", ez:"Ezequiel", dn:"Daniel", os:"Oséias",
+  jl:"Joel", am:"Amós", ob:"Obadias", jn:"Jonas", mq:"Miquéias", na:"Naum",
+  hc:"Habacuque", sf:"Sofonias", ag:"Ageu", zc:"Zacarias", ml:"Malaquias",
+  mt:"Mateus", mc:"Marcos", lc:"Lucas", jo:"João", at:"Atos", rm:"Romanos",
+  "1co":"1 Coríntios", "2co":"2 Coríntios", gl:"Gálatas", ef:"Efésios",
+  fp:"Filipenses", cl:"Colossenses", "1ts":"1 Tessalonicenses",
+  "2ts":"2 Tessalonicenses", "1tm":"1 Timóteo", "2tm":"2 Timóteo", tt:"Tito",
+  fm:"Filemom", hb:"Hebreus", tg:"Tiago", "1pe":"1 Pedro", "2pe":"2 Pedro",
+  "1jo":"1 João", "2jo":"2 João", "3jo":"3 João", jd:"Judas", ap:"Apocalipse"
+};
+
+// Mapa "Js 24.26-30" / "1 Sm 17.24,27" -> { livroSlug, capitulo, versiculos:[26,27,28,29,30] }
+const LIVRO_SLUG = {
+  "gn":"gn","gênesis":"gn","genesis":"gn",
+  "êx":"ex","ex":"ex","êxodo":"ex","exodo":"ex",
+  "lv":"lv","levítico":"lv","levitico":"lv",
+  "nm":"nm","números":"nm","numeros":"nm",
+  "dt":"dt","deuteronômio":"dt","deuteronomio":"dt",
+  "js":"js","josué":"js","josue":"js",
+  "jz":"jz","juízes":"jz","juizes":"jz",
+  "rt":"rt","rute":"rt",
+  "1sm":"1sm","1 sm":"1sm","1samuel":"1sm",
+  "2sm":"2sm","2 sm":"2sm","2samuel":"2sm",
+  "1rs":"1rs","1 rs":"1rs","1reis":"1rs",
+  "2rs":"2rs","2 rs":"2rs","2reis":"2rs",
+  "1cr":"1cr","1 cr":"1cr","1crônicas":"1cr","1cronicas":"1cr",
+  "2cr":"2cr","2 cr":"2cr","2crônicas":"2cr","2cronicas":"2cr",
+  "ed":"ed","esdras":"ed",
+  "ne":"ne","neemias":"ne",
+  "et":"et","ester":"et",
+  "jó":"job","jo_":"job","job":"job",
+  "sl":"sl","salmos":"sl","salmo":"sl",
+  "pv":"pv","provérbios":"pv","proverbios":"pv",
+  "ec":"ec","eclesiastes":"ec",
+  "ct":"ct","cantares":"ct",
+  "is":"is","isaías":"is","isaias":"is",
+  "jr":"jr","jeremias":"jr",
+  "lm":"lm","lamentações":"lm","lamentacoes":"lm",
+  "ez":"ez","ezequiel":"ez",
+  "dn":"dn","daniel":"dn",
+  "os":"os","oséias":"os","oseias":"os",
+  "jl":"jl","joel":"jl",
+  "am":"am","amós":"am","amos":"am",
+  "ob":"ob","obadias":"ob",
+  "jn":"jn","jonas":"jn",
+  "mq":"mq","miquéias":"mq","miqueias":"mq",
+  "na":"na","naum":"na",
+  "hc":"hc","habacuque":"hc",
+  "sf":"sf","sofonias":"sf",
+  "ag":"ag","ageu":"ag",
+  "zc":"zc","zacarias":"zc",
+  "ml":"ml","malaquias":"ml",
+  "mt":"mt","mateus":"mt",
+  "mc":"mc","marcos":"mc",
+  "lc":"lc","lucas":"lc",
+  "jo":"jo","joão":"jo","joao":"jo",
+  "at":"at","atos":"at",
+  "rm":"rm","romanos":"rm",
+  "1co":"1co","1 co":"1co","1coríntios":"1co","1corintios":"1co",
+  "2co":"2co","2 co":"2co","2coríntios":"2co","2corintios":"2co",
+  "gl":"gl","gálatas":"gl","galatas":"gl",
+  "ef":"ef","efésios":"ef","efesios":"ef",
+  "fp":"fp","filipenses":"fp",
+  "cl":"cl","colossenses":"cl",
+  "1ts":"1ts","1 ts":"1ts","1tessalonicenses":"1ts",
+  "2ts":"2ts","2 ts":"2ts","2tessalonicenses":"2ts",
+  "1tm":"1tm","1 tm":"1tm","1timóteo":"1tm","1timoteo":"1tm",
+  "2tm":"2tm","2 tm":"2tm","2timóteo":"2tm","2timoteo":"2tm",
+  "tt":"tt","tito":"tt",
+  "fm":"fm","filemom":"fm",
+  "hb":"hb","hebreus":"hb",
+  "tg":"tg","tiago":"tg",
+  "1pe":"1pe","1 pe":"1pe","1pedro":"1pe",
+  "2pe":"2pe","2 pe":"2pe","2pedro":"2pe",
+  "1jo":"1jo","1 jo":"1jo","1joão":"1jo","1joao":"1jo",
+  "2jo":"2jo","2 jo":"2jo","2joão":"2jo","2joao":"2jo",
+  "3jo":"3jo","3 jo":"3jo","3joão":"3jo","3joao":"3jo",
+  "jd":"jd","judas":"jd",
+  "ap":"ap","apocalipse":"ap"
+};
+
+function parseReferencia(referencia) {
+  const m = referencia.match(/^(\d?\s?[^\d.]+?)\s*(\d+)\.(\d+(?:[-,]\d+)*)/);
+  if (!m) return null;
+  const livroTxt = m[1].trim().toLowerCase().replace(/\s+/g, ' ');
+  const capitulo = parseInt(m[2], 10);
+  const slug = LIVRO_SLUG[livroTxt] || LIVRO_SLUG[livroTxt.replace(/\s/g, '')];
+  if (!slug) return null;
+  const versParte = m[3];
+  let versiculos = [];
+  // Trata cada pedaço separado por vírgula individualmente, expandindo
+  // ranges com hífen dentro de cada pedaço (ex: "2,18-20" -> [2,18,19,20])
+  versParte.split(',').forEach(pedaco => {
+    if (pedaco.includes('-')) {
+      const [ini, fim] = pedaco.split('-').map(Number);
+      if (!isNaN(ini) && !isNaN(fim)) {
+        for (let v = ini; v <= fim; v++) versiculos.push(v);
+      }
     } else {
-      const res = await fetch('https://api.mistral.ai/v1/chat/completions', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiConfig.key}` },
-        body: JSON.stringify({ model: 'mistral-small-latest', messages: [{ role: 'user', content: prompt }], max_tokens: 300, temperature: 0 })
-      });
-      const data = await res.json();
-      return data.choices?.[0]?.message?.content?.trim() || null;
+      const v = Number(pedaco);
+      if (!isNaN(v)) versiculos.push(v);
     }
-  } catch (e) { console.warn('Erro API versículo:', e); return null; }
+  });
+  return { slug, capitulo, versiculos };
 }
 
-// ============================================
-// CONTEXTOS BÍBLICOS (sem versículo)
-// ============================================
-let ctxPorId = {};
+function esperar(ms) { return new Promise(r => setTimeout(r, ms)); }
 
-function carregarContextos() {
-  ctxPorId = {};
-  if (typeof window.contextosBiblicosMap !== 'undefined') {
-    Object.assign(ctxPorId, window.contextosBiblicosMap);
-  } else if (typeof window.bibliotecaContextos !== 'undefined') {
-    window.bibliotecaContextos.forEach(c => { if (c.id) ctxPorId[c.id] = c; });
+// ── Fila com concorrência limitada ──
+function criarFila(concorrenciaMax) {
+  let ativos = 0;
+  const pendentes = [];
+  const proximo = () => {
+    if (ativos >= concorrenciaMax || pendentes.length === 0) return;
+    ativos++;
+    const { tarefa, resolve, reject } = pendentes.shift();
+    tarefa().then(resolve, reject).finally(() => { ativos--; proximo(); });
+  };
+  return (tarefa) => new Promise((resolve, reject) => {
+    pendentes.push({ tarefa, resolve, reject });
+    proximo();
+  });
+}
+const filaVersiculos = criarFila(1);
+
+// ── Bíblia (bible-api.com) — fonte PRIMÁRIA, gratuita, sem chave necessária ──
+// Rate limit do serviço: 15 requisições a cada 30s por IP. Por isso ela também
+// respeita o mesmo "delay entre tentativas" configurado na tela.
+async function buscarVersiculoBibliaAPI(referencia, tentativa = 0) {
+  const ref = parseReferencia(referencia);
+  if (!ref) return null;
+  const nomeLivro = NOME_LIVRO_PT[ref.slug];
+  if (!nomeLivro) return null;
+  if (!ref.versiculos || ref.versiculos.length === 0) return null;
+
+  const versParte = ref.versiculos.join(',');
+  const query = encodeURIComponent(`${nomeLivro} ${ref.capitulo}:${versParte}`);
+
+  try {
+    const res = await fetch(`https://bible-api.com/${query}?translation=almeida`);
+    if (res.status === 429) {
+      if (tentativa < 2) {
+        await esperar(1500 * (tentativa + 1));
+        return buscarVersiculoBibliaAPI(referencia, tentativa + 1);
+      }
+      return { rateLimited: true };
+    }
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    const texto = (data.text || '').trim().replace(/\s+/g, ' ');
+    return texto || null;
+  } catch (e) {
+    // "Failed to fetch" costuma ser o rate limit (429) do bible-api.com
+    // aparecendo como erro de CORS no navegador (a resposta de erro do
+    // serviço não inclui cabeçalho CORS). Vale tentar de novo antes de desistir.
+    if (tentativa < 2) {
+      await esperar(1500 * (tentativa + 1));
+      return buscarVersiculoBibliaAPI(referencia, tentativa + 1);
+    }
+    console.warn('Erro Bíblia (bible-api.com):', e.message);
+    return null;
   }
+}
+
+// ── Groq ──
+async function buscarVersiculoGroq(referencia, tentativa = 0) {
+  if (!apiKeys.groq) return null;
+  const prompt = `Forneça APENAS o texto do versículo bíblico "${referencia}" na versão Almeida Revista e Corrigida (ARC) em português. Não inclua nenhuma explicação, comentário ou formatação. Apenas o texto do versículo.`;
+  try {
+    const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKeys.groq}` },
+      body: JSON.stringify({ 
+        model: 'openai/gpt-oss-20b', 
+        messages: [{ role: 'user', content: prompt }], 
+        max_tokens: 300, 
+        temperature: 0 
+      })
+    });
+    if (res.status === 429) {
+      if (tentativa < 3) { 
+        await esperar(2000 * (tentativa + 1)); 
+        return buscarVersiculoGroq(referencia, tentativa + 1); 
+      }
+      return { rateLimited: true };
+    }
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    return data.choices?.[0]?.message?.content?.trim() || null;
+  } catch (e) { 
+    console.warn('Erro Groq:', e.message); 
+    return null; 
+  }
+}
+
+// ── Mistral ──
+async function buscarVersiculoMistral(referencia, tentativa = 0) {
+  if (!apiKeys.mistral) return null;
+  const prompt = `Forneça APENAS o texto do versículo bíblico "${referencia}" na versão Almeida Revista e Corrigida (ARC) em português. Não inclua nenhuma explicação, comentário ou formatação. Apenas o texto do versículo.`;
+  try {
+    const res = await fetch('https://api.mistral.ai/v1/chat/completions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKeys.mistral}` },
+      body: JSON.stringify({ 
+        model: 'mistral-small-latest', 
+        messages: [{ role: 'user', content: prompt }], 
+        max_tokens: 300, 
+        temperature: 0 
+      })
+    });
+    if (res.status === 429) {
+      if (tentativa < 3) { 
+        await esperar(2000 * (tentativa + 1)); 
+        return buscarVersiculoMistral(referencia, tentativa + 1); 
+      }
+      return { rateLimited: true };
+    }
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    return data.choices?.[0]?.message?.content?.trim() || null;
+  } catch (e) { 
+    console.warn('Erro Mistral:', e.message); 
+    return null; 
+  }
+}
+
+// ── Orquestrador: Bíblia (primária) → rodízio Groq/Mistral (fallback) ──
+async function buscarVersiculoComRodizio(referencia) {
+  return filaVersiculos(async () => {
+    // 1) Tenta a Bíblia (bible-api.com) — opção principal, gratuita, sem chave
+    if (apiStatus.biblia !== 'inativa') {
+      const resultadoBiblia = await buscarVersiculoBibliaAPI(referencia);
+      if (resultadoBiblia && typeof resultadoBiblia === 'string') {
+        return resultadoBiblia;
+      }
+      // Se falhou ou bateu no rate limit (429), espera um pouco antes de
+      // cair pro fallback — mesmo delay usado entre as tentativas de IA.
+      await esperar(Math.min(config.delay, 1500));
+    }
+
+    // 2) Rodízio entre Groq e Mistral (fallback secundário)
+    const provedores = ['groq', 'mistral'];
+    let tentativas = 0;
+    const maxTentativas = 4; // 2 provedores * 2 tentativas cada
+
+    // Se nenhum provedor tiver chave configurada, desiste na hora
+    // em vez de entrar num loop sem nunca aguardar nada (o que travava a aba).
+    const algumConfigurado = provedores.some(p => !!apiKeys[p]);
+    if (!algumConfigurado) {
+      return null;
+    }
+
+    while (tentativas < maxTentativas) {
+      // Pega o próximo provedor da lista (round-robin)
+      const provider = provedores[config.currentIndex % provedores.length];
+      config.currentIndex++;
+
+      // Verifica se o provedor tem chave configurada
+      // (NÃO usar apiStatus aqui: durante a busca o status fica 'aguardando'
+      // só para efeito visual, e isso não deve impedir a tentativa real.)
+      if (!apiKeys[provider]) {
+        tentativas++;
+        if (tentativas < maxTentativas) await esperar(200);
+        continue;
+      }
+
+      let resultado;
+      if (provider === 'groq') {
+        resultado = await buscarVersiculoGroq(referencia);
+      } else if (provider === 'mistral') {
+        resultado = await buscarVersiculoMistral(referencia);
+      }
+
+      if (resultado && !resultado.rateLimited && typeof resultado === 'string') {
+        return resultado;
+      }
+
+      // Se rate limited, espera e tenta o próximo
+      if (resultado?.rateLimited) {
+        await esperar(1500);
+      }
+
+      tentativas++;
+
+      // Delay entre tentativas (configurável)
+      if (tentativas < maxTentativas) {
+        await esperar(config.delay);
+      }
+    }
+
+    return null;
+  });
+}
+
+// Versão antiga para compatibilidade
+const buscarVersiculo = buscarVersiculoComRodizio;
+
+// ============================================
+// CONTEXTOS BÍBLICOS (v3 — montado na hora a partir das bibliotecas segmentadas)
+// ============================================
+function obterContexto(id) {
+  if (typeof window.montarContextoCompleto === 'function') {
+    return window.montarContextoCompleto(id);
+  }
+  return null;
 }
 
 function formatarCabecalhoContexto(ctx) {
   let h = `📖 ${ctx.referencia}`;
-  if (ctx.data)             h += ` | 📅 ${ctx.data}`;
-  if (ctx.local)            h += ` | 🚩 ${ctx.local}`;
-  if (ctx.lider)            h += ` | 👑 ${ctx.lider}${ctx.liderReinado ? ' (' + ctx.liderReinado + ')' : ''}`;
-  if (ctx.periodo)          h += ` | 📜 ${ctx.periodo}${ctx.periodoDatas ? ' (' + ctx.periodoDatas + ')' : ''}`;
-  if (ctx.periodoHumanidade)h += ` | 🏰 ${ctx.periodoHumanidade}${ctx.periodoHumanidadeDatas ? ' (' + ctx.periodoHumanidadeDatas + ')' : ''}`;
+  if (ctx.data)                h += ` | 📅 ${ctx.data}`;
+  if (ctx.local)                h += ` | 🚩 ${ctx.local}`;
+  if (ctx.lider)                h += ` | 👑 ${ctx.lider}`;
+  if (ctx.era)                  h += ` | 📜 ${ctx.era}${ctx.eraDatas ? ' (' + ctx.eraDatas + ')' : ''}`;
+  if (ctx.classificacao)        h += ` | 📚 ${ctx.classificacao}`;
+  if (ctx.periodoSecular)       h += ` | ⏳ ${ctx.periodoSecular}${ctx.periodoSecularDatas ? ' (' + ctx.periodoSecularDatas + ')' : ''}`;
+  if (ctx.periodoHumanidade)    h += ` | 🏰 ${ctx.periodoHumanidade}${ctx.periodoHumanidadeDatas ? ' (' + ctx.periodoHumanidadeDatas + ')' : ''}`;
   return h;
 }
 
@@ -330,13 +635,28 @@ function renderizarPerguntas(chave) {
 let mapaAtual = null;
 let scriptCarregado = null;
 
+function atualizarStatusAPI() {
+  // Atualiza os badges de status na UI
+  document.querySelectorAll('.api-status-badge').forEach(el => {
+    const api = el.dataset.api;
+    if (apiStatus[api] === 'ativa') {
+      el.textContent = '✅ Ativa';
+      el.className = 'api-status-badge ativa';
+    } else if (apiStatus[api] === 'aguardando') {
+      el.textContent = '⏳ Aguardando...';
+      el.className = 'api-status-badge aguardando';
+    } else {
+      el.textContent = '⛔ Inativa';
+      el.className = 'api-status-badge inativa';
+    }
+  });
+}
+
 async function renderizarConteudo(dados) {
   const tituloHeader = document.getElementById('tituloDinamico');
   tituloHeader.innerHTML = dados.titulo || 'Lição carregada';
   if (dados.trimestre) tituloHeader.innerHTML += ' | ' + dados.trimestre;
   if (dados.paginas)   tituloHeader.innerHTML += ' | Páginas ' + dados.paginas;
-
-  carregarContextos();
 
   const trimestre = document.getElementById('seletorTrimestre').value;
   const licaoNum  = document.getElementById('seletorLicao').value;
@@ -344,20 +664,54 @@ async function renderizarConteudo(dados) {
 
   const container = document.getElementById('conteudo-principal');
 
-  // ── CONFIG API ──
+  // ── CONFIG API (BÍBLIA PRIMÁRIA + RODÍZIO GROQ/MISTRAL) ──
   let html = `
   <section id="api-config">
-    <h2>🔑 Configuração da API de Versículos</h2>
+    <h2>🔑 Configuração das APIs</h2>
     <div class="api-config">
-      <label>Provedor:</label>
-      <select id="apiProvider" onchange="apiConfig.provider=this.value;localStorage.setItem('apiProvider',this.value)">
-        <option value="groq"    ${apiConfig.provider==='groq'    ?'selected':''}>Groq</option>
-        <option value="mistral" ${apiConfig.provider==='mistral' ?'selected':''}>Mistral</option>
-      </select>
-      <label>Chave API:</label>
-      <input type="password" id="apiKeyInput" placeholder="Cole sua chave aqui" value="${apiConfig.key}">
-      <button onclick="apiConfig.key=document.getElementById('apiKeyInput').value;localStorage.setItem('apiKey',apiConfig.key);alert('Chave salva!')">💾 Salvar</button>
-      ${apiConfig.key ? '<span style="color:#3b5e3b;font-size:12px;">✅ Chave configurada</span>' : '<span style="color:#c62828;font-size:12px;">⚠️ Sem chave — versículos não serão buscados</span>'}
+      <div style="font-size:12px;color:#5c4a1e;margin-bottom:10px;">
+        📖 <strong>Bíblia (bible-api.com)</strong> é a fonte principal — gratuita, sem chave, texto real (não gerado por IA).
+        <br>🔄 Se ela falhar, cai automaticamente no <strong>rodízio Groq ↔ Mistral</strong> (IA), com delay de <span id="delayDisplay">${config.delay}</span>ms entre tentativas.
+      </div>
+
+      <!-- Bíblia (bible-api.com) -->
+      <div class="api-linha">
+        <label>📖 Bíblia (bible-api.com):</label>
+        <span style="font-size:12px;color:#666;">Tradução Almeida · sem necessidade de chave</span>
+        <button onclick="alternarBiblia()">${apiStatus.biblia === 'ativa' ? '⏸ Desativar' : '▶️ Ativar'}</button>
+        <span class="api-status-badge ${apiStatus.biblia === 'ativa' ? 'ativa' : 'inativa'}" data-api="biblia">${apiStatus.biblia === 'ativa' ? '✅ Ativa' : '⛔ Inativa'}</span>
+      </div>
+
+      <!-- Groq -->
+      <div class="api-linha">
+        <label>⚡ Groq <span style="font-weight:400;color:#666;">(fallback)</span>:</label>
+        <input type="password" id="keyGroq" placeholder="Chave da Groq" value="${apiKeys.groq}">
+        <button onclick="salvarChave('groq')">💾 Salvar</button>
+        <span class="api-status-badge ${apiStatus.groq === 'ativa' ? 'ativa' : 'inativa'}" data-api="groq">${apiStatus.groq === 'ativa' ? '✅ Ativa' : '⛔ Inativa'}</span>
+      </div>
+
+      <!-- Mistral -->
+      <div class="api-linha">
+        <label>🌀 Mistral <span style="font-weight:400;color:#666;">(fallback)</span>:</label>
+        <input type="password" id="keyMistral" placeholder="Chave da Mistral" value="${apiKeys.mistral}">
+        <button onclick="salvarChave('mistral')">💾 Salvar</button>
+        <span class="api-status-badge ${apiStatus.mistral === 'ativa' ? 'ativa' : 'inativa'}" data-api="mistral">${apiStatus.mistral === 'ativa' ? '✅ Ativa' : '⛔ Inativa'}</span>
+      </div>
+
+      <!-- Delay -->
+      <div class="api-linha" style="margin-top:12px;padding-top:12px;border-top:1px solid #e0e0e0;">
+        <label>⏱ Delay entre tentativas:</label>
+        <input type="number" id="delayInput" value="${config.delay}" min="500" max="10000" step="100" style="width:100px;">
+        <span style="font-size:12px;color:#666;">ms</span>
+        <button onclick="salvarDelay()">💾 Salvar Delay</button>
+        <span style="font-size:11px;color:#999;">(a Bíblia também usa esse delay — o site limita a 15 pedidos a cada 30s)</span>
+      </div>
+
+      <!-- Buscar novamente -->
+      <div class="api-linha" style="margin-top:12px;padding-top:12px;border-top:1px solid #e0e0e0;">
+        <button onclick="buscarVersiculosNovamente()">🔄 Buscar versículos que falharam</button>
+        <span style="font-size:12px;color:#666;">Use isso depois de salvar uma chave, se os versículos já tiverem tentado buscar antes.</span>
+      </div>
     </div>
   </section>`;
 
@@ -416,7 +770,10 @@ async function renderizarConteudo(dados) {
 
   // ── CONTEXTOS ──
   html += `<section id="contextos"><h2>💬 Contextos das Passagens</h2>
-    <p style="font-size:12px;color:#666;margin-bottom:15px;">Os versículos são buscados em tempo real via API. O contexto histórico vem da biblioteca local.</p>
+    <p style="font-size:12px;color:#666;margin-bottom:15px;">
+      📖 Os versículos vêm primeiro da <strong>Bíblia (bible-api.com)</strong>${apiStatus.biblia === 'ativa' ? '' : ' <strong style="color:#c62828;">— desativada agora</strong>'}, texto real, sem IA.
+      <br>🔄 Se falhar, cai no <strong>rodízio</strong> Groq ↔ Mistral (IA) com delay de ${config.delay}ms.
+    </p>
     <div id="containerContextos"></div>
   </section>`;
 
@@ -463,7 +820,7 @@ async function renderizarConteudo(dados) {
     }
   }, 200);
 
-  // ── RENDERIZAR CARDS DE CONTEXTO (com versículo via API) ──
+  // ── RENDERIZAR CARDS DE CONTEXTO ──
   const containerCtx = document.getElementById('containerContextos');
   if (!containerCtx) return;
 
@@ -482,9 +839,9 @@ async function renderizarConteudo(dados) {
     return;
   }
 
-  // Cria cards placeholder imediatamente
+  // Cria cards placeholder
   idsParaRenderizar.forEach(id => {
-    const ctx = ctxPorId[id];
+    const ctx = obterContexto(id);
     const card = document.createElement('div');
     card.className = 'contexto-card';
     card.id = `${id}-contexto`;
@@ -493,11 +850,27 @@ async function renderizarConteudo(dados) {
       const cabecalho = formatarCabecalhoContexto(ctx);
       const assuntosHtml = (ctx.assuntos || []).map(a =>
         `<span class="assunto-tag">#${a}</span>`).join('');
+
+      const panorama = ctx.panorama || {};
+      const linhaPanorama = (panorama.antes || panorama.durante || panorama.depois) ? `
+        <div class="contexto-campo"><strong>🌟 Panorama:</strong>
+          ${panorama.antes   ? `Antes: ${panorama.antes.titulo} (${panorama.antes.referencia})<br>`   : ''}
+          ${panorama.durante ? `Durante: ${panorama.durante.titulo} (${panorama.durante.referencia})<br>` : ''}
+          ${panorama.depois  ? `Depois: ${panorama.depois.titulo} (${panorama.depois.referencia})`      : ''}
+        </div>` : '';
+
+      const secao = ctx.secaoEspecifica || {};
+      const linhaSecao = (secao.antes || secao.depois) ? `
+        <div class="contexto-campo" style="font-size:11px;color:#777;"><strong>📑 Seção específica (ARC):</strong>
+          ${secao.antes  ? `Antes: ${secao.antes.titulo} (${secao.antes.referencia})<br>` : ''}
+          ${secao.depois ? `Depois: ${secao.depois.titulo} (${secao.depois.referencia})` : ''}
+        </div>` : '';
+
       card.innerHTML = `
         <div class="contexto-titulo">${cabecalho}</div>
-        <div class="contexto-campo"><strong>📜 ANTES:</strong> ${ctx.antes || '—'}</div>
-        <div class="contexto-versiculo loading" id="versiculo-${id}">⏳ Buscando versículo via API...</div>
-        <div class="contexto-campo"><strong>📖 DEPOIS:</strong> ${ctx.depois || '—'}</div>
+        ${linhaPanorama}
+        <div class="contexto-versiculo loading" id="versiculo-${id}">⏳ Buscando versículo via API com rodízio...</div>
+        ${linhaSecao}
         <div class="contexto-tags-linha">
           ${assuntosHtml ? `<span class="assuntos">${assuntosHtml}</span>` : ''}
           <span class="contexto-tags-label"><strong>#️⃣ TAGS:</strong> ${ctx.tags || ''}</span>
@@ -510,8 +883,8 @@ async function renderizarConteudo(dados) {
     } else {
       card.innerHTML = `
         <div class="contexto-titulo">📖 ${id}</div>
-        <div class="contexto-versiculo loading" id="versiculo-${id}">⏳ Buscando versículo via API...</div>
-        <p style="font-size:12px;color:#999;">Contexto histórico não encontrado na biblioteca local.</p>
+        <div class="contexto-versiculo loading" id="versiculo-${id}">⏳ Buscando versículo via API com rodízio...</div>
+        <p style="font-size:12px;color:#999;">Contexto histórico ainda não cadastrado em referencias-contextos.js.</p>
         <div class="link-volta">
           <a href="#perguntas" title="Perguntas Sugeridas">❓</a>
         </div>`;
@@ -519,26 +892,135 @@ async function renderizarConteudo(dados) {
     containerCtx.appendChild(card);
   });
 
-  // Busca versículos via API em paralelo
+  // Busca versículos com rodízio
   const refs = listaRef.filter(i => i.id && idsParaRenderizar.includes(i.id));
   const refsUnicas = [...new Map(refs.map(r => [r.id, r])).values()];
 
-  await Promise.all(refsUnicas.map(async item => {
+  // Guarda a lista atual para permitir "Buscar novamente" depois de salvar uma chave
+  window._refsUnicasAtual = refsUnicas;
+
+  await buscarTodosVersiculos(refsUnicas);
+}
+
+// ============================================
+// BUSCA (E RE-BUSCA) DOS VERSÍCULOS
+// ============================================
+async function buscarTodosVersiculos(refsUnicas, somenteFalhas = false) {
+  if (!refsUnicas || refsUnicas.length === 0) return;
+
+  // Marca as APIs como "aguardando" durante a busca
+  for (const api of ['groq', 'mistral']) {
+    if (apiStatus[api] === 'ativa') {
+      apiStatus[api] = 'aguardando';
+    }
+  }
+  atualizarStatusAPI();
+
+  const itensParaBuscar = refsUnicas.filter(item => {
+    if (!somenteFalhas) return true;
+    const el = document.getElementById(`versiculo-${item.id}`);
+    return el && !el.classList.contains('ok');
+  });
+
+  await Promise.all(itensParaBuscar.map(async (item, index) => {
     const el = document.getElementById(`versiculo-${item.id}`);
     if (!el) return;
-    if (!apiConfig.key) {
-      el.innerHTML = `<em style="color:#999;">Configure a chave API acima para buscar o versículo.</em>`;
-      el.classList.remove('loading');
-      return;
+
+    el.classList.add('loading');
+    el.classList.remove('ok');
+    el.innerHTML = '⏳ Buscando versículo via API com rodízio...';
+
+    // Delay entre requisições para não sobrecarregar
+    if (index > 0) {
+      await esperar(config.delay);
     }
+
     const texto = await buscarVersiculo(item.referencia);
     el.classList.remove('loading');
     if (texto) {
+      el.classList.add('ok');
       el.innerHTML = `<strong>✝️ ${item.referencia}:</strong><br>"${texto}"`;
     } else {
-      el.innerHTML = `<em style="color:#c62828;">Não foi possível buscar o versículo.</em>`;
+      el.innerHTML = `<em style="color:#c62828;">Não foi possível buscar o versículo. Verifique as chaves das APIs.</em>`;
     }
   }));
+
+  // Volta as APIs para "ativa"
+  for (const api of ['groq', 'mistral']) {
+    if (apiStatus[api] === 'aguardando' && apiKeys[api]) {
+      apiStatus[api] = 'ativa';
+    }
+  }
+  atualizarStatusAPI();
+}
+
+function buscarVersiculosNovamente() {
+  buscarTodosVersiculos(window._refsUnicasAtual, true);
+}
+
+// ============================================
+// FUNÇÕES DE CONFIGURAÇÃO DAS APIs
+// ============================================
+function alternarBiblia() {
+  const ativarAgora = apiStatus.biblia !== 'ativa';
+  apiStatus.biblia = ativarAgora ? 'ativa' : 'inativa';
+  localStorage.setItem('bibliaAtiva', ativarAgora ? 'true' : 'false');
+
+  const badge = document.querySelector(`[data-api="biblia"]`);
+  if (badge) {
+    badge.textContent = ativarAgora ? '✅ Ativa' : '⛔ Inativa';
+    badge.className = `api-status-badge ${ativarAgora ? 'ativa' : 'inativa'}`;
+  }
+  const botao = badge?.parentElement?.querySelector('button');
+  if (botao) botao.textContent = ativarAgora ? '⏸ Desativar' : '▶️ Ativar';
+
+  if (ativarAgora && window._refsUnicasAtual && window._refsUnicasAtual.length > 0) {
+    buscarTodosVersiculos(window._refsUnicasAtual, true);
+  }
+}
+
+function salvarChave(api) {
+  const input = document.getElementById(`key${api.charAt(0).toUpperCase() + api.slice(1)}`);
+  if (!input) return;
+  const key = input.value.trim();
+  apiKeys[api] = key;
+  localStorage.setItem(`apiKey_${api}`, key);
+  
+  if (key) {
+    apiStatus[api] = 'ativa';
+    const badge = document.querySelector(`[data-api="${api}"]`);
+    if (badge) {
+      badge.textContent = '✅ Ativa';
+      badge.className = 'api-status-badge ativa';
+    }
+    alert(`✅ Chave da ${api.charAt(0).toUpperCase() + api.slice(1)} salva com sucesso!`);
+    // Tenta buscar de novo automaticamente os versículos que falharam antes
+    if (window._refsUnicasAtual && window._refsUnicasAtual.length > 0) {
+      buscarTodosVersiculos(window._refsUnicasAtual, true);
+    }
+  } else {
+    apiStatus[api] = 'inativa';
+    const badge = document.querySelector(`[data-api="${api}"]`);
+    if (badge) {
+      badge.textContent = '⛔ Inativa';
+      badge.className = 'api-status-badge inativa';
+    }
+    alert(`⚠️ Chave da ${api.charAt(0).toUpperCase() + api.slice(1)} removida.`);
+  }
+}
+
+function salvarDelay() {
+  const input = document.getElementById('delayInput');
+  if (!input) return;
+  const val = parseInt(input.value, 10);
+  if (val >= 500 && val <= 10000) {
+    config.delay = val;
+    localStorage.setItem('apiDelay', val);
+    document.getElementById('delayDisplay').textContent = val;
+    alert(`✅ Delay salvo: ${val}ms`);
+  } else {
+    alert('⚠️ O delay deve estar entre 500ms e 10000ms');
+  }
 }
 
 // ============================================

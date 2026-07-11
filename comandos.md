@@ -5,7 +5,7 @@ git status
 git add .
 
 # 3. Commit com mensagem
-git commit -m "sua mensagem aqui"
+git commit -m "seguimentacao de bibliotecas index v2"
 
 # 4. Enviar para o GitHub
 git push

@@ -60,23 +60,7 @@ const bibliotecaContextos = [
     assuntos: ["judaismo", "sinédrio", "apostolos"]
   },
 
-  // 4. Atos 17.24-27 (Atenas - importante para filosofia)
-  {
-    id: "at17.24-27",
-    referencia: "At 17.24-27",
-    local: "Atenas / Ática (Grécia)",
-    paisAtual: "Grécia",
-    lider: "Paulo",
-    liderReinado: "",
-    periodo: "Igreja Primitiva",
-    periodoDatas: "30-100 d.C.",
-    data: "~50-51 d.C.",
-    antes: "Atenas já havia perdido sua glória política, mas continuava sendo o centro intelectual do Império Romano. O Areópago era o tribunal e local de debates filosóficos. Epicuristas e estoicos dominavam o pensamento grego. Paulo foi levado ao Areópago por curiosos que queriam ouvir suas ideias.",
-    versiculo: "✅ O Deus que fez o mundo e tudo o que nele há, sendo Senhor do céu e da terra, não habita em templos feitos por mãos de homens; nem tão pouco é servido por mãos de homens, como que necessitando de alguma coisa; pois ele mesmo é quem dá a todos a vida, e a respiração, e todas as coisas; e de um só sangue fez toda a geração dos homens, para habitar sobre toda a face da terra, determinando os tempos já dantes ordenados, e os limites da sua habitação; para que buscassem ao Senhor, se porventura, tateando, o pudessem achar; ainda que não está longe de cada um de nós.",
-    depois: "Alguns zombaram quando Paulo falou da ressurreição, mas outros creram, incluindo Dionísio, membro do Areópago, e uma mulher chamada Dâmaris. A pregação de Paulo em Atenas gerou poucos frutos comparada a Corinto, mas estabeleceu um precedente para o diálogo entre fé e filosofia.",
-    tags: "revelação / busca por Deus / propósito",
-    assuntos: ["atenas", "areopago", "filosofia-grega", "estoicismo", "epicurismo", "paulo"]
-  },
+
 
   // 5. Gálatas 1.10 (Galácia - celtas)
   {

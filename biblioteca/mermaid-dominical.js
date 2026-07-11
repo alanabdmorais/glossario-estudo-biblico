@@ -52,7 +52,7 @@ window.bibliotecaMermaid["2T2026-licao13"] = `mindmap
         Rejeitar o inconsistente
 `;
 
-window.bibliotecaMermaid["3T2026-licao01"] = `mindmap
+window.bibliotecaMermaid["3T2026-licao1"] = `mindmap
   root((O Livro\\nde Juízes))
     Josué e a Conquista
       Conquista da Terra Prometida
@@ -88,4 +88,41 @@ window.bibliotecaMermaid["3T2026-licao01"] = `mindmap
       No poder do Espírito
         Não é habilidade natural
         Espírito do Senhor se apoderou de
+`;
+
+window.bibliotecaMermaid["3T2026-licao2"] = `mindmap
+  root((Fidelidade\\na Deus))
+    Entre Êxitos e Fracassos
+      O começo promissor de Judá
+        Consulta ao Senhor
+        Tribo escolhida primeiro
+      Força divina e união fraterna
+        Vitória não é força militar
+        Judá e Simeão se unem
+      Conquista parcial
+        Carros de ferro
+        Falta de fé e coragem
+    O Anjo do Senhor Repreende
+      Deus fala
+        Teofania em Boquim
+        Questão de vontade, não capacidade
+      A desobediência do povo
+        Aliança proibida com cananeus
+        Por que fizestes isso?
+      Choro e remorso
+        Sacrifícios oferecidos
+        Sem mudança real de atitude
+    Vivendo Entre Ídolos
+      Uma geração rebelde
+        Não conhecia o Senhor
+        Esquecimento das origens
+      O pecado da idolatria
+        Baal e Astarote
+        Ritos lascivos e sacrifícios humanos
+      Contaminação e sincretismo
+        Ciclo de pecado e livramento
+        Juízo divino e misericórdia
+      Mantendo a fidelidade hoje
+        Ídolos modernos
+        Fugir da idolatria
 `;
