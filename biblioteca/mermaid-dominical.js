@@ -126,3 +126,37 @@ window.bibliotecaMermaid["3T2026-licao2"] = `mindmap
         Ídolos modernos
         Fugir da idolatria
 `;
+
+window.bibliotecaMermaid["3T2026-licao4"] = `mindmap
+  root((Eúde e Sangar\\nDeus Usa os\\nImprováveis))
+    Eúde: Deus Usa os Improváveis
+      Uma derrota amarga
+        Israel volta a pecar
+        18 anos sob Eglom
+      Um libertador improvável
+        Homem canhoto
+        Deus usa o inesperado
+      Uma grande vitória
+        Plano estratégico
+        Confiança no Senhor
+    Sangar: Deus Usa o Que Temos à Disposição
+      Um juiz desconhecido
+        Aguilhada de bois
+        80 anos de paz
+      Um nome estrangeiro
+        Origem não hebraica
+        Deus usa qualquer um
+      Uma arma diferente
+        Ferramenta de trabalho
+        Usar o que temos à mão
+    A Questão da Violência
+      Um Deus injusto?
+        Padrão objetivo de justiça
+        Deus é o referencial
+      Pessoas inocentes
+        Ninguém é inocente
+        Juízo por idolatria
+      Revelação progressiva
+        Textos descritivos, não prescritivos
+        Plenitude em Cristo
+`;

@@ -342,3 +342,116 @@ window.bibliotecaPerguntas["3T2026-licao2"] = [
     refs: ["lv18.24-30", "dt18.9-12", "gn15.16"]
   }
 ];
+
+window.bibliotecaPerguntas["3T2026-licao4"] = [
+  // ── perguntas extras de aprofundamento, uma para cada subtópico ──
+  {
+    pergunta: "Por que a derrota de Israel para Eglom é chamada de 'amarga', considerando que a cidade das Palmeiras havia sido conquistada milagrosamente sob Josué?",
+    topicoOrigem: "I.1 Uma derrota amarga",
+    pagina: 28,
+    tags: "cidade das Palmeiras / conquista perdida / fora da direção de Deus",
+    refs: ["jz3.13", "js6", "jo15.6"]
+  },
+  {
+    pergunta: "O que o fato de Eúde ser canhoto revela sobre a forma como Deus escolhe quem vai usar?",
+    topicoOrigem: "I.2 Um libertador improvável",
+    pagina: 28,
+    tags: "homem canhoto / libertador improvável / Deus usa o incomum",
+    refs: ["jz3.15b", "1co1.27-29b"]
+  },
+  {
+    pergunta: "Quais foram as quatro etapas da estratégia de Eúde para derrotar Eglom e vencer os moabitas?",
+    topicoOrigem: "I.3 Uma grande vitória",
+    pagina: 28,
+    tags: "reconhecimento / arma oculta / momento certo / convocação para a batalha",
+    refs: ["jz3.17-19", "jz3.18-22", "jz3.28-29"]
+  },
+  {
+    pergunta: "Por que Sangar é considerado um 'juiz desconhecido', mesmo tendo libertado Israel dos filisteus?",
+    topicoOrigem: "II.1 Um juiz desconhecido",
+    pagina: 29,
+    tags: "poucas informações / filho de Anate / 80 anos de paz",
+    refs: ["jz3.31a"]
+  },
+  {
+    pergunta: "O que a origem estrangeira do nome de Sangar ensina sobre os limites (ou a ausência deles) da graça de Deus?",
+    topicoOrigem: "II.2 Um nome estrangeiro",
+    pagina: 29,
+    tags: "nome não hebraico / Ciro / Raabe / graça alcança gentios",
+    refs: ["is45.1", "js2", "rm11.17"]
+  },
+  {
+    pergunta: "De que forma a aguilhada de bois usada por Sangar ilustra o princípio de que Deus usa o que já temos em mãos?",
+    topicoOrigem: "II.3 Uma arma diferente",
+    pagina: 29,
+    tags: "ferramenta de trabalho / arma improvisada / desculpas por falta de recursos",
+    refs: ["jz3.31b"]
+  },
+  {
+    pergunta: "Por que a acusação de que 'Deus é injusto' pressupõe, ainda que involuntariamente, a existência do próprio Deus como referencial moral?",
+    topicoOrigem: "III.1 Um Deus injusto?",
+    pagina: 29,
+    tags: "padrão objetivo de justiça / referencial absoluto / Legislador moral",
+    refs: []
+  },
+  {
+    pergunta: "Segundo a lição, por que a ideia de 'povos completamente inocentes' não encontra respaldo bíblico?",
+    topicoOrigem: "III.2 Pessoas inocentes",
+    pagina: 30,
+    tags: "todos pecaram / não há justo / juízo também sobre Israel",
+    refs: ["rm3.23", "rm3.10", "2rs17.7-23"]
+  },
+  {
+    pergunta: "O que significa dizer que certos textos do Antigo Testamento são 'descritivos, não prescritivos', e por que isso importa para entender a violência nesses relatos?",
+    topicoOrigem: "III.3 Revelação progressiva",
+    pagina: 30,
+    tags: "descritivo x prescritivo / revelação progressiva / plenitude em Cristo",
+    refs: ["jo1.17"]
+  },
+
+  // ── pergunta extra, livre ──
+  {
+    pergunta: "Segundo o Subsídio 1, qual é a diferença entre a ação de Eúde contra Eglom e um assassinato comum, e o que isso ensina sobre a guerra espiritual do cristão hoje?",
+    topicoOrigem: "I — Subsídio 1",
+    pagina: 28,
+    tags: "Subsídio 1 / ato de guerra / novo concerto / guerra espiritual contra Satanás",
+    refs: ["jz3.15c"]
+  },
+
+  // ── 5 perguntas oficiais da Hora da Revisão (apostila, Pg. 31) ──
+  {
+    pergunta: "Hora da Revisão — 1. Como a cidade das Palmeiras era antes conhecida?",
+    topicoOrigem: "I.1 Uma derrota amarga",
+    pagina: 31,
+    tags: "Jericó",
+    refs: ["jz3.13"]
+  },
+  {
+    pergunta: "Hora da Revisão — 2. O que destaca o fato de Eúde ser canhoto?",
+    topicoOrigem: "I.2 Um libertador improvável",
+    pagina: 31,
+    tags: "destaca que ele era incomum / um libertador improvável / fora dos moldes esperados",
+    refs: ["jz3.15b"]
+  },
+  {
+    pergunta: "Hora da Revisão — 3. O que era a aguilhada de bois usada por Sangar?",
+    topicoOrigem: "II.3 Uma arma diferente",
+    pagina: 31,
+    tags: "uma vara longa e pontiaguda",
+    refs: ["jz3.31b"]
+  },
+  {
+    pergunta: "Hora da Revisão — 4. Como você explica a violência no Antigo Testamento?",
+    topicoOrigem: "III.2 Pessoas inocentes",
+    pagina: 31,
+    tags: "padrões de justiça divina / guerra e opressão prolongada / juízo contra nações ímpias e opressoras",
+    refs: ["rm3.23"]
+  },
+  {
+    pergunta: "Hora da Revisão — 5. O que é revelação progressiva?",
+    topicoOrigem: "III.3 Revelação progressiva",
+    pagina: 31,
+    tags: "Deus se revelou de forma gradual / culminando em Cristo / plenitude da graça e da verdade",
+    refs: ["jo1.17"]
+  }
+];
