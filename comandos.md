@@ -5,7 +5,7 @@ git status
 git add .
 
 # 3. Commit com mensagem
-git commit -m "acrescimo licao4 3t2026 dominical"
+git commit -m "acrescimo lv6 cp2 teologia"
 
 # 4. Enviar para o GitHub
 git push
