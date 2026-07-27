@@ -5,7 +5,7 @@ git status
 git add .
 
 # 3. Commit com mensagem
-git commit -m "seguimentacao de bibliotecas index v2"
+git commit -m "acrescimo licao4 3t2026 dominical"
 
 # 4. Enviar para o GitHub
 git push
