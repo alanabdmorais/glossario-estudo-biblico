@@ -160,3 +160,37 @@ window.bibliotecaMermaid["3T2026-licao4"] = `mindmap
         Textos descritivos, não prescritivos
         Plenitude em Cristo
 `;
+
+window.bibliotecaMermaid["3T2026-licao5"] = `mindmap
+  root((Débora e Baraque\\nUnião para Fazer\\na Obra de Deus))
+    Débora: Uma Mulher Usada por Deus
+      Novo ciclo de infidelidade
+        Israel volta a pecar
+        Hazor reconquistada por Jabim
+      O perfil de Débora
+        Profetisa e juíza
+        Única juíza mencionada na Bíblia
+      Liderança inesperada
+        Deus escolhe uma mulher em tempo de guerra
+        Cada um tem dons e talentos únicos
+    Os Papéis de Baraque e Jael
+      A mensagem de Deus a Baraque
+        Condiciona ida à companhia de Débora
+        Ninguém caminha sozinho
+      Palavras de encorajamento
+        Levanta-te, o Senhor já saiu diante de ti
+        Débora à frente na batalha
+      A ação de Jael
+        Sísera refugia-se na tenda de Jael
+        Falsa paz termina em morte
+    Lições da Vitória
+      Tributo a Deus
+        Cântico de Débora e Baraque
+        Não é do guerreiro a vitória
+      Liderança, cooperação e sinergia
+        Igreja como um organismo
+        Cada membro exerce sua função
+      O papel das mulheres
+        Protagonismo feminino na Bíblia
+        Complementaridade, não antagonismo
+`;

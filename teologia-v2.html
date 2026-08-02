@@ -160,6 +160,7 @@
   </div>
 </div>
 
+<script src="biblioteca/biblia-almeida.js"></script>
 <script src="biblioteca/contextos-biblicos.js"></script>
 <script src="biblioteca/rodape-vestibular.js"></script>
 <script src="biblioteca/materias-vestibular.js"></script>
@@ -430,27 +431,52 @@ async function buscarVersiculoMistral(referencia, tentativa = 0) {
   }
 }
 
-// ── Orquestrador: Bíblia (primária) → rodízio Groq/Mistral (fallback) ──
-async function buscarVersiculoComRodizio(referencia) {
+// ── Bíblia local (arquivo estático "biblioteca/biblia-almeida.js", domínio público) ──
+// Busca instantânea, sem rede, sem rate limit. Sempre a primeira tentativa.
+function buscarVersiculoLocal(referencia) {
+  if (!window.BIBLIA_ALMEIDA) return null; // arquivo não carregou por algum motivo
+  const ref = parseReferencia(referencia);
+  if (!ref) return null;
+  const capitulos = window.BIBLIA_ALMEIDA[ref.slug];
+  if (!capitulos) return null;
+  const versiculosCap = capitulos[ref.capitulo - 1];
+  if (!versiculosCap || !ref.versiculos || ref.versiculos.length === 0) return null;
+
+  const textos = ref.versiculos.map(v => versiculosCap[v - 1]).filter(Boolean);
+  if (textos.length === 0) return null;
+  return textos.join(' ');
+}
+
+// ── Busca automática: Bíblia local (primária) → bible-api.com (secundária) ──
+// A IA (Groq/Mistral) NÃO entra aqui — só é usada sob demanda, veja buscarVersiculoComIA().
+async function buscarVersiculoSemIA(referencia) {
   return filaVersiculos(async () => {
-    // 1) Tenta a Bíblia (bible-api.com) — opção principal, gratuita, sem chave
+    // 0) Tenta a Bíblia local — instantâneo, sem rede, sem limite de requisições
+    const resultadoLocal = buscarVersiculoLocal(referencia);
+    if (resultadoLocal) {
+      return resultadoLocal;
+    }
+
+    // 1) Tenta a Bíblia (bible-api.com) — opção secundária, gratuita, sem chave
     if (apiStatus.biblia !== 'inativa') {
       const resultadoBiblia = await buscarVersiculoBibliaAPI(referencia);
       if (resultadoBiblia && typeof resultadoBiblia === 'string') {
         return resultadoBiblia;
       }
-      // Se falhou ou bateu no rate limit (429), espera um pouco antes de
-      // cair pro fallback — mesmo delay usado entre as tentativas de IA.
-      await esperar(Math.min(config.delay, 1500));
     }
 
-    // 2) Rodízio entre Groq e Mistral (fallback secundário)
+    return null;
+  });
+}
+
+// ── Busca manual de emergência: rodízio Groq ↔ Mistral (IA) ──
+// Só é chamada quando o usuário clica no botão "🆘 Tentar com IA" de um versículo que falhou.
+async function buscarVersiculoComIA(referencia) {
+  return filaVersiculos(async () => {
     const provedores = ['groq', 'mistral'];
     let tentativas = 0;
     const maxTentativas = 4; // 2 provedores * 2 tentativas cada
 
-    // Se nenhum provedor tiver chave configurada, desiste na hora
-    // em vez de entrar num loop sem nunca aguardar nada (o que travava a aba).
     const algumConfigurado = provedores.some(p => !!apiKeys[p]);
     if (!algumConfigurado) {
       return null;
@@ -461,9 +487,6 @@ async function buscarVersiculoComRodizio(referencia) {
       const provider = provedores[config.currentIndex % provedores.length];
       config.currentIndex++;
 
-      // Verifica se o provedor tem chave configurada
-      // (NÃO usar apiStatus aqui: durante a busca o status fica 'aguardando'
-      // só para efeito visual, e isso não deve impedir a tentativa real.)
       if (!apiKeys[provider]) {
         tentativas++;
         if (tentativas < maxTentativas) await esperar(200);
@@ -481,14 +504,12 @@ async function buscarVersiculoComRodizio(referencia) {
         return resultado;
       }
 
-      // Se rate limited, espera e tenta o próximo
       if (resultado?.rateLimited) {
         await esperar(1500);
       }
 
       tentativas++;
 
-      // Delay entre tentativas (configurável)
       if (tentativas < maxTentativas) {
         await esperar(config.delay);
       }
@@ -498,8 +519,9 @@ async function buscarVersiculoComRodizio(referencia) {
   });
 }
 
-// Versão antiga para compatibilidade
-const buscarVersiculo = buscarVersiculoComRodizio;
+// Versão antiga para compatibilidade (usada só nas buscas automáticas, sem IA)
+const buscarVersiculoComRodizio = buscarVersiculoSemIA;
+const buscarVersiculo = buscarVersiculoSemIA;
 
 // ============================================
 // FUNÇÕES DE CONFIGURAÇÃO DAS APIs
@@ -515,7 +537,7 @@ function alternarBiblia() {
     badge.className = `api-status-badge ${ativarAgora ? 'ativa' : 'inativa'}`;
   }
   const botao = badge?.parentElement?.querySelector('button');
-  if (botao) botao.textContent = ativarAgora ? '⏸ Desativar' : '▶️ Ativar';
+  if (botao) botao.textContent = ativarAgora ? '‖ Desativar' : '▶️ Ativar';
 
   if (ativarAgora && window._refsUnicasAtual && window._refsUnicasAtual.length > 0) {
     buscarTodosVersiculos(window._refsUnicasAtual, true);
@@ -536,11 +558,7 @@ function salvarChave(api) {
       badge.textContent = '✅ Ativa';
       badge.className = 'api-status-badge ativa';
     }
-    alert(`✅ Chave da ${api.charAt(0).toUpperCase() + api.slice(1)} salva com sucesso!`);
-    // Tenta buscar de novo automaticamente os versículos que falharam antes
-    if (window._refsUnicasAtual && window._refsUnicasAtual.length > 0) {
-      buscarTodosVersiculos(window._refsUnicasAtual, true);
-    }
+    alert(`✅ Chave da ${api.charAt(0).toUpperCase() + api.slice(1)} salva! Use o botão "🆘 Tentar com IA" nos versículos que falharem, quando precisar.`);
   } else {
     apiStatus[api] = 'inativa';
     const badge = document.querySelector(`[data-api="${api}"]`);
@@ -702,21 +720,22 @@ async function renderizarConteudo(dados) {
     <h2>🔑 Configuração das APIs</h2>
     <div class="api-config">
       <div style="font-size:12px;color:#4a3b6e;margin-bottom:10px;">
-        📖 <strong>Bíblia (bible-api.com)</strong> é a fonte principal — gratuita, sem chave, texto real (não gerado por IA).
-        <br>🔄 Se ela falhar, cai automaticamente no <strong>rodízio Groq ↔ Mistral</strong> (IA), com delay de <span id="delayDisplay">${config.delay}</span>ms entre tentativas.
+        📚 <strong>Bíblia local</strong> (arquivo salvo no projeto, domínio público) é a fonte principal — instantânea, sem rede, sem limite de requisições.
+        <br>📖 Se algo não for encontrado localmente, tenta a <strong>Bíblia (bible-api.com)</strong> online, também gratuita e sem chave.
+        <br>🆘 Se as duas falharem, a IA (Groq/Mistral) fica disponível <strong>só sob demanda</strong>, por um botão em cada versículo — não é usada automaticamente.
       </div>
 
       <!-- Bíblia (bible-api.com) -->
       <div class="api-linha">
         <label>📖 Bíblia (bible-api.com):</label>
         <span style="font-size:12px;color:#666;">Tradução Almeida · sem necessidade de chave</span>
-        <button onclick="alternarBiblia()">${apiStatus.biblia === 'ativa' ? '⏸ Desativar' : '▶️ Ativar'}</button>
+        <button onclick="alternarBiblia()">${apiStatus.biblia === 'ativa' ? '‖ Desativar' : '▶️ Ativar'}</button>
         <span class="api-status-badge ${apiStatus.biblia === 'ativa' ? 'ativa' : 'inativa'}" data-api="biblia">${apiStatus.biblia === 'ativa' ? '✅ Ativa' : '⛔ Inativa'}</span>
       </div>
 
       <!-- Groq -->
       <div class="api-linha">
-        <label>⚡ Groq <span style="font-weight:400;color:#666;">(fallback)</span>:</label>
+        <label>⚡ Groq <span style="font-weight:400;color:#666;">(IA · botão manual)</span>:</label>
         <input type="password" id="keyGroq" placeholder="Chave da Groq" value="${apiKeys.groq}">
         <button onclick="salvarChave('groq')">💾 Salvar</button>
         <span class="api-status-badge ${apiStatus.groq === 'ativa' ? 'ativa' : 'inativa'}" data-api="groq">${apiStatus.groq === 'ativa' ? '✅ Ativa' : '⛔ Inativa'}</span>
@@ -724,7 +743,7 @@ async function renderizarConteudo(dados) {
 
       <!-- Mistral -->
       <div class="api-linha">
-        <label>🌀 Mistral <span style="font-weight:400;color:#666;">(fallback)</span>:</label>
+        <label>🌀 Mistral <span style="font-weight:400;color:#666;">(IA · botão manual)</span>:</label>
         <input type="password" id="keyMistral" placeholder="Chave da Mistral" value="${apiKeys.mistral}">
         <button onclick="salvarChave('mistral')">💾 Salvar</button>
         <span class="api-status-badge ${apiStatus.mistral === 'ativa' ? 'ativa' : 'inativa'}" data-api="mistral">${apiStatus.mistral === 'ativa' ? '✅ Ativa' : '⛔ Inativa'}</span>
@@ -732,17 +751,17 @@ async function renderizarConteudo(dados) {
 
       <!-- Delay -->
       <div class="api-linha" style="margin-top:12px;padding-top:12px;border-top:1px solid #e0e0e0;">
-        <label>⏱ Delay entre tentativas:</label>
+        <label>🐌 Delay entre tentativas:</label>
         <input type="number" id="delayInput" value="${config.delay}" min="500" max="10000" step="100" style="width:100px;">
-        <span style="font-size:12px;color:#666;">ms</span>
+        <span style="font-size:12px;color:#666;">ms (atual: <span id="delayDisplay">${config.delay}</span>ms)</span>
         <button onclick="salvarDelay()">💾 Salvar Delay</button>
-        <span style="font-size:11px;color:#999;">(a Bíblia também usa esse delay — o site limita a 15 pedidos a cada 30s)</span>
+        <span style="font-size:11px;color:#999;">(usado entre pedidos à bible-api.com e no botão de IA — o site limita a 15 pedidos a cada 30s)</span>
       </div>
 
       <!-- Buscar novamente -->
       <div class="api-linha" style="margin-top:12px;padding-top:12px;border-top:1px solid #e0e0e0;">
-        <button onclick="buscarVersiculosNovamente()">🔄 Buscar versículos que falharam</button>
-        <span style="font-size:12px;color:#666;">Use isso depois de salvar uma chave, se os versículos já tiverem tentado buscar antes.</span>
+        <button onclick="buscarVersiculosNovamente()">↻ Buscar versículos que falharam</button>
+        <span style="font-size:12px;color:#666;">Tenta de novo na Bíblia local/bible-api.com. Para IA, use o botão 🆘 em cada versículo.</span>
       </div>
     </div>
   </section>
@@ -751,7 +770,7 @@ async function renderizarConteudo(dados) {
     ${dados.hierarquia?.length ? renderizarHierarquia(dados.hierarquia, 1) : '<p style="color:#999;font-style:italic;">Hierarquia não disponível neste modelo.</p>'}
   </section>
 
-  <section id="mapa-mental"><h2>🧠 Mapa Mental</h2>${renderizarMermaid(chaveLib)}</section>
+  <section id="mapa-mental"><h2>Ψ Mapa Mental</h2>${renderizarMermaid(chaveLib)}</section>
   <section id="perguntas"><h2>❓ Perguntas Sugeridas</h2>${renderizarPerguntas(chaveLib)}</section>`;
 
   // Lista Alfabética (Lista de Aparição removida — já coberta pela Hierarquia)
@@ -783,8 +802,8 @@ async function renderizarConteudo(dados) {
 
   <section id="contextos"><h2>💬 Contextos das Passagens</h2>
     <p style="font-size:12px;color:#666;margin-bottom:15px;">
-      📖 Os versículos vêm primeiro da <strong>Bíblia (bible-api.com)</strong>${apiStatus.biblia === 'ativa' ? '' : ' <strong style="color:#c62828;">— desativada agora</strong>'}, texto real, sem IA.
-      <br>🔄 Se falhar, cai no <strong>rodízio</strong> Groq ↔ Mistral (IA) com delay de ${config.delay}ms.
+      📚 Os versículos vêm primeiro da <strong>Bíblia local</strong> (domínio público, instantânea), depois da <strong>bible-api.com</strong>${apiStatus.biblia === 'ativa' ? '' : ' <strong style="color:#c62828;">— desativada agora</strong>'} online.
+      <br>🆘 Se ambas falharem, aparece um botão pra tentar com <strong>IA (Groq/Mistral)</strong> só quando você quiser.
       <br>Contexto histórico vem da biblioteca local.
     </p>
     <div id="containerContextos"></div>
@@ -849,22 +868,22 @@ async function renderizarConteudo(dados) {
       card.innerHTML = `
         <div class="contexto-titulo">${formatarCabecalho(ctx)}</div>
         <div class="contexto-campo"><strong>📜 ANTES:</strong> ${ctx.antes || '—'}</div>
-        <div class="contexto-versiculo loading" id="versiculo-${id}">⏳ Buscando versículo via API com rodízio...</div>
+        <div class="contexto-versiculo loading" id="versiculo-${id}">⏳ Buscando versículo (Bíblia local → bible-api.com)...</div>
         <div class="contexto-campo"><strong>📖 DEPOIS:</strong> ${ctx.depois || '—'}</div>
         <div class="contexto-tags-linha">
           ${assuntosHtml ? `<span class="assuntos">${assuntosHtml}</span>` : ''}
           <span class="contexto-tags-label"><strong>#️⃣ TAGS:</strong> ${ctx.tags || ''}</span>
         </div>
         <div class="link-volta">
-          <a href="#perguntas" title="Perguntas Sugeridas">❓</a><a href="#alfabetica">🔤</a><a href="#hierarquia">📋</a>
+          <a href="#perguntas" title="Perguntas Sugeridas">❓</a><a href="#alfabetica" title="Lista Alfabética">🔤</a><a href="#hierarquia" title="Hierarquia">📋</a>
         </div>`;
     } else {
       card.innerHTML = `
         <div class="contexto-titulo">📖 ${id}</div>
-        <div class="contexto-versiculo loading" id="versiculo-${id}">⏳ Buscando versículo via API com rodízio...</div>
+        <div class="contexto-versiculo loading" id="versiculo-${id}">⏳ Buscando versículo (Bíblia local → bible-api.com)...</div>
         <p style="font-size:12px;color:#999;">Contexto histórico não disponível na biblioteca local.</p>
         <div class="link-volta">
-          <a href="#perguntas" title="Perguntas Sugeridas">❓</a>
+          <a href="#perguntas" title="Perguntas Sugeridas">❓</a><a href="#alfabetica" title="Lista Alfabética">🔤</a><a href="#hierarquia" title="Hierarquia">📋</a>
         </div>`;
     }
     containerCtx.appendChild(card);
@@ -879,18 +898,10 @@ async function renderizarConteudo(dados) {
 }
 
 // ============================================
-// BUSCA (E RE-BUSCA) DOS VERSÍCULOS
+// BUSCA (E RE-BUSCA) DOS VERSÍCULOS — sem IA (Bíblia local + bible-api.com)
 // ============================================
 async function buscarTodosVersiculos(refsUnicas, somenteFalhas = false) {
   if (!refsUnicas || refsUnicas.length === 0) return;
-
-  // Marca as APIs como "aguardando" durante a busca
-  for (const api of ['groq', 'mistral']) {
-    if (apiStatus[api] === 'ativa') {
-      apiStatus[api] = 'aguardando';
-    }
-  }
-  atualizarStatusAPI();
 
   const itensParaBuscar = refsUnicas.filter(item => {
     if (!somenteFalhas) return true;
@@ -904,30 +915,49 @@ async function buscarTodosVersiculos(refsUnicas, somenteFalhas = false) {
 
     el.classList.add('loading');
     el.classList.remove('ok');
-    el.innerHTML = '⏳ Buscando versículo via API com rodízio...';
+    el.innerHTML = '⏳ Buscando versículo (Bíblia local → bible-api.com)...';
 
     // Delay entre requisições para não sobrecarregar
     if (index > 0) {
       await esperar(config.delay);
     }
 
-    const texto = await buscarVersiculoComRodizio(item.referencia);
+    const texto = await buscarVersiculoSemIA(item.referencia);
     el.classList.remove('loading');
     if (texto) {
       el.classList.add('ok');
       el.innerHTML = `<strong>✝️ ${item.referencia}:</strong><br>"${texto}"`;
     } else {
-      el.innerHTML = `<em style="color:#c62828;">Não foi possível buscar o versículo. Verifique as chaves das APIs.</em>`;
+      el.innerHTML = `<em style="color:#c62828;">Não encontrado na Bíblia local nem na bible-api.com.</em>
+        <br><button onclick="tentarComIA('${item.id}')" style="margin-top:6px;font-size:12px;padding:4px 10px;background:#4a3b6e;color:#fff;border:none;border-radius:4px;cursor:pointer;">🆘 Tentar com IA (Groq/Mistral)</button>`;
     }
   }));
+}
 
-  // Volta as APIs para "ativa"
-  for (const api of ['groq', 'mistral']) {
-    if (apiStatus[api] === 'aguardando' && apiKeys[api]) {
-      apiStatus[api] = 'ativa';
-    }
+// Busca manual de emergência para UM versículo específico, acionada pelo botão 🆘
+async function tentarComIA(id) {
+  const item = (window._refsUnicasAtual || []).find(i => i.id === id);
+  const el = document.getElementById(`versiculo-${id}`);
+  if (!item || !el) return;
+
+  const algumConfigurado = apiKeys.groq || apiKeys.mistral;
+  if (!algumConfigurado) {
+    alert('⚠️ Configure a chave da Groq ou da Mistral na seção "Configuração das APIs" antes de usar esse botão.');
+    return;
   }
-  atualizarStatusAPI();
+
+  el.classList.add('loading');
+  el.innerHTML = '⏳ Consultando IA (Groq/Mistral)...';
+
+  const texto = await buscarVersiculoComIA(item.referencia);
+  el.classList.remove('loading');
+  if (texto) {
+    el.classList.add('ok');
+    el.innerHTML = `<strong>✝️ ${item.referencia} <span style="font-size:11px;color:#999;font-weight:400;">(via IA)</span>:</strong><br>"${texto}"`;
+  } else {
+    el.innerHTML = `<em style="color:#c62828;">A IA também não conseguiu buscar. Verifique as chaves configuradas.</em>
+      <br><button onclick="tentarComIA('${id}')" style="margin-top:6px;font-size:12px;padding:4px 10px;background:#4a3b6e;color:#fff;border:none;border-radius:4px;cursor:pointer;">🆘 Tentar novamente com IA</button>`;
+  }
 }
 
 function buscarVersiculosNovamente() {

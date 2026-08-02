@@ -80,4 +80,20 @@ const legendas = [
   ["❌", "Erro - ação inválida"],
   ["❗", "Atenção - aviso importante"],
   ["ℹ️", "Informação - informação adicional"],
+  ["✕", "Fechar - fechar janela/modal"],
+  ["↑", "Topo - voltar ao topo da seção"],
+  ["💾", "Salvar - salvar configuração ou chave de API"],
+  ["↻", "Atualizar - buscar novamente / rodízio entre fontes"],
+  ["⚠️", "Aviso - alerta genérico (indisponibilidade, validação)"],
+  ["📑", "Seção específica - trecho isolado de um capítulo"],
+
+  // ===== APIS E BUSCA DE VERSÍCULOS =====
+  ["🐌", "Delay - tempo de espera configurável entre tentativas de busca"],
+  ["‖", "Desativar - pausar/desativar uma fonte de busca"],
+  ["✅", "Ativa - fonte de busca habilitada e funcionando"],
+  ["⛔", "Inativa - fonte de busca desativada/indisponível"],
+  ["🌀", "Mistral - provedor de IA Mistral (busca sob demanda)"],
+  ["🆘", "Emergência IA - buscar versículo via IA (Groq/Mistral) sob demanda"],
+  ["Ψ", "Mapa Mental - diagrama mindmap da lição"],
+  ["💬", "Contextos - seção de contextos das passagens bíblicas"],
 ];

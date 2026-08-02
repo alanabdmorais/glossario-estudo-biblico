@@ -455,3 +455,116 @@ window.bibliotecaPerguntas["3T2026-licao4"] = [
     refs: ["jo1.17"]
   }
 ];
+
+window.bibliotecaPerguntas["3T2026-licao5"] = [
+  // ── perguntas extras de aprofundamento, uma para cada subtópico ──
+  {
+    pergunta: "Por que a reconquista de Hazor pelos cananeus, uma cidade que já havia sido destruída por Josué, ilustra o perigo de não eliminar completamente o pecado da vida do crente?",
+    topicoOrigem: "I.1 Novo ciclo de infidelidade",
+    pagina: 34,
+    tags: "Hazor reconquistada / pecado que se fortalece / Gn 4.7",
+    refs: ["jz4.1", "js11.10-11", "gn4.7"]
+  },
+  {
+    pergunta: "Por que era tão incomum, na cultura da época, uma mulher exercer simultaneamente os papéis de profetisa e juíza em Israel?",
+    topicoOrigem: "I.2 O perfil de Débora",
+    pagina: 35,
+    tags: "profetisa / juíza / única mencionada com essa função",
+    refs: ["jz4.4", "jz4.5", "ex15.20", "2rs22.14"]
+  },
+  {
+    pergunta: "O que a escolha de Débora, uma mulher sem experiência militar, para liderar Israel em tempos de guerra ensina sobre a forma como Deus distribui dons e talentos?",
+    topicoOrigem: "I.3 Liderança inesperada",
+    pagina: 35,
+    tags: "liderança inesperada / dons distintos / não comparar-se aos outros",
+    refs: []
+  },
+  {
+    pergunta: "Por que Baraque condicionou sua ida à batalha à presença de Débora, e o que essa atitude revela sobre a importância da cooperação na obra de Deus?",
+    topicoOrigem: "II.1 A mensagem de Deus a Baraque",
+    pagina: 36,
+    tags: "condição de Baraque / cooperação / ninguém caminha sozinho",
+    refs: ["jz4.8", "jz4.9"]
+  },
+  {
+    pergunta: "Apesar da superioridade militar dos carros de ferro de Sísera, o que motivou Débora a exortar Baraque a avançar para a batalha?",
+    topicoOrigem: "II.2 Palavras de encorajamento",
+    pagina: 36,
+    tags: "carros de ferro / confiança no Senhor / Jz 4.14",
+    refs: ["jz4.14b", "jz4.15"]
+  },
+  {
+    pergunta: "De que forma a confiança equivocada de Sísera na 'paz' entre Héber e Jabim contribuiu para o seu fim, e que princípio bíblico isso ilustra?",
+    topicoOrigem: "II.3 A ação de Jael",
+    pagina: 36,
+    tags: "falsa paz / Pv 12.19,20 / momento oportuno",
+    refs: ["jz4.17", "pv12.19-20", "jz4.19-21"]
+  },
+  {
+    pergunta: "Por que é tão fácil, mesmo entre os crentes, atribuir as vitórias exclusivamente ao planejamento e à capacidade humana, esquecendo que 'não é do guerreiro a vitória'?",
+    topicoOrigem: "III.1 Tributo a Deus",
+    pagina: 37,
+    tags: "tributo a Deus / 1 Sm 17.47 / 2 Cr 20.15",
+    refs: ["1sm17.47", "2cr20.15"]
+  },
+  {
+    pergunta: "Como a comparação da igreja a um organismo, feita pelo apóstolo Paulo, ajuda a entender os papéis complementares de Débora, Baraque e Jael?",
+    topicoOrigem: "III.2 Liderança, cooperação e sinergia",
+    pagina: 37,
+    tags: "igreja como organismo / cada membro tem função / 1 Co 12",
+    refs: ["1co12.12-27b", "1co3.6-9c"]
+  },
+  {
+    pergunta: "Segundo a lição, qual é a diferença entre o modelo bíblico de identidade da mulher e a proposta do feminismo como movimento ideológico?",
+    topicoOrigem: "III.3 O papel das mulheres",
+    pagina: 37,
+    tags: "modelo bíblico / feminismo / complementaridade x antagonismo",
+    refs: ["gl3.28b", "gn1.27", "ef5.22-33"]
+  },
+
+  // ── pergunta extra, livre ──
+  {
+    pergunta: "Segundo o Subsídio 3, por que o fato de a mulher ser chamada de 'adjutora' (hebraico 'ezer') não implica inferioridade, especialmente considerando que a mesma palavra é usada para descrever Deus?",
+    topicoOrigem: "III — Subsídio 3",
+    pagina: 37,
+    tags: "Subsídio 3 / ezer / adjutora / Deus como ajudador",
+    refs: []
+  },
+
+  // ── 5 perguntas oficiais da Hora da Revisão (apostila, Pg. 38) ──
+  {
+    pergunta: "Hora da Revisão — 1. Quais papéis Débora desempenhou em Israel?",
+    topicoOrigem: "I.2 O perfil de Débora",
+    pagina: 38,
+    tags: "profetisa e juíza",
+    refs: ["jz4.4", "jz4.5"]
+  },
+  {
+    pergunta: "Hora da Revisão — 2. Quem era Baraque?",
+    topicoOrigem: "II.1 A mensagem de Deus a Baraque",
+    pagina: 38,
+    tags: "comandante ou líder militar de Israel",
+    refs: []
+  },
+  {
+    pergunta: "Hora da Revisão — 3. Qual foi o pedido de Baraque a Débora para ir à guerra?",
+    topicoOrigem: "II.1 A mensagem de Deus a Baraque",
+    pagina: 38,
+    tags: "ele afirma que irá, mas condiciona sua ida à companhia de Débora",
+    refs: ["jz4.8"]
+  },
+  {
+    pergunta: "Hora da Revisão — 4. O que contém o capítulo 5 do livro de Juízes?",
+    topicoOrigem: "III.1 Tributo a Deus",
+    pagina: 38,
+    tags: "o cântico de Débora e Baraque, junto com todo o povo, louvando ao Senhor pela libertação",
+    refs: ["jz5.1-31"]
+  },
+  {
+    pergunta: "Hora da Revisão — 5. Fale sobre a importância da mulher na obra de Deus.",
+    topicoOrigem: "III.3 O papel das mulheres",
+    pagina: 38,
+    tags: "a fé cristã afirma e valoriza a feminilidade à luz das Escrituras, sustentando um modelo bíblico de identidade e atuação da mulher",
+    refs: ["gl3.28b"]
+  }
+];
