@@ -161,14 +161,10 @@
 </div>
 
 <script src="biblioteca/biblia-almeida.js"></script>
-<script src="biblioteca/contextos-biblicos.js"></script>
-<script src="biblioteca/rodape-vestibular.js"></script>
-<script src="biblioteca/materias-vestibular.js"></script>
-<script src="biblioteca/calendario-escolar.js"></script>
+<!-- biblioteca-inativa (não usada) — comentado para evitar 404: contextos-biblicos.js, rodape-vestibular.js, materias-vestibular.js, calendario-escolar.js, links-teologia.js -->
 <script src="biblioteca/legendas-emogis.js"></script>
 <script src="biblioteca/perguntas-teologia.js"></script>
 <script src="biblioteca/mermaid-teologia.js"></script>
-<script src="biblioteca/links-teologia.js"></script>
 
 <script>
 // ============================================
@@ -287,7 +283,9 @@ const LIVRO_SLUG = {
 };
 
 function parseReferencia(referencia) {
-  const m = referencia.match(/^(\d?\s?[^\d.]+?)\s*(\d+)\.(\d+(?:[-,]\d+)*)/);
+  // Aceita tanto "Jz 3.15" (padrão dominical, com ponto) quanto
+  // "Jz 6:12" (padrão teologia, extraído direto do livro, com dois-pontos)
+  const m = referencia.match(/^(\d?\s?[^\d.:]+?)\s*(\d+)[.:](\d+(?:[-,]\d+)*)/);
   if (!m) return null;
   const livroTxt = m[1].trim().toLowerCase().replace(/\s+/g, ' ');
   const capitulo = parseInt(m[2], 10);

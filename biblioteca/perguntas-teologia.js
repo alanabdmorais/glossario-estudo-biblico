@@ -136,3 +136,130 @@ window.bibliotecaPerguntas["lv6-cp2"] = [
   }
 ];
 
+
+window.bibliotecaPerguntas["lv6-cp3"] = [
+  // ── perguntas extras de aprofundamento, uma para cada subtópico principal ──
+  {
+    pergunta: "Nos exemplos de Agar, Daniel e Zacarias, o que os anjos tinham em comum ao atuar como mensageiros de Deus no Antigo Testamento?",
+    topicoOrigem: "1.a) Atuaram como mensageiros de Deus",
+    pagina: 48,
+    tags: "mensagens diretas e claras / propósito específico para cada pessoa",
+    refs: ["gn16.7-10", "dn9.21-23", "zc1.9"]
+  },
+  {
+    pergunta: "O livramento de Ló em Sodoma e o de Daniel na cova dos leões mostram que a proteção de Deus por meio dos anjos é sempre visível e imediata, ou também pode ser silenciosa?",
+    topicoOrigem: "1.b) Atuaram como protetores do povo de Deus",
+    pagina: 49,
+    tags: "proteção divina / anjos como protetores em momentos críticos",
+    refs: ["dn6.22a", "gn19.15-16", "2rs6.16-17"]
+  },
+  {
+    pergunta: "O juízo executado pelos anjos em Sodoma e sobre o exército assírio revela que tipo de caráter de Deus, além do Seu amor?",
+    topicoOrigem: "1.c) Atuaram como executores de juízo",
+    pagina: 49,
+    tags: "justiça de Deus em ação / santidade e juízo",
+    refs: ["gn19.13a", "2sm24.16a", "2rs19.35a"]
+  },
+  {
+    pergunta: "Elias, cansado e desanimado no deserto, foi sustentado por um anjo antes de continuar sua missão. O que isso ensina sobre o cuidado de Deus com o cansaço humano?",
+    topicoOrigem: "1.e) Atuaram como instrumentos de encorajamento em tempos de crise espiritual",
+    pagina: 50,
+    tags: "Deus cuida do cansaço / renovação de forças antes da missão continuar",
+    refs: ["1rs19.5-7", "gn31.11-13"]
+  },
+  {
+    pergunta: "Por que a presença dos anjos desde o anúncio do nascimento até a ascensão de Jesus reforça que toda a Sua missão foi acompanhada pelo céu, sem que Ele dependesse deles?",
+    topicoOrigem: "2. Qual foi o papel dos anjos na missão de Jesus?",
+    pagina: 53,
+    tags: "anjos confirmam a grandiosidade da missão, sem tornar Jesus dependente deles",
+    refs: ["lc2.13-14a", "hb1.14a"]
+  },
+  {
+    pergunta: "O anjo que avisou José a fugir para o Egito não impediu o perigo de Herodes, mas orientou o caminho de escape. O que isso ensina sobre a forma como Deus normalmente age diante do perigo?",
+    topicoOrigem: "2.b) Os anjos protegeram Jesus em momentos de perigo",
+    pagina: 54,
+    tags: "Deus geralmente orienta o caminho, mais do que remove o perigo por completo",
+    refs: ["mt2.13-14", "mt2.19-20"]
+  },
+  {
+    pergunta: "Se Jesus, sendo o Filho de Deus, recebeu força de um anjo no Getsêmani, o que isso revela sobre a humanidade real que Ele assumiu?",
+    topicoOrigem: "2.c) Os anjos serviram e fortaleceram Jesus em sua missão",
+    pagina: 54,
+    tags: "humanidade genuína de Cristo / auxílio celestial em momento de angústia",
+    refs: ["lc22.43", "mt4.11"]
+  },
+  {
+    pergunta: "Por que Filipe, ao ser guiado por um anjo até o deserto, não recebeu a ordem de pregar diretamente do anjo, mas apenas a direção para onde ir?",
+    topicoOrigem: "3.a) Os anjos serviram como cooperadores na expansão do evangelho",
+    pagina: 58,
+    tags: "anjos preparam encontros e abrem caminhos, mas não pregam no lugar da Igreja",
+    refs: ["at8.26", "at10.3-5"]
+  },
+  {
+    pergunta: "O juízo sobre Herodes, que aceitou ser chamado de deus, ensina qual princípio sobre a forma como Deus trata quem usurpa a glória que só pertence a Ele?",
+    topicoOrigem: "3.b) Os anjos serviram executando juízo quando necessário",
+    pagina: 59,
+    tags: "Deus não divide sua glória / juízo sobre o orgulho humano",
+    refs: ["at12.21-23", "is42.8"]
+  },
+  {
+    pergunta: "O livramento de Pedro da prisão por um anjo mostra que nenhuma prisão ou perseguição impede os planos de Deus. Isso significa que Deus sempre livrará o crente de toda perseguição física?",
+    topicoOrigem: "3.c) Os anjos serviram participando de livramentos extraordinários",
+    pagina: 59,
+    tags: "Deus tem o controle mesmo quando não livra fisicamente todos os perseguidos / soberania sobre o tempo certo",
+    refs: ["at12.7-11a", "sl91.11", "is43.13"]
+  },
+  {
+    pergunta: "Nos eventos do fim dos tempos, os anjos reunirão os salvos, executarão juízos e separarão justos de ímpios — mas quem realmente comanda cada uma dessas ações?",
+    topicoOrigem: "4. Os anjos estarão presentes nos eventos do fim dos tempos?",
+    pagina: 64,
+    tags: "os anjos são executores; Cristo é quem governa e dá as ordens finais",
+    refs: ["mt24.31a", "mt25.31"]
+  },
+
+  // ── pergunta extra, livre ──
+  {
+    pergunta: "Na história 'A Noite Difícil', Emanuel não viu um anjo como Pedro viu, mas sentiu que Deus ainda cuidava dele da mesma forma. O que essa ilustração ensina sobre como reconhecer o cuidado de Deus quando Ele age de forma invisível?",
+    topicoOrigem: "3. História Ilustrativa — A Noite Difícil (Emanuel)",
+    pagina: 62,
+    tags: "Deus cuida mesmo sem manifestação visível / confiança além do que se vê",
+    refs: ["at12.7-10b"]
+  },
+
+  // ── perguntas tipo "Hora da Revisão" (formato apostila, retiradas das Perguntas Rápidas de cada tópico) ──
+  {
+    pergunta: "Hora da Revisão — 1. Qual era o foco das manifestações angelicais no Antigo Testamento?",
+    topicoOrigem: "1. Como os anjos atuaram no Antigo Testamento?",
+    pagina: 51,
+    tags: "glorificar a Deus, nunca a si mesmos",
+    refs: []
+  },
+  {
+    pergunta: "Hora da Revisão — 2. Qual foi a mensagem dos anjos na ressurreição de Jesus?",
+    topicoOrigem: "2.d) Os anjos proclamaram a vitória na ressurreição e ascensão",
+    pagina: 55,
+    tags: "\\\"Ele não está aqui; ressuscitou!\\\"",
+    refs: ["mt28.5-6"]
+  },
+  {
+    pergunta: "Hora da Revisão — 3. Quem realmente estava no controle da igreja primitiva, apesar da atuação dos anjos?",
+    topicoOrigem: "3. Como os anjos serviram na igreja primitiva?",
+    pagina: 60,
+    tags: "Deus, usando os anjos como instrumentos",
+    refs: []
+  },
+  {
+    pergunta: "Hora da Revisão — 4. Quem dará a ordem final nos eventos do fim dos tempos?",
+    topicoOrigem: "4. Os anjos estarão presentes nos eventos do fim dos tempos?",
+    pagina: 65,
+    tags: "Cristo",
+    refs: []
+  },
+  {
+    pergunta: "Hora da Revisão — 5. Qual será o papel dos anjos no fim dos tempos, segundo a lição?",
+    topicoOrigem: "4.d) Os anjos separarão justos e ímpios",
+    pagina: 65,
+    tags: "separarão os justos dos ímpios",
+    refs: ["mt13.41-42", "mt25.32"]
+  }
+];

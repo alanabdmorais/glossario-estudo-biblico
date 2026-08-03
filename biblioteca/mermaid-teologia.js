@@ -54,3 +54,43 @@ window.bibliotecaMermaid["lv6-cp2"] = `mindmap
         Servos de Deus, sem culto a eles
 `;
 
+
+window.bibliotecaMermaid["lv6-cp3"] = `mindmap
+  root((Anjos na\\nHistória Bíblica))
+    Como atuaram no Antigo Testamento?
+      Mensageiros de Deus
+        Agar, Daniel, Zacarias
+      Protetores do povo
+        Daniel, servo de Eliseu, Ló
+      Executores de juízo
+        Sodoma, Davi, Ezequias
+      Instrumentos de encorajamento
+        Elias, Daniel, Jacó
+    Papel dos anjos na missão de Jesus
+      Anúncio do nascimento
+        Gabriel, José, pastores
+      Proteção em momentos de perigo
+        Fuga e retorno do Egito
+      Serviram e fortaleceram Jesus
+        Deserto e Getsêmani
+      Proclamaram a vitória
+        Ressurreição e ascensão
+    Como serviram na igreja primitiva?
+      Cooperadores na expansão do evangelho
+        Filipe e Cornélio
+      Executando juízo quando necessário
+        Herodes
+      Livramentos extraordinários
+        Pedro liberto da prisão
+      Reino de Deus avança apesar da oposição
+        Soberania sobre os impérios
+    Presentes nos eventos do fim dos tempos
+      Participarão da volta de Cristo
+        Exército celestial
+      Reunirão os salvos
+        Grande som de trombeta
+      Executarão juízos divinos
+        Taças e trombetas do Apocalipse
+      Separarão justos e ímpios
+        Julgamento final
+`;
