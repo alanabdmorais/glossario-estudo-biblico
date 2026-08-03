@@ -1,0 +1,51 @@
+// ============================================
+// ARQUIVO GERADO AUTOMATICAMENTE — NÃO EDITE NA MÃO
+// Gerado por gerar-cache-manifest.js em 2026-08-03T11:10:28.893Z
+// ============================================
+self.CACHE_MANIFEST = {
+  versao: "18fd2b798d56",
+  arquivosConteudo: [
+  "./biblioteca/classificacao-livros-biblicos.js",
+  "./biblioteca/contextos-biblicos.js",
+  "./biblioteca/cronologia-biblica.js",
+  "./biblioteca/eventos-biblicos.js",
+  "./biblioteca/legendas-emogis.js",
+  "./biblioteca/locais-biblicos.js",
+  "./biblioteca/mermaid-dominical.js",
+  "./biblioteca/mermaid-teologia.js",
+  "./biblioteca/perguntas-dominical.js",
+  "./biblioteca/perguntas-teologia.js",
+  "./biblioteca/periodos-biblicos.js",
+  "./biblioteca/periodos-humanidade.js",
+  "./biblioteca/periodos-seculares.js",
+  "./biblioteca/referencias-contextos.js",
+  "./biblioteca/titulos-biblicos.js",
+  "./biblioteca/topicos-biblicos.js",
+  "./dados/dominical/dados-2T2026-licao10.js",
+  "./dados/dominical/dados-2T2026-licao11.js",
+  "./dados/dominical/dados-2T2026-licao12.js",
+  "./dados/dominical/dados-2T2026-licao13-v2.js",
+  "./dados/dominical/dados-2T2026-licao13.js",
+  "./dados/dominical/dados-2T2026-licao7.js",
+  "./dados/dominical/dados-2T2026-licao8.js",
+  "./dados/dominical/dados-2T2026-licao9.js",
+  "./dados/dominical/dados-3T2026-licao1-v2.js",
+  "./dados/dominical/dados-3T2026-licao2-v2.js",
+  "./dados/dominical/dados-3T2026-licao4-v2.js",
+  "./dados/dominical/dados-3T2026-licao5-v2.js",
+  "./dados/teologia/dados-lv4-cp5.js",
+  "./dados/teologia/dados-lv4-cp6.js",
+  "./dados/teologia/dados-lv4-cp7.js",
+  "./dados/teologia/dados-lv5-cp1.js",
+  "./dados/teologia/dados-lv5-cp2.js",
+  "./dados/teologia/dados-lv5-cp3.js",
+  "./dados/teologia/dados-lv5-cp4.js",
+  "./dados/teologia/dados-lv5-cp5.js",
+  "./dados/teologia/dados-lv5-cp6.js",
+  "./dados/teologia/dados-lv5-cp7.js",
+  "./dados/teologia/dados-lv6-cp2-v2.js",
+  "./dominical-v2.html",
+  "./index.html",
+  "./teologia-v2.html"
+]
+};

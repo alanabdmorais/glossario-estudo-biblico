@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Teologia Descomplicada v2</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <link rel="stylesheet" href="biblioteca/vendor/leaflet.css" />
+  <script src="biblioteca/vendor/leaflet.js"></script>
+  <script src="biblioteca/vendor/mermaid.min.js"></script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #e4e0d4; padding: 20px; }
@@ -354,6 +354,16 @@ async function buscarVersiculoBibliaAPI(referencia, tentativa = 0) {
     }
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
+
+    // Quando a referência cobre 2+ versículos, a bible-api.com devolve um
+    // array "verses" com cada versículo separado — usamos isso para numerar.
+    if (Array.isArray(data.verses) && data.verses.length > 1) {
+      const numerado = data.verses
+        .map(v => `<strong>${v.verse}</strong> ${(v.text || '').trim().replace(/\s+/g, ' ')}`)
+        .join(' ');
+      return numerado || null;
+    }
+
     const texto = (data.text || '').trim().replace(/\s+/g, ' ');
     return texto || null;
   } catch (e) {
@@ -372,7 +382,7 @@ async function buscarVersiculoBibliaAPI(referencia, tentativa = 0) {
 // ── Groq ──
 async function buscarVersiculoGroq(referencia, tentativa = 0) {
   if (!apiKeys.groq) return null;
-  const prompt = `Forneça APENAS o texto do versículo bíblico "${referencia}" na versão Almeida Revista e Corrigida (ARC) em português. Não inclua nenhuma explicação, comentário ou formatação. Apenas o texto do versículo.`;
+  const prompt = `Forneça APENAS o texto do(s) versículo(s) bíblico(s) "${referencia}" na versão Almeida Revista e Corrigida (ARC) em português. Se a referência cobrir mais de um versículo, numere cada um antes do seu respectivo texto (formato: "19 texto do versículo 20 texto do versículo"). Não inclua nenhuma explicação, comentário ou formatação adicional.`;
   try {
     const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
       method: 'POST',
@@ -403,7 +413,7 @@ async function buscarVersiculoGroq(referencia, tentativa = 0) {
 // ── Mistral ──
 async function buscarVersiculoMistral(referencia, tentativa = 0) {
   if (!apiKeys.mistral) return null;
-  const prompt = `Forneça APENAS o texto do versículo bíblico "${referencia}" na versão Almeida Revista e Corrigida (ARC) em português. Não inclua nenhuma explicação, comentário ou formatação. Apenas o texto do versículo.`;
+  const prompt = `Forneça APENAS o texto do(s) versículo(s) bíblico(s) "${referencia}" na versão Almeida Revista e Corrigida (ARC) em português. Se a referência cobrir mais de um versículo, numere cada um antes do seu respectivo texto (formato: "19 texto do versículo 20 texto do versículo"). Não inclua nenhuma explicação, comentário ou formatação adicional.`;
   try {
     const res = await fetch('https://api.mistral.ai/v1/chat/completions', {
       method: 'POST',
@@ -442,9 +452,16 @@ function buscarVersiculoLocal(referencia) {
   const versiculosCap = capitulos[ref.capitulo - 1];
   if (!versiculosCap || !ref.versiculos || ref.versiculos.length === 0) return null;
 
-  const textos = ref.versiculos.map(v => versiculosCap[v - 1]).filter(Boolean);
-  if (textos.length === 0) return null;
-  return textos.join(' ');
+  const encontrados = ref.versiculos
+    .map(v => ({ numero: v, texto: versiculosCap[v - 1] }))
+    .filter(v => v.texto);
+  if (encontrados.length === 0) return null;
+
+  // Referência de um único versículo: mantém o texto simples, sem numeração.
+  if (encontrados.length === 1) return encontrados[0].texto;
+
+  // Referência com 2+ versículos: numera cada um para facilitar a leitura.
+  return encontrados.map(v => `<strong>${v.numero}</strong> ${v.texto}`).join(' ');
 }
 
 // ── Busca automática: Bíblia local (primária) → bible-api.com (secundária) ──
@@ -850,6 +867,7 @@ async function renderizarConteudo(dados) {
   const listaRef = dados.listaAparicao || [];
   const idsVistos = new Set();
   const idsParaRenderizar = [];
+  const referenciaPorId = new Map(listaRef.filter(i => i.id).map(i => [i.id, i.referencia]));
   listaRef.forEach(item => {
     if (!item.id || idsVistos.has(item.id)) return;
     idsVistos.add(item.id);
@@ -878,8 +896,9 @@ async function renderizarConteudo(dados) {
           <a href="#perguntas" title="Perguntas Sugeridas">❓</a><a href="#alfabetica" title="Lista Alfabética">🔤</a><a href="#hierarquia" title="Hierarquia">📋</a>
         </div>`;
     } else {
+      const referenciaLimpa = referenciaPorId.get(id) || id;
       card.innerHTML = `
-        <div class="contexto-titulo">📖 ${id}</div>
+        <div class="contexto-titulo">📖 ${referenciaLimpa}</div>
         <div class="contexto-versiculo loading" id="versiculo-${id}">⏳ Buscando versículo (Bíblia local → bible-api.com)...</div>
         <p style="font-size:12px;color:#999;">Contexto histórico não disponível na biblioteca local.</p>
         <div class="link-volta">
@@ -1024,6 +1043,16 @@ document.getElementById('fecharModalLegenda').addEventListener('click', () => {
 document.getElementById('modalLegenda').addEventListener('click', (e) => {
   if (e.target.id === 'modalLegenda') document.getElementById('modalLegenda').classList.remove('aberto');
 });
+</script>
+<script>
+  // Registra o Service Worker para permitir uso offline após a 1ª visita
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('✅ Service Worker registrado — site disponível offline.'))
+        .catch(err => console.warn('⚠️ Falha ao registrar Service Worker:', err));
+    });
+  }
 </script>
 </body>
 </html>

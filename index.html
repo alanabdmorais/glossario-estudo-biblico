@@ -100,5 +100,15 @@
       <p>📍 Estudo bíblico com contextos históricos e dados para vestibular</p>
     </div>
   </div>
+  <script>
+    // Registra o Service Worker para permitir uso offline após a 1ª visita
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('✅ Service Worker registrado — site disponível offline.'))
+          .catch(err => console.warn('⚠️ Falha ao registrar Service Worker:', err));
+      });
+    }
+  </script>
 </body>
 </html>

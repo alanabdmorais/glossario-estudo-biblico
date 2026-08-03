@@ -491,7 +491,7 @@ window.bibliotecaPerguntas["3T2026-licao5"] = [
     topicoOrigem: "II.2 Palavras de encorajamento",
     pagina: 36,
     tags: "carros de ferro / confiança no Senhor / Jz 4.14",
-    refs: ["jz4.14b", "jz4.15"]
+    refs: ["jz4.14", "jz4.15"]
   },
   {
     pergunta: "De que forma a confiança equivocada de Sísera na 'paz' entre Héber e Jabim contribuiu para o seu fim, e que princípio bíblico isso ilustra?",
@@ -512,14 +512,14 @@ window.bibliotecaPerguntas["3T2026-licao5"] = [
     topicoOrigem: "III.2 Liderança, cooperação e sinergia",
     pagina: 37,
     tags: "igreja como organismo / cada membro tem função / 1 Co 12",
-    refs: ["1co12.12-27b", "1co3.6-9c"]
+    refs: ["1co12.12-27", "1co3.6-9"]
   },
   {
     pergunta: "Segundo a lição, qual é a diferença entre o modelo bíblico de identidade da mulher e a proposta do feminismo como movimento ideológico?",
     topicoOrigem: "III.3 O papel das mulheres",
     pagina: 37,
     tags: "modelo bíblico / feminismo / complementaridade x antagonismo",
-    refs: ["gl3.28b", "gn1.27", "ef5.22-33"]
+    refs: ["gl3.28", "gn1.27", "ef5.22-33"]
   },
 
   // ── pergunta extra, livre ──
@@ -565,6 +565,6 @@ window.bibliotecaPerguntas["3T2026-licao5"] = [
     topicoOrigem: "III.3 O papel das mulheres",
     pagina: 38,
     tags: "a fé cristã afirma e valoriza a feminilidade à luz das Escrituras, sustentando um modelo bíblico de identidade e atuação da mulher",
-    refs: ["gl3.28b"]
+    refs: ["gl3.28"]
   }
 ];
