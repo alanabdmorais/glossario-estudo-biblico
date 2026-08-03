@@ -1,26 +1,15 @@
 // ============================================
 // ARQUIVO GERADO AUTOMATICAMENTE — NÃO EDITE NA MÃO
-// Gerado por gerar-cache-manifest.js em 2026-08-03T11:10:28.893Z
+// Gerado por gerar-cache-manifest.js em 2026-08-03T20:32:18.874Z
 // ============================================
 self.CACHE_MANIFEST = {
-  versao: "18fd2b798d56",
+  versao: "6612aa531b7d",
   arquivosConteudo: [
-  "./biblioteca/classificacao-livros-biblicos.js",
-  "./biblioteca/contextos-biblicos.js",
-  "./biblioteca/cronologia-biblica.js",
-  "./biblioteca/eventos-biblicos.js",
   "./biblioteca/legendas-emogis.js",
-  "./biblioteca/locais-biblicos.js",
   "./biblioteca/mermaid-dominical.js",
   "./biblioteca/mermaid-teologia.js",
   "./biblioteca/perguntas-dominical.js",
   "./biblioteca/perguntas-teologia.js",
-  "./biblioteca/periodos-biblicos.js",
-  "./biblioteca/periodos-humanidade.js",
-  "./biblioteca/periodos-seculares.js",
-  "./biblioteca/referencias-contextos.js",
-  "./biblioteca/titulos-biblicos.js",
-  "./biblioteca/topicos-biblicos.js",
   "./dados/dominical/dados-2T2026-licao10.js",
   "./dados/dominical/dados-2T2026-licao11.js",
   "./dados/dominical/dados-2T2026-licao12.js",
@@ -44,6 +33,7 @@ self.CACHE_MANIFEST = {
   "./dados/teologia/dados-lv5-cp6.js",
   "./dados/teologia/dados-lv5-cp7.js",
   "./dados/teologia/dados-lv6-cp2-v2.js",
+  "./dados/teologia/dados-lv6-cp3-v2.js",
   "./dominical-v2.html",
   "./index.html",
   "./teologia-v2.html"
