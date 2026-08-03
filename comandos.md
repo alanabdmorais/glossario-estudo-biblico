@@ -5,7 +5,7 @@ git status
 git add .
 
 # 3. Commit com mensagem
-git commit -m "acrescimo licao 5 dominical 3t2026 e atualizacao emogis"
+git commit -m "funcionar offline"
 
 # 4. Enviar para o GitHub
 git push
