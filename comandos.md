@@ -5,7 +5,7 @@ git status
 git add .
 
 # 3. Commit com mensagem
-git commit -m "funcionar offline"
+git commit -m "3tm dominical lc7"
 
 # 4. Enviar para o GitHub
 git push
