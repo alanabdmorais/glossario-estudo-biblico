@@ -86,6 +86,10 @@ const legendas = [
   ["↻", "Atualizar - buscar novamente / rodízio entre fontes"],
   ["⚠️", "Aviso - alerta genérico (indisponibilidade, validação)"],
   ["📑", "Seção específica - trecho isolado de um capítulo"],
+  ["⏪", "Antes - evento/seção anterior na linha do tempo"],
+  ["⏺️", "Durante - evento da própria passagem na linha do tempo"],
+  ["⏩", "Depois - evento/seção seguinte na linha do tempo"],
+  ["🔮", "Dado estimado - calculado a partir das eras, não digitado de uma fonte"],
 
   // ===== APIS E BUSCA DE VERSÍCULOS =====
   ["🐌", "Delay - tempo de espera configurável entre tentativas de busca"],

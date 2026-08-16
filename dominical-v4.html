@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escola Dominical v2</title>
+  <link rel="stylesheet" href="biblioteca/vendor/leaflet.css" />
+  <script src="biblioteca/vendor/leaflet.js"></script>
+  <script src="biblioteca/vendor/mermaid.min.js"></script>
+  <style>
+    * { margitree /f
+      n: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #e8e4d4; padding: 20px; }
+    .container { max-width: 1400px; margin: 0 auto; background-color: #fffef7; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); overflow: hidden; }
+    header { background-color: #3b5e3b; color: white; padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+    header h1 { font-size: 1.8rem; }
+    header a { color: white; background-color: #2d4a2d; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 14px; }
+    .seletor-area { background-color: #f9f7e8; padding: 15px 30px; border-bottom: 1px solid #d4c9a6; display: flex; flex-direction: column; gap: 15px; }
+    .seletor-linha { display: flex; gap: 15px; align-items: center; flex-wrap: wrap; }
+    .seletor-area select, .seletor-area button { padding: 8px 15px; font-size: 14px; border-radius: 6px; border: 1px solid #d4c9a6; background-color: white; }
+    .seletor-area button { background-color: #3b5e3b; color: white; border: none; cursor: pointer; }
+    .seletor-area button:hover { background-color: #2d4a2d; }
+    .titulo-capitalizado { background-color: #e8e4d4; padding: 10px 15px; border-radius: 6px; font-weight: bold; color: #3b5e3b; border-left: 4px solid #3b5e3b; font-size: 13px; }
+    section { padding: 20px 30px; border-bottom: 1px solid #d4c9a6; }
+    section h2 { color: #3b5e3b; margin-bottom: 15px; font-size: 1.4rem; border-left: 4px solid #3b5e3b; padding-left: 12px; }
+    table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    th, td { border: 1px solid #d4c9a6; padding: 8px 10px; text-align: left; vertical-align: top; }
+    th { background-color: #e8e4d4; font-weight: 600; color: #3b5e3b; }
+    .col-num { width: 50px; text-align: center; }
+    .col-ref { width: 130px; font-family: monospace; }
+    .col-pag { width: 60px; text-align: center; }
+    #mapaInterativo { height: 400px; border-radius: 8px; margin-bottom: 20px; }
+    .netlify-section { background: #f9f7e8; padding: 15px; border-radius: 8px; border: 1px solid #d4c9a6; }
+    .netlify-section input { width: 70%; padding: 8px 12px; border: 1px solid #d4c9a6; border-radius: 4px; margin-right: 10px; }
+    .netlify-section button { background-color: #3b5e3b; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; }
+    .contexto-card { background-color: #f9f7e8; border-left: 5px solid #3b5e3b; padding: 15px; margin-bottom: 20px; border-radius: 0 8px 8px 0; }
+    .contexto-titulo { font-weight: bold; font-size: 13px; margin-bottom: 10px; color: #3b5e3b; background-color: #e8e4d4; padding: 8px; border-radius: 6px; }
+    .contexto-versiculo { font-style: italic; background: white; padding: 10px; border-radius: 6px; margin: 10px 0; border: 1px solid #d4c9a6; }
+    .contexto-versiculo.loading { color: #999; }
+    .contexto-campo { margin-bottom: 10px; font-size: 13px; }
+    .contexto-campo strong { color: #5c4a1e; }
+    .contexto-tags-linha { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 10px 0; background-color: #e8e4d4; padding: 6px 8px; border-radius: 4px; }
+    .contexto-tags-label { font-size: 11px; color: #666; }
+    .assuntos { display: flex; flex-wrap: wrap; gap: 6px; }
+    .assunto-tag { background-color: #3b5e3b; color: white; padding: 2px 8px; border-radius: 15px; font-size: 10px; white-space: nowrap; }
+    .link-volta { text-align: right; margin-top: 10px; font-size: 18px; display: flex; gap: 15px; justify-content: flex-end; }
+    .link-volta a { color: #3b5e3b; text-decoration: none; }
+    .footer-links { margin-top: 15px; text-align: right; font-size: 12px; }
+    .footer-links a { color: #3b5e3b; text-decoration: none; margin-left: 15px; }
+    .loading { text-align: center; padding: 40px; color: #666; }
+    /* ── HIERARQUIA ── */
+    .hierarquia-lista { list-style: none; padding-left: 0; }
+    .hierarquia-lista li { margin-bottom: 4px; }
+    .hierarquia-item { display: flex; align-items: flex-start; gap: 8px; padding: 5px 8px; border-radius: 6px; }
+    .hierarquia-item:hover { background: #f0ede0; }
+    .hierarquia-label { font-size: 13px; font-weight: 600; color: #3b5e3b; }
+    .hierarquia-refs { margin-top: 4px; padding-left: 16px; }
+    .hierarquia-ref-item { display: flex; align-items: center; gap: 8px; margin-bottom: 3px; font-size: 12px; }
+    .hierarquia-ref-link { color: #3b5e3b; font-weight: bold; text-decoration: none; font-family: monospace; white-space: nowrap; }
+    .hierarquia-ref-link:hover { text-decoration: underline; }
+    .hierarquia-tags { color: #888; font-size: 11px; font-style: italic; }
+    .hierarquia-filhos { padding-left: 20px; margin-top: 4px; border-left: 2px solid #d4c9a6; }
+    .nivel-1 > .hierarquia-item > .hierarquia-label { font-size: 14px; color: #2d4a2d; }
+    .nivel-2 > .hierarquia-item > .hierarquia-label { font-size: 13px; }
+    .nivel-3 > .hierarquia-item > .hierarquia-label { font-size: 12px; color: #555; }
+    /* ── MERMAID ── */
+    .mermaid-wrapper { background: #f9f7e8; border: 1px solid #d4c9a6; border-radius: 8px; padding: 20px; overflow-x: auto; }
+    .mermaid-wrapper .mermaid { min-height: 200px; }
+    .sem-mermaid { color: #999; font-style: italic; font-size: 13px; padding: 20px; text-align: center; }
+    /* ── PERGUNTAS ── */
+    .pergunta-card { background: #f9f7e8; border: 1px solid #d4c9a6; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; }
+    .pergunta-subtitulo { color: #3b5e3b; font-size: 13px; margin: 18px 0 10px; padding-bottom: 4px; border-bottom: 2px solid #d4c9a6; }
+    .pergunta-subtitulo:first-child { margin-top: 0; }
+    .icone-gabarito { cursor: pointer; font-size: 14px; margin-left: 4px; user-select: none; }
+    .icone-gabarito:hover { transform: scale(1.15); display: inline-block; }
+    .gabarito-box { display: none; margin-top: 10px; padding: 10px 12px; background: #fff8e1; border: 1px dashed #d4b86a; border-radius: 6px; font-size: 12px; }
+    .gabarito-box.aberto { display: block; animation: fadeIn 0.25s ease; }
+    .gabarito-linha { margin-bottom: 5px; }
+    .gabarito-linha strong { color: #5c4a1e; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+    .pergunta-texto { font-weight: 600; font-size: 13px; color: #2d4a2d; margin-bottom: 8px; }
+    .pergunta-meta { display: flex; flex-wrap: wrap; gap: 10px; font-size: 11px; color: #666; }
+    .pergunta-pagina { background: #3b5e3b; color: white; padding: 2px 8px; border-radius: 10px; font-size: 11px; }
+    .pergunta-tags { font-style: italic; color: #888; }
+    .pergunta-refs { display: flex; gap: 6px; flex-wrap: wrap; }
+    .pergunta-ref-badge { background: #e8e4d4; color: #3b5e3b; padding: 2px 7px; border-radius: 10px; font-size: 10px; font-family: monospace; cursor: pointer; }
+    .pergunta-ref-badge:hover { background: #d4c9a6; }
+    .sem-perguntas { color: #999; font-style: italic; font-size: 13px; padding: 20px; text-align: center; }
+    /* ── API STATUS ── */
+    .api-config { background: #fff8e1; border: 1px solid #ffe082; border-radius: 8px; padding: 14px 18px; margin-bottom: 16px; }
+    .api-config label { font-size: 13px; font-weight: 600; color: #5c4a1e; }
+    .api-config select, .api-config input { padding: 6px 10px; border: 1px solid #d4c9a6; border-radius: 4px; font-size: 13px; }
+    .api-config input { width: 300px; }
+    .api-config button { background: #5c4a1e; color: white; border: none; padding: 6px 14px; border-radius: 4px; cursor: pointer; font-size: 13px; }
+    .api-config .api-linha { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-top: 8px; }
+    .api-config .api-linha:first-child { margin-top: 0; }
+    .api-status-badge { font-size: 12px; padding: 2px 10px; border-radius: 12px; font-weight: 500; }
+    .api-status-badge.ativa { background: #c8e6c9; color: #2e7d32; }
+    .api-status-badge.inativa { background: #ffcdd2; color: #c62828; }
+    .api-status-badge.aguardando { background: #fff3e0; color: #e65100; }
+    /* ── MODAL LEGENDA EMOJIS ── */
+    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center; }
+    .modal-overlay.aberto { display: flex; }
+    .modal-box { background: white; border-radius: 12px; max-width: 600px; width: 90%; max-height: 80vh; overflow-y: auto; box-shadow: 0 10px 40px rgba(0,0,0,0.3); }
+    .modal-header { background: #3b5e3b; color: white; padding: 16px 20px; border-radius: 12px 12px 0 0; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; }
+    .modal-header h3 { font-size: 16px; }
+    .modal-fechar { background: none; border: none; color: white; font-size: 22px; cursor: pointer; line-height: 1; }
+    .modal-body { padding: 16px 20px; }
+    .legenda-grid-modal { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 16px; }
+    .legenda-item-modal { display: flex; align-items: center; gap: 10px; font-size: 13px; padding: 6px 8px; border-radius: 6px; }
+    .legenda-item-modal:hover { background: #f0ede0; }
+    .legenda-emoji-modal { font-size: 18px; min-width: 32px; text-align: center; }
+    @media (max-width: 600px) { .legenda-grid-modal { grid-template-columns: 1fr; } }
+    @media (max-width: 768px) { section { padding: 15px; } .api-config input { width: 100%; } }
+  </style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>📖 Escola Dominical <span style="font-size:0.7em;opacity:0.8;">v4</span></h1>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;">
+      <button id="btnLegendaEmojis" style="color:white;background-color:#5c4a1e;padding:8px 16px;border-radius:6px;border:none;font-size:14px;cursor:pointer;">📋 Legenda de Emojis</button>
+      <a href="index.html">🏠 Cursos</a>
+    </div>
+  </header>
+
+  <div class="seletor-area">
+    <div class="seletor-linha">
+      <label>Trimestre:</label>
+      <select id="seletorTrimestre"></select>
+      <label>Lição:</label>
+      <select id="seletorLicao"></select>
+      <button id="carregarBtn">🔤 Carregar Lição</button>
+    </div>
+    <div id="tituloDinamico" class="titulo-capitalizado">Selecione uma lição</div>
+    <p style="font-size:11px;color:#888;margin-top:6px;">
+      ℹ️ A v4 só lista lições que já têm arquivo <code>-v4.js</code> próprio. Lições ainda não migradas continuam disponíveis na
+      <a href="dominical-v3.html">Escola Dominical v3</a>.
+    </p>
+  </div>
+
+  <div id="conteudo-principal">
+    <div class="loading">📖 Selecione uma lição e clique em "Carregar Lição"</div>
+  </div>
+</div>
+
+<!-- MODAL LEGENDA DE EMOJIS -->
+<div class="modal-overlay" id="modalLegenda">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3>📋 Legenda de Emojis</h3>
+      <button class="modal-fechar" id="fecharModalLegenda">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="legenda-grid-modal" id="legendaGridModal"></div>
+    </div>
+  </div>
+</div>
+
+<script src="biblioteca/biblia-almeida.js"></script>
+<script src="biblioteca/periodos-biblicos.js"></script>
+<script src="biblioteca/periodos-seculares.js"></script>
+<script src="biblioteca/periodos-humanidade.js"></script>
+<script src="biblioteca/classificacao-livros-biblicos.js"></script>
+<script src="biblioteca/eventos-biblicos.js"></script>
+<script src="biblioteca/titulos-biblicos.js"></script>
+<script src="biblioteca/motor-contextos.js"></script>
+<script src="biblioteca/legendas-emogis.js"></script>
+<script src="biblioteca/perguntas-dominical.js"></script>
+<script src="biblioteca/mermaid-dominical.js"></script>
+
+<script>
+// ============================================
+// CONFIG DAS 3 APIS (separadas)
+// ============================================
+const apiKeys = {
+  groq: localStorage.getItem('apiKey_groq') || '',
+  mistral: localStorage.getItem('apiKey_mistral') || '',
+};
+
+// Status de cada API: 'ativa' | 'inativa' | 'aguardando'
+// A Bíblia (bible-api.com) é gratuita e não precisa de chave, então já começa ativa,
+// a não ser que o usuário desative manualmente (fica salvo no localStorage).
+let apiStatus = {
+  biblia: localStorage.getItem('bibliaAtiva') === 'false' ? 'inativa' : 'ativa',
+  groq: apiKeys.groq ? 'ativa' : 'inativa',
+  mistral: apiKeys.mistral ? 'ativa' : 'inativa',
+};
+
+// Configuração do rodízio
+const config = {
+  delay: parseInt(localStorage.getItem('apiDelay')) || 2000,
+  providerOrder: ['groq', 'mistral'], // fallback secundário, usado só se a Bíblia falhar
+  currentIndex: 0,
+  isRunning: false,
+  shouldStop: false,
+};
+
+// Nome completo em português de cada livro, no formato que o bible-api.com espera
+// (tradução "almeida" = João Ferreira de Almeida, domínio público)
+const NOME_LIVRO_PT = {
+  gn:"Gênesis", ex:"Êxodo", lv:"Levítico", nm:"Números", dt:"Deuteronômio",
+  js:"Josué", jz:"Juízes", rt:"Rute", "1sm":"1 Samuel", "2sm":"2 Samuel",
+  "1rs":"1 Reis", "2rs":"2 Reis", "1cr":"1 Crônicas", "2cr":"2 Crônicas",
+  ed:"Esdras", ne:"Neemias", et:"Ester", job:"Jó", sl:"Salmos", pv:"Provérbios",
+  ec:"Eclesiastes", ct:"Cantares de Salomão", is:"Isaías", jr:"Jeremias",
+  lm:"Lamentações de Jeremias", ez:"Ezequiel", dn:"Daniel", os:"Oséias",
+  jl:"Joel", am:"Amós", ob:"Obadias", jn:"Jonas", mq:"Miquéias", na:"Naum",
+  hc:"Habacuque", sf:"Sofonias", ag:"Ageu", zc:"Zacarias", ml:"Malaquias",
+  mt:"Mateus", mc:"Marcos", lc:"Lucas", jo:"João", at:"Atos", rm:"Romanos",
+  "1co":"1 Coríntios", "2co":"2 Coríntios", gl:"Gálatas", ef:"Efésios",
+  fp:"Filipenses", cl:"Colossenses", "1ts":"1 Tessalonicenses",
+  "2ts":"2 Tessalonicenses", "1tm":"1 Timóteo", "2tm":"2 Timóteo", tt:"Tito",
+  fm:"Filemom", hb:"Hebreus", tg:"Tiago", "1pe":"1 Pedro", "2pe":"2 Pedro",
+  "1jo":"1 João", "2jo":"2 João", "3jo":"3 João", jd:"Judas", ap:"Apocalipse"
+};
+
+// Mapa "Js 24.26-30" / "1 Sm 17.24,27" -> { livroSlug, capitulo, versiculos:[26,27,28,29,30] }
+const LIVRO_SLUG = {
+  "gn":"gn","gênesis":"gn","genesis":"gn",
+  "êx":"ex","ex":"ex","êxodo":"ex","exodo":"ex",
+  "lv":"lv","levítico":"lv","levitico":"lv",
+  "nm":"nm","números":"nm","numeros":"nm",
+  "dt":"dt","deuteronômio":"dt","deuteronomio":"dt",
+  "js":"js","josué":"js","josue":"js",
+  "jz":"jz","juízes":"jz","juizes":"jz",
+  "rt":"rt","rute":"rt",
+  "1sm":"1sm","1 sm":"1sm","1samuel":"1sm",
+  "2sm":"2sm","2 sm":"2sm","2samuel":"2sm",
+  "1rs":"1rs","1 rs":"1rs","1reis":"1rs",
+  "2rs":"2rs","2 rs":"2rs","2reis":"2rs",
+  "1cr":"1cr","1 cr":"1cr","1crônicas":"1cr","1cronicas":"1cr",
+  "2cr":"2cr","2 cr":"2cr","2crônicas":"2cr","2cronicas":"2cr",
+  "ed":"ed","esdras":"ed",
+  "ne":"ne","neemias":"ne",
+  "et":"et","ester":"et",
+  "jó":"job","jo_":"job","job":"job",
+  "sl":"sl","salmos":"sl","salmo":"sl",
+  "pv":"pv","provérbios":"pv","proverbios":"pv",
+  "ec":"ec","eclesiastes":"ec",
+  "ct":"ct","cantares":"ct",
+  "is":"is","isaías":"is","isaias":"is",
+  "jr":"jr","jeremias":"jr",
+  "lm":"lm","lamentações":"lm","lamentacoes":"lm",
+  "ez":"ez","ezequiel":"ez",
+  "dn":"dn","daniel":"dn",
+  "os":"os","oséias":"os","oseias":"os",
+  "jl":"jl","joel":"jl",
+  "am":"am","amós":"am","amos":"am",
+  "ob":"ob","obadias":"ob",
+  "jn":"jn","jonas":"jn",
+  "mq":"mq","miquéias":"mq","miqueias":"mq",
+  "na":"na","naum":"na",
+  "hc":"hc","habacuque":"hc",
+  "sf":"sf","sofonias":"sf",
+  "ag":"ag","ageu":"ag",
+  "zc":"zc","zacarias":"zc",
+  "ml":"ml","malaquias":"ml",
+  "mt":"mt","mateus":"mt",
+  "mc":"mc","marcos":"mc",
+  "lc":"lc","lucas":"lc",
+  "jo":"jo","joão":"jo","joao":"jo",
+  "at":"at","atos":"at",
+  "rm":"rm","romanos":"rm",
+  "1co":"1co","1 co":"1co","1coríntios":"1co","1corintios":"1co",
+  "2co":"2co","2 co":"2co","2coríntios":"2co","2corintios":"2co",
+  "gl":"gl","gálatas":"gl","galatas":"gl",
+  "ef":"ef","efésios":"ef","efesios":"ef",
+  "fp":"fp","filipenses":"fp",
+  "cl":"cl","colossenses":"cl",
+  "1ts":"1ts","1 ts":"1ts","1tessalonicenses":"1ts",
+  "2ts":"2ts","2 ts":"2ts","2tessalonicenses":"2ts",
+  "1tm":"1tm","1 tm":"1tm","1timóteo":"1tm","1timoteo":"1tm",
+  "2tm":"2tm","2 tm":"2tm","2timóteo":"2tm","2timoteo":"2tm",
+  "tt":"tt","tito":"tt",
+  "fm":"fm","filemom":"fm",
+  "hb":"hb","hebreus":"hb",
+  "tg":"tg","tiago":"tg",
+  "1pe":"1pe","1 pe":"1pe","1pedro":"1pe",
+  "2pe":"2pe","2 pe":"2pe","2pedro":"2pe",
+  "1jo":"1jo","1 jo":"1jo","1joão":"1jo","1joao":"1jo",
+  "2jo":"2jo","2 jo":"2jo","2joão":"2jo","2joao":"2jo",
+  "3jo":"3jo","3 jo":"3jo","3joão":"3jo","3joao":"3jo",
+  "jd":"jd","judas":"jd",
+  "ap":"ap","apocalipse":"ap"
+};
+
+function parseReferencia(referencia) {
+  const m = referencia.match(/^(\d?\s?[^\d.]+?)\s*(\d+)\.(\d+(?:[-,]\d+)*)/);
+  if (!m) return null;
+  const livroTxt = m[1].trim().toLowerCase().replace(/\s+/g, ' ');
+  const capitulo = parseInt(m[2], 10);
+  const slug = LIVRO_SLUG[livroTxt] || LIVRO_SLUG[livroTxt.replace(/\s/g, '')];
+  if (!slug) return null;
+  const versParte = m[3];
+  let versiculos = [];
+  // Trata cada pedaço separado por vírgula individualmente, expandindo
+  // ranges com hífen dentro de cada pedaço (ex: "2,18-20" -> [2,18,19,20])
+  versParte.split(',').forEach(pedaco => {
+    if (pedaco.includes('-')) {
+      const [ini, fim] = pedaco.split('-').map(Number);
+      if (!isNaN(ini) && !isNaN(fim)) {
+        for (let v = ini; v <= fim; v++) versiculos.push(v);
+      }
+    } else {
+      const v = Number(pedaco);
+      if (!isNaN(v)) versiculos.push(v);
+    }
+  });
+  return { slug, capitulo, versiculos };
+}
+
+function esperar(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+// ── Fila com concorrência limitada ──
+function criarFila(concorrenciaMax) {
+  let ativos = 0;
+  const pendentes = [];
+  const proximo = () => {
+    if (ativos >= concorrenciaMax || pendentes.length === 0) return;
+    ativos++;
+    const { tarefa, resolve, reject } = pendentes.shift();
+    tarefa().then(resolve, reject).finally(() => { ativos--; proximo(); });
+  };
+  return (tarefa) => new Promise((resolve, reject) => {
+    pendentes.push({ tarefa, resolve, reject });
+    proximo();
+  });
+}
+const filaVersiculos = criarFila(1);
+
+// ── Bíblia (bible-api.com) — fonte PRIMÁRIA, gratuita, sem chave necessária ──
+// Rate limit do serviço: 15 requisições a cada 30s por IP. Por isso ela também
+// respeita o mesmo "delay entre tentativas" configurado na tela.
+async function buscarVersiculoBibliaAPI(referencia, tentativa = 0) {
+  const ref = parseReferencia(referencia);
+  if (!ref) return null;
+  const nomeLivro = NOME_LIVRO_PT[ref.slug];
+  if (!nomeLivro) return null;
+  if (!ref.versiculos || ref.versiculos.length === 0) return null;
+
+  const versParte = ref.versiculos.join(',');
+  const query = encodeURIComponent(`${nomeLivro} ${ref.capitulo}:${versParte}`);
+
+  try {
+    const res = await fetch(`https://bible-api.com/${query}?translation=almeida`);
+    if (res.status === 429) {
+      if (tentativa < 2) {
+        await esperar(1500 * (tentativa + 1));
+        return buscarVersiculoBibliaAPI(referencia, tentativa + 1);
+      }
+      return { rateLimited: true };
+    }
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+
+    // Quando a referência cobre 2+ versículos, a bible-api.com devolve um
+    // array "verses" com cada versículo separado — usamos isso para numerar.
+    if (Array.isArray(data.verses) && data.verses.length > 1) {
+      const numerado = data.verses
+        .map(v => `<strong>${v.verse}</strong> ${(v.text || '').trim().replace(/\s+/g, ' ')}`)
+        .join(' ');
+      return numerado || null;
+    }
+
+    const texto = (data.text || '').trim().replace(/\s+/g, ' ');
+    return texto || null;
+  } catch (e) {
+    // "Failed to fetch" costuma ser o rate limit (429) do bible-api.com
+    // aparecendo como erro de CORS no navegador (a resposta de erro do
+    // serviço não inclui cabeçalho CORS). Vale tentar de novo antes de desistir.
+    if (tentativa < 2) {
+      await esperar(1500 * (tentativa + 1));
+      return buscarVersiculoBibliaAPI(referencia, tentativa + 1);
+    }
+    console.warn('Erro Bíblia (bible-api.com):', e.message);
+    return null;
+  }
+}
+
+// ── Groq ──
+async function buscarVersiculoGroq(referencia, tentativa = 0) {
+  if (!apiKeys.groq) return null;
+  const prompt = `Forneça APENAS o texto do(s) versículo(s) bíblico(s) "${referencia}" na versão Almeida Revista e Corrigida (ARC) em português. Se a referência cobrir mais de um versículo, numere cada um antes do seu respectivo texto (formato: "19 texto do versículo 20 texto do versículo"). Não inclua nenhuma explicação, comentário ou formatação adicional.`;
+  try {
+    const res = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKeys.groq}` },
+      body: JSON.stringify({ 
+        model: 'openai/gpt-oss-20b', 
+        messages: [{ role: 'user', content: prompt }], 
+        max_tokens: 300, 
+        temperature: 0 
+      })
+    });
+    if (res.status === 429) {
+      if (tentativa < 3) { 
+        await esperar(2000 * (tentativa + 1)); 
+        return buscarVersiculoGroq(referencia, tentativa + 1); 
+      }
+      return { rateLimited: true };
+    }
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    return data.choices?.[0]?.message?.content?.trim() || null;
+  } catch (e) { 
+    console.warn('Erro Groq:', e.message); 
+    return null; 
+  }
+}
+
+// ── Mistral ──
+async function buscarVersiculoMistral(referencia, tentativa = 0) {
+  if (!apiKeys.mistral) return null;
+  const prompt = `Forneça APENAS o texto do(s) versículo(s) bíblico(s) "${referencia}" na versão Almeida Revista e Corrigida (ARC) em português. Se a referência cobrir mais de um versículo, numere cada um antes do seu respectivo texto (formato: "19 texto do versículo 20 texto do versículo"). Não inclua nenhuma explicação, comentário ou formatação adicional.`;
+  try {
+    const res = await fetch('https://api.mistral.ai/v1/chat/completions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKeys.mistral}` },
+      body: JSON.stringify({ 
+        model: 'mistral-small-latest', 
+        messages: [{ role: 'user', content: prompt }], 
+        max_tokens: 300, 
+        temperature: 0 
+      })
+    });
+    if (res.status === 429) {
+      if (tentativa < 3) { 
+        await esperar(2000 * (tentativa + 1)); 
+        return buscarVersiculoMistral(referencia, tentativa + 1); 
+      }
+      return { rateLimited: true };
+    }
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    return data.choices?.[0]?.message?.content?.trim() || null;
+  } catch (e) { 
+    console.warn('Erro Mistral:', e.message); 
+    return null; 
+  }
+}
+
+// ── Bíblia local (arquivo estático "biblioteca/biblia-almeida.js", domínio público) ──
+// Busca instantânea, sem rede, sem rate limit. Sempre a primeira tentativa.
+function buscarVersiculoLocal(referencia) {
+  if (!window.BIBLIA_ALMEIDA) return null; // arquivo não carregou por algum motivo
+  const ref = parseReferencia(referencia);
+  if (!ref) return null;
+  const capitulos = window.BIBLIA_ALMEIDA[ref.slug];
+  if (!capitulos) return null;
+  const versiculosCap = capitulos[ref.capitulo - 1];
+  if (!versiculosCap || !ref.versiculos || ref.versiculos.length === 0) return null;
+
+  const encontrados = ref.versiculos
+    .map(v => ({ numero: v, texto: versiculosCap[v - 1] }))
+    .filter(v => v.texto);
+  if (encontrados.length === 0) return null;
+
+  // Referência de um único versículo: mantém o texto simples, sem numeração.
+  if (encontrados.length === 1) return encontrados[0].texto;
+
+  // Referência com 2+ versículos: numera cada um para facilitar a leitura.
+  return encontrados.map(v => `<strong>${v.numero}</strong> ${v.texto}`).join(' ');
+}
+
+// ── Busca automática: Bíblia local (primária) → bible-api.com (secundária) ──
+// A IA (Groq/Mistral) NÃO entra aqui — só é usada sob demanda, veja buscarVersiculoComIA().
+async function buscarVersiculoSemIA(referencia) {
+  return filaVersiculos(async () => {
+    // 0) Tenta a Bíblia local — instantâneo, sem rede, sem limite de requisições
+    const resultadoLocal = buscarVersiculoLocal(referencia);
+    if (resultadoLocal) {
+      return resultadoLocal;
+    }
+
+    // 1) Tenta a Bíblia (bible-api.com) — opção secundária, gratuita, sem chave
+    if (apiStatus.biblia !== 'inativa') {
+      const resultadoBiblia = await buscarVersiculoBibliaAPI(referencia);
+      if (resultadoBiblia && typeof resultadoBiblia === 'string') {
+        return resultadoBiblia;
+      }
+    }
+
+    return null;
+  });
+}
+
+// ── Busca manual de emergência: rodízio Groq ↔ Mistral (IA) ──
+// Só é chamada quando o usuário clica no botão "🆘 Tentar com IA" de um versículo que falhou.
+async function buscarVersiculoComIA(referencia) {
+  return filaVersiculos(async () => {
+    const provedores = ['groq', 'mistral'];
+    let tentativas = 0;
+    const maxTentativas = 4; // 2 provedores * 2 tentativas cada
+
+    const algumConfigurado = provedores.some(p => !!apiKeys[p]);
+    if (!algumConfigurado) {
+      return null;
+    }
+
+    while (tentativas < maxTentativas) {
+      // Pega o próximo provedor da lista (round-robin)
+      const provider = provedores[config.currentIndex % provedores.length];
+      config.currentIndex++;
+
+      if (!apiKeys[provider]) {
+        tentativas++;
+        if (tentativas < maxTentativas) await esperar(200);
+        continue;
+      }
+
+      let resultado;
+      if (provider === 'groq') {
+        resultado = await buscarVersiculoGroq(referencia);
+      } else if (provider === 'mistral') {
+        resultado = await buscarVersiculoMistral(referencia);
+      }
+
+      if (resultado && !resultado.rateLimited && typeof resultado === 'string') {
+        return resultado;
+      }
+
+      if (resultado?.rateLimited) {
+        await esperar(1500);
+      }
+
+      tentativas++;
+
+      if (tentativas < maxTentativas) {
+        await esperar(config.delay);
+      }
+    }
+
+    return null;
+  });
+}
+
+// Versão antiga para compatibilidade (usada só nas buscas automáticas, sem IA)
+const buscarVersiculoComRodizio = buscarVersiculoSemIA;
+const buscarVersiculo = buscarVersiculoSemIA;
+
+// ============================================
+// CONTEXTOS BÍBLICOS (v3 — dados ficam na própria lição,
+// só a montagem final busca ao vivo nas bibliotecas segmentadas)
+// ============================================
+function obterContexto(id, dadosLicao, referencia) {
+  const fino = dadosLicao?.contextosReferencias?.[id];
+  if (fino && typeof window.montarContextoCompleto === 'function') {
+    return window.montarContextoCompleto(fino);
+  }
+  // Sem curadoria manual pra essa referência: puxa direto das
+  // bibliotecas segmentadas (era, eventos antes/durante/depois, data
+  // estimada). Fica marcado com 🔮 na tela por ser inferido, não digitado.
+  if (referencia && typeof window.inferirContextoAutomatico === 'function') {
+    return window.inferirContextoAutomatico(id, referencia);
+  }
+  return null;
+}
+
+function formatarCabecalhoContexto(ctx) {
+  let h = `📖 ${ctx.referencia}`;
+  if (ctx.autoInferido)         h += ` 🔮`;
+  if (ctx.data)                h += ` | 📅 ${ctx.data}`;
+  if (ctx.local)                h += ` | 🚩 ${ctx.local}`;
+  if (ctx.lider)                h += ` | 👑 ${ctx.lider}`;
+  if (ctx.era)                  h += ` | 📜 ${ctx.era}${ctx.eraDatas ? ' (' + ctx.eraDatas + ')' : ''}`;
+  if (ctx.classificacao)        h += ` | 📚 ${ctx.classificacao}`;
+  if (ctx.periodoSecular)       h += ` | ⏳ ${ctx.periodoSecular}${ctx.periodoSecularDatas ? ' (' + ctx.periodoSecularDatas + ')' : ''}`;
+  if (ctx.periodoHumanidade)    h += ` | 🏰 ${ctx.periodoHumanidade}${ctx.periodoHumanidadeDatas ? ' (' + ctx.periodoHumanidadeDatas + ')' : ''}`;
+  return h;
+}
+
+// ============================================
+// HIERARQUIA
+// ============================================
+function renderizarHierarquia(nos, nivel) {
+  if (!nos || nos.length === 0) return '';
+  let html = `<ul class="hierarquia-lista">`;
+  nos.forEach(no => {
+    html += `<li class="nivel-${nivel}">
+      <div class="hierarquia-item">
+        <div>
+          <div class="hierarquia-label">${no.label}</div>`;
+    if (no.refs && no.refs.length > 0) {
+      html += `<div class="hierarquia-refs">`;
+      no.refs.forEach(r => {
+        html += `<div class="hierarquia-ref-item">
+          <a class="hierarquia-ref-link" href="#${r.id}-contexto">${r.referencia}</a>
+          <span class="hierarquia-tags">${r.tags || ''}</span>
+        </div>`;
+      });
+      html += `</div>`;
+    }
+    html += `</div></div>`;
+    if (no.filhos && no.filhos.length > 0) {
+      html += `<div class="hierarquia-filhos">${renderizarHierarquia(no.filhos, nivel + 1)}</div>`;
+    }
+    html += `</li>`;
+  });
+  html += `</ul>`;
+  return html;
+}
+
+// ============================================
+// MAPA MENTAL MERMAID
+// ============================================
+function renderizarMermaid(chave) {
+  const diagrama = (window.bibliotecaMermaid || {})[chave];
+  if (!diagrama) return `<div class="sem-mermaid">⚠️ Diagrama não disponível para esta lição.</div>`;
+  return `<div class="mermaid-wrapper"><div class="mermaid">${diagrama}</div></div>`;
+}
+
+// ============================================
+// PERGUNTAS SUGERIDAS
+// ============================================
+function embaralhar(array) {
+  const a = [...array];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+let _perguntaIdCounter = 0;
+
+function renderizarCardPergunta(p, numero) {
+  const id = `gab-${_perguntaIdCounter++}`;
+  const refsHtml = (p.refs || []).map(r =>
+    `<span class="pergunta-ref-badge" onclick="event.stopPropagation();document.getElementById('${r}-contexto')?.scrollIntoView({behavior:'smooth'})">${r}</span>`
+  ).join('');
+  const textoLimpo = p.pergunta.replace(/^Hora da Revisão\s*—\s*\d+\.\s*/, '');
+  return `<div class="pergunta-card">
+    <div class="pergunta-texto">${numero}. ${textoLimpo} <span class="icone-gabarito" id="icone-${id}" onclick="const box=document.getElementById('${id}');box.classList.toggle('aberto');document.getElementById('icone-${id}').textContent=box.classList.contains('aberto')?'🙈':'🔑'" title="Ver/ocultar gabarito">🔑</span></div>
+    <div class="gabarito-box" id="${id}">
+      <div class="gabarito-linha"><strong>📋 Tópico:</strong> ${p.topicoOrigem || '—'}</div>
+      <div class="gabarito-linha"><strong>📄 Página:</strong> ${p.pagina}</div>
+      <div class="gabarito-linha"><strong>#️⃣ Tags:</strong> ${p.tags}</div>
+      ${refsHtml ? `<div class="gabarito-linha"><strong>📖 Refs:</strong> <div class="pergunta-refs" style="display:inline-flex;">${refsHtml}</div></div>` : ''}
+    </div>
+  </div>`;
+}
+
+function renderizarPerguntas(chave) {
+  const todas = (window.bibliotecaPerguntas || {})[chave];
+  if (!todas || todas.length === 0)
+    return `<div class="sem-perguntas">⚠️ Perguntas não disponíveis para esta lição.</div>`;
+
+  const extras  = embaralhar(todas.filter(p => !p.pergunta.startsWith('Hora da Revisão')));
+  const revisao = embaralhar(todas.filter(p =>  p.pergunta.startsWith('Hora da Revisão')));
+
+  let html = '';
+
+  if (extras.length > 0) {
+    html += `<h3 class="pergunta-subtitulo">💡 Perguntas de Aprofundamento</h3>`;
+    html += extras.map((p, i) => renderizarCardPergunta(p, i + 1)).join('');
+  }
+
+  if (revisao.length > 0) {
+    html += `<h3 class="pergunta-subtitulo">📝 Hora da Revisão (Apostila)</h3>`;
+    html += revisao.map((p, i) => renderizarCardPergunta(p, i + 1)).join('');
+  }
+
+  return html;
+}
+
+// ============================================
+// RENDERIZAR CONTEÚDO PRINCIPAL
+// ============================================
+let mapaAtual = null;
+let scriptCarregado = null;
+
+function atualizarStatusAPI() {
+  // Atualiza os badges de status na UI
+  document.querySelectorAll('.api-status-badge').forEach(el => {
+    const api = el.dataset.api;
+    if (apiStatus[api] === 'ativa') {
+      el.textContent = '✅ Ativa';
+      el.className = 'api-status-badge ativa';
+    } else if (apiStatus[api] === 'aguardando') {
+      el.textContent = '⏳ Aguardando...';
+      el.className = 'api-status-badge aguardando';
+    } else {
+      el.textContent = '⛔ Inativa';
+      el.className = 'api-status-badge inativa';
+    }
+  });
+}
+
+async function renderizarConteudo(dados) {
+  const tituloHeader = document.getElementById('tituloDinamico');
+  tituloHeader.innerHTML = dados.titulo || 'Lição carregada';
+  if (dados.trimestre) tituloHeader.innerHTML += ' | ' + dados.trimestre;
+  if (dados.paginas)   tituloHeader.innerHTML += ' | Páginas ' + dados.paginas;
+
+  const trimestre = document.getElementById('seletorTrimestre').value;
+  const licaoNum  = document.getElementById('seletorLicao').value;
+  const chaveLib  = `${trimestre}-licao${licaoNum}`;
+
+  const container = document.getElementById('conteudo-principal');
+
+  // ── CONFIG API (BÍBLIA PRIMÁRIA + RODÍZIO GROQ/MISTRAL) ──
+  let html = `
+  <section id="api-config">
+    <h2>🔑 Configuração das APIs</h2>
+    <div class="api-config">
+      <div style="font-size:12px;color:#5c4a1e;margin-bottom:10px;">
+        📚 <strong>Bíblia local</strong> (arquivo salvo no projeto, domínio público) é a fonte principal — instantânea, sem rede, sem limite de requisições.
+        <br>📖 Se algo não for encontrado localmente, tenta a <strong>Bíblia (bible-api.com)</strong> online, também gratuita e sem chave.
+        <br>🆘 Se as duas falharem, a IA (Groq/Mistral) fica disponível <strong>só sob demanda</strong>, por um botão em cada versículo — não é usada automaticamente.
+      </div>
+
+      <!-- Bíblia (bible-api.com) -->
+      <div class="api-linha">
+        <label>📖 Bíblia (bible-api.com):</label>
+        <span style="font-size:12px;color:#666;">Tradução Almeida · sem necessidade de chave</span>
+        <button onclick="alternarBiblia()">${apiStatus.biblia === 'ativa' ? '‖ Desativar' : '▶️ Ativar'}</button>
+        <span class="api-status-badge ${apiStatus.biblia === 'ativa' ? 'ativa' : 'inativa'}" data-api="biblia">${apiStatus.biblia === 'ativa' ? '✅ Ativa' : '⛔ Inativa'}</span>
+      </div>
+
+      <!-- Groq -->
+      <div class="api-linha">
+        <label>⚡ Groq <span style="font-weight:400;color:#666;">(IA · botão manual)</span>:</label>
+        <input type="password" id="keyGroq" placeholder="Chave da Groq" value="${apiKeys.groq}">
+        <button onclick="salvarChave('groq')">💾 Salvar</button>
+        <span class="api-status-badge ${apiStatus.groq === 'ativa' ? 'ativa' : 'inativa'}" data-api="groq">${apiStatus.groq === 'ativa' ? '✅ Ativa' : '⛔ Inativa'}</span>
+      </div>
+
+      <!-- Mistral -->
+      <div class="api-linha">
+        <label>🌀 Mistral <span style="font-weight:400;color:#666;">(IA · botão manual)</span>:</label>
+        <input type="password" id="keyMistral" placeholder="Chave da Mistral" value="${apiKeys.mistral}">
+        <button onclick="salvarChave('mistral')">💾 Salvar</button>
+        <span class="api-status-badge ${apiStatus.mistral === 'ativa' ? 'ativa' : 'inativa'}" data-api="mistral">${apiStatus.mistral === 'ativa' ? '✅ Ativa' : '⛔ Inativa'}</span>
+      </div>
+
+      <!-- Delay -->
+      <div class="api-linha" style="margin-top:12px;padding-top:12px;border-top:1px solid #e0e0e0;">
+        <label>🐌 Delay entre tentativas:</label>
+        <input type="number" id="delayInput" value="${config.delay}" min="500" max="10000" step="100" style="width:100px;">
+        <span style="font-size:12px;color:#666;">ms (atual: <span id="delayDisplay">${config.delay}</span>ms)</span>
+        <button onclick="salvarDelay()">💾 Salvar Delay</button>
+        <span style="font-size:11px;color:#999;">(usado entre pedidos à bible-api.com e no botão de IA — o site limita a 15 pedidos a cada 30s)</span>
+      </div>
+
+      <!-- Buscar novamente -->
+      <div class="api-linha" style="margin-top:12px;padding-top:12px;border-top:1px solid #e0e0e0;">
+        <button onclick="buscarVersiculosNovamente()">↻ Buscar versículos que falharam</button>
+        <span style="font-size:12px;color:#666;">Tenta de novo na Bíblia local/bible-api.com. Para IA, use o botão 🆘 em cada versículo.</span>
+      </div>
+    </div>
+  </section>`;
+
+  // ── HIERARQUIA ──
+  html += `<section id="hierarquia"><h2>📋 Hierarquia de Tópicos</h2>`;
+  if (dados.hierarquia && dados.hierarquia.length > 0) {
+    html += renderizarHierarquia(dados.hierarquia, 1);
+  } else {
+    html += `<p style="color:#999;font-style:italic;">Hierarquia não disponível neste modelo de dados.</p>`;
+  }
+  html += `</section>`;
+
+  // ── MAPA MENTAL ──
+  html += `<section id="mapa-mental"><h2>Ψ Mapa Mental</h2>${renderizarMermaid(chaveLib)}</section>`;
+
+  // ── PERGUNTAS ──
+  html += `<section id="perguntas"><h2>❓ Perguntas Sugeridas</h2>${renderizarPerguntas(chaveLib)}</section>`;
+
+  // ── LISTA ALFABÉTICA ──
+  if (dados.listaAlfabetica && dados.listaAlfabetica.length > 0) {
+    const listaAlf = [...dados.listaAlfabetica];
+    html += `<section id="alfabetica"><h2>🔤 Lista Alfabética de Referências</h2>
+      <p style="font-size:12px;color:#666;margin-bottom:10px;">📌 ${listaAlf.length} referências únicas</p>
+      <table><thead><tr>
+        <th class="col-num">1️⃣</th>
+        <th class="col-ref">📖</th>
+        <th>#️⃣ Tags</th>
+        <th class="col-pag">📄</th>
+      </tr></thead><tbody>`;
+    listaAlf.forEach((item, idx) => {
+      const refLink = item.id
+        ? `<a href="#${item.id}-contexto" style="color:#3b5e3b;font-weight:bold;">${item.referencia}</a>`
+        : (item.referencia || '');
+      html += `<tr>
+        <td class="col-num">${idx + 1}</td>
+        <td class="col-ref">${refLink}</td>
+        <td>${item.tags || ''}</td>
+        <td class="col-pag">${item.pagina || ''}</td>
+      </tr>`;
+    });
+    html += `</tbody></table>
+      <div class="footer-links"><a href="#hierarquia">📋 Hierarquia de tópicos ↑</a></div>
+    </section>`;
+  }
+
+  // ── MAPAS ──
+  html += `<section id="mapas"><h2>🌏⛺ Mapas da Lição</h2>
+    <div id="mapaInterativo" style="height:400px;border-radius:8px;margin-bottom:20px;"></div>
+    <div class="netlify-section">
+      <h3>🔗 Link do Projeto (Netlify)</h3>
+      <input type="text" id="netlifyInput" placeholder="Cole o link do projeto">
+      <button id="salvarLink">Salvar Link</button>
+      <div id="linkSalvo"></div>
+    </div>
+  </section>`;
+
+  // ── PLANILHAS (links externos, não pesa a lição) ──
+  html += `<section id="planilhaEventos"><h2>📊 Planilhas de Referência</h2>
+    <p style="font-size:12px;color:#666;margin-bottom:8px;">
+      Consulta geral da Bíblia inteira — ficam em páginas separadas pra não pesar aqui na lição.
+    </p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;">
+      <a href="planilha-cronologica.html?filtro=arco" target="_blank" style="padding:8px 14px;border:1px solid #3b5e3b;border-radius:6px;text-decoration:none;color:#3b5e3b;background:#f4f1e4;">🌟 Só eventos do arco ↗</a>
+      <a href="planilha-cronologica.html?filtro=almeida" target="_blank" style="padding:8px 14px;border:1px solid #3b5e3b;border-radius:6px;text-decoration:none;color:#3b5e3b;background:#f4f1e4;">📑 Só títulos Almeida ↗</a>
+      <a href="planilha-cronologica.html" target="_blank" style="padding:8px 14px;border:1px solid #3b5e3b;border-radius:6px;text-decoration:none;color:#3b5e3b;background:#f4f1e4;">📖 Geralzão completo — eventos + títulos ARC ↗</a>
+    </div>
+  </section>`;
+
+  // ── CONTEXTOS ──
+  html += `<section id="contextos"><h2>💬 Contextos das Passagens</h2>
+    <p style="font-size:12px;color:#666;margin-bottom:15px;">
+      📚 Os versículos vêm primeiro da <strong>Bíblia local</strong> (domínio público, instantânea), depois da <strong>bible-api.com</strong>${apiStatus.biblia === 'ativa' ? '' : ' <strong style="color:#c62828;">— desativada agora</strong>'} online.
+      <br>↻ Se ambas falharem, cai no <strong>rodízio</strong> Groq ↔ Mistral (IA) com delay de ${config.delay}ms.
+    </p>
+    <div id="containerContextos"></div>
+  </section>`;
+
+  container.innerHTML = html;
+
+  // ── INIT MERMAID ──
+  if (typeof mermaid !== 'undefined') {
+    mermaid.initialize({ startOnLoad: false, theme: 'default', securityLevel: 'loose' });
+    mermaid.run({ nodes: document.querySelectorAll('.mermaid') });
+  }
+
+  // ── MAPA LEAFLET ──
+  setTimeout(() => {
+    const el = document.getElementById('mapaInterativo');
+    if (el) {
+      if (mapaAtual) { mapaAtual.remove(); mapaAtual = null; }
+      const centro = dados.mapaConfig?.centro || [20, 0];
+      const zoom   = dados.mapaConfig?.zoom   || 2;
+      mapaAtual = L.map('mapaInterativo').setView(centro, zoom);
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        attribution: '© OSM & CartoDB', subdomains: 'abcd', maxZoom: 19
+      }).addTo(mapaAtual);
+      (dados.mapaConfig?.marcadores || []).forEach(m => {
+        L.marker([m.lat, m.lng]).addTo(mapaAtual).bindPopup(m.popup || m.local);
+      });
+    }
+    // Netlify
+    const netlifyInput = document.getElementById('netlifyInput');
+    const salvarBtn    = document.getElementById('salvarLink');
+    const linkSalvoDiv = document.getElementById('linkSalvo');
+    if (netlifyInput && salvarBtn) {
+      const salvo = localStorage.getItem('netlifyLink');
+      if (salvo) {
+        netlifyInput.value = salvo;
+        linkSalvoDiv.innerHTML = `✅ <a href="${salvo}" target="_blank">${salvo}</a>`;
+      }
+      salvarBtn.onclick = () => {
+        const link = netlifyInput.value.trim();
+        if (link) {
+          localStorage.setItem('netlifyLink', link);
+          linkSalvoDiv.innerHTML = `✅ <a href="${link}" target="_blank">${link}</a>`;
+        }
+      };
+    }
+  }, 200);
+
+  // ── RENDERIZAR CARDS DE CONTEXTO ──
+  const containerCtx = document.getElementById('containerContextos');
+  if (!containerCtx) return;
+
+  const listaRef = dados.listaAparicao || [];
+  const idsVistos = new Set();
+  const idsParaRenderizar = [];
+  const referenciaPorId = new Map(listaRef.filter(i => i.id).map(i => [i.id, i.referencia]));
+
+  listaRef.forEach(item => {
+    if (!item.id || idsVistos.has(item.id)) return;
+    idsVistos.add(item.id);
+    idsParaRenderizar.push(item.id);
+  });
+
+  if (idsParaRenderizar.length === 0) {
+    containerCtx.innerHTML = '<p>Nenhum contexto disponível.</p>';
+    return;
+  }
+
+  // Cria cards placeholder
+  idsParaRenderizar.forEach(id => {
+    const ctx = obterContexto(id, dados, referenciaPorId.get(id) || id);
+    const card = document.createElement('div');
+    card.className = 'contexto-card';
+    card.id = `${id}-contexto`;
+
+    if (ctx) {
+      const cabecalho = formatarCabecalhoContexto(ctx);
+      const assuntosHtml = (ctx.assuntos || []).map(a =>
+        `<span class="assunto-tag">#${a}</span>`).join('');
+
+      const panorama = ctx.panorama || {};
+      const pTag = (item) => (item?.personagens?.length ? ` 👤🔗 ${item.personagens.join(', ')}` : '');
+      const linhaPanorama = (panorama.antes || panorama.durante || panorama.depois) ? `
+        <div class="contexto-campo">🌟
+          ${panorama.antes   ? `⏪ ${panorama.antes.titulo} (${panorama.antes.referencia})${pTag(panorama.antes)}`   : ''}
+          ${panorama.durante ? `⏺️ ${panorama.durante.titulo} (${panorama.durante.referencia})${pTag(panorama.durante)}` : ''}
+          ${panorama.depois  ? `⏩ ${panorama.depois.titulo} (${panorama.depois.referencia})${pTag(panorama.depois)}`      : ''}
+        </div>` : '';
+
+      const secao = ctx.secaoEspecifica || {};
+      const linhaSecao = (secao.antes || secao.durante || secao.depois) ? `
+        <div class="contexto-campo" style="font-size:11px;color:#777;">📑
+          ${secao.antes   ? `⏪ ${secao.antes.titulo} (${secao.antes.referencia})`   : ''}
+          ${secao.durante ? `⏺️ ${secao.durante.titulo} (${secao.durante.referencia})` : ''}
+          ${secao.depois  ? `⏩ ${secao.depois.titulo} (${secao.depois.referencia})` : ''}
+        </div>` : '';
+
+      card.innerHTML = `
+        <div class="contexto-titulo">${cabecalho}</div>
+        ${linhaPanorama}
+        <div class="contexto-versiculo loading" id="versiculo-${id}">⏳ Buscando versículo (Bíblia local → bible-api.com)...</div>
+        ${linhaSecao}
+        <div class="contexto-tags-linha">
+          ${assuntosHtml ? `<span class="assuntos">${assuntosHtml}</span>` : ''}
+        </div>
+        <div class="link-volta">
+          <a href="#perguntas" title="Perguntas Sugeridas">❓</a>
+          <a href="#alfabetica" title="Lista alfabética">🔤</a>
+          <a href="#hierarquia" title="Hierarquia">📋</a>
+        </div>`;
+    } else {
+      const referenciaLimpa = referenciaPorId.get(id) || id;
+      card.innerHTML = `
+        <div class="contexto-titulo">📖 ${referenciaLimpa}</div>
+        <div class="contexto-versiculo loading" id="versiculo-${id}">⏳ Buscando versículo (Bíblia local → bible-api.com)...</div>
+        <p style="font-size:12px;color:#999;">Contexto não pôde ser inferido automaticamente (livro/capítulo não reconhecido). Pode cadastrar manualmente em contextosReferencias no dados-licaoN.js.</p>
+        <div class="link-volta">
+          <a href="#perguntas" title="Perguntas Sugeridas">❓</a>
+          <a href="#alfabetica" title="Lista alfabética">🔤</a>
+          <a href="#hierarquia" title="Hierarquia">📋</a>
+        </div>`;
+    }
+    containerCtx.appendChild(card);
+  });
+
+  // Busca versículos com rodízio
+  const refs = listaRef.filter(i => i.id && idsParaRenderizar.includes(i.id));
+  const refsUnicas = [...new Map(refs.map(r => [r.id, r])).values()];
+
+  // Guarda a lista atual para permitir "Buscar novamente" depois de salvar uma chave
+  window._refsUnicasAtual = refsUnicas;
+
+  await buscarTodosVersiculos(refsUnicas);
+}
+
+// ============================================
+// BUSCA (E RE-BUSCA) DOS VERSÍCULOS — sem IA (Bíblia local + bible-api.com)
+// ============================================
+async function buscarTodosVersiculos(refsUnicas, somenteFalhas = false) {
+  if (!refsUnicas || refsUnicas.length === 0) return;
+
+  const itensParaBuscar = refsUnicas.filter(item => {
+    if (!somenteFalhas) return true;
+    const el = document.getElementById(`versiculo-${item.id}`);
+    return el && !el.classList.contains('ok');
+  });
+
+  await Promise.all(itensParaBuscar.map(async (item, index) => {
+    const el = document.getElementById(`versiculo-${item.id}`);
+    if (!el) return;
+
+    el.classList.add('loading');
+    el.classList.remove('ok');
+    el.innerHTML = '⏳ Buscando versículo (Bíblia local → bible-api.com)...';
+
+    // Delay entre requisições para não sobrecarregar
+    if (index > 0) {
+      await esperar(config.delay);
+    }
+
+    const texto = await buscarVersiculoSemIA(item.referencia);
+    el.classList.remove('loading');
+    if (texto) {
+      el.classList.add('ok');
+      el.innerHTML = `<strong>✝️ ${item.referencia}:</strong><br>"${texto}"`;
+    } else {
+      el.innerHTML = `<em style="color:#c62828;">Não encontrado na Bíblia local nem na bible-api.com.</em>
+        <br><button onclick="tentarComIA('${item.id}')" style="margin-top:6px;font-size:12px;padding:4px 10px;background:#3b5e3b;color:#fff;border:none;border-radius:4px;cursor:pointer;">🆘 Tentar com IA (Groq/Mistral)</button>`;
+    }
+  }));
+}
+
+// Busca manual de emergência para UM versículo específico, acionada pelo botão 🆘
+async function tentarComIA(id) {
+  const item = (window._refsUnicasAtual || []).find(i => i.id === id);
+  const el = document.getElementById(`versiculo-${id}`);
+  if (!item || !el) return;
+
+  const algumConfigurado = apiKeys.groq || apiKeys.mistral;
+  if (!algumConfigurado) {
+    alert('⚠️ Configure a chave da Groq ou da Mistral na seção "Configuração das APIs" antes de usar esse botão.');
+    return;
+  }
+
+  el.classList.add('loading');
+  el.innerHTML = '⏳ Consultando IA (Groq/Mistral)...';
+
+  const texto = await buscarVersiculoComIA(item.referencia);
+  el.classList.remove('loading');
+  if (texto) {
+    el.classList.add('ok');
+    el.innerHTML = `<strong>✝️ ${item.referencia} <span style="font-size:11px;color:#999;font-weight:400;">(via IA)</span>:</strong><br>"${texto}"`;
+  } else {
+    el.innerHTML = `<em style="color:#c62828;">A IA também não conseguiu buscar. Verifique as chaves configuradas.</em>
+      <br><button onclick="tentarComIA('${id}')" style="margin-top:6px;font-size:12px;padding:4px 10px;background:#3b5e3b;color:#fff;border:none;border-radius:4px;cursor:pointer;">🆘 Tentar novamente com IA</button>`;
+  }
+}
+
+function buscarVersiculosNovamente() {
+  buscarTodosVersiculos(window._refsUnicasAtual, true);
+}
+
+// ============================================
+// FUNÇÕES DE CONFIGURAÇÃO DAS APIs
+// ============================================
+function alternarBiblia() {
+  const ativarAgora = apiStatus.biblia !== 'ativa';
+  apiStatus.biblia = ativarAgora ? 'ativa' : 'inativa';
+  localStorage.setItem('bibliaAtiva', ativarAgora ? 'true' : 'false');
+
+  const badge = document.querySelector(`[data-api="biblia"]`);
+  if (badge) {
+    badge.textContent = ativarAgora ? '✅ Ativa' : '⛔ Inativa';
+    badge.className = `api-status-badge ${ativarAgora ? 'ativa' : 'inativa'}`;
+  }
+  const botao = badge?.parentElement?.querySelector('button');
+  if (botao) botao.textContent = ativarAgora ? '‖ Desativar' : '▶️ Ativar';
+
+  if (ativarAgora && window._refsUnicasAtual && window._refsUnicasAtual.length > 0) {
+    buscarTodosVersiculos(window._refsUnicasAtual, true);
+  }
+}
+
+function salvarChave(api) {
+  const input = document.getElementById(`key${api.charAt(0).toUpperCase() + api.slice(1)}`);
+  if (!input) return;
+  const key = input.value.trim();
+  apiKeys[api] = key;
+  localStorage.setItem(`apiKey_${api}`, key);
+  
+  if (key) {
+    apiStatus[api] = 'ativa';
+    const badge = document.querySelector(`[data-api="${api}"]`);
+    if (badge) {
+      badge.textContent = '✅ Ativa';
+      badge.className = 'api-status-badge ativa';
+    }
+    alert(`✅ Chave da ${api.charAt(0).toUpperCase() + api.slice(1)} salva! Use o botão "🆘 Tentar com IA" nos versículos que falharem, quando precisar.`);
+  } else {
+    apiStatus[api] = 'inativa';
+    const badge = document.querySelector(`[data-api="${api}"]`);
+    if (badge) {
+      badge.textContent = '⛔ Inativa';
+      badge.className = 'api-status-badge inativa';
+    }
+    alert(`⚠️ Chave da ${api.charAt(0).toUpperCase() + api.slice(1)} removida.`);
+  }
+}
+
+function salvarDelay() {
+  const input = document.getElementById('delayInput');
+  if (!input) return;
+  const val = parseInt(input.value, 10);
+  if (val >= 500 && val <= 10000) {
+    config.delay = val;
+    localStorage.setItem('apiDelay', val);
+    document.getElementById('delayDisplay').textContent = val;
+    alert(`✅ Delay salvo: ${val}ms`);
+  } else {
+    alert('⚠️ O delay deve estar entre 500ms e 10000ms');
+  }
+}
+
+// ============================================
+// LIÇÕES DISPONÍVEIS NA V4
+// Só entram aqui as lições que já têm arquivo
+// dados-{trimestre}-licao{N}-v4.js próprio.
+// Quando migrar mais uma lição, é só adicionar o
+// número dela na lista do trimestre correspondente.
+// ============================================
+const licoesDisponiveisV4 = {
+  "3T2026": [1, 2, 4, 5, 6, 7],
+  "2T2026": [13]
+};
+
+function popularSeletoresV4() {
+  const selTrimestre = document.getElementById('seletorTrimestre');
+  const selLicao = document.getElementById('seletorLicao');
+  const nomesTrimestre = { "3T2026": "3º Trimestre 2026", "2T2026": "2º Trimestre 2026" };
+
+  selTrimestre.innerHTML = Object.keys(licoesDisponiveisV4)
+    .map(t => `<option value="${t}">${nomesTrimestre[t] || t}</option>`).join('');
+
+  function popularLicoes() {
+    const licoes = licoesDisponiveisV4[selTrimestre.value] || [];
+    selLicao.innerHTML = licoes.map(n => `<option value="${n}">Lição ${n}</option>`).join('');
+  }
+  selTrimestre.addEventListener('change', () => { popularLicoes(); carregarLicao(); });
+  popularLicoes();
+}
+popularSeletoresV4();
+
+// ============================================
+// CARREGAR LIÇÃO
+// ============================================
+function removerScriptAnterior() {
+  if (scriptCarregado?.parentNode) { scriptCarregado.parentNode.removeChild(scriptCarregado); scriptCarregado = null; }
+  delete window.dadosLicaoV4;
+  delete window.dadosLicao;
+}
+
+function carregarLicao() {
+  const trimestre = document.getElementById('seletorTrimestre').value;
+  const licao     = document.getElementById('seletorLicao').value;
+  if (!licao) {
+    document.getElementById('conteudo-principal').innerHTML = `<div class="loading">❌ Nenhuma lição v3 disponível para ${trimestre}.</div>`;
+    return;
+  }
+  removerScriptAnterior();
+  if (mapaAtual) { mapaAtual.remove(); mapaAtual = null; }
+  document.getElementById('conteudo-principal').innerHTML = `<div class="loading">📖 Carregando lição ${licao} (v3)...</div>`;
+  document.getElementById('tituloDinamico').innerHTML = `⏳ Carregando lição ${licao}...`;
+
+  const script = document.createElement('script');
+  script.src = `dados/dominical/dados-${trimestre}-licao${licao}-v4.js?v=${Date.now()}`;
+  scriptCarregado = script;
+
+  script.onload = () => setTimeout(() => {
+    const dados = window.dadosLicaoV4 || window.dadosLicao;
+    if (dados) {
+      renderizarConteudo(dados);
+    } else {
+      document.getElementById('conteudo-principal').innerHTML = `<div class="loading">❌ Dados da lição ${licao} não encontrados.</div>`;
+    }
+  }, 100);
+
+  script.onerror = () => {
+    document.getElementById('conteudo-principal').innerHTML = `<div class="loading">❌ Arquivo não encontrado: dados-${trimestre}-licao${licao}-v4.js</div>`;
+  };
+
+  document.body.appendChild(script);
+}
+
+document.getElementById('carregarBtn').addEventListener('click', carregarLicao);
+document.addEventListener('DOMContentLoaded', carregarLicao);
+
+// ============================================
+// MODAL LEGENDA DE EMOJIS
+// ============================================
+function popularLegendaModal() {
+  const grid = document.getElementById('legendaGridModal');
+  const lista = window.legendas || (typeof legendas !== 'undefined' ? legendas : null);
+  if (!lista) {
+    grid.innerHTML = '<p style="color:#999;font-style:italic;grid-column:1/-1;">Arquivo legendas-emogis.js não encontrado.</p>';
+    return;
+  }
+  grid.innerHTML = lista.map(([emoji, descricao]) =>
+    `<div class="legenda-item-modal"><span class="legenda-emoji-modal">${emoji}</span><span>${descricao}</span></div>`
+  ).join('');
+}
+
+document.getElementById('btnLegendaEmojis').addEventListener('click', () => {
+  popularLegendaModal();
+  document.getElementById('modalLegenda').classList.add('aberto');
+});
+document.getElementById('fecharModalLegenda').addEventListener('click', () => {
+  document.getElementById('modalLegenda').classList.remove('aberto');
+});
+document.getElementById('modalLegenda').addEventListener('click', (e) => {
+  if (e.target.id === 'modalLegenda') document.getElementById('modalLegenda').classList.remove('aberto');
+});
+</script>
+<script>
+  // Registra o Service Worker para permitir uso offline após a 1ª visita
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('✅ Service Worker registrado — site disponível offline.'))
+        .catch(err => console.warn('⚠️ Falha ao registrar Service Worker:', err));
+    });
+  }
+</script>
+</body>
+</html>

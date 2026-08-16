@@ -55,6 +55,52 @@ window.bibliotecaMermaid["lv6-cp2"] = `mindmap
 `;
 
 
+window.bibliotecaMermaid["lv6-cp5"] = `mindmap
+  root((Batalha\\nEspiritual))
+    O que é a guerra espiritual?
+      Batalha invisível, mas real
+      Contra forças espirituais, não pessoas
+      Acontece na mente e no coração
+      Aproxima o cristão de Deus
+    Armas espirituais do cristão
+      Cinto da verdade
+      Couraça da justiça
+      Escudo da fé
+      Capacete da salvação
+      Espada do Espírito e oração
+    Como resistir às tentações?
+      Submeter-se a Deus
+      Vigiar
+      Evitar ambientes de risco
+      Confessar pecados
+    O diabo já está derrotado?
+      Vitória conquistada na cruz
+      Confirmada na ressurreição
+      Vivida pela Igreja hoje
+      Consumada no juízo final
+`;
+
+window.bibliotecaMermaid["lv6-cp6"] = `mindmap
+  root((Dúvidas Sinceras\\ndos Jovens))
+    Todo crente tem um anjo da guarda?
+      Anjos agem só por ordem de Deus
+      Bíblia não fala de anjo exclusivo
+      Deus envia quantos anjos quiser
+    Um cristão pode ser possuído?
+      Cristão é habitação do Espírito Santo
+      Pode ser tentado, não possuído
+      Nenhum caso bíblico de cristão possuído
+    Tentação e provação são a mesma coisa?
+      Tentação atrai pro pecado
+      Provação testa a fidelidade
+      Tentação evita-se, provação enfrenta-se
+    Como ter paz na batalha espiritual?
+      Paz nasce da presença de Deus
+      Paz nasce da confiança
+      Paz vem pela oração
+      Deus luta por nós
+`;
+
 window.bibliotecaMermaid["lv6-cp3"] = `mindmap
   root((Anjos na\\nHistória Bíblica))
     Como atuaram no Antigo Testamento?

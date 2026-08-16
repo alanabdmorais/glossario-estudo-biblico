@@ -194,3 +194,42 @@ window.bibliotecaMermaid["3T2026-licao5"] = `mindmap
         Protagonismo feminino na Bíblia
         Complementaridade, não antagonismo
 `;
+window.bibliotecaMermaid["3T2026-licao7"] = `mindmap
+  root((O Fim de Gideão\\ne o Governo de\\nAbimeleque))
+    I – Falhas de Gideão
+      Divergências e vingança
+        Ressentimento de Efraim
+        Sucote e Penuel punidos
+      Falhas do líder
+        Éfode — idolatria
+        Riqueza e muitas esposas
+        Setenta filhos e Abimeleque
+      Perigos da liderança
+        Orgulho e centralização
+        Negligência espiritual
+        Necessidade de vigilância
+    II – Abimeleque Sem Chamado
+      Um homem ambicioso
+        Meu pai é rei
+        Inclinação monárquica
+      Um homem manipulador
+        Discurso conveniente
+        Apoio de Baal-Berite
+        Recrutamento de desordeiros
+      Um homem destruidor
+        Mata 70 meios-irmãos
+        Jotão sobreviveu
+    III – Parábola e Fim Trágico
+      O rei espinheiro
+        Oliveira, figueira, videira recusam
+        Espinheiro aceita e ameaça
+        Monarquia fora do plano divino
+      Conflitos do reino
+        Mau espírito após 3 anos
+        Revolta de Gaal
+        Tudo o que semear ceifará
+      O trágico fim
+        Pedra de moinho em Tebes
+        Parábola de Jotão cumprida
+        Justiça de Deus implacável
+`;

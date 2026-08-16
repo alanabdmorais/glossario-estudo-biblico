@@ -137,6 +137,209 @@ window.bibliotecaPerguntas["lv6-cp2"] = [
 ];
 
 
+window.bibliotecaPerguntas["lv6-cp5"] = [
+  // ── perguntas extras de aprofundamento, uma para cada subtópico principal ──
+  {
+    pergunta: "Se a guerra espiritual é travada principalmente na mente e no coração, o que isso muda na forma como um jovem deveria vigiar seus próprios pensamentos no dia a dia?",
+    topicoOrigem: "1.c) A guerra espiritual acontece principalmente na mente e no coração",
+    pagina: 93,
+    tags: "vigilância sobre pensamentos e emoções / a vitória começa dentro, antes de aparecer fora",
+    refs: ["2co10.5", "pv4.23", "rm12.2"]
+  },
+  {
+    pergunta: "Por que a Bíblia insiste que a luta do cristão não é contra pessoas, mesmo quando alguém nos magoa ou se opõe a nós?",
+    topicoOrigem: "1.b) A guerra espiritual não é contra pessoas, mas contra forças espirituais do mal",
+    pagina: 93,
+    tags: "discernir influências espirituais por trás das situações / combater o mal, amar as pessoas",
+    refs: ["ef6.12b", "mt5.44"]
+  },
+  {
+    pergunta: "Das cinco peças da armadura descritas em Efésios 6, qual você acha que costuma ficar mais esquecida na vida cristã do dia a dia, e por quê?",
+    topicoOrigem: "2. Quais são as armas espirituais do cristão?",
+    pagina: 97,
+    tags: "reflexão pessoal / a armadura precisa ser vestida por inteiro, não em partes",
+    refs: ["ef6.11a", "ef6.13"]
+  },
+  {
+    pergunta: "Por que o escudo da fé é descrito como capaz de apagar os \"dardos inflamados\" do inimigo, e não apenas bloqueá-los?",
+    topicoOrigem: "2.c) O escudo da fé",
+    pagina: 99,
+    tags: "a fé não apenas resiste, ela neutraliza mentiras, dúvidas e acusações antes que se espalhem",
+    refs: ["ef6.16", "hb11.1"]
+  },
+  {
+    pergunta: "Tiago diz que resistir ao diabo começa com submissão a Deus. Por que a ordem importa — por que não dá pra resistir ao inimigo sem primeiro se submeter ao Senhor?",
+    topicoOrigem: "3.a) A resistência acontece quando nos submetemos a Deus",
+    pagina: 104,
+    tags: "resistência sem submissão é força própria; a vitória bíblica começa com um coração rendido",
+    refs: ["tg4.7b", "rm6.13"]
+  },
+  {
+    pergunta: "Por que evitar certos ambientes e amizades é descrito como sabedoria espiritual, e não como fraqueza ou covardia?",
+    topicoOrigem: "3.c) A resistência acontece quando evitamos ambientes e práticas que alimentam a tentação",
+    pagina: 104,
+    tags: "a maior vitória é não dar o primeiro passo rumo à queda / fugir é reconhecer os próprios limites",
+    refs: ["1co6.18", "1co10.14", "2tm2.22"]
+  },
+  {
+    pergunta: "Se o diabo já foi derrotado na cruz e na ressurreição, por que ele ainda parece tão ativo no mundo hoje?",
+    topicoOrigem: "4. O diabo ainda pode vencer ou já está derrotado?",
+    pagina: 109,
+    tags: "derrotado mas ainda atuante por um tempo limitado / a sentença já foi dada, falta o cumprimento",
+    refs: ["cl2.15", "ap12.12"]
+  },
+  {
+    pergunta: "O que significa, na prática, dizer que a vitória de Cristo sobre o mal já é \"vivida pela Igreja hoje\", e não só uma promessa para o futuro?",
+    topicoOrigem: "4.c) A vitória é vivida pela Igreja hoje",
+    pagina: 110,
+    tags: "a vitória não é só escatológica, já pode ser experimentada agora pela fé, obediência e dependência de Deus",
+    refs: ["1jo5.4", "rm8.37"]
+  },
+
+  // ── perguntas tipo "Hora da Revisão" (formato apostila, retiradas das Perguntas Rápidas de cada tópico) ──
+  {
+    pergunta: "Hora da Revisão — 1. Contra quem é a guerra espiritual, segundo a Bíblia?",
+    topicoOrigem: "1. O que é a guerra espiritual segundo a Bíblia?",
+    pagina: 94,
+    tags: "contra forças espirituais do mal, não contra pessoas",
+    refs: ["ef6.12b"]
+  },
+  {
+    pergunta: "Hora da Revisão — 2. Quais são as cinco armas espirituais do cristão citadas em Efésios 6?",
+    topicoOrigem: "2. Quais são as armas espirituais do cristão?",
+    pagina: 100,
+    tags: "verdade, justiça, fé, salvação e a espada do Espírito (Palavra e oração)",
+    refs: ["ef6.14a", "ef6.16", "ef6.17a"]
+  },
+  {
+    pergunta: "Hora da Revisão — 3. Fugir de uma situação de tentação é sinal de fraqueza na guerra espiritual?",
+    topicoOrigem: "3.c) A resistência acontece quando evitamos ambientes e práticas que alimentam a tentação",
+    pagina: 105,
+    tags: "não; é resistência e demonstra sabedoria espiritual",
+    refs: ["1co6.18"]
+  },
+  {
+    pergunta: "Hora da Revisão — 4. Onde a vitória de Cristo sobre o diabo começou?",
+    topicoOrigem: "4.a) A vitória foi conquistada na cruz",
+    pagina: 111,
+    tags: "na cruz, quando Jesus derrotou o poder do pecado, da morte e de Satanás",
+    refs: ["cl2.15"]
+  },
+  {
+    pergunta: "Hora da Revisão — 5. A vitória sobre o mal já é vivida hoje, ou é só uma promessa futura?",
+    topicoOrigem: "4.c) A vitória é vivida pela Igreja hoje",
+    pagina: 111,
+    tags: "já é vivida hoje, embora ainda será plenamente consumada no juízo final",
+    refs: ["1jo5.4"]
+  }
+];
+
+window.bibliotecaPerguntas["lv6-cp6"] = [
+  // ── perguntas extras de aprofundamento, uma para cada subtópico principal ──
+  {
+    pergunta: "Se a Bíblia não afirma que cada pessoa tem um anjo exclusivo, por que ainda vale a pena confiar que Deus cuida de você de forma pessoal e constante?",
+    topicoOrigem: "1.c) A Bíblia não afirma que cada pessoa tem um anjo exclusivo",
+    pagina: 116,
+    tags: "o cuidado de Deus é pessoal mesmo sem depender de um anjo específico / a fonte da proteção é o próprio Senhor",
+    refs: ["mt18.10", "hb1.14a"]
+  },
+  {
+    pergunta: "At 12:15 registra os discípulos dizendo \"é o seu anjo\" sobre Pedro. Por que essa fala não pode ser usada como prova de que cada pessoa tem um anjo da guarda?",
+    topicoOrigem: "1.b) Quando a Bíblia registra, mas não ensina",
+    pagina: 116,
+    tags: "o texto narra uma reação humana de surpresa, sem transformar essa fala em doutrina bíblica",
+    refs: ["at12.15"]
+  },
+  {
+    pergunta: "Por que a Bíblia trata a possessão demoníaca de forma tão diferente da opressão ou da tentação, quando fala do cristão?",
+    topicoOrigem: "2. Um cristão pode ser possuído por demônios?",
+    pagina: 120,
+    tags: "possessão implica domínio espiritual, algo que a Bíblia nunca atribui a quem é habitação do Espírito Santo",
+    refs: ["1co6.19b", "ef6.11c"]
+  },
+  {
+    pergunta: "Por que nenhum caso de possessão demoníaca na Bíblia envolve um verdadeiro cristão, segundo o capítulo?",
+    topicoOrigem: "2.c) Nenhum cristão é mencionado na Bíblia sendo possuído por demônios",
+    pagina: 121,
+    tags: "os casos de possessão envolvem pessoas que ainda não experimentaram a salvação em Cristo",
+    refs: ["cl1.13"]
+  },
+  {
+    pergunta: "Qual a diferença prática entre viver com \"medo excessivo\" do inimigo e viver com \"descuido espiritual\", segundo o capítulo? Por que os dois extremos são perigosos?",
+    topicoOrigem: "2.d) O cristão deve viver com equilíbrio, sem medo e sem descuido",
+    pagina: 121,
+    tags: "o medo excessivo enfraquece; o descuido abre espaço para quedas; o equilíbrio bíblico é vigilância com confiança em Deus",
+    refs: ["1pe5.8b", "2tm1.7"]
+  },
+  {
+    pergunta: "Abraão, ao entregar Isaque, e Eva, ao comer do fruto proibido, enfrentaram situações bem diferentes. O que essas duas histórias ensinam sobre a diferença entre tentação e provação?",
+    topicoOrigem: "3.b) A tentação atrai para o pecado; a provação testa a fidelidade",
+    pagina: 126,
+    tags: "a tentação esconde as consequências e apresenta o erro como atraente; a provação expõe e revela a fé verdadeira",
+    refs: ["gn3.6", "gn22.1-12"]
+  },
+  {
+    pergunta: "José fugiu da tentação; Daniel não pôde fugir da provação da cova dos leões. O que essa diferença ensina sobre como reagir diante de cada tipo de luta?",
+    topicoOrigem: "3.c) A tentação pode ser evitada; a provação precisa ser enfrentada",
+    pagina: 126,
+    tags: "tentação se evita com vigilância e decisões sábias; provação se enfrenta com fé e perseverança",
+    refs: ["gn39.12", "dn6.16-23"]
+  },
+  {
+    pergunta: "Por que a paz que Jesus oferece em João 14:27 é descrita como diferente da paz que \"o mundo dá\"?",
+    topicoOrigem: "4. Como ter paz mesmo em meio à batalha espiritual?",
+    pagina: 131,
+    tags: "a paz do mundo depende de circunstâncias favoráveis; a paz de Jesus vem da presença e da confiança nEle, mesmo em meio à luta",
+    refs: ["jo14.27", "hb13.5"]
+  },
+
+  // ── pergunta extra, livre ──
+  {
+    pergunta: "Na história \"A Janela Iluminada\", Ludmilla aprende que a paz de Deus não significa que a guerra acabou, mas que Jesus está com ela no meio dela. Como essa ideia muda a forma de orar em meio a um problema que ainda não tem solução?",
+    topicoOrigem: "4. História Ilustrativa — A Janela Iluminada (Ludmilla)",
+    pagina: 134,
+    tags: "orar não pra remover o problema, mas pra receber a paz de Deus dentro dele",
+    refs: ["fp4.7"]
+  },
+
+  // ── perguntas tipo "Hora da Revisão" (formato apostila, retiradas das Perguntas Rápidas de cada tópico) ──
+  {
+    pergunta: "Hora da Revisão — 1. A Bíblia fala de \"anjo da guarda\"?",
+    topicoOrigem: "1. Todo crente tem um anjo da guarda?",
+    pagina: 116,
+    tags: "não; fala de anjos enviados por Deus, conforme sua vontade",
+    refs: []
+  },
+  {
+    pergunta: "Hora da Revisão — 2. O que acontece na conversão, segundo Colossenses 1:13?",
+    topicoOrigem: "2. Um cristão pode ser possuído por demônios?",
+    pagina: 122,
+    tags: "o cristão é liberto do império das trevas",
+    refs: ["cl1.13"]
+  },
+  {
+    pergunta: "Hora da Revisão — 3. Satanás ainda pode agir contra o cristão?",
+    topicoOrigem: "2.b) O cristão pode ser tentado e oprimido, mas não possuído",
+    pagina: 122,
+    tags: "sim, por influência (tentação e opressão), mas não por posse",
+    refs: ["1pe5.8-9"]
+  },
+  {
+    pergunta: "Hora da Revisão — 4. Qual é o primeiro passo para resistir à tentação, segundo Tiago 4:7?",
+    topicoOrigem: "3.a) A resistência acontece quando nos submetemos a Deus",
+    pagina: 127,
+    tags: "submeter-se a Deus, vivendo em obediência",
+    refs: ["tg4.7b"]
+  },
+  {
+    pergunta: "Hora da Revisão — 5. Onde nasce a verdadeira paz, segundo o capítulo?",
+    topicoOrigem: "4.b) A paz nasce da confiança em Deus",
+    pagina: 133,
+    tags: "na presença de Deus e na confiança nEle, não nas circunstâncias",
+    refs: ["is26.3"]
+  }
+];
+
 window.bibliotecaPerguntas["lv6-cp3"] = [
   // ── perguntas extras de aprofundamento, uma para cada subtópico principal ──
   {

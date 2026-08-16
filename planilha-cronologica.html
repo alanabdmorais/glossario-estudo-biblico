@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📊 Planilha Cronológica — Bíblia Inteira</title>
+<style>
+  body { font-family: Georgia, serif; background:#fffef7; color:#333; margin:0; padding:16px; }
+  h1 { font-size:18px; margin-bottom:4px; }
+  .subtitulo { font-size:12px; color:#777; margin-bottom:12px; }
+  .controles {
+    padding:10px 0; display:flex; gap:10px; align-items:center; flex-wrap:wrap;
+  }
+  .controles button {
+    font-size:15px; padding:6px 12px; cursor:pointer; border-radius:6px;
+    border:1px solid #999; background:#fff;
+  }
+  #buscaInput { flex:1; min-width:160px; padding:6px 10px; font-size:14px; border-radius:6px; border:1px solid #999; }
+
+  #planilhaViewport {
+    height:75vh; border:2px solid #3b5e3b; border-radius:10px; overflow:auto;
+    position:relative; background:#f9f7ee; cursor:grab;
+  }
+  #planilhaViewport.arrastando { cursor:grabbing; }
+  #planilha { padding:15px; width:900px; }
+  .era-card {
+    border:2px solid #3b5e3b; border-radius:10px; padding:12px;
+    margin-bottom:18px; background:#f4f1e4;
+  }
+  .era-titulo { font-size:17px; font-weight:bold; color:#3b5e3b; }
+  .meta-linha { font-size:12px; color:#555; margin:4px 0 10px 0; }
+  table { border-collapse:collapse; width:100%; background:white; }
+  th, td { border:1px solid #ccc; padding:5px 8px; font-size:13px; text-align:left; vertical-align:top; }
+  th { background:#3b5e3b; color:white; }
+  td.emoji-col { text-align:center; width:36px; }
+  td.personagens-col { font-size:11px; color:#666; white-space:nowrap; }
+  tr.linha-oculta { display:none; }
+  tr[data-tipo="evento"].negrito-evento td { font-weight:bold; }
+  .contador-linhas { font-size:11px; color:#888; margin-top:4px; }
+  .aviso-vazio { font-size:12px; color:#999; font-style:italic; }
+  .dica-zoom { font-size:11px; color:#888; margin-top:6px; }
+  .filtro-btn { opacity:0.5; }
+  .filtro-btn.ativo { opacity:1; background:#3b5e3b; color:white; }
+</style>
+</head>
+<body>
+  <h1>📊 Planilha Cronológica — Bíblia Inteira</h1>
+  <p class="subtitulo">
+    🌟 = evento do arco (eventos-biblicos.js) &nbsp;·&nbsp; 📑 = título de seção ARC (titulos-biblicos.js)
+    &nbsp;·&nbsp; agrupado por era (periodos-biblicos.js) &nbsp;·&nbsp; legenda completa de emojis fica na página própria.
+  </p>
+
+  <div class="controles">
+    <button id="filtroArco" class="filtro-btn">🌟 Só Arco</button>
+    <button id="filtroAlmeida" class="filtro-btn">📑 Só Almeida</button>
+    <button id="filtroTudo" class="filtro-btn ativo">🔄 Os Dois</button>
+    <button id="zoomReset">🔄 Resetar zoom</button>
+    <input type="text" id="buscaInput" placeholder="🔎 Filtrar por referência ou título...">
+  </div>
+
+  <div id="planilhaViewport">
+    <div id="planilha">Carregando…</div>
+  </div>
+  <p class="dica-zoom">🖱️ Rode a rodinha do mouse pra dar zoom, arraste pra rolar &nbsp;·&nbsp; 📱 belisque pra dar zoom, arraste com o dedo</p>
+
+<!-- Bibliotecas segmentadas — a planilha só lê, nunca duplica -->
+<script src="biblioteca/periodos-biblicos.js"></script>
+<script src="biblioteca/periodos-seculares.js"></script>
+<script src="biblioteca/periodos-humanidade.js"></script>
+<script src="biblioteca/eventos-biblicos.js"></script>
+<script src="biblioteca/titulos-biblicos.js"></script>
+<script src="biblioteca/cronologia-biblica.js"></script>
+<script src="biblioteca/planilha-cronologica.js"></script>
+
+<script>
+  // ============================================
+  // ZOOM/PAN DINÂMICO (wheel, pinça, arrastar) usando a barra de rolagem
+  // NATIVA da janela (viewport), não um transform por cima do conteúdo.
+  // Usa a propriedade CSS "zoom" (em vez de transform: scale) porque ela
+  // muda o tamanho real do conteúdo — o scroll nativo (barra lateral,
+  // touch, trackpad) já sabe até onde rolar sem eu precisar recalcular nada.
+  // ============================================
+  const viewport = document.getElementById('planilhaViewport');
+  const conteudo = document.getElementById('planilha');
+  const ZOOM_MIN = 0.3, ZOOM_MAX = 3;
+  let escala = 1;
+
+  function zoomEm(pontoX, pontoY, novaEscalaBruta) {
+    const novaEscala = Math.max(ZOOM_MIN, Math.min(ZOOM_MAX, novaEscalaBruta));
+    // ponto "lógico" (sem zoom) que está sob o cursor/dedo agora
+    const mundoX = (viewport.scrollLeft + pontoX) / escala;
+    const mundoY = (viewport.scrollTop + pontoY) / escala;
+    escala = novaEscala;
+    conteudo.style.zoom = escala;
+    // rola pra esse mesmo ponto continuar sob o cursor/dedo
+    viewport.scrollLeft = mundoX * escala - pontoX;
+    viewport.scrollTop = mundoY * escala - pontoY;
+  }
+
+  // --- Mouse: wheel pra zoom ---
+  viewport.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    const rect = viewport.getBoundingClientRect();
+    const px = e.clientX - rect.left;
+    const py = e.clientY - rect.top;
+    const fator = e.deltaY < 0 ? 1.12 : 1 / 1.12;
+    zoomEm(px, py, escala * fator);
+  }, { passive: false });
+
+  // --- Mouse: arrastar pra mover (move o scroll nativo) ---
+  let arrastandoMouse = false, inicioX = 0, inicioY = 0, scrollInicioX = 0, scrollInicioY = 0;
+  viewport.addEventListener('mousedown', (e) => {
+    arrastandoMouse = true;
+    viewport.classList.add('arrastando');
+    inicioX = e.clientX; inicioY = e.clientY;
+    scrollInicioX = viewport.scrollLeft; scrollInicioY = viewport.scrollTop;
+  });
+  window.addEventListener('mousemove', (e) => {
+    if (!arrastandoMouse) return;
+    viewport.scrollLeft = scrollInicioX - (e.clientX - inicioX);
+    viewport.scrollTop = scrollInicioY - (e.clientY - inicioY);
+  });
+  window.addEventListener('mouseup', () => { arrastandoMouse = false; viewport.classList.remove('arrastando'); });
+
+  // --- Touch: 1 dedo arrasta (scroll nativo), 2 dedos belisca (zoom) ---
+  let distanciaInicial = null, escalaInicial = 1, meioInicial = null;
+
+  function distanciaEntre(t1, t2) {
+    return Math.hypot(t1.clientX - t2.clientX, t1.clientY - t2.clientY);
+  }
+  function pontoMedio(t1, t2, rect) {
+    return { x: (t1.clientX + t2.clientX) / 2 - rect.left, y: (t1.clientY + t2.clientY) / 2 - rect.top };
+  }
+
+  viewport.addEventListener('touchstart', (e) => {
+    const rect = viewport.getBoundingClientRect();
+    if (e.touches.length === 2) {
+      distanciaInicial = distanciaEntre(e.touches[0], e.touches[1]);
+      escalaInicial = escala;
+      meioInicial = pontoMedio(e.touches[0], e.touches[1], rect);
+    }
+    // com 1 dedo só, deixa o navegador rolar sozinho (scroll nativo por touch)
+  }, { passive: true });
+
+  viewport.addEventListener('touchmove', (e) => {
+    if (e.touches.length === 2 && distanciaInicial) {
+      e.preventDefault();
+      const distanciaAtual = distanciaEntre(e.touches[0], e.touches[1]);
+      const fator = distanciaAtual / distanciaInicial;
+      zoomEm(meioInicial.x, meioInicial.y, escalaInicial * fator);
+    }
+  }, { passive: false });
+
+  viewport.addEventListener('touchend', (e) => {
+    if (e.touches.length < 2) { distanciaInicial = null; }
+  });
+
+  document.getElementById('zoomReset').addEventListener('click', () => {
+    escala = 1;
+    conteudo.style.zoom = escala;
+    viewport.scrollLeft = 0; viewport.scrollTop = 0;
+  });
+
+  // ============================================
+  // RENDERIZAÇÃO DA PLANILHA
+  // ============================================
+  function renderizarPlanilha() {
+    const eras = window.gerarPlanilhaCronologica ? window.gerarPlanilhaCronologica() : [];
+    if (!eras.length) {
+      conteudo.innerHTML = '<p class="aviso-vazio">Nenhum dado encontrado — confira se as bibliotecas carregaram.</p>';
+      return;
+    }
+
+    let html = '';
+    eras.forEach((eraObj, eIdx) => {
+      html += `<div class="era-card" data-era-idx="${eIdx}">
+        <div class="era-titulo">⏳ ${eraObj.era} (${eraObj.eraDatas})</div>
+        <div class="meta-linha">
+          🏰 ${eraObj.humanidade || '-'} &nbsp;|&nbsp;
+          🏛️ ${eraObj.secular || '-'} &nbsp;|&nbsp;
+          📚 ${eraObj.livros.join(', ') || '-'}
+        </div>`;
+
+      if (!eraObj.linhas.length) {
+        html += `<p class="aviso-vazio">Sem eventos/títulos cadastrados pra essa era ainda.</p></div>`;
+        return;
+      }
+
+      html += `<table>
+        <tr><th class="emoji-col"></th><th>Referência</th><th>Título</th><th>👤🔗 Personagens</th></tr>`;
+      eraObj.linhas.forEach(l => {
+        const personagens = (l.personagens && l.personagens.length) ? l.personagens.join(', ') : '';
+        html += `<tr class="linha-dado" data-tipo="${l.tipo}" data-busca="${(l.referencia + ' ' + l.titulo).toLowerCase()}">
+          <td class="emoji-col">${l.emoji}</td>
+          <td>${l.referencia}</td>
+          <td>${l.titulo}</td>
+          <td class="personagens-col">${personagens}</td>
+        </tr>`;
+      });
+      html += `</table>
+        <div class="contador-linhas">${eraObj.linhas.length} linhas</div>
+      </div>`;
+    });
+
+    conteudo.innerHTML = html;
+    conteudo.style.zoom = escala;
+  }
+
+  document.getElementById('buscaInput').addEventListener('input', aplicarFiltros);
+
+  // ============================================
+  // FILTRO DE VERSÃO (arco / almeida / tudo)
+  // ============================================
+  let filtroAtual = 'tudo';
+  const params = new URLSearchParams(window.location.search);
+  if (['arco', 'almeida', 'tudo'].includes(params.get('filtro'))) {
+    filtroAtual = params.get('filtro');
+  }
+
+  function marcarBotaoAtivo() {
+    document.getElementById('filtroArco').classList.toggle('ativo', filtroAtual === 'arco');
+    document.getElementById('filtroAlmeida').classList.toggle('ativo', filtroAtual === 'almeida');
+    document.getElementById('filtroTudo').classList.toggle('ativo', filtroAtual === 'tudo');
+  }
+
+  function aplicarFiltros() {
+    const termo = document.getElementById('buscaInput').value.toLowerCase().trim();
+    const negritoLigado = filtroAtual === 'tudo';
+    document.querySelectorAll('.linha-dado').forEach(tr => {
+      const tipoBate = filtroAtual === 'tudo'
+        || (filtroAtual === 'arco' && tr.dataset.tipo === 'evento')
+        || (filtroAtual === 'almeida' && tr.dataset.tipo === 'titulo');
+      const buscaBate = !termo || tr.dataset.busca.includes(termo);
+      tr.classList.toggle('linha-oculta', !(tipoBate && buscaBate));
+      tr.classList.toggle('negrito-evento', negritoLigado && tr.dataset.tipo === 'evento');
+    });
+    document.querySelectorAll('.era-card').forEach(card => {
+      const visiveis = card.querySelectorAll('.linha-dado:not(.linha-oculta)').length;
+      card.style.display = (visiveis === 0) ? 'none' : '';
+    });
+  }
+
+  function trocarFiltro(novo) {
+    filtroAtual = novo;
+    marcarBotaoAtivo();
+    aplicarFiltros();
+  }
+  document.getElementById('filtroArco').addEventListener('click', () => trocarFiltro('arco'));
+  document.getElementById('filtroAlmeida').addEventListener('click', () => trocarFiltro('almeida'));
+  document.getElementById('filtroTudo').addEventListener('click', () => trocarFiltro('tudo'));
+
+  document.addEventListener('DOMContentLoaded', () => {
+    renderizarPlanilha();
+    marcarBotaoAtivo();
+    aplicarFiltros();
+  });
+</script>
+</body>
+</html>

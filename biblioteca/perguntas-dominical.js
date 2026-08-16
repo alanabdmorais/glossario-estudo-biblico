@@ -568,3 +568,101 @@ window.bibliotecaPerguntas["3T2026-licao5"] = [
     refs: ["gl3.28"]
   }
 ];
+window.bibliotecaPerguntas["3T2026-licao7"] = [
+  // ── perguntas extras de aprofundamento ──
+  {
+    pergunta: "Por que a queixa da tribo de Efraim revela que o orgulho e o ressentimento são tão perigosos quanto os inimigos externos?",
+    topicoOrigem: "I.1 Divergências internas e vingança",
+    pagina: 49,
+    tags: "Efraim / ressentimento / tensão interna / Sucote e Penuel / liderança",
+    refs: ["jz8.5-9"]
+  },
+  {
+    pergunta: "Gideão recusou publicamente o título de rei, mas suas ações posteriores contradisseram essa declaração. O que isso ensina sobre a diferença entre discurso e prática na liderança?",
+    topicoOrigem: "I.2 As falhas de um líder",
+    pagina: 50,
+    tags: "discurso x prática / efode / idolatria / riqueza / muitas esposas",
+    refs: ["jz8.23", "jz8.27"]
+  },
+  {
+    pergunta: "O que o episódio do éfode de Gideão nos ensina sobre como boas intenções mal conduzidas podem se tornar armadilhas espirituais?",
+    topicoOrigem: "I.2 As falhas de um líder",
+    pagina: 50,
+    tags: "éfode / idolatria / Israel se prostituiu / armadilha espiritual",
+    refs: ["jz8.27", "ex28.6-14"]
+  },
+  {
+    pergunta: "De que forma a estrutura familiar desordenada de Gideão contribuiu diretamente para a crise política e moral que se seguiu?",
+    topicoOrigem: "I.2 As falhas de um líder",
+    pagina: 50,
+    tags: "setenta filhos / concubina / Abimeleque / estrutura familiar / rivalidade",
+    refs: ["jz8.30-31"]
+  },
+  {
+    pergunta: "Quais são os três passos da estratégia de Abimeleque para usurpar o poder, e como cada um deles se repete em líderes manipuladores de hoje?",
+    topicoOrigem: "II.2 Um homem manipulador",
+    pagina: 51,
+    tags: "discurso conveniente / apoio financeiro da falsa religião / recrutamento de desordeiros",
+    refs: ["jz9.1-2", "jz9.4"]
+  },
+  {
+    pergunta: "A parábola de Jotão descreve as boas árvores recusando o reinado por preferirem continuar produzindo frutos. O que isso ensina sobre os motivos certos para buscar (ou não) posições de liderança?",
+    topicoOrigem: "III.1 O rei espinheiro",
+    pagina: 51,
+    tags: "parábola / oliveira / figueira / videira / espinheiro / motivações / frutos",
+    refs: ["jz9.7-15"]
+  },
+  {
+    pergunta: "O princípio 'tudo o que o homem semear, isso também ceifará' se cumpriu de forma literal na vida de Abimeleque. Cite exemplos concretos dessa colheita em sua trajetória.",
+    topicoOrigem: "III.2 Os conflitos do reino",
+    pagina: 52,
+    tags: "semeadura / colheita / mau espírito / Gaal / Tebes / morte por mulher",
+    refs: ["gl6.7", "jz9.22", "jz9.56-57"]
+  },
+
+  // ── pergunta extra livre ──
+  {
+    pergunta: "Segundo o Subsídio 3, qual era o objetivo de Jotão ao contar a parábola das árvores, e por que a parábola termina com o espinheiro como uma ameaça, e não apenas como algo inútil?",
+    topicoOrigem: "III — Subsídio 3",
+    pagina: 52,
+    tags: "Subsídio 3 / parábola / espinheiro / ameaça / fogo / cedros do Líbano / destruição",
+    refs: ["jz9.16", "ez34.2-4"]
+  },
+
+  // ── 5 perguntas oficiais da Hora da Revisão (apostila, Pg. 53) ──
+  {
+    pergunta: "Hora da Revisão — 1. O que era o éfode?",
+    topicoOrigem: "I.2 As falhas de um líder",
+    pagina: 53,
+    tags: "vestimenta sagrada exclusiva do sumo sacerdote no Tabernáculo (Êx 28.6-14)",
+    refs: ["ex28.6-14b"]
+  },
+  {
+    pergunta: "Hora da Revisão — 2. Em suas palavras, quais foram as falhas de Gideão?",
+    topicoOrigem: "I.2 As falhas de um líder",
+    pagina: 53,
+    tags: "solicitou parte dos despojos / mandou confeccionar um efode / conduta familiar problemática / muitas mulheres e concubinas",
+    refs: []
+  },
+  {
+    pergunta: "Hora da Revisão — 3. Qual o significado do nome Abimeleque?",
+    topicoOrigem: "II.1 Um homem ambicioso",
+    pagina: 53,
+    tags: "'Meu pai é rei'",
+    refs: []
+  },
+  {
+    pergunta: "Hora da Revisão — 4. Cite os três aspectos da estratégia de tomada de poder de Abimeleque.",
+    topicoOrigem: "II.2 Um homem manipulador",
+    pagina: 53,
+    tags: "discurso conveniente / apoio financeiro da falsa religião / recrutamento de desordeiros",
+    refs: ["jz9.1-2", "jz9.4"]
+  },
+  {
+    pergunta: "Hora da Revisão — 5. Na parábola de Jotão, quem representa o espinheiro?",
+    topicoOrigem: "III.1 O rei espinheiro",
+    pagina: 53,
+    tags: "o espinheiro representa Abimeleque: inútil, sem frutos, perigoso, pois pode causar destruição",
+    refs: ["jz9.7-15"]
+  }
+];
