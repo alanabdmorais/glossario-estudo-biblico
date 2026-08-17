@@ -1710,6 +1710,23 @@ else if (locaisDaLicaoAtual.length > 0) {
         `;
       }
 
+      const imagemHtml = renderizarImagemDoContexto(id);
+      const filmesHtml = renderizarFilmesDoContexto(id);
+
+      card.innerHTML = `
+        <div class="contexto-titulo">${cabecalho}</div>
+        <div class="contexto-versiculo loading" id="versiculo-${id}">⏳ Buscando versículo (Bíblia local → bible-api.com)...</div>
+        ${assuntosHtml ? `<div class="contexto-campo">${assuntosHtml}</div>` : ''}
+        ${linhaPanorama}
+        ${linhaSecao}
+        ${locaisHtml}
+        ${imagemHtml}
+        ${filmesHtml}
+        <div class="link-volta">
+          <a href="#perguntas" title="Perguntas Sugeridas">❓</a>
+          <a href="#alfabetica" title="Lista alfabética">🔤</a>
+          <a href="#hierarquia" title="Hierarquia">📋</a>
+        </div>`;
 
     } else {
       const referenciaLimpa = referenciaPorId.get(id) || id;
@@ -1732,10 +1749,15 @@ else if (locaisDaLicaoAtual.length > 0) {
         `;
       }
       
+      const imagemHtml = renderizarImagemDoContexto(id);
+      const filmesHtml = renderizarFilmesDoContexto(id);
+
       card.innerHTML = `
         <div class="contexto-titulo">📖 ${referenciaLimpa}</div>
         <div class="contexto-versiculo loading" id="versiculo-${id}">⏳ Buscando versículo (Bíblia local → bible-api.com)...</div>
         ${locaisHtml}
+        ${imagemHtml}
+        ${filmesHtml}
         <p style="font-size:12px;color:#999;">Contexto não pôde ser inferido automaticamente (livro/capítulo não reconhecido). Pode cadastrar manualmente em contextosReferencias no dados-licaoN.js.</p>
         <div class="link-volta">
           <a href="#perguntas" title="Perguntas Sugeridas">❓</a>
@@ -1981,57 +2003,21 @@ window.toggleListaLocais = toggleListaLocais;
 // ============================================
 
 function renderizarImagemDoContexto(referenciaId) {
-    // Busca a imagem que tem esta referência
+    // Busca a imagem que tem esta referência, usando a função da biblioteca
+    // (IMAGENS_BIBLICAS é um objeto {id: {...}}, não um array — por isso
+    // usamos buscarImagensPorReferencias, que já sabe iterar sobre ele
+    // corretamente em vez de chamar .forEach diretamente no objeto).
     let imagemEncontrada = null;
-    
+
     console.log('🔍 Buscando imagem para:', referenciaId);
-    
-    if (typeof window.IMAGENS_BIBLICAS !== 'undefined') {
-        console.log('📚 IMAGENS_BIBLICAS disponíveis:', window.IMAGENS_BIBLICAS);
-        
-        // Extrai o livro+capítulo do ID da referência
-        // Ex: "jz9.1-6" → "jz9"
-        const capituloId = referenciaId.split('.')[0];
-        console.log(`   📌 Capítulo extraído: ${capituloId}`);
-        
-        // Procura em todas as imagens da biblioteca
-        window.IMAGENS_BIBLICAS.forEach(img => {
-            console.log(`   Verificando imagem: ${img.titulo} (${img.id})`);
-            console.log(`      refs:`, img.refs);
-            console.log(`      refsCapitulo:`, img.refsCapitulo);
-            
-            // 1. Verifica match exato com refs (IDs completos)
-            if (img.refs && img.refs.some(ref => ref.toLowerCase() === referenciaId.toLowerCase())) {
-                console.log(`   ✅ Match exato em refs para ${referenciaId}`);
-                imagemEncontrada = img;
-                return;
-            }
-            
-            // 2. Verifica se o ID da referência está contido em alguma ref
-            if (!imagemEncontrada && img.refs && img.refs.some(ref => {
-                const refNorm = ref.toLowerCase();
-                const idNorm = referenciaId.toLowerCase();
-                return refNorm === idNorm || refNorm.includes(idNorm) || idNorm.includes(refNorm);
-            })) {
-                console.log(`   ✅ Match contido em refs para ${referenciaId}`);
-                imagemEncontrada = img;
-                return;
-            }
-            
-            // 3. Verifica nas refsCapitulo (comparando com o capítulo extraído)
-            if (!imagemEncontrada && img.refsCapitulo && img.refsCapitulo.some(ref => {
-                const capNorm = ref.toLowerCase();
-                return capNorm === capituloId || capituloId.includes(capNorm) || capNorm.includes(capituloId);
-            })) {
-                console.log(`   ✅ Match em refsCapitulo para ${capituloId}`);
-                imagemEncontrada = img;
-                return;
-            }
-        });
+
+    if (typeof window.buscarImagensPorReferencias === 'function') {
+        const imagens = window.buscarImagensPorReferencias([referenciaId]);
+        imagemEncontrada = imagens && imagens.length > 0 ? imagens[0] : null;
     } else {
-        console.warn('⚠️ window.IMAGENS_BIBLICAS não está definido!');
+        console.warn('⚠️ window.buscarImagensPorReferencias não está definida!');
     }
-    
+
     console.log('📦 imagemEncontrada:', imagemEncontrada);
     
     if (imagemEncontrada) {

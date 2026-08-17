@@ -912,197 +912,167 @@ window.dadosLicaoV4 = {
   // LISTA ALFABÉTICA - COM LOCAIS
   // ============================================
   listaAlfabetica: [
-    { 
-      referencia: "1 Co 10.12",  
-      tags: "leitura semanal / quarta — cuide para que não caia", 
-      pagina: 47, 
+    {
+      referencia: "1 Co 10.12",
+      tags: "cuidado para não cair / autoconfiança excessiva",
+      pagina: 47,
       id: "1co10.12",
       locais: []
     },
-    { 
-      referencia: "1 Co 10.12",  
-      tags: "I.3 perigos da liderança / orgulho / centralização de poder", 
-      pagina: 50, 
-      id: "1co10.12",
-      locais: []
-    },
-    { 
-      referencia: "1 Co 16.13",  
-      tags: "leitura semanal / terça — sejam vigilantes", 
-      pagina: 47, 
+    {
+      referencia: "1 Co 16.13",
+      tags: "vigilância / firmeza na fé / sede fortes",
+      pagina: 47,
       id: "1co16.13",
       locais: []
     },
-    { 
-      referencia: "1 Co 6.9,10", 
-      tags: "Subsídio 2 / falsos mestres perdem o lugar no Reino", 
-      pagina: 51, 
+    {
+      referencia: "1 Co 6.9,10",
+      tags: "injustos não herdam o Reino de Deus / advertência moral",
+      pagina: 51,
       id: "1co6.9-10",
       locais: []
     },
-    { 
-      referencia: "1 Pe 5.2,3",  
-      tags: "leitura semanal / sexta — não cuide do rebanho com má vontade", 
-      pagina: 47, 
+    {
+      referencia: "1 Pe 5.2,3",
+      tags: "pastores / apascentar o rebanho de boa vontade, não por sordidez",
+      pagina: 47,
       id: "1pe5.2-3",
       locais: []
     },
-    { 
-      referencia: "1 Pe 5.2,3",  
-      tags: "I.3 perigos da liderança / vigilância constante", 
-      pagina: 50, 
-      id: "1pe5.2-3",
-      locais: []
-    },
-    { 
-      referencia: "2 Co 11.15",  
-      tags: "Subsídio 2 / falsos ministros se disfarçam como ministros da verdade", 
-      pagina: 51, 
+    {
+      referencia: "2 Co 11.15",
+      tags: "falsos ministros disfarçados de ministros da justiça",
+      pagina: 51,
       id: "2co11.15",
       locais: []
     },
-    { 
-      referencia: "2 Pe 2.3",    
-      tags: "II.1 líder sem chamado divino / discurso, engano, falsa espiritualidade", 
-      pagina: 51, 
+    {
+      referencia: "2 Pe 2.3",
+      tags: "falsos mestres / cobiça / palavras fingidas",
+      pagina: 51,
       id: "2pe2.3",
       locais: []
     },
-    { 
-      referencia: "Êx 28.6-14",  
-      tags: "I.2 falhas de um líder / o efode era exclusivo do sumo sacerdote", 
-      pagina: 50, 
+    {
+      referencia: "Êx 28.6-14",
+      tags: "éfode / vestimenta sagrada exclusiva do sumo sacerdote",
+      pagina: 50,
       id: "ex28.6-14",
       locais: [
         { nome: "Tabernáculo", tipo: "local" },
         { nome: "Ofra", tipo: "cidade" }
       ]
     },
-    { 
-      referencia: "Êx 28.6-14",  
-      tags: "hora da revisão / 1 — o que era o éfode", 
-      pagina: 53, 
-      id: "ex28.6-14",
-      locais: [
-        { nome: "Tabernáculo", tipo: "local" }
-      ]
-    },
-    { 
-      referencia: "Ef 5.5,6",    
-      tags: "Subsídio 2 / cobiçoso não herda o reino de Cristo", 
-      pagina: 51, 
+    {
+      referencia: "Ef 5.5,6",
+      tags: "cobiçoso e idólatra não têm herança no Reino de Cristo",
+      pagina: 51,
       id: "ef5.5-6",
       locais: []
     },
-    { 
-      referencia: "Ez 34.2,4",   
-      tags: "Subsídio 3 / pastores que cuidam de si mesmos / perigo da omissão", 
-      pagina: 52, 
+    {
+      referencia: "Ez 34.2,4",
+      tags: "pastores de Israel que cuidam de si mesmos / ovelhas negligenciadas",
+      pagina: 52,
       id: "ez34.2-4",
       locais: []
     },
-    { 
-      referencia: "Gl 5.19,21",  
-      tags: "Subsídio 2 / obras da carne / motivação egoísta", 
-      pagina: 51, 
+    {
+      referencia: "Gl 5.19,21",
+      tags: "obras da carne / inimizades, contendas, invejas",
+      pagina: 51,
       id: "gl5.19-21",
       locais: []
     },
-    { 
-      referencia: "Gl 6.7",      
-      tags: "III.2 conflitos do reino / tudo o que o homem semear isso também ceifará", 
-      pagina: 52, 
+    {
+      referencia: "Gl 6.7",
+      tags: "semear e colher / ninguém zomba de Deus",
+      pagina: 52,
       id: "gl6.7",
       locais: []
     },
-    { 
-      referencia: "Jo 10.12,13", 
-      tags: "leitura semanal / sábado — o perigo dos mercenários", 
-      pagina: 47, 
+    {
+      referencia: "Jo 10.12,13",
+      tags: "mercenário foge do lobo / não tem cuidado das ovelhas",
+      pagina: 47,
       id: "jo10.12-13",
       locais: []
     },
-    { 
-      referencia: "Jz 8.21",     
-      tags: "I.1 / Gideão mata os reis midianitas Zeba e Salmuna", 
-      pagina: 49, 
+    {
+      referencia: "Jz 8.21",
+      tags: "Gideão mata Zeba e Salmuna, reis midianitas",
+      pagina: 49,
       id: "jz8.21",
       locais: []
     },
-    { 
-      referencia: "Jz 8.22",     
-      tags: "I.2 / povo pede que Gideão seja rei / tentação do poder hereditário", 
-      pagina: 50, 
+    {
+      referencia: "Jz 8.22",
+      tags: "povo pede que Gideão reine / tentação da dinastia hereditária",
+      pagina: 50,
       id: "jz8.22",
       locais: [
         { nome: "Israel", tipo: "região" }
       ]
     },
-    { 
-      referencia: "Jz 8.22-24",  
-      tags: "texto bíblico / Juízes 8 — povo pede Gideão como rei", 
-      pagina: 49, 
+    {
+      referencia: "Jz 8.22-24",
+      tags: "povo pede Gideão como rei / ele pede as argolas de ouro do despojo",
+      pagina: 49,
       id: "jz8.22-24",
       locais: [
         { nome: "Israel", tipo: "região" }
       ]
     },
-    { 
-      referencia: "Jz 8.23",     
-      tags: "I.2 / Gideão recusa o título — o Senhor governará sobre Israel", 
-      pagina: 50, 
+    {
+      referencia: "Jz 8.23",
+      tags: "Gideão recusa o título de rei / o Senhor reinará sobre Israel",
+      pagina: 50,
       id: "jz8.23",
       locais: []
     },
-    { 
-      referencia: "Jz 8.23",     
-      tags: "II.1 / Gideão recusou o reino / Abimeleque nutria inclinação monárquica", 
-      pagina: 51, 
-      id: "jz8.23",
-      locais: []
-    },
-    { 
-      referencia: "Jz 8.27",     
-      tags: "I.2 / todo o Israel prostituiu-se ali após o efode de Gideão", 
-      pagina: 50, 
+    {
+      referencia: "Jz 8.27",
+      tags: "efode de Gideão em Ofra / Israel se prostitui / tropeço",
+      pagina: 50,
       id: "jz8.27",
       locais: [
         { nome: "Ofra", tipo: "cidade" },
         { nome: "Israel", tipo: "região" }
       ]
     },
-    { 
-      referencia: "Jz 8.30,31",  
-      tags: "I.2 / setenta filhos de Gideão / Abimeleque filho da concubina de Siquém", 
-      pagina: 50, 
+    {
+      referencia: "Jz 8.30,31",
+      tags: "setenta filhos de Gideão / Abimeleque, filho da concubina de Siquém",
+      pagina: 50,
       id: "jz8.30-31",
       locais: [
         { nome: "Siquém", tipo: "cidade" }
       ]
     },
-    { 
-      referencia: "Jz 8.5-9",    
-      tags: "I.1 / tensões com Efraim / Sucote e Penuel recusam apoio", 
-      pagina: 49, 
+    {
+      referencia: "Jz 8.5-9",
+      tags: "Sucote e Penuel recusam pão a Gideão / vingança posterior",
+      pagina: 49,
       id: "jz8.5-9",
       locais: [
         { nome: "Sucote", tipo: "cidade" },
         { nome: "Penuel", tipo: "cidade" }
       ]
     },
-    { 
-      referencia: "Jz 9.1,2",    
-      tags: "II.2a discurso conveniente / Abimeleque convence Siquém", 
-      pagina: 51, 
+    {
+      referencia: "Jz 9.1,2",
+      tags: "Abimeleque fala aos irmãos da mãe / propõe liderança única",
+      pagina: 51,
       id: "jz9.1-2",
       locais: [
         { nome: "Siquém", tipo: "cidade" }
       ]
     },
-    { 
-      referencia: "Jz 9.1-6",    
-      tags: "texto bíblico / Juízes 9 — Abimeleque em Siquém / mata 70 irmãos", 
-      pagina: 49, 
+    {
+      referencia: "Jz 9.1-6",
+      tags: "Abimeleque vai a Siquém / é proclamado rei junto ao carvalho",
+      pagina: 49,
       id: "jz9.1-6",
       locais: [
         { nome: "Siquém", tipo: "cidade" },
@@ -1111,78 +1081,69 @@ window.dadosLicaoV4 = {
         { nome: "Baal-Berite", tipo: "templo" }
       ]
     },
-    { 
-      referencia: "Jz 9.16",     
-      tags: "Subsídio 3 / Jotão conta a história das árvores / motivações para liderar", 
-      pagina: 52, 
+    {
+      referencia: "Jz 9.16",
+      tags: "Jotão questiona a sinceridade da escolha / lealdade a Jerubaal",
+      pagina: 52,
       id: "jz9.16",
       locais: []
     },
-    { 
-      referencia: "Jz 9.22",     
-      tags: "III.2 / após 3 anos Deus envia mau espírito entre Abimeleque e Siquém", 
-      pagina: 52, 
+    {
+      referencia: "Jz 9.22",
+      tags: "Abimeleque reina três anos sobre Israel",
+      pagina: 52,
       id: "jz9.22",
       locais: [
         { nome: "Siquém", tipo: "cidade" }
       ]
     },
-    { 
-      referencia: "Jz 9.26-29",  
-      tags: "III.2 / Gaal lidera revolta do povo contra Abimeleque", 
-      pagina: 52, 
+    {
+      referencia: "Jz 9.26-29",
+      tags: "Gaal incita o povo de Siquém contra Abimeleque",
+      pagina: 52,
       id: "jz9.26-29",
       locais: [
         { nome: "Siquém", tipo: "cidade" }
       ]
     },
-    { 
-      referencia: "Jz 9.4",      
-      tags: "II.2b apoio financeiro / 70 peças de prata de Baal-Berite", 
-      pagina: 51, 
+    {
+      referencia: "Jz 9.4",
+      tags: "setenta peças de prata do templo de Baal-Berite financiam Abimeleque",
+      pagina: 51,
       id: "jz9.4",
       locais: [
         { nome: "Baal-Berite", tipo: "templo" }
       ]
     },
-    { 
-      referencia: "Jz 9.4",      
-      tags: "II.2c recrutamento de desordeiros / homens sem escrúpulos", 
-      pagina: 51, 
-      id: "jz9.4",
-      locais: [
-        { nome: "Baal-Berite", tipo: "templo" }
-      ]
-    },
-    { 
-      referencia: "Jz 9.5",      
-      tags: "II.3 / mata 70 meios-irmãos / Jotão sobreviveu escondido", 
-      pagina: 51, 
+    {
+      referencia: "Jz 9.5",
+      tags: "Abimeleque mata os setenta irmãos sobre uma pedra / Jotão escapa",
+      pagina: 51,
       id: "jz9.5",
       locais: [
         { nome: "Ofra", tipo: "cidade" }
       ]
     },
-    { 
-      referencia: "Jz 9.50",     
-      tags: "III.3 fim trágico / Abimeleque ataca Tebes", 
-      pagina: 52, 
+    {
+      referencia: "Jz 9.50",
+      tags: "Abimeleque ataca a cidade de Tebes",
+      pagina: 52,
       id: "jz9.50",
       locais: [
         { nome: "Tebes", tipo: "cidade" }
       ]
     },
-    { 
-      referencia: "Jz 9.56,57",  
-      tags: "III.3 / Deus fez recair sobre Abimeleque o mal que praticara", 
-      pagina: 52, 
+    {
+      referencia: "Jz 9.56,57",
+      tags: "Deus faz recair sobre Abimeleque o mal que ele praticou",
+      pagina: 52,
       id: "jz9.56-57",
       locais: []
     },
-    { 
-      referencia: "Jz 9.6",      
-      tags: "texto principal / Abimeleque proclamado rei em Siquém e Bete-Milo", 
-      pagina: 47, 
+    {
+      referencia: "Jz 9.6",
+      tags: "cidadãos de Siquém e Bete-Milo proclamam Abimeleque rei junto ao carvalho",
+      pagina: 47,
       id: "jz9.6",
       locais: [
         { nome: "Siquém", tipo: "cidade" },
@@ -1190,80 +1151,63 @@ window.dadosLicaoV4 = {
         { nome: "Carvalho da Coluna", tipo: "local" }
       ]
     },
-    { 
-      referencia: "Jz 9.6",      
-      tags: "III.1 / parábola de Jotão / monarquia fora da orientação divina", 
-      pagina: 51, 
-      id: "jz9.6",
-      locais: [
-        { nome: "Siquém", tipo: "cidade" },
-        { nome: "Bete-Milo", tipo: "local" }
-      ]
-    },
-    { 
-      referencia: "Jz 9.7-15",   
-      tags: "III.1 / parábola de Jotão / oliveira, figueira, videira recusam", 
-      pagina: 51, 
+    {
+      referencia: "Jz 9.7-15",
+      tags: "parábola de Jotão / árvores convidam alguém para reinar / o espinheiro aceita",
+      pagina: 51,
       id: "jz9.7-15",
       locais: [
         { nome: "Monte Gerizim", tipo: "monte" }
       ]
     },
-    { 
-      referencia: "Mq 3.1-4",    
-      tags: "III.3 / juízo contra líderes que buscam poder para o próprio benefício", 
-      pagina: 52, 
+    {
+      referencia: "Mq 3.1-4",
+      tags: "juízo contra líderes que odeiam o bem e amam o mal",
+      pagina: 52,
       id: "mq3.1-4",
       locais: []
     },
-    { 
-      referencia: "Pv 16.18",    
-      tags: "leitura semanal / quinta — a soberba precede a ruína", 
-      pagina: 47, 
+    {
+      referencia: "Pv 16.18",
+      tags: "a soberba precede a ruína / o espírito altivo precede a queda",
+      pagina: 47,
       id: "pv16.18",
       locais: []
     },
-    { 
-      referencia: "Pv 16.18",    
-      tags: "I.3 perigos da liderança / o orgulho precede a queda", 
-      pagina: 50, 
-      id: "pv16.18",
-      locais: []
-    },
-    { 
-      referencia: "Rm 12.19",    
-      tags: "III.3 / a mim me pertence a vingança / eu darei o pago", 
-      pagina: 52, 
+    {
+      referencia: "Rm 12.19",
+      tags: "a mim pertence a vingança, eu retribuirei, diz o Senhor",
+      pagina: 52,
       id: "rm12.19",
       locais: []
     },
-    { 
-      referencia: "Sl 139.23",   
-      tags: "leitura semanal / segunda — sonda-me, ó Deus", 
-      pagina: 47, 
+    {
+      referencia: "Sl 139.23",
+      tags: "sonda-me, ó Deus, e conhece o meu coração",
+      pagina: 47,
       id: "sl139.23",
       locais: []
     },
-    { 
-      referencia: "Sl 18.31",    
-      tags: "I.2 / Gideão colocou o efode em Ofra — centro de idolatria", 
-      pagina: 50, 
+    {
+      referencia: "Sl 18.31",
+      tags: "quem é Deus além do Senhor? / fidelidade exclusiva a Deus",
+      pagina: 50,
       id: "sl18.31",
       locais: [
         { nome: "Ofra", tipo: "cidade" }
       ]
     },
-    { 
-      referencia: "Sl 37.35,36", 
-      tags: "III.3 / o Senhor conduz os acontecimentos para cumprir seu juízo", 
-      pagina: 52, 
+    {
+      referencia: "Sl 37.35,36",
+      tags: "o ímpio passa e já não existe / o justo permanece",
+      pagina: 52,
       id: "sl37.35-36",
       locais: []
     },
-    { 
-      referencia: "Tg 3.16",     
-      tags: "III.2 / onde há inveja e contenda há perturbação e toda obra má", 
-      pagina: 52, 
+    {
+      referencia: "Tg 3.16",
+      tags: "onde há inveja e contenda há confusão e toda obra perversa",
+      pagina: 52,
       id: "tg3.16",
       locais: []
     }
