@@ -5,88 +5,96 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Teologia Descomplicada v4</title>
   <link rel="stylesheet" href="biblioteca/vendor/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
   <script src="biblioteca/vendor/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <script src="biblioteca/cores-locais-biblicos.js"></script>
+  <script src="biblioteca/locais-biblicos.js"></script>
+  <script src="biblioteca/locais-biblicos-pt.js"></script>
   <script src="biblioteca/vendor/mermaid.min.js"></script>
+  <script src="biblioteca/imagens-biblicas.js"></script>
+  <script src="biblioteca/filmes-biblicos.js"></script>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #e4e0d4; padding: 20px; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #e8e4d4; padding: 20px; }
     .container { max-width: 1400px; margin: 0 auto; background-color: #fffef7; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); overflow: hidden; }
-    header { background-color: #4a3b6e; color: white; padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; }
+    header { background-color: #3b5e3b; color: white; padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; }
     header h1 { font-size: 1.8rem; }
-    header a { color: white; background-color: #362b52; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 14px; }
-    .seletor-area { background-color: #f5f3f0; padding: 15px 30px; border-bottom: 1px solid #c9c0d4; display: flex; flex-direction: column; gap: 15px; }
+    header a { color: white; background-color: #2d4a2d; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-size: 14px; }
+    .seletor-area { background-color: #f9f7e8; padding: 15px 30px; border-bottom: 1px solid #d4c9a6; display: flex; flex-direction: column; gap: 15px; }
     .seletor-linha { display: flex; gap: 15px; align-items: center; flex-wrap: wrap; }
-    .seletor-area select, .seletor-area button { padding: 8px 15px; font-size: 14px; border-radius: 6px; border: 1px solid #c9c0d4; background-color: white; }
-    .seletor-area button { background-color: #4a3b6e; color: white; border: none; cursor: pointer; }
-    .seletor-area button:hover { background-color: #362b52; }
-    .titulo-capitalizado { background-color: #e4e0d4; padding: 10px 15px; border-radius: 6px; font-weight: bold; color: #4a3b6e; border-left: 4px solid #4a3b6e; font-size: 13px; }
-    section { padding: 20px 30px; border-bottom: 1px solid #c9c0d4; }
-    section h2 { color: #4a3b6e; margin-bottom: 15px; font-size: 1.4rem; border-left: 4px solid #4a3b6e; padding-left: 12px; }
+    .seletor-area select, .seletor-area button { padding: 8px 15px; font-size: 14px; border-radius: 6px; border: 1px solid #d4c9a6; background-color: white; }
+    .seletor-area button { background-color: #3b5e3b; color: white; border: none; cursor: pointer; }
+    .seletor-area button:hover { background-color: #2d4a2d; }
+    .titulo-capitalizado { background-color: #e8e4d4; padding: 10px 15px; border-radius: 6px; font-weight: bold; color: #3b5e3b; border-left: 4px solid #3b5e3b; font-size: 13px; }
+    section { padding: 20px 30px; border-bottom: 1px solid #d4c9a6; }
+    section h2 { color: #3b5e3b; margin-bottom: 15px; font-size: 1.4rem; border-left: 4px solid #3b5e3b; padding-left: 12px; }
     table { width: 100%; border-collapse: collapse; font-size: 12px; }
-    th, td { border: 1px solid #c9c0d4; padding: 8px 10px; text-align: left; vertical-align: top; }
-    th { background-color: #e4e0d4; font-weight: 600; color: #4a3b6e; }
+    th, td { border: 1px solid #d4c9a6; padding: 8px 10px; text-align: left; vertical-align: top; }
+    th { background-color: #e8e4d4; font-weight: 600; color: #3b5e3b; }
     .col-num { width: 50px; text-align: center; }
     .col-ref { width: 160px; font-family: monospace; }
     .col-pag { width: 60px; text-align: center; }
     #mapaInterativo { height: 400px; border-radius: 8px; margin-bottom: 20px; }
-    .netlify-section { background: #f5f3f0; padding: 15px; border-radius: 8px; border: 1px solid #c9c0d4; }
-    .netlify-section input { width: 70%; padding: 8px 12px; border: 1px solid #c9c0d4; border-radius: 4px; margin-right: 10px; }
-    .netlify-section button { background-color: #4a3b6e; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; }
-    .contexto-card { background-color: #f5f3f0; border-left: 5px solid #4a3b6e; padding: 15px; margin-bottom: 20px; border-radius: 0 8px 8px 0; }
-    .contexto-titulo { font-weight: bold; font-size: 13px; margin-bottom: 10px; color: #4a3b6e; background-color: #e4e0d4; padding: 8px; border-radius: 6px; }
-    .contexto-versiculo { font-style: italic; background: white; padding: 10px; border-radius: 6px; margin: 10px 0; border: 1px solid #c9c0d4; }
+    .netlify-section { background: #f9f7e8; padding: 15px; border-radius: 8px; border: 1px solid #d4c9a6; }
+    .netlify-section input { width: 70%; padding: 8px 12px; border: 1px solid #d4c9a6; border-radius: 4px; margin-right: 10px; }
+    .netlify-section button { background-color: #3b5e3b; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; }
+    .contexto-card { background-color: #f9f7e8; border-left: 5px solid #3b5e3b; padding: 15px; margin-bottom: 20px; border-radius: 0 8px 8px 0; }
+    .contexto-titulo { font-weight: bold; font-size: 13px; margin-bottom: 10px; color: #3b5e3b; background-color: #e8e4d4; padding: 8px; border-radius: 6px; }
+    .contexto-versiculo { font-style: italic; background: white; padding: 10px; border-radius: 6px; margin: 10px 0; border: 1px solid #d4c9a6; }
     .contexto-versiculo.loading { color: #999; }
     .contexto-campo { margin-bottom: 10px; font-size: 13px; }
-    .contexto-campo strong { color: #4a3b6e; }
-    .contexto-tags-linha { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 10px 0; background-color: #e4e0d4; padding: 6px 8px; border-radius: 4px; }
+    .contexto-campo strong { color: #3b5e3b; }
+    .contexto-tags-linha { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 10px 0; background-color: #e8e4d4; padding: 6px 8px; border-radius: 4px; }
     .contexto-tags-label { font-size: 11px; color: #666; }
     .assuntos { display: flex; flex-wrap: wrap; gap: 6px; }
-    .assunto-tag { background-color: #4a3b6e; color: white; padding: 2px 8px; border-radius: 15px; font-size: 10px; white-space: nowrap; }
+    .assunto-tag { background-color: #3b5e3b; color: white; padding: 2px 8px; border-radius: 15px; font-size: 10px; white-space: nowrap; }
     .link-volta { text-align: right; margin-top: 10px; font-size: 18px; display: flex; gap: 15px; justify-content: flex-end; }
-    .link-volta a { color: #4a3b6e; text-decoration: none; }
+    .link-volta a { color: #3b5e3b; text-decoration: none; }
     .footer-links { margin-top: 15px; text-align: right; font-size: 12px; }
-    .footer-links a { color: #4a3b6e; text-decoration: none; margin-left: 15px; }
+    .footer-links a { color: #3b5e3b; text-decoration: none; margin-left: 15px; }
     .loading { text-align: center; padding: 40px; color: #666; }
     /* ── HIERARQUIA ── */
     .hierarquia-lista { list-style: none; padding-left: 0; }
     .hierarquia-lista li { margin-bottom: 4px; }
     .hierarquia-item { display: flex; align-items: flex-start; gap: 8px; padding: 5px 8px; border-radius: 6px; }
-    .hierarquia-item:hover { background: #ede9f5; }
-    .hierarquia-label { font-size: 13px; font-weight: 600; color: #4a3b6e; }
+    .hierarquia-item:hover { background: #f0ede0; }
+    .hierarquia-label { font-size: 13px; font-weight: 600; color: #3b5e3b; }
     .hierarquia-refs { margin-top: 4px; padding-left: 16px; }
     .hierarquia-ref-item { display: flex; align-items: center; gap: 8px; margin-bottom: 3px; font-size: 12px; }
-    .hierarquia-ref-link { color: #4a3b6e; font-weight: bold; text-decoration: none; font-family: monospace; }
+    .hierarquia-ref-link { color: #3b5e3b; font-weight: bold; text-decoration: none; font-family: monospace; }
     .hierarquia-ref-link:hover { text-decoration: underline; }
     .hierarquia-tags { color: #888; font-size: 11px; font-style: italic; }
-    .hierarquia-filhos { padding-left: 20px; margin-top: 4px; border-left: 2px solid #c9c0d4; }
-    .nivel-1 > .hierarquia-item > .hierarquia-label { font-size: 14px; color: #362b52; }
+    .hierarquia-filhos { padding-left: 20px; margin-top: 4px; border-left: 2px solid #d4c9a6; }
+    .nivel-1 > .hierarquia-item > .hierarquia-label { font-size: 14px; color: #2d4a2d; }
     /* ── MERMAID ── */
-    .mermaid-wrapper { background: #f5f3f0; border: 1px solid #c9c0d4; border-radius: 8px; padding: 20px; overflow-x: auto; }
+    .mermaid-wrapper { background: #f9f7e8; border: 1px solid #d4c9a6; border-radius: 8px; padding: 20px; overflow-x: auto; }
     .sem-mermaid, .sem-perguntas { color: #999; font-style: italic; font-size: 13px; padding: 20px; text-align: center; }
     /* ── PERGUNTAS ── */
-    .pergunta-card { background: #f5f3f0; border: 1px solid #c9c0d4; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; }
-    .pergunta-subtitulo { color: #4a3b6e; font-size: 13px; margin: 18px 0 10px; padding-bottom: 4px; border-bottom: 2px solid #c9c0d4; }
+    .pergunta-card { background: #f9f7e8; border: 1px solid #d4c9a6; border-radius: 8px; padding: 14px 18px; margin-bottom: 12px; }
+    .pergunta-subtitulo { color: #3b5e3b; font-size: 13px; margin: 18px 0 10px; padding-bottom: 4px; border-bottom: 2px solid #d4c9a6; }
     .pergunta-subtitulo:first-child { margin-top: 0; }
     .icone-gabarito { cursor: pointer; font-size: 14px; margin-left: 4px; user-select: none; }
     .icone-gabarito:hover { transform: scale(1.15); display: inline-block; }
     .gabarito-box { display: none; margin-top: 10px; padding: 10px 12px; background: #f3eefc; border: 1px dashed #b3a3d4; border-radius: 6px; font-size: 12px; }
     .gabarito-box.aberto { display: block; animation: fadeIn 0.25s ease; }
     .gabarito-linha { margin-bottom: 5px; }
-    .gabarito-linha strong { color: #4a3b6e; }
+    .gabarito-linha strong { color: #3b5e3b; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
-    .pergunta-texto { font-weight: 600; font-size: 13px; color: #362b52; margin-bottom: 8px; }
+    .pergunta-texto { font-weight: 600; font-size: 13px; color: #2d4a2d; margin-bottom: 8px; }
     .pergunta-meta { display: flex; flex-wrap: wrap; gap: 10px; font-size: 11px; color: #666; }
-    .pergunta-pagina { background: #4a3b6e; color: white; padding: 2px 8px; border-radius: 10px; font-size: 11px; }
+    .pergunta-pagina { background: #3b5e3b; color: white; padding: 2px 8px; border-radius: 10px; font-size: 11px; }
     .pergunta-tags { font-style: italic; color: #888; }
     .pergunta-refs { display: flex; gap: 6px; flex-wrap: wrap; }
-    .pergunta-ref-badge { background: #e4e0d4; color: #4a3b6e; padding: 2px 7px; border-radius: 10px; font-size: 10px; font-family: monospace; cursor: pointer; }
-    .pergunta-ref-badge:hover { background: #c9c0d4; }
+    .pergunta-ref-badge { background: #e8e4d4; color: #3b5e3b; padding: 2px 7px; border-radius: 10px; font-size: 10px; font-family: monospace; cursor: pointer; }
+    .pergunta-ref-badge:hover { background: #d4c9a6; }
     /* ── API CONFIG ── */
     .api-config { background: #fff8e1; border: 1px solid #ffe082; border-radius: 8px; padding: 14px 18px; margin-bottom: 16px; }
-    .api-config label { font-size: 13px; font-weight: 600; color: #4a3b6e; }
-    .api-config select, .api-config input { padding: 6px 10px; border: 1px solid #c9c0d4; border-radius: 4px; font-size: 13px; }
+    .api-config label { font-size: 13px; font-weight: 600; color: #3b5e3b; }
+    .api-config select, .api-config input { padding: 6px 10px; border: 1px solid #d4c9a6; border-radius: 4px; font-size: 13px; }
     .api-config input { width: 300px; }
-    .api-config button { background: #4a3b6e; color: white; border: none; padding: 6px 14px; border-radius: 4px; cursor: pointer; font-size: 13px; }
+    .api-config button { background: #3b5e3b; color: white; border: none; padding: 6px 14px; border-radius: 4px; cursor: pointer; font-size: 13px; }
     .api-config .api-linha { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-top: 8px; }
     .api-config .api-linha:first-child { margin-top: 0; }
     .api-status-badge { font-size: 12px; padding: 2px 10px; border-radius: 12px; font-weight: 500; }
@@ -97,16 +105,29 @@
     .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center; }
     .modal-overlay.aberto { display: flex; }
     .modal-box { background: white; border-radius: 12px; max-width: 600px; width: 90%; max-height: 80vh; overflow-y: auto; box-shadow: 0 10px 40px rgba(0,0,0,0.3); }
-    .modal-header { background: #4a3b6e; color: white; padding: 16px 20px; border-radius: 12px 12px 0 0; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; }
+    .modal-header { background: #3b5e3b; color: white; padding: 16px 20px; border-radius: 12px 12px 0 0; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; }
     .modal-header h3 { font-size: 16px; }
     .modal-fechar { background: none; border: none; color: white; font-size: 22px; cursor: pointer; line-height: 1; }
     .modal-body { padding: 16px 20px; }
     .legenda-grid-modal { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 16px; }
     .legenda-item-modal { display: flex; align-items: center; gap: 10px; font-size: 13px; padding: 6px 8px; border-radius: 6px; }
-    .legenda-item-modal:hover { background: #ede9f5; }
+    .legenda-item-modal:hover { background: #f0ede0; }
     .legenda-emoji-modal { font-size: 18px; min-width: 32px; text-align: center; }
     @media (max-width: 600px) { .legenda-grid-modal { grid-template-columns: 1fr; } }
     @media (max-width: 768px) { section { padding: 15px; } .api-config input { width: 100%; } }
+    .recurso-relacionado { margin-top:10px; padding:8px 12px; background:rgba(255,215,0,.1); border-radius:6px; border-left:3px solid #c99b4a; font-size:11px; }
+    .recurso-imagem { display:flex; align-items:center; gap:12px; cursor:pointer; margin-top:6px; }
+    .recurso-imagem img { width:80px; height:60px; object-fit:cover; border-radius:4px; border:1px solid #ddd; }
+    .recurso-imagem span { display:flex; flex-direction:column; gap:3px; }
+    .recurso-imagem small { color:#888; }
+    .filmes-card { margin-top:10px; padding:10px 12px; background:#f9f7e8; border:1px solid #d4c9a6; border-radius:6px; font-size:12px; }
+    .filmes-card .label { font-weight:600; color:#5c4a1e; margin-bottom:8px; }
+    .filme-item { margin-bottom:8px; }
+    .filme-item:last-child { margin-bottom:0; }
+    .filme-item .descricao, .filme-item .observacao { margin-top:3px; color:#666; }
+    .filme-item .links { margin-top:5px; display:flex; flex-wrap:wrap; gap:6px; }
+    .filme-link { color:#3b5e3b; text-decoration:none; }
+    .indice-locais { margin-top:12px; padding:10px 12px; background:#f9f7e8; border:1px solid #d4c9a6; border-radius:6px; }
   </style>
 </head>
 <body>
@@ -114,7 +135,7 @@
   <header>
     <h1>📚 Teologia Descomplicada <span style="font-size:0.7em;opacity:0.8;">v4</span></h1>
     <div style="display:flex;gap:10px;">
-      <button id="btnLegendaEmojis" style="color:white;background-color:#4a3b6e;padding:8px 16px;border-radius:6px;border:none;font-size:14px;cursor:pointer;">📋 Legenda de Emojis</button>
+      <button id="btnLegendaEmojis" style="color:white;background-color:#3b5e3b;padding:8px 16px;border-radius:6px;border:none;font-size:14px;cursor:pointer;">📋 Legenda de Emojis</button>
       <a href="index.html">🏠 Cursos</a>
     </div>
   </header>
@@ -129,7 +150,7 @@
     </div>
     <div id="tituloDinamico" class="titulo-capitalizado">Selecione um capítulo</div>
     <p style="font-size:11px;color:#888;margin-top:6px;">
-      ℹ️ A v4 só lista capítulos que já têm arquivo <code>-v4.js</code> próprio. Capítulos ainda não migrados continuam disponíveis na
+      ℹ️ A v4 lista apenas os capítulos que já possuem arquivo <code>-v4.js</code> próprio. Os demais continuam disponíveis na
       <a href="teologia-v2.html">Teologia Descomplicada v2</a>.
     </p>
   </div>
@@ -722,6 +743,53 @@ function atualizarStatusAPI() {
   });
 }
 
+function extrairLocaisDaLicaoTeologia(dadosLicao) {
+  if (!dadosLicao || typeof window.locaisBiblicos === 'undefined') return [];
+  const refs = [];
+  (dadosLicao.listaAparicao || []).forEach(item => { if (item.referencia) refs.push(item.referencia); });
+  function walk(nodes) {
+    (nodes || []).forEach(no => {
+      (no.refs || []).forEach(r => { if (r.referencia) refs.push(r.referencia); });
+      walk(no.filhos);
+    });
+  }
+  walk(dadosLicao.hierarquia);
+  const unicas = [...new Set(refs.map(r => String(r).trim()).filter(Boolean))];
+  const encontrados = [];
+  const base = window.locaisBiblicos;
+  unicas.forEach(ref => {
+    Object.values(base || {}).forEach(local => {
+      const lr = (local.referencias || []).map(String);
+      if (lr.some(r => r.includes(ref) || ref.includes(r))) {
+        if (!encontrados.some(x => x.id === local.id)) encontrados.push(local);
+      }
+    });
+  });
+  return encontrados;
+}
+
+function renderizarRecursosBiblicos(referenciaId) {
+  let html = '';
+  if (typeof window.buscarImagensPorReferencias === 'function') {
+    const imagens = window.buscarImagensPorReferencias([referenciaId]) || [];
+    if (imagens.length) {
+      const img = imagens[0];
+      html += `<div class="recurso-relacionado"><strong>🖼️ Imagem Relacionada:</strong><div class="recurso-imagem" onclick="window.open('${img.imagem}','_blank')"><img src="${img.imagem}" alt="${img.titulo}" onerror="this.style.display='none'"><span><b>${img.titulo}</b><small>📖 ${(img.refs || []).join('; ')}</small></span></div></div>`;
+    }
+  }
+  if (typeof window.buscarFilmesPorReferencia === 'function') {
+    const filmes = window.buscarFilmesPorReferencia(referenciaId) || [];
+    if (filmes.length) {
+      html += `<div class="filmes-card"><div class="label">🎬 Filmes Relacionados:</div>`;
+      filmes.forEach(f => {
+        html += `<div class="filme-item"><b>${f.titulo || ''}</b>${f.ano ? ` <span>(${f.ano})</span>` : ''}${f.diretor ? ` - Dir. ${f.diretor}` : ''}${f.descricao ? `<div class="descricao">${f.descricao}</div>` : ''}${f.observacao ? `<div class="observacao">📌 ${f.observacao}</div>` : ''}${f.links?.length ? `<div class="links">${f.links.map(l => `<a href="${l.url}" target="_blank" class="filme-link">🎬 ${l.plataforma}${l.idioma ? ` (${l.idioma})` : ''}</a>`).join('')}</div>` : ''}</div>`;
+      });
+      html += `</div>`;
+    }
+  }
+  return html;
+}
+
 async function renderizarConteudo(dados) {
   const tituloHeader = document.getElementById('tituloDinamico');
   tituloHeader.innerHTML = dados.titulo || '';
@@ -739,7 +807,7 @@ async function renderizarConteudo(dados) {
   <section id="api-config">
     <h2>🔑 Configuração das APIs</h2>
     <div class="api-config">
-      <div style="font-size:12px;color:#4a3b6e;margin-bottom:10px;">
+      <div style="font-size:12px;color:#3b5e3b;margin-bottom:10px;">
         📚 <strong>Bíblia local</strong> (arquivo salvo no projeto, domínio público) é a fonte principal — instantânea, sem rede, sem limite de requisições.
         <br>📖 Se algo não for encontrado localmente, tenta a <strong>Bíblia (bible-api.com)</strong> online, também gratuita e sem chave.
         <br>🆘 Se as duas falharem, a IA (Groq/Mistral) fica disponível <strong>só sob demanda</strong>, por um botão em cada versículo — não é usada automaticamente.
@@ -803,7 +871,7 @@ async function renderizarConteudo(dados) {
       </tr></thead><tbody>`;
     listaAlf.forEach((item, idx) => {
       const refLink = item.id
-        ? `<a href="#${item.id}-contexto" style="color:#4a3b6e;font-weight:bold;">${item.referencia}</a>`
+        ? `<a href="#${item.id}-contexto" style="color:#3b5e3b;font-weight:bold;">${item.referencia}</a>`
         : (item.referencia || '');
       html += `<tr><td class="col-num">${idx+1}</td><td class="col-ref">${refLink}</td><td>${item.tags||''}</td><td class="col-pag">${item.pagina||''}</td></tr>`;
     });
@@ -848,9 +916,16 @@ async function renderizarConteudo(dados) {
       L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
         attribution: '© OSM & CartoDB', subdomains: 'abcd', maxZoom: 19
       }).addTo(mapaAtual);
-      (dados.mapaConfig?.marcadores || []).forEach(m => {
-        L.marker([m.lat, m.lng]).addTo(mapaAtual).bindPopup(m.popup || m.local);
-      });
+      const grupo = (typeof L.markerClusterGroup === 'function') ? L.markerClusterGroup() : null;
+      const adicionar = (lat,lng,popup) => {
+        if (!Number.isFinite(lat) || !Number.isFinite(lng)) return;
+        const marker = L.marker([lat,lng]).bindPopup(popup || '📍 Local');
+        if (grupo) grupo.addLayer(marker); else marker.addTo(mapaAtual);
+      };
+      (dados.mapaConfig?.marcadores || []).forEach(m => adicionar(parseFloat(m.lat), parseFloat(m.lng), m.popup || m.local));
+      const locais = extrairLocaisDaLicaoTeologia(dados);
+      locais.forEach(l => adicionar(parseFloat(l.latitude), parseFloat(l.longitude), `<strong>${l.nome || l.nomeOriginal || l.id || 'Local'}</strong><br>📖 ${(l.referencias || []).join(', ')}`));
+      if (grupo) { grupo.addTo(mapaAtual); }
     }
     const netlifyInput = document.getElementById('netlifyInput');
     const salvarBtn    = document.getElementById('salvarLink');
@@ -910,6 +985,7 @@ async function renderizarConteudo(dados) {
         ${linhaPanorama}
         <div class="contexto-versiculo loading" id="versiculo-${id}">⏳ Buscando versículo (Bíblia local → bible-api.com)...</div>
         ${linhaSecao}
+        ${renderizarRecursosBiblicos(referenciaPorId.get(id) || id)}
         <div class="contexto-tags-linha">
           ${assuntosHtml ? `<span class="assuntos">${assuntosHtml}</span>` : ''}
         </div>
@@ -969,7 +1045,7 @@ async function buscarTodosVersiculos(refsUnicas, somenteFalhas = false) {
       el.innerHTML = `<strong>✝️ ${item.referencia}:</strong><br>"${texto}"`;
     } else {
       el.innerHTML = `<em style="color:#c62828;">Não encontrado na Bíblia local nem na bible-api.com.</em>
-        <br><button onclick="tentarComIA('${item.id}')" style="margin-top:6px;font-size:12px;padding:4px 10px;background:#4a3b6e;color:#fff;border:none;border-radius:4px;cursor:pointer;">🆘 Tentar com IA (Groq/Mistral)</button>`;
+        <br><button onclick="tentarComIA('${item.id}')" style="margin-top:6px;font-size:12px;padding:4px 10px;background:#3b5e3b;color:#fff;border:none;border-radius:4px;cursor:pointer;">🆘 Tentar com IA (Groq/Mistral)</button>`;
     }
   }));
 }
@@ -996,7 +1072,7 @@ async function tentarComIA(id) {
     el.innerHTML = `<strong>✝️ ${item.referencia} <span style="font-size:11px;color:#999;font-weight:400;">(via IA)</span>:</strong><br>"${texto}"`;
   } else {
     el.innerHTML = `<em style="color:#c62828;">A IA também não conseguiu buscar. Verifique as chaves configuradas.</em>
-      <br><button onclick="tentarComIA('${id}')" style="margin-top:6px;font-size:12px;padding:4px 10px;background:#4a3b6e;color:#fff;border:none;border-radius:4px;cursor:pointer;">🆘 Tentar novamente com IA</button>`;
+      <br><button onclick="tentarComIA('${id}')" style="margin-top:6px;font-size:12px;padding:4px 10px;background:#3b5e3b;color:#fff;border:none;border-radius:4px;cursor:pointer;">🆘 Tentar novamente com IA</button>`;
   }
 }
 
@@ -1010,7 +1086,9 @@ function buscarVersiculosNovamente() {
 // dados-{livro}-{capitulo}-v4.js próprio.
 // ============================================
 const capitulosDisponiveisV4 = {
-  "lv6": [5, 6]
+  "lv4": [5, 6, 7],
+  "lv5": [1, 2, 3, 4, 5, 6, 7],
+  "lv6": [2, 3, 5, 6]
 };
 
 function popularSeletoresV4() {
@@ -1091,6 +1169,8 @@ document.getElementById('btnLegendaEmojis').addEventListener('click', () => {
 document.getElementById('fecharModalLegenda').addEventListener('click', () => {
   document.getElementById('modalLegenda').classList.remove('aberto');
 });
+window.extrairLocaisDaLicaoTeologia = extrairLocaisDaLicaoTeologia;
+window.renderizarRecursosBiblicos = renderizarRecursosBiblicos;
 document.getElementById('modalLegenda').addEventListener('click', (e) => {
   if (e.target.id === 'modalLegenda') document.getElementById('modalLegenda').classList.remove('aberto');
 });

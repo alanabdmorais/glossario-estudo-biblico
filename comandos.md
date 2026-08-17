@@ -5,7 +5,7 @@ git status
 git add .
 
 # 3. Commit com mensagem
-git commit -m "3tm dominical lc7"
+git commit -m "incluir filmes e imagens v4"
 
 # 4. Enviar para o GitHub
 git push

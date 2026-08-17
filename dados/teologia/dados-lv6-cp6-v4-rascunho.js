@@ -1,11 +1,9 @@
 // ============================================
 // DADOS DO CURSO TEOLOGIA DESCOMPLICADA PARA JOVENS
-// LIVRO 6 - CAPÍTULO VI - DÚVIDAS SINCERAS QUE OS
-//           JOVENS TÊM
+// LIVRO 6 - CAPÍTULO VI - DÚVIDAS SINCERAS QUE OS JOVENS TÊM
 // MODELO V4 - hierarquia, listaAparicao, listaAlfabetica
 //             (extraídos dos prints, páginas 114-135)
-// Contexto histórico -> motor-contextos.js (automático,
-//             igual dominical v4 — não precisa cadastrar nada aqui)
+// Contexto histórico -> motor-contextos.js (automático)
 // ============================================
 
 window.dadosLicaoV4 = {
@@ -417,7 +415,7 @@ window.dadosLicaoV4 = {
   ],
 
   // ============================================
-  // LISTA ALFABÉTICA (gerada automaticamente a partir da listaAparicao)
+  // LISTA ALFABÉTICA (gerada a partir da listaAparicao)
   // ============================================
   listaAlfabetica: [
     { referencia: "1 Co 6:19", tags: "versículo-chave / o corpo de vocês é santuário do Espírito Santo que habita em vocês", pagina: 120, id: "1co6.19a" },
